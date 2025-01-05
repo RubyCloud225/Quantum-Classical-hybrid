@@ -46,8 +46,10 @@ int main () {
         {1.0, 0.0},
         {0.0, 1.0}
     };
+    // apply weights
+    std::vector<double> weights = {1.0, 1.0};
 
-    GaussianNoise noise(mean, covariance);
+    GaussianNoise noise(mean, covariance, weights);
 
     // Generate and print Gaussian noise
     std::vector<double> noiseSamples;
@@ -55,7 +57,7 @@ int main () {
         std::vector<double> sample = noise.generateNoise();
         std::cout << "Sample " << i + 1 << ": (" << sample[0] << ", " << sample[1] << ")" << std::endl;
     }
-    // prepaire data for linear regression
+    // prepare data for linear regression
     std::vector<std::pair<double, double>> regressionData;
     for (const auto& noiseValue : noiseSamples) {
         regressionData.emplace_back(noiseValue, (totalTokens));
@@ -81,6 +83,18 @@ int main () {
     for (const auto& value : Y) {
         std::cout << value << std::endl;
     }
-    
+    // define a sample to calculate the density and NLL
+    std::vector<double> sample = {0.5, -0.5};
+    //Calculate the density
+    double density = noise.calculateDensity(sample);
+    std::cout << "Density: " << density << std::endl;
+    // calculate NNL- lose function - overall aim is to control this function
+    try {
+        double nll = noise.negativeLogLikelihood(sample);
+        std::cout <<"NLL: " << nll << std::endl;
+    } catch (const std::runtime_error& e){
+        std::cout << "Error calculating NLL" << std::endl;
+    }
+
     return 0;
 }

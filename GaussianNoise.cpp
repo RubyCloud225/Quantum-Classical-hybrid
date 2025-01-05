@@ -2,10 +2,14 @@
 #include <stdexcept>
 #include <cmath>
 
-GaussianNoise::GaussianNoise(const std::vector<double>& mean, const std::vector<std::vector<double>>& coveriance) : mean_(mean), covariance_(coveriance), distribution_(0.0, 1.0) {
+GaussianNoise::GaussianNoise(const std::vector<double>& mean, const std::vector<std::vector<double>>& covariance, const std::vector<double>& weights) 
+: mean_(mean), covariance_(covariance), weights_(weights), distribution_(0.0, 1.0) {
         // Check if covariance matrix is square and positive definite
-    if (coveriance.size() != coveriance[0].size()) {
+    if (covariance.size() != covariance[0].size()) {
         throw std::invalid_argument("Coverance matrix must be square.");
+    }
+    if (mean.size() != weights.size()) {
+        throw std::invalid_argument("Mean and weights must have the same size.");
     }
 
     choleskyDecomposition();
@@ -38,7 +42,6 @@ std::vector<double> GaussianNoise::generateNoise() {
     for (size_t i = 0; i < n; ++i) {
         z[i] = distribution_(generator_);
     }
-
     // Transform to multivariate Gaussian
     std::vector<double> noise(n, 0.0);
     for (size_t i = 0; i < n; ++i) {
@@ -46,6 +49,10 @@ std::vector<double> GaussianNoise::generateNoise() {
             noise[i] += L_[i][j] * z[j];
         }
         noise[i] += mean_[i];
+    }
+    // apply weights to the generated noise
+    for (size_t i = 0; i < n; ++i) {
+        noise[i] *= weights_[i]; // scale the noise by the weight
     }
     return noise;
 }
@@ -64,3 +71,12 @@ double GaussianNoise::calculateDensity(const std::vector<double>& sample) {
     }
     return (1.0 / std::sqrt(std::pow(2 * M_PI, n) * determinant)) * std::exp(exponent);
 }
+
+double GaussianNoise::negativeLogLikelihood(const std::vector<double>& sample) {
+    double density = calculateDensity(sample);
+    if (density <= 0 ) {
+        throw std::runtime_error("Density is non positive, cannot compute Nll");
+    }
+    return -std::log(density);
+}
+
