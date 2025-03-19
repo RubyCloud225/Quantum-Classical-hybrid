@@ -10,6 +10,7 @@ class GaussianNoise {
     std::vector<double> generateNoise();
     double calculateDensity(const std::vector<double>& sample);
     double negativeLogLikelihood(const std::vector<double>& sample);
+    double calculateEntropy() const;
     private:
     std::vector<double> mean_;
     std::vector<double> weights_;

@@ -50,6 +50,8 @@
         "stack": "cpp",
         "streambuf": "cpp",
         "unordered_map": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "iostream": "cpp",
+        "unordered_set": "cpp"
     }
 }

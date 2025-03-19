@@ -80,3 +80,11 @@ double GaussianNoise::negativeLogLikelihood(const std::vector<double>& sample) {
     return -std::log(density);
 }
 
+double GaussianNoise::calculateEntropy() const {
+    size_t n = mean_.size();
+    double determinant = 1.0;
+    for (size_t i = 0; i < n; ++i) {
+        determinant *= L_[i][i] * L_[i][i]; // Calculate the determinant
+    }
+    return 0.5 * (n * std::log(2 * M_PI) + 0.5 * n * std::log(determinant));
+}

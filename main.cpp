@@ -1,8 +1,12 @@
 #include <iostream>
-#include "tokenizer.hpp"
-#include "GaussianNoise.hpp"
-#include "LinearRegression.hpp"
-#include "LayerNormalization.hpp"
+#include <algorithm>
+#include <random>
+#include "DataProcessing/tokenizer.hpp"
+#include "DataProcessing/GaussianNoise.hpp"
+#include "DataProcessing/LinearRegression.hpp"
+#include "DataProcessing/LayerNormalization.hpp"
+#include "DiT/BetaSchedule.hpp"
+#include "DiT/GaussianDiffusion.hpp"
 
 int main () {
     // input string to tokenized
@@ -60,19 +64,28 @@ int main () {
     // prepare data for linear regression
     std::vector<std::pair<double, double>> regressionData;
     for (const auto& noiseValue : noiseSamples) {
-        regressionData.emplace_back(noiseValue, (totalTokens));
+        regressionData.emplace_back(noiseValue, static_cast<double>(totalTokens));
     }
+    // Shuffle regression data
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::shuffle(regressionData.begin(), regressionData.end(), g);
+    // Split into training and testing sets (80% train, 20% test)
+    size_t trainSize = static_cast<size_t>(0.8 * regressionData.size());
+    std::vector<std::pair<double, double>> trainData(regressionData.begin(), regressionData.begin() + trainSize);
+    std::vector<std::pair<double, double>> testData(regressionData.begin() + trainSize, regressionData.end());
     // initalise linear regression
     LinearRegression lr;
     // fit the model to the noise created by Gaussian
-    lr.fit(regressionData);
-    // predict the total tokens
-    double x = static_cast<double>(totalTokens);
-    double y = lr.predict(x);
-    std::cout << "predicted noise value at total tokens = " << x << ":" << y << std::endl;
+    lr.fit(trainData);
+    // predict the total tokens using test data
+    for (const auto& testSample : testData) {
+        double x = testSample.first;
+        double predictedY = lr.predict(x);
+    }
 
     // prepare the data for layer normalization
-    std::vector<double> Y = {y};
+    std::vector<double> Y = {testData[0].second}; // first element of test data
     LayerNormalization layerNorm(Y.size());
     // reset 
     layerNorm.resetParameters();
@@ -80,7 +93,7 @@ int main () {
     std::vector<double> normalizedOutput = layerNorm.forward(Y);
     // Output normalized noise values
     std::cout << "\nNormalizedNoise Output: " << std::endl;
-    for (const auto& value : Y) {
+    for (const auto& value : normalizedOutput) {
         std::cout << value << std::endl;
     }
     // define a sample to calculate the density and NLL
@@ -95,6 +108,26 @@ int main () {
     } catch (const std::runtime_error& e){
         std::cout << "Error calculating NLL" << std::endl;
     }
+    return density;
+    // calculate the entropy
+    double entropy = noise.calculateEntropy();
+    std::cout << "Entropy: " << entropy << std::endl;
 
+    // Initialize BetaSchedule
+    const int total_epochs = 100;
+    const double initial_beta = 1.0;
+    BetaSchedule betaSchedule(total_epochs, initial_beta);
+    std::vector<double> nll_losses(total_epochs);
+    std::vector<double> entropy_losses(total_epochs);
+    //Training loop
+    for (int epoch = 0; epoch < total_epochs; ++epoch) {
+        // Get the current beta value
+        nll_losses[epoch] = density;
+        entropy_losses[epoch] = entropy;
+        betaSchedule.update(nll_losses, entropy_losses, epoch);
+    }
+    //retieve the final beta value
+    double final_beta = betaSchedule.getCurrentBeta();
     return 0;
 }
+
