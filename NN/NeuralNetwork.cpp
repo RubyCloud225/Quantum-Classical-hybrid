@@ -7,18 +7,35 @@ NeuralNetwork::NeuralNetwork() {
 
 // Add a convolutional layer to the network
 void NeuralNetwork::addConvolutionalLayer(int input_channels, int output_channels, int kernel_size, int stride) {
-    layers_.emplace_back(input_channels, output_channels, kernel_size, stride);
+    ConvolutionalLayer convLayer(input_channels, output_channels, kernel_size, stride);
+    convLayers_.push_back(convLayer);
+}
+
+void NeuralNetwork::addReluLayer() {
+    ReLu relu;
+    reluLayers_.push_back(relu);
+}
+
+void NeuralNetwork::addPoolingLayer(int inputHeight, int inputWidth, int poolSize, int stride, int padding) {
+    PoolingLayer poolingLayer(inputHeight, inputWidth, poolSize, stride, padding);
+    poolingLayers_.push_back(poolingLayer);
 }
 
 // Forward pass through the network
 std::vector<std::vector<std::vector<double>>> NeuralNetwork::forward(const std::vector<std::vector<double>>& input) {
     // Wrap the input in a 3D vector
-    std::vector<std::vector<std::vector<double>>> current_input(1, input); // 1 channel
+    std::vector<std::vector<std::vector<double>>> currentOutput(1, input); // 1 channel
 
-    // Pass the input through each layer
-    for (auto& layer : layers_) {
-        current_input = layer.forwardPass(current_input);
+    // ConvolutionalLayer
+    for (const auto& convLayer : convLayers_) {
+        currentOutput = convLayer.forwardPass(currentOutput);
+    }
+    for (const auto& relu : reluLayers_) {
+        currentOutput = relu.forward(currentOutput);
+    }
+    for (const auto& poolingLayer : poolingLayers_) {
+        currentOutput = poolingLayer.forward(currentOutput);
     }
 
-    return current_input; // Return the final output
+    return currentOutput; // Return the final output
 }

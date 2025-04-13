@@ -28,7 +28,7 @@ void ConvolutionalLayer::initializeWeights() {
 }
 
 // Forward pass
-std::vector<std::vector<std::vector<double>>> ConvolutionalLayer::forwardPass(const std::vector<std::vector<std::vector<double>>>& input) {
+std::vector<std::vector<std::vector<double>>> ConvolutionalLayer::forwardPass(const std::vector<std::vector<std::vector<double>>>& input) const {
     int input_height = input.size();
     int input_width = input[0].size();
     int output_height = (input_height - kernel_size_) / stride_ + 1;

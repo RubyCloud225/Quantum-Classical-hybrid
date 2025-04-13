@@ -9,7 +9,7 @@
 class ConvolutionalLayer {
 public:
     ConvolutionalLayer(int input_channels, int output_channels, int kernel_size, int stride);
-    std::vector<std::vector<std::vector<double>>> forwardPass(const std::vector<std::vector<std::vector<double>>>& input);
+    std::vector<std::vector<std::vector<double>>> forwardPass(const std::vector<std::vector<std::vector<double>>>& input) const;
     // Add methods for backward pass, weight updates, etc. as needed
 
 private:

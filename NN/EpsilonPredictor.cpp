@@ -3,7 +3,7 @@
 
 EpsilonPredictor::EpsilonPredictor(int input_channels, int output_size) {
     nn_.addConvolutionalLayer(input_channels, 64, 3, 1); // conv layer
-    nn_.addLayer(ReLu()); // Activation
+    nn_.addReluLayer(); // Activation
     nn_.addLayer(PoolingLayer(2, 2)); // pooling layer
     nn_.addLayer(ConvolutionalLayer(64, 128, 3, 1)); // second conv layer
     nn_.addLayer(Relu()); // activation
