@@ -20,6 +20,10 @@ void NeuralNetwork::addPoolingLayer(int inputHeight, int inputWidth, int poolSiz
     PoolingLayer poolingLayer(inputHeight, inputWidth, poolSize, stride, padding);
     poolingLayers_.push_back(poolingLayer);
 }
+void NeuralNetwork::addFlatten() {
+    Flatten flatten;
+    flatten_.push_back(flatten);
+}
 
 // Forward pass through the network
 std::vector<std::vector<std::vector<double>>> NeuralNetwork::forward(const std::vector<std::vector<double>>& input) {
@@ -35,6 +39,9 @@ std::vector<std::vector<std::vector<double>>> NeuralNetwork::forward(const std::
     }
     for (const auto& poolingLayer : poolingLayers_) {
         currentOutput = poolingLayer.forward(currentOutput);
+    }
+    for (const auto& flatten : flatten_) {
+        currentOutput = flatten.forward(currentOutput);
     }
 
     return currentOutput; // Return the final output
