@@ -9,7 +9,7 @@ class ReLu {
     // method to compute the ReLU function
     std::vector<std::vector<std::vector<double>>> forward(const std::vector<std::vector<std::vector<double>>>& input) const;
     // method for backward propagation
-    std::vector<std::vector<std::vector<double>>> ReLu::backward(const std::vector<std::vector<std::vector<double>>>& input, const std::vector<double>& upstreamGradient);
+    std::vector<std::vector<std::vector<double>>> backward(const std::vector<std::vector<std::vector<double>>>& input, const std::vector<double>& upstreamGradient);
 
     private:
     // private method to compute the derivative of the ReLU function

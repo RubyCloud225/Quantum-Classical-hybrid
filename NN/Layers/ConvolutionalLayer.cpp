@@ -39,7 +39,7 @@ std::vector<std::vector<std::vector<double>>> ConvolutionalLayer::forwardPass(co
     std::vector<std::vector<double>>(output_height, 
     std::vector<double>(output_width, 0.0)));
 
-    std::vector<std::vector<std::vector<double>>> input(input_channels_, std::vector<std::vector<double>>(input_height, std::vector<double>(input_width, 0.0)));
+    std::vector<std::vector<std::vector<double>>> input_tensor(input_channels_, std::vector<std::vector<double>>(input_height, std::vector<double>(input_width, 0.0)));
 
     for (int oc = 0; oc < output_channels_; ++oc) { // For each output channel
         for (int i = 0; i < output_height; ++i) {

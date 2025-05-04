@@ -43,6 +43,10 @@ std::vector<std::vector<std::vector<double>>> NeuralNetwork::forward(const std::
     for (const auto& flatten : flatten_) {
         currentOutput = flatten.forward(currentOutput);
     }
+    // FullyConnected
+    for (const auto& fullyConnectedLayer : fullyConnectedLayers_) {
+        currentOutput = fullyConnectedLayer.Inputweights(currentOutput);
+    }
 
     return currentOutput; // Return the final output
 }

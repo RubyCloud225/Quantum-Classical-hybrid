@@ -53,5 +53,10 @@
         "variant": "cpp",
         "iostream": "cpp",
         "unordered_set": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "python.analysis.extraPaths": [
+        "./NN/test_",
+        "./NN/test_"
+    ]
 }
