@@ -64,6 +64,18 @@ condition the mean by computing the graient of the log proability of the mean wi
     the condition is on y
     strategy used is Sohl- Dickstein et al (2015) - lets look for something more recient 
 
+use the reverse mode automatic differentiation to compute the gradient of the log probability of the mean with respect to the mean
+https://arxiv.org/pdf/1509.07164 
+- this is the reverse process
+f(y,µ,σ) = log (Normal(y|µ,σ)) =−1/2
+(y−µ/σ)^2 −log σ−1/2 log(2π)
+
+with a gradient
+
+∂f/∂y(y,µ,σ) =−(y−µ)σ^-2
+∂f/∂µ(y,µ,σ) = (y−µ)σ^-2
+∂f/∂σ(y,µ,σ) =−(y−µ)^2σ^−3 − σ^−1
+
 condition the score:
     compute the P_mean_variance output
 
