@@ -1,6 +1,7 @@
 #include "BetaSchedule.hpp"
 #include "GaussianDiffusion.hpp"
 #include "EpsilonPredictor.hpp"
+#include "Diffusion_model.hpp"
 
 int main() {
     //Initialize parameters
@@ -14,11 +15,15 @@ int main() {
     double beta1 = 0.9;
     double beta2 = 0.999;
     double epsilon = 1e-8;
+    int input_size = 3; // Example input size
+    int outsize_size = 3; // Example output size
+    int epochs = 5;
     AdamOptimizer adam_optimizer(learning_rate, beta1, beta2, epsilon);
     // Create an instance of GaussianDiffusion
     int num_timesteps = 1000;
     std::vector<double> betas(num_timesteps, initial_beta);
     GaussianDiffusion gaussian_diffusion(num_timesteps, betas, adam_optimizer);
+    DiffusionModel diffusion_model(input_size, outsize_size); // Example input and output sizes
     // Example data for the forward process
     std::vector<std::vector<double>> training_data = {
         {0.1, 0.2, 0.3},
@@ -51,15 +56,20 @@ int main() {
             std::vector<double> x_t = gaussian_diffusion.forward(sample, epoch % num_timesteps);
             EpsilonPredictor predictor(sample.size(), sample.size());
             std::vector<double> epsilon_pred = predictor.predict(x_t, epoch % num_timesteps);
-            double x_start_pred = x_t[0]; // Example prediction
+            std::vector<double> sampled_x = diffusion_model.sample(x_t, t, true, nullptr, nullptr, {});
+            double x_start_pred = sampled_x[0]; // Example prediction
             double eps_pred = epsilon_pred[0]; // Example prediction
             double y = sample[0]; // Example observation
+            
 
             //log probability
             try {
                 double log_prob = NormalDist::log_prob_from_predictions(y, x_start_pred, eps_pred);
                 double dfd_y, dfd_mu, dfd_sigma;
                 NormalDist::gradients(y, x_start_pred, eps_pred, dfd_y, dfd_mu, dfd_sigma);
+                for (const auto& val : sampled_x) {
+                    std::cout << "Sampled x: " << val << std::endl;
+                }
                 std::cout << "Log Probability: " << log_prob << std::endl;
                 std::cout << "Gradients: dfd_y: " << dfd_y << ", dfd_mu: " << dfd_mu << ", dfd_sigma: " << dfd_sigma << std::endl;
             } catch (const std::exception& e) {
