@@ -2,6 +2,7 @@
 #include "GaussianDiffusion.hpp"
 #include "EpsilonPredictor.hpp"
 #include "Diffusion_model.hpp"
+#include "Diffusion_Sample.hpp"
 
 int main() {
     //Initialize parameters
@@ -75,6 +76,20 @@ int main() {
             } catch (const std::exception& e) {
                 std::cerr << "Error: " << e.what() << std::endl;
             }
+        }
+
+        // usage of p_sample_loop_progressive
+        std::vector<int> shape = {1, 3, 32, 32}; // Example shape
+        bool clip_denoised = true;
+        auto progressive_sample = Diffusion_Sample.p_sample_loop_progressive(training_data, shape, clip);
+        int step = 0;
+        for (const auto& sample : progressive_sample) {
+            std::cout << "Step: " << step << ", Sample: ";
+            for (const auto& val : sample) {
+                std::cout << val << " ";
+            }
+            std::cout << std::endl;
+            ++step;
         }
     }
     return 0;
