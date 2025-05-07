@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build')
+
 import epsilonpredictor
 
 predictor = epsilonpredictor.EpsilonPredictor(input_channels=3, output_channels=1)
