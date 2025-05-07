@@ -2,45 +2,43 @@ cmake_minimum_required(VERSION 3.14)
 project(HypernetworkModel LANGUAGES CXX)
 
 # Set C++ standard
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find Python and pybind11 packages
-find_package(Python COMPONENTS Interpreter Development REQUIRED)
-add_subdirectory(external/pybind11)
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
+find_package(pybind11 REQUIRED)
 
-# Include directories
+# Find the required libraries
 include_directories(
-    ${PROJECT_SOURCE_DIR}/NN
-    ${PROJECT_SOURCE_DIR}/NN/Layers
-    ${PROJECT_SOURCE_DIR}/DiT
+    ${PROJECT_SOURCE_DIR}/src/DiT
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
 )
 
-# Source files
-set(SOURCES
-    PythonBindings.cpp
-    NN/EpsilonPredictor.cpp
-    NN/NeuralNetwork.cpp
-    NN/Layers/ConvolutionalLayer.cpp
-    NN/Layers/Flatten.cpp
-    NN/Layers/FullyConnectedLayer.cpp
-    NN/Layers/PoolingLayer.cpp
-    NN/Layers/ReluLayer.cpp
-    DiT/BetaSchedule.cpp
-    DiT/Diffusion_model.cpp
-    DiT/Diffusion_Sample.cpp
-    DiT/GaussianDiffusion.cpp
-    DiT/NormalDist.cpp
+pybind11_add_module(Hypernetwork
+    src/Bindings/DiTWrapper.cpp
+    src/DiT/main.cpp
+    src/DiT/BetaSchedule.cpp
+    src/DiT/GaussianDiffusion.cpp
+    src/DiT/NN/EpsilonPredictor.cpp
+    src/DiT/Diffusion_model.cpp
+    src/DiT/Diffusion_Sample.cpp
+    src/DataProcessing/sampleData.cpp
+)
+target_link_libraries(Hypernetwork PRIVATE
+    ${Python3_LIBRARIES}
+    ${Python3_INCLUDE_DIRS}
+)
+target_include_directories(Hypernetwork PRIVATE
+    ${Python3_INCLUDE_DIRS}
+)
+# Set the output directory for the compiled module
+set_target_properties(Hypernetwork PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
 )
 
-# Create Python module
-pybind11_add_module(epsilonpredictor ${SOURCES})
 
-# Link libraries
-target_link_libraries(epsilonpredictor PRIVATE Python::Python pybind11::module)
-
-# Set properties for Python module
-set_target_properties(epsilonpredictor PROPERTIES
-    PREFIX ""
-    SUFFIX "${PYTHON_MODULE_EXTENSION}"
-)

@@ -186,6 +186,9 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 // inside the indicated SDK.
 CMAKE_OSX_SYSROOT:STRING=
 
+//No help, variable specified on the command line.
+CMAKE_PREFIX_PATH:UNINITIALIZED=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/share/cmake/pybind11
+
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
 
@@ -322,7 +325,7 @@ PYBIND11_USE_CROSSCOMPILING:BOOL=OFF
 pybind11_BINARY_DIR:STATIC=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/external/pybind11
 
 //The directory containing a CMake configuration file for pybind11.
-pybind11_DIR:PATH=pybind11_DIR-NOTFOUND
+pybind11_DIR:PATH=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/share/cmake/pybind11
 
 //Value Computed by CMake
 pybind11_IS_TOP_LEVEL:STATIC=OFF
@@ -461,7 +464,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -508,6 +511,8 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/bin/python3.13][/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13][/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib][found components: Interpreter Development Development.Module Development.Embed ][v3.13.2()]
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/bin/python3.13][/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13][/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib][found components: Interpreter Development Development.Module Development.Embed ][v3.13.2()]
 //Test HAS_FLTO_THIN
 HAS_FLTO_THIN:INTERNAL=1
 PYBIND11_INCLUDE_DIR:INTERNAL=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include
@@ -520,7 +525,26 @@ PYTHON_MODULE_EXTENSION:INTERNAL=.cpython-313-darwin.so
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _PYBIND11_CROSSCOMPILING:INTERNAL=OFF
-_Python:INTERNAL=Python
+_Python:INTERNAL=Python3
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=cb3fa249e86eedcf59e523c40fb802f3
+_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=d67631b7e73c716cc71bd4f49624e9d1
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/bin/python3.13
+//Path to a file.
+_Python3_INCLUDE_DIR:INTERNAL=/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;2;64;<none>;cpython-313-darwin;abi3;/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13;/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages;/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=4a402d96f7a305512dfe9e69c125ade1
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python3_LIBRARY_RELEASE:INTERNAL=/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
 //Compiler reason failure
 _Python_Compiler_REASON_FAILURE:INTERNAL=
 _Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=cb3fa249e86eedcf59e523c40fb802f3
@@ -545,5 +569,5 @@ pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
 pybind11_INCLUDE_DIR:INTERNAL=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include;/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13
+pybind11_INCLUDE_DIRS:INTERNAL=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include;/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13
 

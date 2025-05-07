@@ -1,80 +1,50 @@
 [
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/PythonBindings.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/PythonBindings.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/PythonBindings.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/PythonBindings.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o"
 },
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/NN/EpsilonPredictor.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/EpsilonPredictor.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/EpsilonPredictor.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/NN/EpsilonPredictor.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o"
 },
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/NN/NeuralNetwork.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/NeuralNetwork.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/NeuralNetwork.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/NN/NeuralNetwork.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o"
 },
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/NN/Layers/ConvolutionalLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/ConvolutionalLayer.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/ConvolutionalLayer.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/NN/Layers/ConvolutionalLayer.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o"
 },
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/NN/Layers/Flatten.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/Flatten.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/Flatten.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/NN/Layers/Flatten.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o"
 },
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/NN/Layers/FullyConnectedLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/FullyConnectedLayer.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/FullyConnectedLayer.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/NN/Layers/FullyConnectedLayer.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o"
 },
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/NN/Layers/PoolingLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/PoolingLayer.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/PoolingLayer.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/NN/Layers/PoolingLayer.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o"
 },
 {
   "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/NN/Layers/ReluLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/ReluLayer.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers/ReluLayer.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/NN/Layers/ReluLayer.cpp.o"
-},
-{
-  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/DiT/BetaSchedule.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/BetaSchedule.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/BetaSchedule.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/DiT/BetaSchedule.cpp.o"
-},
-{
-  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/Diffusion_model.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/Diffusion_model.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_model.cpp.o"
-},
-{
-  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/Diffusion_Sample.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/Diffusion_Sample.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_Sample.cpp.o"
-},
-{
-  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/DiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/GaussianDiffusion.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/GaussianDiffusion.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/DiT/GaussianDiffusion.cpp.o"
-},
-{
-  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
-  "command": "/usr/bin/clang++ -Depsilonpredictor_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/NN/Layers -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11/include -g -std=gnu++14 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/epsilonpredictor.dir/DiT/NormalDist.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/NormalDist.cpp",
-  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/DiT/NormalDist.cpp",
-  "output": "CMakeFiles/epsilonpredictor.dir/DiT/NormalDist.cpp.o"
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o"
 }
 ]

@@ -1,8 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/cmake_install.cmake",
-		"/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/external/pybind11/cmake_install.cmake"
+		"/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
