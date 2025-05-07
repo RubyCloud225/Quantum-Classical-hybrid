@@ -1,6 +1,7 @@
 #include "Diffusion_model.hpp"
 #include <algorithm>
 #include <cmath>
+#include <omp.h>
 
 DiffusionModel::DiffusionModel(int input_size, int output_size) : input_size(input_size), output_size(output_size), normal_dist(0.0, 1.0) {
     if (input_size <= 0 || output_size <= 0) {
@@ -18,7 +19,7 @@ void DiffusionModel::compute_mean_variance(const std::vector<double>& x_t, int t
     mean.resize(x_t.size());
     variance.resize(x_t.size());
     // Example mean and variance computation
-    for (int i = 0; i < output_size; ++i) {
+    #pragma omp parallel for (int i = 0; i < output_size; ++i) {
         mean[i] = x_t[i % input_size] * (1.0 - t / 1000.0); // Placeholder computation
         variance[i] = 1.0 - t / 1000.0; // Placeholder computation
     }
@@ -42,14 +43,12 @@ std::vector<double> DiffusionModel::sample(
     std::vector<double> x_start = (denoised_fn) ? denoised_fn(mean) : mean;
 
     // Clip denoised values if required
-    if (clip_denoised) {
-        for (auto& value : x_start) {
-            value = std::clamp(value, -1.0, 1.0);
-        }
+    #pragma omp parallel for (size_t i = 0; i < x_start.size(); ++i) {
+        x_start[i] = std::clamp(x_start[i], -1.0, 1.0);
     }
     // Sample from the normal distribution
     std::vector<double> sample(x.size());
-    for (size_t i = 0; i < x.size(); ++i) {
+    #pragma omp parallel for (size_t i = 0; i < x.size(); ++i) {
         sample[i] = x_start[i] + std::sqrt(variance[i]) * normal_dist(generator);
     }
 

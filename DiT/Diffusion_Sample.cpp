@@ -1,5 +1,8 @@
 #include "Diffusion_Sample.hpp"
 #include "Diffusion_model.hpp"
+#include <random>
+#include <omp.h>
+
 
 DiffusionSample::DiffusionSample(DiffusionModel& model, const std::vector<double>& noise_schedule)
     : model(model), noise_schedule_(noise_schedule), generator_(std::random_device{}()), normal_dist_(0.0, 1.0) {}
@@ -41,25 +44,36 @@ std::vector<std::unordered_map<std::string, std::vector<double>>> DiffusionSampl
     const std::string& device
 ) {
     std::vector<std::unordered_map<std::string, std::vector<double>>> samples;
-    for (int n = 0; n < shape[0]; ++n) {
-        std::unordered_map<std::string, std::vector<double>> sample;
-        std::vector<double> x_t(shape[1] * shape[2] * shape[3], 0.0);
-        for (int t = shape[0] - 1; t >= 0; --t) {
-            double noise = distribution_(generator_) * std::sqrt(variance[i]);
-            x_t[i] = mean[i] + noise;
-        }
+    #pragma omp parallel {
+        std::vector<std::unordered_map<std::string, std::vector<double>>> progressive_samples(shape[0]);
+        std::normal_distribution<double> distribution_(0.0, 1.0);
+        std::default_random_engine generator_(std::random_device{}());
 
-        if (denoised_fn) {
-            x_t = denoised_fn(x_t);
-        }
+        #pragma omp for nowait
+        for (int n = 0; n < shape[0]; ++n) {
+            std::unordered_map<std::string, std::vector<double>> sample;
+            std::vector<double> x_t(shape[1] * shape[2] * shape[3], 0.0);
 
-        if (clip_denoised) {
-            for (auto& value : x_t) {
-                value = std::clamp(value, -1.0, 1.0);
+            for (int t = shape[0] - 1; t >= 0; --t) {
+                double noise = distribution_(generator_) * std::sqrt(variance[i]);
+                x_t[i] = mean[i] + noise;
             }
+
+            if (denoised_fn) {
+                x_t = denoised_fn(x_t);
+            }
+
+            if (clip_denoised) {
+                for (auto& value : x_t) {
+                    value = std::clamp(value, -1.0, 1.0);
+                }
+            }
+            // Store the sample in the progressive_samples vector
+            sample["sample"] = x_t;
+            progressive_samples.push_back(sample);
         }
-        sample["sample"] = x_t; // Store the sample
-        samples.push_back(sample);
+        #pragma omp critial
+        samples.insert(samples.end(), progressive_samples.begin(), progressive_samples.end());
     }
     return progressive_samples;
 }

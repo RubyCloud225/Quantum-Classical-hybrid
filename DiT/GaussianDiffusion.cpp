@@ -1,5 +1,6 @@
 #include "GaussianDiffusion.hpp"
 #include "EpsilonPredictor.hpp"
+#include <omp.h>
 
 // Adam Optimizer Constructor
 AdamOptimizer::AdamOptimizer(double learning_rate, double beta1, double beta2, double epsilon) : learning_rate_(learning_rate), beta1_(beta1), beta2_(beta2), epsilon_(epsilon), t_(0) {
@@ -13,7 +14,7 @@ void AdamOptimizer::update(std::vector<double>& params, std::vector<double>& gra
         m_.resize(params.size(), 0);
         v_.resize(params.size(), 0);
     }
-    for (size_t i = 0; i < params.size(); ++i) {
+    #pragma omp parallel for (size_t i = 0; i < params.size(); ++i) {
         m_[i] = beta1_ * m_[i] + (1 - beta1_) * gradients[i];
         v_[i] = beta2_ * v_[i] + (1 - beta2_) * gradients[i] * gradients[i];
         double m_hat = m_[i] / (1 - std::pow(beta1_, t_));
@@ -72,7 +73,7 @@ double GaussianDiffusion::sigmoid_derivative(double x) const {
 
 //train method
 void GaussianDiffusion::train(const std::vector<std::vector<double>>& data, int epochs) {
-    for (int epoch = 0; epoch < epochs; ++epoch) {
+    #pragma omp parallel for (int epoch = 0; epoch < epochs; ++epoch) {
         for (const auto& sample : data) {
             // Current timestamp
             int t = epoch % num_timesteps_;
