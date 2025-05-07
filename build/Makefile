@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Hypernetwork/bui
 
 # Special rule for the target edit_cache
 edit_cache:
-	@echo "Running external command ..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
 	/opt/homebrew/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@echo "Running external command ..."
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
 	/opt/homebrew/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -116,6 +116,331 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named epsilonpredictor
+
+# Build rule for target.
+epsilonpredictor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 epsilonpredictor
+.PHONY : epsilonpredictor
+
+# fast build rule for target.
+epsilonpredictor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/build
+.PHONY : epsilonpredictor/fast
+
+DiT/BetaSchedule.o: DiT/BetaSchedule.cpp.o
+.PHONY : DiT/BetaSchedule.o
+
+# target to build an object file
+DiT/BetaSchedule.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/BetaSchedule.cpp.o
+.PHONY : DiT/BetaSchedule.cpp.o
+
+DiT/BetaSchedule.i: DiT/BetaSchedule.cpp.i
+.PHONY : DiT/BetaSchedule.i
+
+# target to preprocess a source file
+DiT/BetaSchedule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/BetaSchedule.cpp.i
+.PHONY : DiT/BetaSchedule.cpp.i
+
+DiT/BetaSchedule.s: DiT/BetaSchedule.cpp.s
+.PHONY : DiT/BetaSchedule.s
+
+# target to generate assembly for a file
+DiT/BetaSchedule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/BetaSchedule.cpp.s
+.PHONY : DiT/BetaSchedule.cpp.s
+
+DiT/Diffusion_Sample.o: DiT/Diffusion_Sample.cpp.o
+.PHONY : DiT/Diffusion_Sample.o
+
+# target to build an object file
+DiT/Diffusion_Sample.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_Sample.cpp.o
+.PHONY : DiT/Diffusion_Sample.cpp.o
+
+DiT/Diffusion_Sample.i: DiT/Diffusion_Sample.cpp.i
+.PHONY : DiT/Diffusion_Sample.i
+
+# target to preprocess a source file
+DiT/Diffusion_Sample.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_Sample.cpp.i
+.PHONY : DiT/Diffusion_Sample.cpp.i
+
+DiT/Diffusion_Sample.s: DiT/Diffusion_Sample.cpp.s
+.PHONY : DiT/Diffusion_Sample.s
+
+# target to generate assembly for a file
+DiT/Diffusion_Sample.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_Sample.cpp.s
+.PHONY : DiT/Diffusion_Sample.cpp.s
+
+DiT/Diffusion_model.o: DiT/Diffusion_model.cpp.o
+.PHONY : DiT/Diffusion_model.o
+
+# target to build an object file
+DiT/Diffusion_model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_model.cpp.o
+.PHONY : DiT/Diffusion_model.cpp.o
+
+DiT/Diffusion_model.i: DiT/Diffusion_model.cpp.i
+.PHONY : DiT/Diffusion_model.i
+
+# target to preprocess a source file
+DiT/Diffusion_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_model.cpp.i
+.PHONY : DiT/Diffusion_model.cpp.i
+
+DiT/Diffusion_model.s: DiT/Diffusion_model.cpp.s
+.PHONY : DiT/Diffusion_model.s
+
+# target to generate assembly for a file
+DiT/Diffusion_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/Diffusion_model.cpp.s
+.PHONY : DiT/Diffusion_model.cpp.s
+
+DiT/GaussianDiffusion.o: DiT/GaussianDiffusion.cpp.o
+.PHONY : DiT/GaussianDiffusion.o
+
+# target to build an object file
+DiT/GaussianDiffusion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/GaussianDiffusion.cpp.o
+.PHONY : DiT/GaussianDiffusion.cpp.o
+
+DiT/GaussianDiffusion.i: DiT/GaussianDiffusion.cpp.i
+.PHONY : DiT/GaussianDiffusion.i
+
+# target to preprocess a source file
+DiT/GaussianDiffusion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/GaussianDiffusion.cpp.i
+.PHONY : DiT/GaussianDiffusion.cpp.i
+
+DiT/GaussianDiffusion.s: DiT/GaussianDiffusion.cpp.s
+.PHONY : DiT/GaussianDiffusion.s
+
+# target to generate assembly for a file
+DiT/GaussianDiffusion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/GaussianDiffusion.cpp.s
+.PHONY : DiT/GaussianDiffusion.cpp.s
+
+DiT/NormalDist.o: DiT/NormalDist.cpp.o
+.PHONY : DiT/NormalDist.o
+
+# target to build an object file
+DiT/NormalDist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/NormalDist.cpp.o
+.PHONY : DiT/NormalDist.cpp.o
+
+DiT/NormalDist.i: DiT/NormalDist.cpp.i
+.PHONY : DiT/NormalDist.i
+
+# target to preprocess a source file
+DiT/NormalDist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/NormalDist.cpp.i
+.PHONY : DiT/NormalDist.cpp.i
+
+DiT/NormalDist.s: DiT/NormalDist.cpp.s
+.PHONY : DiT/NormalDist.s
+
+# target to generate assembly for a file
+DiT/NormalDist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/DiT/NormalDist.cpp.s
+.PHONY : DiT/NormalDist.cpp.s
+
+NN/EpsilonPredictor.o: NN/EpsilonPredictor.cpp.o
+.PHONY : NN/EpsilonPredictor.o
+
+# target to build an object file
+NN/EpsilonPredictor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/EpsilonPredictor.cpp.o
+.PHONY : NN/EpsilonPredictor.cpp.o
+
+NN/EpsilonPredictor.i: NN/EpsilonPredictor.cpp.i
+.PHONY : NN/EpsilonPredictor.i
+
+# target to preprocess a source file
+NN/EpsilonPredictor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/EpsilonPredictor.cpp.i
+.PHONY : NN/EpsilonPredictor.cpp.i
+
+NN/EpsilonPredictor.s: NN/EpsilonPredictor.cpp.s
+.PHONY : NN/EpsilonPredictor.s
+
+# target to generate assembly for a file
+NN/EpsilonPredictor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/EpsilonPredictor.cpp.s
+.PHONY : NN/EpsilonPredictor.cpp.s
+
+NN/Layers/ConvolutionalLayer.o: NN/Layers/ConvolutionalLayer.cpp.o
+.PHONY : NN/Layers/ConvolutionalLayer.o
+
+# target to build an object file
+NN/Layers/ConvolutionalLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/ConvolutionalLayer.cpp.o
+.PHONY : NN/Layers/ConvolutionalLayer.cpp.o
+
+NN/Layers/ConvolutionalLayer.i: NN/Layers/ConvolutionalLayer.cpp.i
+.PHONY : NN/Layers/ConvolutionalLayer.i
+
+# target to preprocess a source file
+NN/Layers/ConvolutionalLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/ConvolutionalLayer.cpp.i
+.PHONY : NN/Layers/ConvolutionalLayer.cpp.i
+
+NN/Layers/ConvolutionalLayer.s: NN/Layers/ConvolutionalLayer.cpp.s
+.PHONY : NN/Layers/ConvolutionalLayer.s
+
+# target to generate assembly for a file
+NN/Layers/ConvolutionalLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/ConvolutionalLayer.cpp.s
+.PHONY : NN/Layers/ConvolutionalLayer.cpp.s
+
+NN/Layers/Flatten.o: NN/Layers/Flatten.cpp.o
+.PHONY : NN/Layers/Flatten.o
+
+# target to build an object file
+NN/Layers/Flatten.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/Flatten.cpp.o
+.PHONY : NN/Layers/Flatten.cpp.o
+
+NN/Layers/Flatten.i: NN/Layers/Flatten.cpp.i
+.PHONY : NN/Layers/Flatten.i
+
+# target to preprocess a source file
+NN/Layers/Flatten.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/Flatten.cpp.i
+.PHONY : NN/Layers/Flatten.cpp.i
+
+NN/Layers/Flatten.s: NN/Layers/Flatten.cpp.s
+.PHONY : NN/Layers/Flatten.s
+
+# target to generate assembly for a file
+NN/Layers/Flatten.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/Flatten.cpp.s
+.PHONY : NN/Layers/Flatten.cpp.s
+
+NN/Layers/FullyConnectedLayer.o: NN/Layers/FullyConnectedLayer.cpp.o
+.PHONY : NN/Layers/FullyConnectedLayer.o
+
+# target to build an object file
+NN/Layers/FullyConnectedLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/FullyConnectedLayer.cpp.o
+.PHONY : NN/Layers/FullyConnectedLayer.cpp.o
+
+NN/Layers/FullyConnectedLayer.i: NN/Layers/FullyConnectedLayer.cpp.i
+.PHONY : NN/Layers/FullyConnectedLayer.i
+
+# target to preprocess a source file
+NN/Layers/FullyConnectedLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/FullyConnectedLayer.cpp.i
+.PHONY : NN/Layers/FullyConnectedLayer.cpp.i
+
+NN/Layers/FullyConnectedLayer.s: NN/Layers/FullyConnectedLayer.cpp.s
+.PHONY : NN/Layers/FullyConnectedLayer.s
+
+# target to generate assembly for a file
+NN/Layers/FullyConnectedLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/FullyConnectedLayer.cpp.s
+.PHONY : NN/Layers/FullyConnectedLayer.cpp.s
+
+NN/Layers/PoolingLayer.o: NN/Layers/PoolingLayer.cpp.o
+.PHONY : NN/Layers/PoolingLayer.o
+
+# target to build an object file
+NN/Layers/PoolingLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/PoolingLayer.cpp.o
+.PHONY : NN/Layers/PoolingLayer.cpp.o
+
+NN/Layers/PoolingLayer.i: NN/Layers/PoolingLayer.cpp.i
+.PHONY : NN/Layers/PoolingLayer.i
+
+# target to preprocess a source file
+NN/Layers/PoolingLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/PoolingLayer.cpp.i
+.PHONY : NN/Layers/PoolingLayer.cpp.i
+
+NN/Layers/PoolingLayer.s: NN/Layers/PoolingLayer.cpp.s
+.PHONY : NN/Layers/PoolingLayer.s
+
+# target to generate assembly for a file
+NN/Layers/PoolingLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/PoolingLayer.cpp.s
+.PHONY : NN/Layers/PoolingLayer.cpp.s
+
+NN/Layers/ReluLayer.o: NN/Layers/ReluLayer.cpp.o
+.PHONY : NN/Layers/ReluLayer.o
+
+# target to build an object file
+NN/Layers/ReluLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/ReluLayer.cpp.o
+.PHONY : NN/Layers/ReluLayer.cpp.o
+
+NN/Layers/ReluLayer.i: NN/Layers/ReluLayer.cpp.i
+.PHONY : NN/Layers/ReluLayer.i
+
+# target to preprocess a source file
+NN/Layers/ReluLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/ReluLayer.cpp.i
+.PHONY : NN/Layers/ReluLayer.cpp.i
+
+NN/Layers/ReluLayer.s: NN/Layers/ReluLayer.cpp.s
+.PHONY : NN/Layers/ReluLayer.s
+
+# target to generate assembly for a file
+NN/Layers/ReluLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/Layers/ReluLayer.cpp.s
+.PHONY : NN/Layers/ReluLayer.cpp.s
+
+NN/NeuralNetwork.o: NN/NeuralNetwork.cpp.o
+.PHONY : NN/NeuralNetwork.o
+
+# target to build an object file
+NN/NeuralNetwork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/NeuralNetwork.cpp.o
+.PHONY : NN/NeuralNetwork.cpp.o
+
+NN/NeuralNetwork.i: NN/NeuralNetwork.cpp.i
+.PHONY : NN/NeuralNetwork.i
+
+# target to preprocess a source file
+NN/NeuralNetwork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/NeuralNetwork.cpp.i
+.PHONY : NN/NeuralNetwork.cpp.i
+
+NN/NeuralNetwork.s: NN/NeuralNetwork.cpp.s
+.PHONY : NN/NeuralNetwork.s
+
+# target to generate assembly for a file
+NN/NeuralNetwork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/NN/NeuralNetwork.cpp.s
+.PHONY : NN/NeuralNetwork.cpp.s
+
+PythonBindings.o: PythonBindings.cpp.o
+.PHONY : PythonBindings.o
+
+# target to build an object file
+PythonBindings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/PythonBindings.cpp.o
+.PHONY : PythonBindings.cpp.o
+
+PythonBindings.i: PythonBindings.cpp.i
+.PHONY : PythonBindings.i
+
+# target to preprocess a source file
+PythonBindings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/PythonBindings.cpp.i
+.PHONY : PythonBindings.cpp.i
+
+PythonBindings.s: PythonBindings.cpp.s
+.PHONY : PythonBindings.s
+
+# target to generate assembly for a file
+PythonBindings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/epsilonpredictor.dir/build.make CMakeFiles/epsilonpredictor.dir/PythonBindings.cpp.s
+.PHONY : PythonBindings.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +449,46 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... epsilonpredictor"
+	@echo "... DiT/BetaSchedule.o"
+	@echo "... DiT/BetaSchedule.i"
+	@echo "... DiT/BetaSchedule.s"
+	@echo "... DiT/Diffusion_Sample.o"
+	@echo "... DiT/Diffusion_Sample.i"
+	@echo "... DiT/Diffusion_Sample.s"
+	@echo "... DiT/Diffusion_model.o"
+	@echo "... DiT/Diffusion_model.i"
+	@echo "... DiT/Diffusion_model.s"
+	@echo "... DiT/GaussianDiffusion.o"
+	@echo "... DiT/GaussianDiffusion.i"
+	@echo "... DiT/GaussianDiffusion.s"
+	@echo "... DiT/NormalDist.o"
+	@echo "... DiT/NormalDist.i"
+	@echo "... DiT/NormalDist.s"
+	@echo "... NN/EpsilonPredictor.o"
+	@echo "... NN/EpsilonPredictor.i"
+	@echo "... NN/EpsilonPredictor.s"
+	@echo "... NN/Layers/ConvolutionalLayer.o"
+	@echo "... NN/Layers/ConvolutionalLayer.i"
+	@echo "... NN/Layers/ConvolutionalLayer.s"
+	@echo "... NN/Layers/Flatten.o"
+	@echo "... NN/Layers/Flatten.i"
+	@echo "... NN/Layers/Flatten.s"
+	@echo "... NN/Layers/FullyConnectedLayer.o"
+	@echo "... NN/Layers/FullyConnectedLayer.i"
+	@echo "... NN/Layers/FullyConnectedLayer.s"
+	@echo "... NN/Layers/PoolingLayer.o"
+	@echo "... NN/Layers/PoolingLayer.i"
+	@echo "... NN/Layers/PoolingLayer.s"
+	@echo "... NN/Layers/ReluLayer.o"
+	@echo "... NN/Layers/ReluLayer.i"
+	@echo "... NN/Layers/ReluLayer.s"
+	@echo "... NN/NeuralNetwork.o"
+	@echo "... NN/NeuralNetwork.i"
+	@echo "... NN/NeuralNetwork.s"
+	@echo "... PythonBindings.o"
+	@echo "... PythonBindings.i"
+	@echo "... PythonBindings.s"
 .PHONY : help
 
 

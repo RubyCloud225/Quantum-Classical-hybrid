@@ -451,3 +451,44 @@ events:
       LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
       TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.4)
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "external/pybind11/tools/pybind11Common.cmake:316 (check_cxx_compiler_flag)"
+      - "external/pybind11/tools/pybind11Common.cmake:356 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "external/pybind11/tools/pybind11Common.cmake:417 (_pybind11_generate_lto)"
+      - "external/pybind11/CMakeLists.txt:238 (include)"
+    checks:
+      - "Performing Test HAS_FLTO_THIN"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ByQXTf"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ByQXTf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "HAS_FLTO_THIN"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ByQXTf'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5150a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5150a.dir/build.make CMakeFiles/cmTC_5150a.dir/build
+        Building CXX object CMakeFiles/cmTC_5150a.dir/src.cxx.o
+        /usr/bin/clang++ -DHAS_FLTO_THIN  -std=gnu++14 -arch arm64   -flto -MD -MT CMakeFiles/cmTC_5150a.dir/src.cxx.o -MF CMakeFiles/cmTC_5150a.dir/src.cxx.o.d -o CMakeFiles/cmTC_5150a.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ByQXTf/src.cxx
+        Linking CXX executable cmTC_5150a
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5150a.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5150a.dir/src.cxx.o -o cmTC_5150a  -flto
+        
+      exitCode: 0
+...

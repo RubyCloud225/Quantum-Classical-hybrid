@@ -1,4 +1,6 @@
 #include "Diffusion_model.hpp"
+#include <algorithm>
+#include <cmath>
 
 DiffusionModel::DiffusionModel(int input_size, int output_size) : input_size(input_size), output_size(output_size), normal_dist(0.0, 1.0) {
     if (input_size <= 0 || output_size <= 0) {
@@ -47,8 +49,8 @@ std::vector<double> DiffusionModel::sample(
     }
     // Sample from the normal distribution
     std::vector<double> sample(x.size());
-    for (size_t i = 0; i < x.size(); ++1) {
-        sample[i] = x_start[i] + std:;sqrt(variance[i]) * distribution_(generator);
+    for (size_t i = 0; i < x.size(); ++i) {
+        sample[i] = x_start[i] + std::sqrt(variance[i]) * normal_dist(generator);
     }
 
     return sample;

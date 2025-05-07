@@ -58,5 +58,6 @@
     "python.analysis.extraPaths": [
         "./NN/test_",
         "./NN/test_"
-    ]
+    ],
+    "cmake.sourceDirectory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11"
 }
