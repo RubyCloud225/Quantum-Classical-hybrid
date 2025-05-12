@@ -17,12 +17,12 @@ class DiffusionSample {
     public:
     DiffusionSample(DiffusionModel& model, const std::vector<double>& noise_schedule);
     // Generate a batch of samples
-    std::vector<std::double>> p_sample(
+    std::vector<std::vector<double> > p_sample(
         std::vector<int>& shape,
         bool clip_denoised,
         const std::function<std::vector<double>(const std::vector<double>&)>& denoised_fn,
         const std::unordered_map<std::string, double>& model_kwags,
-        const std::string& device,
+        const std::string& device
     );
     
     // Generate a single sample
@@ -31,8 +31,7 @@ class DiffusionSample {
         bool clip_denoised,
         const std::function<std::vector<double>(const std::vector<double>&)>& denoised_fn,
         const std::unordered_map<std::string, double>& model_kwags,
-        const std::string& device,
-    );
+        const std::string& device);
     private:
     DiffusionModel& model_;
     std::vector<double> noise_schedule_;

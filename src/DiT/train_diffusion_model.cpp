@@ -5,6 +5,7 @@
 #include "Diffusion_model.hpp"
 #include "Diffusion_Sample.hpp"
 #include "DataProcessing/sampleData.hpp"
+#include "train_diffusion_model.hpp"
 
 void train_diffusion_model(
     double initial_beta,

@@ -8,6 +8,7 @@
 #include "Diffusion_Sample.hpp"
 #include "NormalDist.hpp"
 #include "sampleData.hpp"
+#include "train_diffusion_model.hpp"
 
 namespace py = pybind11;
 PYBIND11_MODULE(dit_wrapper, m) {
@@ -17,30 +18,30 @@ PYBIND11_MODULE(dit_wrapper, m) {
 
     //Wrapping GaussianDiffusion
     py::class_<GaussianDiffusion>(m, "GaussianDiffusion")
-        .def(py::init<int, const std::vector<double>>()) // number of timesteps, beta schedule
-        .def("train", &GaussianDiffusion::train, py::arg("training_noise"), py::arg("targets"), py::arg("nll_losses") py::arg("epochs"))
+        .def(py::init<int, double, double>(), py::arg("num_timesteps"), py::arg("beta_start"), py::arg("beta_end"))
+        .def("train", &GaussianDiffusion::train, py::arg("data"), py::arg("epochs"))
         .def("forward", &GaussianDiffusion::forward, py::arg("x_prev"), py::arg("t"));
     
     //Wrapping DiffusionModel
     py::class_<DiffusionModel>(m, "DiffusionModel")
         .def(py::init<int, int>()) // input size, output size
-        .def("forward", &DiffusionModel::forward, py::arg("x_t"), py::arg("t"), py::arg("clip_denoised"), py::arg("denoised_fn"), py::arg("model_kwargs"));
+        .def("compute_mean_variance", &DiffusionModel::compute_mean_variance, py::arg("x_t"), py::arg("t"), py::arg("mean"), py::arg("variance"));
     
     //Wrapping EpisilonPredictor
     py::class_<EpsilonPredictor>(m, "EpsilonPredictor")
         .def(py::init<int, int>()) // input size, output size
-        .def("predict", &EpsilionPredictor::predict, py::arg("x_t"), py::arg("t"));
+        .def("predictEpsilon", &EpsilonPredictor::predictEpilson, py::arg("x_t"), py::arg("t"));
     
     //Wrapping DiffusionSample
     py::class_<DiffusionSample>(m, "DiffusionSample")
-        .def(py::init<>())
+        .def(py::init<DiffusionModel&, const std::vector<double>&>(), py::arg("model"), py::arg("noise_schedule"))
         .def("p_sample", &DiffusionSample::p_sample, py::arg("shape"), py::arg("clip_denoised"), py::arg("denoised_fn"), py::arg("model_kwargs"), py::arg("device") = "cpu")
         .def("p_sample_loop_progressive", &DiffusionSample::p_sample_loop_progressive, py::arg("shape"), py::arg("clip_denoised"), py::arg("denoised_fn"), py::arg("model_kwargs"), py::arg("device") = "cpu");
     
     //Wrapping NormalDist
-    py::class_<NormalDist>(m, "NormalDist")
-        .def_static("log_prob_from_predictions", &NormalDist::log_prob_from_predictions, py::arg("y"), py::arg("x_start_pred"), py::arg("eps_pred"))
-        .def_static("gradients", &NormalDist::gradients, py::arg("y"), py::arg("x_start_pred"), py::arg("eps_pred"), py::arg("dfd_y"), py::arg("dfd_mu"), py::arg("dfd_sigma"));
+
+    m.def("log_prob_from_predictions", &NormalDist::log_prob_from_predictions, py::arg("y"), py::arg("x_start_pred"), py::arg("eps_pred"));
+    m.def("gradients", &NormalDist::gradients, py::arg("y"), py::arg("x_start_pred"), py::arg("eps_pred"), py::arg("dfd_y"), py::arg("dfd_mu"), py::arg("dfd_sigma"));
     
     // Wrape main loop function (for training)
     m.def("train_diffusion_model", &train_diffusion_model, 

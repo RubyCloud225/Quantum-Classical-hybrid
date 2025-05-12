@@ -1040,4 +1040,5 @@ CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o: \
   /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.hpp \
   /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.hpp \
   /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NormalDist.hpp \
-  /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.hpp
+  /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.hpp \
+  /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/train_diffusion_model.hpp

@@ -26,6 +26,9 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
+//CUDA compiler
+CMAKE_CUDA_COMPILER:FILEPATH=CMAKE_CUDA_COMPILER-NOTFOUND
+
 //CXX compiler
 CMAKE_CXX_COMPILER:STRING=/usr/bin/clang++
 
@@ -358,6 +361,8 @@ CMAKE_COMMAND:INTERNAL=/opt/homebrew/bin/cmake
 CMAKE_CPACK_COMMAND:INTERNAL=/opt/homebrew/bin/cpack
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/opt/homebrew/bin/ctest
+//ADVANCED property for variable: CMAKE_CUDA_COMPILER
+CMAKE_CUDA_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS

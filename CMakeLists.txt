@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
 find_package(pybind11 REQUIRED)
 
+
 # Find the required libraries
 include_directories(
     ${PROJECT_SOURCE_DIR}/src/DiT
@@ -17,6 +18,7 @@ include_directories(
 
 pybind11_add_module(Hypernetwork
     src/Bindings/DiTWrapper.cpp
+    src/Bindings/DataWrapper.cpp
     src/DiT/main.cpp
     src/DiT/BetaSchedule.cpp
     src/DiT/GaussianDiffusion.cpp
@@ -24,13 +26,21 @@ pybind11_add_module(Hypernetwork
     src/DiT/Diffusion_model.cpp
     src/DiT/Diffusion_Sample.cpp
     src/DataProcessing/sampleData.cpp
+    src/DataProcessing/GaussianNoise.cpp
+    src/DataProcessing/LinearRegression.cpp
+    src/DataProcessing/PreprocessingBindings.cpp
+    src/DataProcessing/tokenizer.cpp
 )
+
+# Set the include directories for the Hypernetwork module
 target_link_libraries(Hypernetwork PRIVATE
     ${Python3_LIBRARIES}
     ${Python3_INCLUDE_DIRS}
 )
 target_include_directories(Hypernetwork PRIVATE
     ${Python3_INCLUDE_DIRS}
+    ${PROJECT_SOURCE_DIR}/src/DiT
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
 )
 # Set the output directory for the compiled module
 set_target_properties(Hypernetwork PROPERTIES

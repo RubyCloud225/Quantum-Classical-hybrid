@@ -5,7 +5,6 @@
 #include <iostream>
 #include <vector>
 
-
 class EpsilonPredictor {
     public:
     EpsilonPredictor(int input_channels, int output_size);
