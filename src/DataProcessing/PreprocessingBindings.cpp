@@ -12,8 +12,7 @@ namespace py = pybind11;
 
 py::dict run_preprocessing(const std::string& input, bool use_gpu = false) {
     // Tokenization
-    Token
-    std::vector<std::string> tokens = tokenize(input);
+    const std::vector<std::string> tokens = tokenize(input);
     int totalTokens = countTokens(tokens);
     int uniqueTokens = countUniqueTokens(tokens);
     int totalWords = countWords(tokens);
