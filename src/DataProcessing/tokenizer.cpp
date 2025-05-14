@@ -27,6 +27,7 @@ int Tokenizer::countToken(const std::vector<std::string>& tokens) {
     return uniqueTokens.size();
 }
 
+// Tokenize sentences
 int Tokenizer::countSentences(const std::string& input) {
     std::regex sentence_regex("[.!?]+");
     std::sregex_token_iterator iter(input.begin(), input.end(), sentence_regex);
