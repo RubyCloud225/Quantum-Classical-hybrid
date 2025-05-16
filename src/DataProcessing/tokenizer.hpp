@@ -7,19 +7,19 @@
 
 class Tokenizer {
     public:
-    std::vector<std::string> tokenize(const std::string& input);
+    std::vector<std::string> tokenize(const input.c_str());
     // count total number of tokens
-    int countTokens(const std::vector<std::string>& tokens);
+    int countTokens(const tokens.c_str());
     // count number of unique tokens types
-    int countUniqueTokens(const std::vector<std::string>& tokens);
+    int countUniqueTokens(const std::vector<std::string> & tokens);
     // count number of sentences
-    int countSentences(const std::vector<std::string>& tokens);
+    int countSentences(const std::vector<std::string> & input);
     // count number of words
-    int countWords(const std::vector<std::string>& tokens);
+    int countWords(const std::vector<std::string> & tokens);
     // count number of characters
-    int countCharacters(const std::vector<std::string>& tokens);
+    int countCharacters(const std::vector<std::string> & tokens);
     // number of punctuation
-    int countPunctuation(const std::string & input);
+    int countPunctuation(const std::vector<std::string> & input);
     // create positional embedding
     std::unordered_map<std::string, std::vector<int>> createPositionalEmbeddings(const std::vector<std::string>& tokens);
     private:

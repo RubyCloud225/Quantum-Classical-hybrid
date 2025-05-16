@@ -22,13 +22,13 @@ std::vector<std::string> Tokenizer::tokenize(const std::string& input) {
     return tokens;
 }
 
-int Tokenizer::countToken(const std::vector<std::string>& tokens) {
+int Tokenizer::countToken(const std::vector<std::string> & tokens) {
     std::unordered_set<std::string> uniqueTokens(tokens.begin(), tokens.end());
     return uniqueTokens.size();
 }
 
 // Tokenize sentences
-int Tokenizer::countSentences(const std::string& input) {
+int Tokenizer::countSentences(const std::vector<std::string> & input) {
     std::regex sentence_regex("[.!?]+");
     std::sregex_token_iterator iter(input.begin(), input.end(), sentence_regex);
     std::sregex_token_iterator end;
@@ -39,7 +39,7 @@ int Tokenizer::countWords(const std::vector<std::string>& tokens) {
     return tokens.size();
 }
 
-int Tokenizer::countPunctuation(const std::string& input) {
+int Tokenizer::countPunctuation(const std::vector<std::string>& input) {
     std::regex punctuation_regex("[^\\w\\s]");
     std::sregex_token_iterator iter(input.begin(), input.end(), punctuation_regex);
     std::sregex_token_iterator end;

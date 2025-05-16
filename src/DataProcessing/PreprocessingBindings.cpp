@@ -12,14 +12,16 @@ namespace py = pybind11;
 
 py::dict run_preprocessing(const std::string& input, bool use_gpu = false) {
     // Tokenization
-    const std::vector<std::string> tokens = tokenize(input);
-    int totalTokens = countTokens(tokens);
-    int uniqueTokens = countUniqueTokens(tokens);
-    int totalWords = countWords(tokens);
-    int totalPunctuation = countPunctuation(input);
+    Tokenizer token;
+    std::vector<std::string> tokens = token.tokenize(input);
+    int totalTokens = token.countTokens(tokens);
+    int uniqueTokens = token.countUniqueTokens(tokens);
+    int totalWords = token.countWords(tokens);
+    int sentences = token.countSentences(input);
+    int totalPunctuation = token.countPunctuation(input);
 
     // Positional Embeddings (optional to expose in return)
-    auto positionalEmbeddings = createPositionalEmbeddings(tokens);
+    auto positionalEmbeddings = token.createPositionalEmbeddings(tokens);
 
     // Gaussian noise setup
     std::vector<double> mean = {static_cast<double>(totalTokens), static_cast<double>(uniqueTokens)};
@@ -85,12 +87,12 @@ py::dict run_preprocessing(const std::string& input, bool use_gpu = false) {
             static_cast<double>(totalWords),
             static_cast<double>(totalPunctuation)
         };
-        sample.gaussian_noise = noiseSamples[i];
+        sample.noise = noiseSamples[i];
         sample.target_value = static_cast<double>(totalTokens);
         sample.normalized_noise = normalizedNLL;  // technically normalized NLL
         sample.density = density;
         sample.nll = nllValues[i];
-        sample.entropy = entropy;
+        sample.entopy = entropy;
         dataset.push_back(sample);
     }
 
@@ -98,13 +100,9 @@ py::dict run_preprocessing(const std::string& input, bool use_gpu = false) {
     saveSamples(dataset, "sample_data.bin");
 
     // Return metadata to Python
-    py::dict(result = py::dict("tokens"_a=tokens,
-                                "total_tokens"_a=totalTokens,
-                                "unique_tokens"_a=uniqueTokens,
-                                "normalized_nll"_a=normalizedNLL,
-                                "entropy"_a=entropy));
-    if (!warning.empty()) {
-        result["warning"] = warning;
+    result = py::dict("tokens" = totalTokens, "unique_tokens" = uniqueTokens, "words" = totalWords, "punctuation" = totalPunctuation);
+    if (!result.empty()) {
+        result["warning"]
     }
     return result;
                                 
