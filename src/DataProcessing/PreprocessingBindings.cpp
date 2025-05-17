@@ -6,19 +6,29 @@
 #include "LayerNormalization.hpp"
 #include "sampleData.hpp"
 #include <iostream>
+#include <string>
+#include <vector>
+#include <string>
 
 namespace py = pybind11;
 
 
-py::dict run_preprocessing(const std::string& input, bool use_gpu = false) {
+py::dict run_preprocessing(
+    const std::string& input, 
+            std::string& tokens, 
+            std::string& totalTokens,
+            std::string& uniqueTokens,
+            std::string& totalWords,
+            std::string& sentences,
+            std::string& totalPunctuation) {
     // Tokenization
-    Tokenizer token;
-    std::vector<std::string> tokens = token.tokenize(input);
-    int totalTokens = token.countTokens(tokens);
-    int uniqueTokens = token.countUniqueTokens(tokens);
-    int totalWords = token.countWords(tokens);
-    int sentences = token.countSentences(input);
-    int totalPunctuation = token.countPunctuation(input);
+    Tokenizer tokenizer;
+    tokens = tokenizer.tokenize(input);
+    totalTokens = tokenizer.countTokens(tokens);
+    uniqueTokens = tokenizer.countUniqueTokens(tokens);
+    totalWords = tokenizer.countWords(tokens);
+    sentences = tokenizer.countSentences(input);
+    totalPunctuation = tokenizer.countPunctuation(input);
 
     // Positional Embeddings (optional to expose in return)
     auto positionalEmbeddings = token.createPositionalEmbeddings(tokens);
