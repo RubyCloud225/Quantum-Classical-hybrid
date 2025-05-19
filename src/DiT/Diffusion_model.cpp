@@ -2,6 +2,9 @@
 #include <algorithm>
 #include <cmath>
 #include <omp.h>
+#include <chrono>
+#include <iostream>
+#include <cassert>
 
 DiffusionModel::DiffusionModel(int input_size, int output_size) : input_size(input_size), output_size(output_size), normal_dist(0.0, 1.0) {
     if (input_size <= 0 || output_size <= 0) {
