@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 #include <string>
+#include <cstring>
 
 namespace py = pybind11;
 
@@ -23,12 +24,12 @@ py::dict run_preprocessing(
             std::string& totalPunctuation) {
     // Tokenization
     Tokenizer tokenizer;
-    tokens = tokenizer.tokenize(input);
-    totalTokens = tokenizer.countTokens(tokens);
-    uniqueTokens = tokenizer.countUniqueTokens(tokens);
-    totalWords = tokenizer.countWords(tokens);
-    sentences = tokenizer.countSentences(input);
-    totalPunctuation = tokenizer.countPunctuation(input);
+    string str tokens = tokenizer.tokenize(input);
+    string str totalTokens = tokenizer.countTokens(tokens);
+    string str uniqueTokens = tokenizer.countUniqueTokens(tokens);
+    string str totalWords = tokenizer.countWords(tokens);
+    string str sentences = tokenizer.countSentences(input);
+    string str totalPunctuation = tokenizer.countPunctuation(input);
 
     // Positional Embeddings (optional to expose in return)
     auto positionalEmbeddings = token.createPositionalEmbeddings(tokens);

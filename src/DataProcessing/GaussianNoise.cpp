@@ -1,7 +1,11 @@
+
 #include "GaussianNoise.hpp"
 #include <stdexcept>
 #include <cmath>
+
+#ifndef __APPLE__
 #include <cuda_runtime.h>
+#endif
 
 // Constructor
 GaussianNoise::GaussianNoise(const std::vector<double>& mean,
@@ -85,6 +89,7 @@ double GaussianNoise::calculateEntropy() const {
     return 0.5 * (n * std::log(2 * M_PI) + std::log(determinant));
 }
 
+#ifndef __APPLE__
 void GaussianNoise::uploadToDevice() {
     int n = static_cast<int>(mean_.size());
     size_t vec_size = n * sizeof(double);
@@ -123,3 +128,4 @@ void GaussianNoise::runCUDAKernel(std::vector<double>& output) {
     cudaMemcpy(output.data(), d_noise_, dim * sizeof(double), cudaMemcpyDeviceToHost);
     freeDeviceMemory();
 }
+#endif

@@ -1,5 +1,8 @@
+
 #include "LayerNormalization.hpp"
+#ifndef __APPLE__
 #include "LayerNormalizationKernels.cuh"
+#endif
 #include <numeric>
 #include <cmath>
 #include <stdexcept>
@@ -22,15 +25,18 @@ std::vector<double> LayerNormalization::forward(const std::vector<double>& input
         throw std::invalid_argument("input size must be Normal_shape");
     }
 
-    // Calculate mean
-    double mean = std::accumulate(input.begin(), input.end(), 0.0) / normal_shape;
-
-    // calculate the variance 
-    double variance = 0.0;
+    // calculate mean and variance using Welford's online algorithm for numerical stability
+    double mean = 0.0;
+    double M2 = 0.0;
+    int n = 0;
     for (const auto& value : input) {
-        variance += (value - mean) * (value - mean);
+        n++;
+        double delta = value - mean;
+        mean += delta / n;
+        double delta2 = value - mean;
+        M2 += delta * delta2;
     }
-    variance /= normal_shape;
+    double variance = M2 / normal_shape;
 
     // Calculate the standard deviation
     double std_dev = std::sqrt(variance + epsilon);

@@ -30,6 +30,17 @@ pybind11_add_module(Hypernetwork
     src/DataProcessing/LinearRegression.cpp
     src/DataProcessing/PreprocessingBindings.cpp
     src/DataProcessing/tokenizer.cpp
+    src/DataProcessing/LayerNormalization.cpp
+    src/DataProcessing/tests/LayerNormalization_performance.cpp
+    src/DataProcessing/tests/LayerNormalization_edge_cases.cpp
+    src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp
+    src/DataProcessing/tests/LinearRegression_basic_tests.cpp
+    src/DataProcessing/tests/LinearRegression_edge_cases.cpp
+    src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp
+    src/DataProcessing/tests/sampleData_basic_tests.cpp
+    src/DataProcessing/tests/gaussianNoise_edge_cases.cpp
+    src/DiT/tests/BetaSchedule_tests.cpp
+    src/DiT/tests/BetaSchedule_edge_cases.cpp
 )
 
 # Set the include directories for the Hypernetwork module
