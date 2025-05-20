@@ -41,6 +41,8 @@ pybind11_add_module(Hypernetwork
     src/DataProcessing/tests/gaussianNoise_edge_cases.cpp
     src/DiT/tests/BetaSchedule_tests.cpp
     src/DiT/tests/BetaSchedule_edge_cases.cpp
+    src/DiT/tests/Diffusion_model_tests.cpp
+    src/DiT/tests/Diffusion_sample_test.cpp
 )
 
 # Set the include directories for the Hypernetwork module
@@ -60,6 +62,21 @@ set_target_properties(Hypernetwork PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
+)
+
+# Add executable target for Diffusion Sample Test with debug flags
+add_executable(DiffusionSampleTest src/DiT/tests/Diffusion_sample_test.cpp)
+
+target_include_directories(DiffusionSampleTest PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/DiT
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+)
+
+target_compile_options(DiffusionSampleTest PRIVATE -g)
+
+target_link_libraries(DiffusionSampleTest PRIVATE
+    ${Python3_LIBRARIES}
+    ${Python3_INCLUDE_DIRS}
 )
 
 

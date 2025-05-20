@@ -1,7 +1,6 @@
 #include "Diffusion_model.hpp"
 #include <algorithm>
 #include <cmath>
-#include <omp.h>
 #include <chrono>
 #include <iostream>
 #include <cassert>
@@ -9,6 +8,14 @@
 DiffusionModel::DiffusionModel(int input_size, int output_size) : input_size(input_size), output_size(output_size), normal_dist(0.0, 1.0) {
     if (input_size <= 0 || output_size <= 0) {
         throw std::invalid_argument("Input and output sizes must be positive integers.");
+    }
+}
+
+// Helper function to clamp values in a vector to a specified range
+void clamp_vector(std::vector<double>& vec, double min_val, double max_val) {
+    #pragma omp parallel for
+    for (size_t i = 0; i < vec.size(); ++i) {
+       vec[i] = std::clamp(vec[i], min_val, max_val);
     }
 }
 
@@ -22,7 +29,8 @@ void DiffusionModel::compute_mean_variance(const std::vector<double>& x_t, int t
     mean.resize(x_t.size());
     variance.resize(x_t.size());
     // Example mean and variance computation
-    #pragma omp parallel for (int i = 0; i < output_size; ++i) {
+    #pragma omp parallel for 
+    for (int i = 0; i < output_size; ++i) {
         mean[i] = x_t[i % input_size] * (1.0 - t / 1000.0); // Placeholder computation
         variance[i] = 1.0 - t / 1000.0; // Placeholder computation
     }
@@ -46,14 +54,17 @@ std::vector<double> DiffusionModel::sample(
     std::vector<double> x_start = (denoised_fn) ? denoised_fn(mean) : mean;
 
     // Clip denoised values if required
-    #pragma omp parallel for (size_t i = 0; i < x_start.size(); ++i) {
-        x_start[i] = std::clamp(x_start[i], -1.0, 1.0);
-    }
+    clamp_vector(x_start, -1.0, 1.0);
+
     // Sample from the normal distribution
     std::vector<double> sample(x.size());
-    #pragma omp parallel for (size_t i = 0; i < x.size(); ++i) {
+    #pragma omp parallel for 
+    for (size_t i = 0; i < x.size(); ++i) {
         sample[i] = x_start[i] + std::sqrt(variance[i]) * normal_dist(generator);
     }
+
+    // Clamp the final sample to [-1.0, 1.0]
+    clamp_vector(sample, -1.0, 1.0);
 
     return sample;
 }

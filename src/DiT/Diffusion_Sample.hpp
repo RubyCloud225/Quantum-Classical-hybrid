@@ -18,7 +18,7 @@ class DiffusionSample {
     DiffusionSample(DiffusionModel& model, const std::vector<double>& noise_schedule);
     // Generate a batch of samples
     std::vector<std::vector<double> > p_sample(
-        std::vector<int>& shape,
+        const std::vector<int>& shape,
         bool clip_denoised,
         const std::function<std::vector<double>(const std::vector<double>&)>& denoised_fn,
         const std::unordered_map<std::string, double>& model_kwags,
@@ -37,6 +37,10 @@ class DiffusionSample {
     std::vector<double> noise_schedule_;
     std::default_random_engine generator_;
     std::normal_distribution<double> normal_dist_;
+public:
+    static double clamp(double value, double min_val, double max_val) {
+        return std::max(min_val, std::min(value, max_val));
+    }
 };
 
 #endif // DIFFUSION_SAMPLE_HPP
