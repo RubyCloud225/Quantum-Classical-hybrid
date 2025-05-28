@@ -64,4 +64,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Hypernetwork.dir/DependInfo.cmake"
+  "CMakeFiles/DiffusionSampleTest.dir/DependInfo.cmake"
+  "CMakeFiles/GaussianDiffusionTest.dir/DependInfo.cmake"
   )

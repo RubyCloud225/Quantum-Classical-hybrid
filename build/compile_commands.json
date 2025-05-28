@@ -76,5 +76,149 @@
   "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp",
   "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp",
   "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++ -DHypernetwork_EXPORTS -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /Users/catherinepemblington/Documents/GitHub/Hypernetwork/.venv/lib/python3.13/site-packages/pybind11/include -g -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp",
+  "output": "CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp",
+  "output": "CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/GaussianDiffusion.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/EpsilonPredictor.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/EpsilonPredictor.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/NeuralNetwork.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/NeuralNetwork.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/NeuralNetwork.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/NeuralNetwork.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ConvolutionalLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/ConvolutionalLayer.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/ConvolutionalLayer.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ConvolutionalLayer.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/Flatten.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/Flatten.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/Flatten.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/Flatten.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/FullyConnectedLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/FullyConnectedLayer.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/FullyConnectedLayer.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/FullyConnectedLayer.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/PoolingLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/PoolingLayer.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/PoolingLayer.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/PoolingLayer.cpp.o"
+},
+{
+  "directory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build",
+  "command": "/usr/bin/clang++  -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing -I/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN -I/opt/homebrew/opt/libomp/include -g -std=gnu++17 -arch arm64 -g -o CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ReluLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/ReluLayer.cpp",
+  "file": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/Layers/ReluLayer.cpp",
+  "output": "CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ReluLayer.cpp.o"
 }
 ]

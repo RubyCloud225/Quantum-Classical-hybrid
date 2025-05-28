@@ -1,3 +1,5 @@
 /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/Hypernetwork.dir
+/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/DiffusionSampleTest.dir
+/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/GaussianDiffusionTest.dir
 /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/edit_cache.dir
 /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/rebuild_cache.dir

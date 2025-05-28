@@ -64,10 +64,14 @@ CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Hypernetwork/bui
 
 # The main recursive "all" target.
 all: CMakeFiles/Hypernetwork.dir/all
+all: CMakeFiles/DiffusionSampleTest.dir/all
+all: CMakeFiles/GaussianDiffusionTest.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/Hypernetwork.dir/codegen
+codegen: CMakeFiles/DiffusionSampleTest.dir/codegen
+codegen: CMakeFiles/GaussianDiffusionTest.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +80,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Hypernetwork.dir/clean
+clean: CMakeFiles/DiffusionSampleTest.dir/clean
+clean: CMakeFiles/GaussianDiffusionTest.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,12 +91,12 @@ clean: CMakeFiles/Hypernetwork.dir/clean
 CMakeFiles/Hypernetwork.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target Hypernetwork"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target Hypernetwork"
 .PHONY : CMakeFiles/Hypernetwork.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Hypernetwork.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Hypernetwork.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles 0
 .PHONY : CMakeFiles/Hypernetwork.dir/rule
@@ -102,13 +108,77 @@ Hypernetwork: CMakeFiles/Hypernetwork.dir/rule
 # codegen rule for target.
 CMakeFiles/Hypernetwork.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Finished codegen for target Hypernetwork"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Finished codegen for target Hypernetwork"
 .PHONY : CMakeFiles/Hypernetwork.dir/codegen
 
 # clean rule for target.
 CMakeFiles/Hypernetwork.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/clean
 .PHONY : CMakeFiles/Hypernetwork.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/DiffusionSampleTest.dir
+
+# All Build rule for target.
+CMakeFiles/DiffusionSampleTest.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=1,2 "Built target DiffusionSampleTest"
+.PHONY : CMakeFiles/DiffusionSampleTest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/DiffusionSampleTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DiffusionSampleTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles 0
+.PHONY : CMakeFiles/DiffusionSampleTest.dir/rule
+
+# Convenience name for target.
+DiffusionSampleTest: CMakeFiles/DiffusionSampleTest.dir/rule
+.PHONY : DiffusionSampleTest
+
+# codegen rule for target.
+CMakeFiles/DiffusionSampleTest.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=1,2 "Finished codegen for target DiffusionSampleTest"
+.PHONY : CMakeFiles/DiffusionSampleTest.dir/codegen
+
+# clean rule for target.
+CMakeFiles/DiffusionSampleTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/clean
+.PHONY : CMakeFiles/DiffusionSampleTest.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/GaussianDiffusionTest.dir
+
+# All Build rule for target.
+CMakeFiles/GaussianDiffusionTest.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Built target GaussianDiffusionTest"
+.PHONY : CMakeFiles/GaussianDiffusionTest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/GaussianDiffusionTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GaussianDiffusionTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles 0
+.PHONY : CMakeFiles/GaussianDiffusionTest.dir/rule
+
+# Convenience name for target.
+GaussianDiffusionTest: CMakeFiles/GaussianDiffusionTest.dir/rule
+.PHONY : GaussianDiffusionTest
+
+# codegen rule for target.
+CMakeFiles/GaussianDiffusionTest.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12 "Finished codegen for target GaussianDiffusionTest"
+.PHONY : CMakeFiles/GaussianDiffusionTest.dir/codegen
+
+# clean rule for target.
+CMakeFiles/GaussianDiffusionTest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/clean
+.PHONY : CMakeFiles/GaussianDiffusionTest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

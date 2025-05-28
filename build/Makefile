@@ -129,6 +129,32 @@ Hypernetwork/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/build
 .PHONY : Hypernetwork/fast
 
+#=============================================================================
+# Target rules for targets named DiffusionSampleTest
+
+# Build rule for target.
+DiffusionSampleTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DiffusionSampleTest
+.PHONY : DiffusionSampleTest
+
+# fast build rule for target.
+DiffusionSampleTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/build
+.PHONY : DiffusionSampleTest/fast
+
+#=============================================================================
+# Target rules for targets named GaussianDiffusionTest
+
+# Build rule for target.
+GaussianDiffusionTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GaussianDiffusionTest
+.PHONY : GaussianDiffusionTest
+
+# fast build rule for target.
+GaussianDiffusionTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/build
+.PHONY : GaussianDiffusionTest/fast
+
 src/Bindings/DataWrapper.o: src/Bindings/DataWrapper.cpp.o
 .PHONY : src/Bindings/DataWrapper.o
 
@@ -201,6 +227,30 @@ src/DataProcessing/GaussianNoise.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.s
 .PHONY : src/DataProcessing/GaussianNoise.cpp.s
 
+src/DataProcessing/LayerNormalization.o: src/DataProcessing/LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/LayerNormalization.o
+
+# target to build an object file
+src/DataProcessing/LayerNormalization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/LayerNormalization.cpp.o
+
+src/DataProcessing/LayerNormalization.i: src/DataProcessing/LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/LayerNormalization.i
+
+# target to preprocess a source file
+src/DataProcessing/LayerNormalization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/LayerNormalization.cpp.i
+
+src/DataProcessing/LayerNormalization.s: src/DataProcessing/LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/LayerNormalization.s
+
+# target to generate assembly for a file
+src/DataProcessing/LayerNormalization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/LayerNormalization.cpp.s
+
 src/DataProcessing/LinearRegression.o: src/DataProcessing/LinearRegression.cpp.o
 .PHONY : src/DataProcessing/LinearRegression.o
 
@@ -272,6 +322,198 @@ src/DataProcessing/sampleData.s: src/DataProcessing/sampleData.cpp.s
 src/DataProcessing/sampleData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.s
 .PHONY : src/DataProcessing/sampleData.cpp.s
+
+src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.o: src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.o
+
+# target to build an object file
+src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o
+
+src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.i: src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i
+
+src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.s: src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s
+
+src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.o: src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.o
+
+# target to build an object file
+src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o
+
+src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.i: src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i
+
+src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.s: src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s
+
+src/DataProcessing/tests/LayerNormalization_edge_cases.o: src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o
+.PHONY : src/DataProcessing/tests/LayerNormalization_edge_cases.o
+
+# target to build an object file
+src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o
+.PHONY : src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o
+
+src/DataProcessing/tests/LayerNormalization_edge_cases.i: src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i
+.PHONY : src/DataProcessing/tests/LayerNormalization_edge_cases.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i
+.PHONY : src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i
+
+src/DataProcessing/tests/LayerNormalization_edge_cases.s: src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s
+.PHONY : src/DataProcessing/tests/LayerNormalization_edge_cases.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s
+.PHONY : src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s
+
+src/DataProcessing/tests/LayerNormalization_performance.o: src/DataProcessing/tests/LayerNormalization_performance.cpp.o
+.PHONY : src/DataProcessing/tests/LayerNormalization_performance.o
+
+# target to build an object file
+src/DataProcessing/tests/LayerNormalization_performance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o
+.PHONY : src/DataProcessing/tests/LayerNormalization_performance.cpp.o
+
+src/DataProcessing/tests/LayerNormalization_performance.i: src/DataProcessing/tests/LayerNormalization_performance.cpp.i
+.PHONY : src/DataProcessing/tests/LayerNormalization_performance.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/LayerNormalization_performance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.i
+.PHONY : src/DataProcessing/tests/LayerNormalization_performance.cpp.i
+
+src/DataProcessing/tests/LayerNormalization_performance.s: src/DataProcessing/tests/LayerNormalization_performance.cpp.s
+.PHONY : src/DataProcessing/tests/LayerNormalization_performance.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/LayerNormalization_performance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.s
+.PHONY : src/DataProcessing/tests/LayerNormalization_performance.cpp.s
+
+src/DataProcessing/tests/LinearRegression_basic_tests.o: src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o
+.PHONY : src/DataProcessing/tests/LinearRegression_basic_tests.o
+
+# target to build an object file
+src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o
+.PHONY : src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o
+
+src/DataProcessing/tests/LinearRegression_basic_tests.i: src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i
+.PHONY : src/DataProcessing/tests/LinearRegression_basic_tests.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i
+.PHONY : src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i
+
+src/DataProcessing/tests/LinearRegression_basic_tests.s: src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s
+.PHONY : src/DataProcessing/tests/LinearRegression_basic_tests.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s
+.PHONY : src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s
+
+src/DataProcessing/tests/LinearRegression_edge_cases.o: src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o
+.PHONY : src/DataProcessing/tests/LinearRegression_edge_cases.o
+
+# target to build an object file
+src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o
+.PHONY : src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o
+
+src/DataProcessing/tests/LinearRegression_edge_cases.i: src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i
+.PHONY : src/DataProcessing/tests/LinearRegression_edge_cases.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i
+.PHONY : src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i
+
+src/DataProcessing/tests/LinearRegression_edge_cases.s: src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s
+.PHONY : src/DataProcessing/tests/LinearRegression_edge_cases.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s
+.PHONY : src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s
+
+src/DataProcessing/tests/gaussianNoise_edge_cases.o: src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o
+.PHONY : src/DataProcessing/tests/gaussianNoise_edge_cases.o
+
+# target to build an object file
+src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o
+.PHONY : src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o
+
+src/DataProcessing/tests/gaussianNoise_edge_cases.i: src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i
+.PHONY : src/DataProcessing/tests/gaussianNoise_edge_cases.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i
+.PHONY : src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i
+
+src/DataProcessing/tests/gaussianNoise_edge_cases.s: src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s
+.PHONY : src/DataProcessing/tests/gaussianNoise_edge_cases.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s
+.PHONY : src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s
+
+src/DataProcessing/tests/sampleData_basic_tests.o: src/DataProcessing/tests/sampleData_basic_tests.cpp.o
+.PHONY : src/DataProcessing/tests/sampleData_basic_tests.o
+
+# target to build an object file
+src/DataProcessing/tests/sampleData_basic_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o
+.PHONY : src/DataProcessing/tests/sampleData_basic_tests.cpp.o
+
+src/DataProcessing/tests/sampleData_basic_tests.i: src/DataProcessing/tests/sampleData_basic_tests.cpp.i
+.PHONY : src/DataProcessing/tests/sampleData_basic_tests.i
+
+# target to preprocess a source file
+src/DataProcessing/tests/sampleData_basic_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.i
+.PHONY : src/DataProcessing/tests/sampleData_basic_tests.cpp.i
+
+src/DataProcessing/tests/sampleData_basic_tests.s: src/DataProcessing/tests/sampleData_basic_tests.cpp.s
+.PHONY : src/DataProcessing/tests/sampleData_basic_tests.s
+
+# target to generate assembly for a file
+src/DataProcessing/tests/sampleData_basic_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.s
+.PHONY : src/DataProcessing/tests/sampleData_basic_tests.cpp.s
 
 src/DataProcessing/tokenizer.o: src/DataProcessing/tokenizer.cpp.o
 .PHONY : src/DataProcessing/tokenizer.o
@@ -375,6 +617,7 @@ src/DiT/GaussianDiffusion.o: src/DiT/GaussianDiffusion.cpp.o
 # target to build an object file
 src/DiT/GaussianDiffusion.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/GaussianDiffusion.cpp.o
 .PHONY : src/DiT/GaussianDiffusion.cpp.o
 
 src/DiT/GaussianDiffusion.i: src/DiT/GaussianDiffusion.cpp.i
@@ -383,6 +626,7 @@ src/DiT/GaussianDiffusion.i: src/DiT/GaussianDiffusion.cpp.i
 # target to preprocess a source file
 src/DiT/GaussianDiffusion.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/GaussianDiffusion.cpp.i
 .PHONY : src/DiT/GaussianDiffusion.cpp.i
 
 src/DiT/GaussianDiffusion.s: src/DiT/GaussianDiffusion.cpp.s
@@ -391,6 +635,7 @@ src/DiT/GaussianDiffusion.s: src/DiT/GaussianDiffusion.cpp.s
 # target to generate assembly for a file
 src/DiT/GaussianDiffusion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/GaussianDiffusion.cpp.s
 .PHONY : src/DiT/GaussianDiffusion.cpp.s
 
 src/DiT/NN/EpsilonPredictor.o: src/DiT/NN/EpsilonPredictor.cpp.o
@@ -399,6 +644,7 @@ src/DiT/NN/EpsilonPredictor.o: src/DiT/NN/EpsilonPredictor.cpp.o
 # target to build an object file
 src/DiT/NN/EpsilonPredictor.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/EpsilonPredictor.cpp.o
 .PHONY : src/DiT/NN/EpsilonPredictor.cpp.o
 
 src/DiT/NN/EpsilonPredictor.i: src/DiT/NN/EpsilonPredictor.cpp.i
@@ -407,6 +653,7 @@ src/DiT/NN/EpsilonPredictor.i: src/DiT/NN/EpsilonPredictor.cpp.i
 # target to preprocess a source file
 src/DiT/NN/EpsilonPredictor.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/EpsilonPredictor.cpp.i
 .PHONY : src/DiT/NN/EpsilonPredictor.cpp.i
 
 src/DiT/NN/EpsilonPredictor.s: src/DiT/NN/EpsilonPredictor.cpp.s
@@ -415,7 +662,152 @@ src/DiT/NN/EpsilonPredictor.s: src/DiT/NN/EpsilonPredictor.cpp.s
 # target to generate assembly for a file
 src/DiT/NN/EpsilonPredictor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/EpsilonPredictor.cpp.s
 .PHONY : src/DiT/NN/EpsilonPredictor.cpp.s
+
+src/DiT/NN/Layers/ConvolutionalLayer.o: src/DiT/NN/Layers/ConvolutionalLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/ConvolutionalLayer.o
+
+# target to build an object file
+src/DiT/NN/Layers/ConvolutionalLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ConvolutionalLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/ConvolutionalLayer.cpp.o
+
+src/DiT/NN/Layers/ConvolutionalLayer.i: src/DiT/NN/Layers/ConvolutionalLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/ConvolutionalLayer.i
+
+# target to preprocess a source file
+src/DiT/NN/Layers/ConvolutionalLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ConvolutionalLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/ConvolutionalLayer.cpp.i
+
+src/DiT/NN/Layers/ConvolutionalLayer.s: src/DiT/NN/Layers/ConvolutionalLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/ConvolutionalLayer.s
+
+# target to generate assembly for a file
+src/DiT/NN/Layers/ConvolutionalLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ConvolutionalLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/ConvolutionalLayer.cpp.s
+
+src/DiT/NN/Layers/Flatten.o: src/DiT/NN/Layers/Flatten.cpp.o
+.PHONY : src/DiT/NN/Layers/Flatten.o
+
+# target to build an object file
+src/DiT/NN/Layers/Flatten.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/Flatten.cpp.o
+.PHONY : src/DiT/NN/Layers/Flatten.cpp.o
+
+src/DiT/NN/Layers/Flatten.i: src/DiT/NN/Layers/Flatten.cpp.i
+.PHONY : src/DiT/NN/Layers/Flatten.i
+
+# target to preprocess a source file
+src/DiT/NN/Layers/Flatten.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/Flatten.cpp.i
+.PHONY : src/DiT/NN/Layers/Flatten.cpp.i
+
+src/DiT/NN/Layers/Flatten.s: src/DiT/NN/Layers/Flatten.cpp.s
+.PHONY : src/DiT/NN/Layers/Flatten.s
+
+# target to generate assembly for a file
+src/DiT/NN/Layers/Flatten.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/Flatten.cpp.s
+.PHONY : src/DiT/NN/Layers/Flatten.cpp.s
+
+src/DiT/NN/Layers/FullyConnectedLayer.o: src/DiT/NN/Layers/FullyConnectedLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/FullyConnectedLayer.o
+
+# target to build an object file
+src/DiT/NN/Layers/FullyConnectedLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/FullyConnectedLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/FullyConnectedLayer.cpp.o
+
+src/DiT/NN/Layers/FullyConnectedLayer.i: src/DiT/NN/Layers/FullyConnectedLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/FullyConnectedLayer.i
+
+# target to preprocess a source file
+src/DiT/NN/Layers/FullyConnectedLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/FullyConnectedLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/FullyConnectedLayer.cpp.i
+
+src/DiT/NN/Layers/FullyConnectedLayer.s: src/DiT/NN/Layers/FullyConnectedLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/FullyConnectedLayer.s
+
+# target to generate assembly for a file
+src/DiT/NN/Layers/FullyConnectedLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/FullyConnectedLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/FullyConnectedLayer.cpp.s
+
+src/DiT/NN/Layers/PoolingLayer.o: src/DiT/NN/Layers/PoolingLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/PoolingLayer.o
+
+# target to build an object file
+src/DiT/NN/Layers/PoolingLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/PoolingLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/PoolingLayer.cpp.o
+
+src/DiT/NN/Layers/PoolingLayer.i: src/DiT/NN/Layers/PoolingLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/PoolingLayer.i
+
+# target to preprocess a source file
+src/DiT/NN/Layers/PoolingLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/PoolingLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/PoolingLayer.cpp.i
+
+src/DiT/NN/Layers/PoolingLayer.s: src/DiT/NN/Layers/PoolingLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/PoolingLayer.s
+
+# target to generate assembly for a file
+src/DiT/NN/Layers/PoolingLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/PoolingLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/PoolingLayer.cpp.s
+
+src/DiT/NN/Layers/ReluLayer.o: src/DiT/NN/Layers/ReluLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/ReluLayer.o
+
+# target to build an object file
+src/DiT/NN/Layers/ReluLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ReluLayer.cpp.o
+.PHONY : src/DiT/NN/Layers/ReluLayer.cpp.o
+
+src/DiT/NN/Layers/ReluLayer.i: src/DiT/NN/Layers/ReluLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/ReluLayer.i
+
+# target to preprocess a source file
+src/DiT/NN/Layers/ReluLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ReluLayer.cpp.i
+.PHONY : src/DiT/NN/Layers/ReluLayer.cpp.i
+
+src/DiT/NN/Layers/ReluLayer.s: src/DiT/NN/Layers/ReluLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/ReluLayer.s
+
+# target to generate assembly for a file
+src/DiT/NN/Layers/ReluLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/Layers/ReluLayer.cpp.s
+.PHONY : src/DiT/NN/Layers/ReluLayer.cpp.s
+
+src/DiT/NN/NeuralNetwork.o: src/DiT/NN/NeuralNetwork.cpp.o
+.PHONY : src/DiT/NN/NeuralNetwork.o
+
+# target to build an object file
+src/DiT/NN/NeuralNetwork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/NeuralNetwork.cpp.o
+.PHONY : src/DiT/NN/NeuralNetwork.cpp.o
+
+src/DiT/NN/NeuralNetwork.i: src/DiT/NN/NeuralNetwork.cpp.i
+.PHONY : src/DiT/NN/NeuralNetwork.i
+
+# target to preprocess a source file
+src/DiT/NN/NeuralNetwork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/NeuralNetwork.cpp.i
+.PHONY : src/DiT/NN/NeuralNetwork.cpp.i
+
+src/DiT/NN/NeuralNetwork.s: src/DiT/NN/NeuralNetwork.cpp.s
+.PHONY : src/DiT/NN/NeuralNetwork.s
+
+# target to generate assembly for a file
+src/DiT/NN/NeuralNetwork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/NN/NeuralNetwork.cpp.s
+.PHONY : src/DiT/NN/NeuralNetwork.cpp.s
 
 src/DiT/main.o: src/DiT/main.cpp.o
 .PHONY : src/DiT/main.o
@@ -441,6 +833,132 @@ src/DiT/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.s
 .PHONY : src/DiT/main.cpp.s
 
+src/DiT/tests/BetaSchedule_edge_cases.o: src/DiT/tests/BetaSchedule_edge_cases.cpp.o
+.PHONY : src/DiT/tests/BetaSchedule_edge_cases.o
+
+# target to build an object file
+src/DiT/tests/BetaSchedule_edge_cases.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o
+.PHONY : src/DiT/tests/BetaSchedule_edge_cases.cpp.o
+
+src/DiT/tests/BetaSchedule_edge_cases.i: src/DiT/tests/BetaSchedule_edge_cases.cpp.i
+.PHONY : src/DiT/tests/BetaSchedule_edge_cases.i
+
+# target to preprocess a source file
+src/DiT/tests/BetaSchedule_edge_cases.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.i
+.PHONY : src/DiT/tests/BetaSchedule_edge_cases.cpp.i
+
+src/DiT/tests/BetaSchedule_edge_cases.s: src/DiT/tests/BetaSchedule_edge_cases.cpp.s
+.PHONY : src/DiT/tests/BetaSchedule_edge_cases.s
+
+# target to generate assembly for a file
+src/DiT/tests/BetaSchedule_edge_cases.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.s
+.PHONY : src/DiT/tests/BetaSchedule_edge_cases.cpp.s
+
+src/DiT/tests/BetaSchedule_tests.o: src/DiT/tests/BetaSchedule_tests.cpp.o
+.PHONY : src/DiT/tests/BetaSchedule_tests.o
+
+# target to build an object file
+src/DiT/tests/BetaSchedule_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o
+.PHONY : src/DiT/tests/BetaSchedule_tests.cpp.o
+
+src/DiT/tests/BetaSchedule_tests.i: src/DiT/tests/BetaSchedule_tests.cpp.i
+.PHONY : src/DiT/tests/BetaSchedule_tests.i
+
+# target to preprocess a source file
+src/DiT/tests/BetaSchedule_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.i
+.PHONY : src/DiT/tests/BetaSchedule_tests.cpp.i
+
+src/DiT/tests/BetaSchedule_tests.s: src/DiT/tests/BetaSchedule_tests.cpp.s
+.PHONY : src/DiT/tests/BetaSchedule_tests.s
+
+# target to generate assembly for a file
+src/DiT/tests/BetaSchedule_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.s
+.PHONY : src/DiT/tests/BetaSchedule_tests.cpp.s
+
+src/DiT/tests/Diffusion_model_test.o: src/DiT/tests/Diffusion_model_test.cpp.o
+.PHONY : src/DiT/tests/Diffusion_model_test.o
+
+# target to build an object file
+src/DiT/tests/Diffusion_model_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o
+.PHONY : src/DiT/tests/Diffusion_model_test.cpp.o
+
+src/DiT/tests/Diffusion_model_test.i: src/DiT/tests/Diffusion_model_test.cpp.i
+.PHONY : src/DiT/tests/Diffusion_model_test.i
+
+# target to preprocess a source file
+src/DiT/tests/Diffusion_model_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.i
+.PHONY : src/DiT/tests/Diffusion_model_test.cpp.i
+
+src/DiT/tests/Diffusion_model_test.s: src/DiT/tests/Diffusion_model_test.cpp.s
+.PHONY : src/DiT/tests/Diffusion_model_test.s
+
+# target to generate assembly for a file
+src/DiT/tests/Diffusion_model_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.s
+.PHONY : src/DiT/tests/Diffusion_model_test.cpp.s
+
+src/DiT/tests/Diffusion_sample_test.o: src/DiT/tests/Diffusion_sample_test.cpp.o
+.PHONY : src/DiT/tests/Diffusion_sample_test.o
+
+# target to build an object file
+src/DiT/tests/Diffusion_sample_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o
+.PHONY : src/DiT/tests/Diffusion_sample_test.cpp.o
+
+src/DiT/tests/Diffusion_sample_test.i: src/DiT/tests/Diffusion_sample_test.cpp.i
+.PHONY : src/DiT/tests/Diffusion_sample_test.i
+
+# target to preprocess a source file
+src/DiT/tests/Diffusion_sample_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.i
+.PHONY : src/DiT/tests/Diffusion_sample_test.cpp.i
+
+src/DiT/tests/Diffusion_sample_test.s: src/DiT/tests/Diffusion_sample_test.cpp.s
+.PHONY : src/DiT/tests/Diffusion_sample_test.s
+
+# target to generate assembly for a file
+src/DiT/tests/Diffusion_sample_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DiffusionSampleTest.dir/build.make CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.s
+.PHONY : src/DiT/tests/Diffusion_sample_test.cpp.s
+
+src/DiT/tests/Gaussian_Diffusion_test.o: src/DiT/tests/Gaussian_Diffusion_test.cpp.o
+.PHONY : src/DiT/tests/Gaussian_Diffusion_test.o
+
+# target to build an object file
+src/DiT/tests/Gaussian_Diffusion_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o
+.PHONY : src/DiT/tests/Gaussian_Diffusion_test.cpp.o
+
+src/DiT/tests/Gaussian_Diffusion_test.i: src/DiT/tests/Gaussian_Diffusion_test.cpp.i
+.PHONY : src/DiT/tests/Gaussian_Diffusion_test.i
+
+# target to preprocess a source file
+src/DiT/tests/Gaussian_Diffusion_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.i
+.PHONY : src/DiT/tests/Gaussian_Diffusion_test.cpp.i
+
+src/DiT/tests/Gaussian_Diffusion_test.s: src/DiT/tests/Gaussian_Diffusion_test.cpp.s
+.PHONY : src/DiT/tests/Gaussian_Diffusion_test.s
+
+# target to generate assembly for a file
+src/DiT/tests/Gaussian_Diffusion_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hypernetwork.dir/build.make CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.s
+.PHONY : src/DiT/tests/Gaussian_Diffusion_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -449,6 +967,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... DiffusionSampleTest"
+	@echo "... GaussianDiffusionTest"
 	@echo "... Hypernetwork"
 	@echo "... src/Bindings/DataWrapper.o"
 	@echo "... src/Bindings/DataWrapper.i"
@@ -459,6 +979,9 @@ help:
 	@echo "... src/DataProcessing/GaussianNoise.o"
 	@echo "... src/DataProcessing/GaussianNoise.i"
 	@echo "... src/DataProcessing/GaussianNoise.s"
+	@echo "... src/DataProcessing/LayerNormalization.o"
+	@echo "... src/DataProcessing/LayerNormalization.i"
+	@echo "... src/DataProcessing/LayerNormalization.s"
 	@echo "... src/DataProcessing/LinearRegression.o"
 	@echo "... src/DataProcessing/LinearRegression.i"
 	@echo "... src/DataProcessing/LinearRegression.s"
@@ -468,6 +991,30 @@ help:
 	@echo "... src/DataProcessing/sampleData.o"
 	@echo "... src/DataProcessing/sampleData.i"
 	@echo "... src/DataProcessing/sampleData.s"
+	@echo "... src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.o"
+	@echo "... src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.i"
+	@echo "... src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.s"
+	@echo "... src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.o"
+	@echo "... src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.i"
+	@echo "... src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.s"
+	@echo "... src/DataProcessing/tests/LayerNormalization_edge_cases.o"
+	@echo "... src/DataProcessing/tests/LayerNormalization_edge_cases.i"
+	@echo "... src/DataProcessing/tests/LayerNormalization_edge_cases.s"
+	@echo "... src/DataProcessing/tests/LayerNormalization_performance.o"
+	@echo "... src/DataProcessing/tests/LayerNormalization_performance.i"
+	@echo "... src/DataProcessing/tests/LayerNormalization_performance.s"
+	@echo "... src/DataProcessing/tests/LinearRegression_basic_tests.o"
+	@echo "... src/DataProcessing/tests/LinearRegression_basic_tests.i"
+	@echo "... src/DataProcessing/tests/LinearRegression_basic_tests.s"
+	@echo "... src/DataProcessing/tests/LinearRegression_edge_cases.o"
+	@echo "... src/DataProcessing/tests/LinearRegression_edge_cases.i"
+	@echo "... src/DataProcessing/tests/LinearRegression_edge_cases.s"
+	@echo "... src/DataProcessing/tests/gaussianNoise_edge_cases.o"
+	@echo "... src/DataProcessing/tests/gaussianNoise_edge_cases.i"
+	@echo "... src/DataProcessing/tests/gaussianNoise_edge_cases.s"
+	@echo "... src/DataProcessing/tests/sampleData_basic_tests.o"
+	@echo "... src/DataProcessing/tests/sampleData_basic_tests.i"
+	@echo "... src/DataProcessing/tests/sampleData_basic_tests.s"
 	@echo "... src/DataProcessing/tokenizer.o"
 	@echo "... src/DataProcessing/tokenizer.i"
 	@echo "... src/DataProcessing/tokenizer.s"
@@ -486,9 +1033,42 @@ help:
 	@echo "... src/DiT/NN/EpsilonPredictor.o"
 	@echo "... src/DiT/NN/EpsilonPredictor.i"
 	@echo "... src/DiT/NN/EpsilonPredictor.s"
+	@echo "... src/DiT/NN/Layers/ConvolutionalLayer.o"
+	@echo "... src/DiT/NN/Layers/ConvolutionalLayer.i"
+	@echo "... src/DiT/NN/Layers/ConvolutionalLayer.s"
+	@echo "... src/DiT/NN/Layers/Flatten.o"
+	@echo "... src/DiT/NN/Layers/Flatten.i"
+	@echo "... src/DiT/NN/Layers/Flatten.s"
+	@echo "... src/DiT/NN/Layers/FullyConnectedLayer.o"
+	@echo "... src/DiT/NN/Layers/FullyConnectedLayer.i"
+	@echo "... src/DiT/NN/Layers/FullyConnectedLayer.s"
+	@echo "... src/DiT/NN/Layers/PoolingLayer.o"
+	@echo "... src/DiT/NN/Layers/PoolingLayer.i"
+	@echo "... src/DiT/NN/Layers/PoolingLayer.s"
+	@echo "... src/DiT/NN/Layers/ReluLayer.o"
+	@echo "... src/DiT/NN/Layers/ReluLayer.i"
+	@echo "... src/DiT/NN/Layers/ReluLayer.s"
+	@echo "... src/DiT/NN/NeuralNetwork.o"
+	@echo "... src/DiT/NN/NeuralNetwork.i"
+	@echo "... src/DiT/NN/NeuralNetwork.s"
 	@echo "... src/DiT/main.o"
 	@echo "... src/DiT/main.i"
 	@echo "... src/DiT/main.s"
+	@echo "... src/DiT/tests/BetaSchedule_edge_cases.o"
+	@echo "... src/DiT/tests/BetaSchedule_edge_cases.i"
+	@echo "... src/DiT/tests/BetaSchedule_edge_cases.s"
+	@echo "... src/DiT/tests/BetaSchedule_tests.o"
+	@echo "... src/DiT/tests/BetaSchedule_tests.i"
+	@echo "... src/DiT/tests/BetaSchedule_tests.s"
+	@echo "... src/DiT/tests/Diffusion_model_test.o"
+	@echo "... src/DiT/tests/Diffusion_model_test.i"
+	@echo "... src/DiT/tests/Diffusion_model_test.s"
+	@echo "... src/DiT/tests/Diffusion_sample_test.o"
+	@echo "... src/DiT/tests/Diffusion_sample_test.i"
+	@echo "... src/DiT/tests/Diffusion_sample_test.s"
+	@echo "... src/DiT/tests/Gaussian_Diffusion_test.o"
+	@echo "... src/DiT/tests/Gaussian_Diffusion_test.i"
+	@echo "... src/DiT/tests/Gaussian_Diffusion_test.s"
 .PHONY : help
 
 

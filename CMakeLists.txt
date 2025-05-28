@@ -41,8 +41,9 @@ pybind11_add_module(Hypernetwork
     src/DataProcessing/tests/gaussianNoise_edge_cases.cpp
     src/DiT/tests/BetaSchedule_tests.cpp
     src/DiT/tests/BetaSchedule_edge_cases.cpp
-    src/DiT/tests/Diffusion_model_tests.cpp
+    src/DiT/tests/Diffusion_model_test.cpp
     src/DiT/tests/Diffusion_sample_test.cpp
+    src/DiT/tests/Gaussian_Diffusion_test.cpp
 )
 
 # Set the include directories for the Hypernetwork module
@@ -75,6 +76,37 @@ target_include_directories(DiffusionSampleTest PRIVATE
 target_compile_options(DiffusionSampleTest PRIVATE -g)
 
 target_link_libraries(DiffusionSampleTest PRIVATE
+    ${Python3_LIBRARIES}
+    ${Python3_INCLUDE_DIRS}
+)
+
+# Add executable target for Gaussian Diffusion Test with debug flags
+add_executable(GaussianDiffusionTest src/DiT/tests/Gaussian_Diffusion_test.cpp src/DiT/GaussianDiffusion.cpp src/DiT/NN/EpsilonPredictor.cpp src/DiT/NN/NeuralNetwork.cpp src/DiT/NN/Layers/ConvolutionalLayer.cpp src/DiT/NN/Layers/Flatten.cpp src/DiT/NN/Layers/FullyConnectedLayer.cpp src/DiT/NN/Layers/PoolingLayer.cpp src/DiT/NN/Layers/ReluLayer.cpp)
+
+target_include_directories(GaussianDiffusionTest PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/DiT
+    ${PROJECT_SOURCE_DIR}/src/DiT/NN
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+    /opt/homebrew/opt/libomp/include
+)
+
+target_compile_options(GaussianDiffusionTest PRIVATE -g)
+
+# Temporarily disable OpenMP support for GaussianDiffusionTest to allow build and run
+# set(OpenMP_CXX_INCLUDE_DIR /opt/homebrew/opt/libomp/include)
+# set(OpenMP_CXX_LIB_NAMES "omp")
+# set(OpenMP_CXX_FLAGS "-Xpreprocessor -fopenmp")
+# set(OpenMP_CXX_LIBRARIES /opt/homebrew/opt/libomp/lib/libomp.dylib)
+
+# find_package(OpenMP REQUIRED)
+# if(OpenMP_CXX_FOUND)
+#     target_include_directories(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_INCLUDE_DIR})
+#     target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
+#     target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS})
+#     target_link_directories(GaussianDiffusionTest PRIVATE /opt/homebrew/opt/libomp/lib)
+# endif()
+
+target_link_libraries(GaussianDiffusionTest PRIVATE
     ${Python3_LIBRARIES}
     ${Python3_INCLUDE_DIRS}
 )

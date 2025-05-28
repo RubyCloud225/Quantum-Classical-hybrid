@@ -552,3 +552,78 @@ events:
     message: |
       Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:95 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-UD67l6"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-UD67l6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-UD67l6'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0f1b3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0f1b3.dir/build.make CMakeFiles/cmTC_0f1b3.dir/build
+        Building CXX object CMakeFiles/cmTC_0f1b3.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/clang++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_0f1b3.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_0f1b3.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_0f1b3.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-UD67l6/OpenMPTryFlag.cpp
+        /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-UD67l6/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[2]: *** [CMakeFiles/cmTC_0f1b3.dir/OpenMPTryFlag.cpp.o] Error 1
+        make[1]: *** [cmTC_0f1b3/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:100 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Nuwq8O"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Nuwq8O"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Nuwq8O'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f109f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f109f.dir/build.make CMakeFiles/cmTC_f109f.dir/build
+        Building CXX object CMakeFiles/cmTC_f109f.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/clang++  -I/opt/homebrew/opt/libomp/include -Xpreprocessor -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_f109f.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_f109f.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_f109f.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Nuwq8O/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_f109f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f109f.dir/link.txt --verbose=1
+        /usr/bin/clang++  -Xpreprocessor -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f109f.dir/OpenMPCheckVersion.cpp.o -o cmTC_f109f
+        
+      exitCode: 0
+...

@@ -15,7 +15,9 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -30,7 +32,9 @@
 					"name" : "HypernetworkModel",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -38,8 +42,22 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "DiffusionSampleTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DiffusionSampleTest-Debug-f363a5d71c6d23f7aca6.json",
+					"name" : "DiffusionSampleTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GaussianDiffusionTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GaussianDiffusionTest-Debug-b4e3e2da0235dce29e1b.json",
+					"name" : "GaussianDiffusionTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "Hypernetwork::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Hypernetwork-Debug-56c0adf3ec62996ee6bc.json",
+					"jsonFile" : "target-Hypernetwork-Debug-58c51a7578fcf58a0737.json",
 					"name" : "Hypernetwork",
 					"projectIndex" : 0
 				}

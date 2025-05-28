@@ -7,18 +7,18 @@ AdamOptimizer::AdamOptimizer(double learning_rate, double beta1, double beta2, d
     // Initialize first and second moment vectors
 }
 
-// update method for Adam Optimizer
 void AdamOptimizer::update(std::vector<double>& params, std::vector<double>& gradients) {
     t_++;
     if (m_.empty()) {
         m_.resize(params.size(), 0);
         v_.resize(params.size(), 0);
     }
-    #pragma omp parallel for (size_t i = 0; i < params.size(); ++i) {
+    #pragma omp parallel for
+    for (size_t i = 0; i < params.size(); ++i) {
         m_[i] = beta1_ * m_[i] + (1 - beta1_) * gradients[i];
         v_[i] = beta2_ * v_[i] + (1 - beta2_) * gradients[i] * gradients[i];
         double m_hat = m_[i] / (1 - std::pow(beta1_, t_));
-        double v_hat = v_[i] / (1 - (beta2_, t_));
+        double v_hat = v_[i] / (1 - std::pow(beta2_, t_));
         params[i] -= learning_rate_ * m_hat / (std::sqrt(v_hat) + epsilon_);
     }
 }
@@ -71,9 +71,11 @@ double GaussianDiffusion::sigmoid_derivative(double x) const {
     return sig * (1.0 - sig);
 }
 
-//train method
 void GaussianDiffusion::train(const std::vector<std::vector<double>>& data, int epochs) {
-    #pragma omp parallel for (int epoch = 0; epoch < epochs; ++epoch) {
+    int input_size = data.empty() ? 0 : data[0].size();
+    int output_size = input_size; // Assuming output size same as input size
+
+    for (int epoch = 0; epoch < epochs; ++epoch) {
         for (const auto& sample : data) {
             // Current timestamp
             int t = epoch % num_timesteps_;
@@ -81,7 +83,7 @@ void GaussianDiffusion::train(const std::vector<std::vector<double>>& data, int 
             std::vector<double> x_t = forward(sample, t);
             //Predict Epsilon
             EpsilonPredictor epsilon_predictor(input_size, output_size);
-            std::vector<double> epsilon_t = epsilon_predictor.predict(x_t, t);
+            std::vector<int> epsilon_t = epsilon_predictor.predictEpsilon(x_t, t);
             // Calculate mean, variance and log variance
             double beta_t = betas_[t];
             std::vector<double> mu(x_t.size());
