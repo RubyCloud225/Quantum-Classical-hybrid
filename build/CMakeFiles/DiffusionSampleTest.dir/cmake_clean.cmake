@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o"
+  "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o.d"
+  "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o"
+  "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o.d"
   "CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o"
   "CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o.d"
   "DiffusionSampleTest"

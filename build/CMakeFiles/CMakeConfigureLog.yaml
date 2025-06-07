@@ -627,3 +627,2548 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:77 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test EIGEN_COMPILER_SUPPORT_CPP11"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tJ6rhv"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tJ6rhv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "EIGEN_COMPILER_SUPPORT_CPP11"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tJ6rhv'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c728b/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c728b.dir/build.make CMakeFiles/cmTC_c728b.dir/build
+        Building CXX object CMakeFiles/cmTC_c728b.dir/src.cxx.o
+        /usr/bin/clang++ -DEIGEN_COMPILER_SUPPORT_CPP11  -std=gnu++17 -arch arm64   -std=c++11 -MD -MT CMakeFiles/cmTC_c728b.dir/src.cxx.o -MF CMakeFiles/cmTC_c728b.dir/src.cxx.o.d -o CMakeFiles/cmTC_c728b.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tJ6rhv/src.cxx
+        Linking CXX executable cmTC_c728b
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c728b.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c728b.dir/src.cxx.o -o cmTC_c728b
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-MG2lGK"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-MG2lGK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-MG2lGK'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7c4ec/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7c4ec.dir/build.make CMakeFiles/cmTC_7c4ec.dir/build
+        Building CXX object CMakeFiles/cmTC_7c4ec.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_7c4ec.dir/src.cxx.o -MF CMakeFiles/cmTC_7c4ec.dir/src.cxx.o.d -o CMakeFiles/cmTC_7c4ec.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-MG2lGK/src.cxx
+        Linking CXX executable cmTC_7c4ec
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c4ec.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7c4ec.dir/src.cxx.o -o cmTC_7c4ec
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "build/_deps/eigen-src/cmake/FindStandardMathLibrary.cmake:35 (CHECK_CXX_SOURCE_COMPILES)"
+      - "build/_deps/eigen-src/CMakeLists.txt:98 (find_package)"
+    checks:
+      - "Performing Test standard_math_library_linked_to_automatically"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sUwOtg"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sUwOtg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "standard_math_library_linked_to_automatically"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sUwOtg'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f8fd2/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f8fd2.dir/build.make CMakeFiles/cmTC_f8fd2.dir/build
+        Building CXX object CMakeFiles/cmTC_f8fd2.dir/src.cxx.o
+        /usr/bin/clang++ -Dstandard_math_library_linked_to_automatically  -std=c++03  -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_f8fd2.dir/src.cxx.o -MF CMakeFiles/cmTC_f8fd2.dir/src.cxx.o.d -o CMakeFiles/cmTC_f8fd2.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sUwOtg/src.cxx
+        Linking CXX executable cmTC_f8fd2
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8fd2.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f8fd2.dir/src.cxx.o -o cmTC_f8fd2
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:150 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_WERROR"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wPhQqQ"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wPhQqQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_WERROR"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wPhQqQ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_aa82a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_aa82a.dir/build.make CMakeFiles/cmTC_aa82a.dir/build
+        Building CXX object CMakeFiles/cmTC_aa82a.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_WERROR  -std=c++03  -std=gnu++17 -arch arm64   -Werror -MD -MT CMakeFiles/cmTC_aa82a.dir/src.cxx.o -MF CMakeFiles/cmTC_aa82a.dir/src.cxx.o.d -o CMakeFiles/cmTC_aa82a.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wPhQqQ/src.cxx
+        Linking CXX executable cmTC_aa82a
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa82a.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_aa82a.dir/src.cxx.o -o cmTC_aa82a
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:154 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_pedantic"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-TNmy0R"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-TNmy0R"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_pedantic"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-TNmy0R'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ccd8a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ccd8a.dir/build.make CMakeFiles/cmTC_ccd8a.dir/build
+        Building CXX object CMakeFiles/cmTC_ccd8a.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_pedantic  -std=c++03 -Werror -std=gnu++17 -arch arm64   -pedantic -MD -MT CMakeFiles/cmTC_ccd8a.dir/src.cxx.o -MF CMakeFiles/cmTC_ccd8a.dir/src.cxx.o.d -o CMakeFiles/cmTC_ccd8a.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-TNmy0R/src.cxx
+        Linking CXX executable cmTC_ccd8a
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccd8a.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ccd8a.dir/src.cxx.o -o cmTC_ccd8a
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:155 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wall"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-EboT26"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-EboT26"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wall"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-EboT26'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cda36/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cda36.dir/build.make CMakeFiles/cmTC_cda36.dir/build
+        Building CXX object CMakeFiles/cmTC_cda36.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wall  -std=c++03 -pedantic -Werror -std=gnu++17 -arch arm64   -Wall -MD -MT CMakeFiles/cmTC_cda36.dir/src.cxx.o -MF CMakeFiles/cmTC_cda36.dir/src.cxx.o.d -o CMakeFiles/cmTC_cda36.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-EboT26/src.cxx
+        Linking CXX executable cmTC_cda36
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cda36.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cda36.dir/src.cxx.o -o cmTC_cda36
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:156 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wextra"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pXKJ66"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pXKJ66"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wextra"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pXKJ66'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_51301/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_51301.dir/build.make CMakeFiles/cmTC_51301.dir/build
+        Building CXX object CMakeFiles/cmTC_51301.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wextra  -std=c++03 -pedantic -Wall -Werror -std=gnu++17 -arch arm64   -Wextra -MD -MT CMakeFiles/cmTC_51301.dir/src.cxx.o -MF CMakeFiles/cmTC_51301.dir/src.cxx.o.d -o CMakeFiles/cmTC_51301.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pXKJ66/src.cxx
+        Linking CXX executable cmTC_51301
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51301.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_51301.dir/src.cxx.o -o cmTC_51301
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:159 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wundef"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-V6iFnj"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-V6iFnj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wundef"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-V6iFnj'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e57f1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e57f1.dir/build.make CMakeFiles/cmTC_e57f1.dir/build
+        Building CXX object CMakeFiles/cmTC_e57f1.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wundef  -std=c++03 -pedantic -Wall -Wextra -Werror -std=gnu++17 -arch arm64   -Wundef -MD -MT CMakeFiles/cmTC_e57f1.dir/src.cxx.o -MF CMakeFiles/cmTC_e57f1.dir/src.cxx.o.d -o CMakeFiles/cmTC_e57f1.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-V6iFnj/src.cxx
+        Linking CXX executable cmTC_e57f1
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e57f1.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e57f1.dir/src.cxx.o -o cmTC_e57f1
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:160 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wcastalign"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tCcshJ"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tCcshJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wcastalign"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tCcshJ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ddd35/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ddd35.dir/build.make CMakeFiles/cmTC_ddd35.dir/build
+        Building CXX object CMakeFiles/cmTC_ddd35.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wcastalign  -std=c++03 -pedantic -Wall -Wextra -Wundef -Werror -std=gnu++17 -arch arm64   -Wcast-align -MD -MT CMakeFiles/cmTC_ddd35.dir/src.cxx.o -MF CMakeFiles/cmTC_ddd35.dir/src.cxx.o.d -o CMakeFiles/cmTC_ddd35.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-tCcshJ/src.cxx
+        Linking CXX executable cmTC_ddd35
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddd35.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ddd35.dir/src.cxx.o -o cmTC_ddd35
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:161 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wcharsubscripts"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-VmkjVn"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-VmkjVn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wcharsubscripts"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-VmkjVn'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cfce3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cfce3.dir/build.make CMakeFiles/cmTC_cfce3.dir/build
+        Building CXX object CMakeFiles/cmTC_cfce3.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wcharsubscripts  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Werror -std=gnu++17 -arch arm64   -Wchar-subscripts -MD -MT CMakeFiles/cmTC_cfce3.dir/src.cxx.o -MF CMakeFiles/cmTC_cfce3.dir/src.cxx.o.d -o CMakeFiles/cmTC_cfce3.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-VmkjVn/src.cxx
+        Linking CXX executable cmTC_cfce3
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfce3.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cfce3.dir/src.cxx.o -o cmTC_cfce3
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:162 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wnonvirtualdtor"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-hoI0V7"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-hoI0V7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wnonvirtualdtor"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-hoI0V7'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7e8e2/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7e8e2.dir/build.make CMakeFiles/cmTC_7e8e2.dir/build
+        Building CXX object CMakeFiles/cmTC_7e8e2.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wnonvirtualdtor  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Werror -std=gnu++17 -arch arm64   -Wnon-virtual-dtor -MD -MT CMakeFiles/cmTC_7e8e2.dir/src.cxx.o -MF CMakeFiles/cmTC_7e8e2.dir/src.cxx.o.d -o CMakeFiles/cmTC_7e8e2.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-hoI0V7/src.cxx
+        Linking CXX executable cmTC_7e8e2
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e8e2.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7e8e2.dir/src.cxx.o -o cmTC_7e8e2
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:163 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wunusedlocaltypedefs"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-RihTmi"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-RihTmi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wunusedlocaltypedefs"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-RihTmi'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a23df/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a23df.dir/build.make CMakeFiles/cmTC_a23df.dir/build
+        Building CXX object CMakeFiles/cmTC_a23df.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wunusedlocaltypedefs  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Werror -std=gnu++17 -arch arm64   -Wunused-local-typedefs -MD -MT CMakeFiles/cmTC_a23df.dir/src.cxx.o -MF CMakeFiles/cmTC_a23df.dir/src.cxx.o.d -o CMakeFiles/cmTC_a23df.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-RihTmi/src.cxx
+        Linking CXX executable cmTC_a23df
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a23df.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a23df.dir/src.cxx.o -o cmTC_a23df
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:164 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wpointerarith"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUhU0V"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUhU0V"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wpointerarith"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUhU0V'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ac2fe/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ac2fe.dir/build.make CMakeFiles/cmTC_ac2fe.dir/build
+        Building CXX object CMakeFiles/cmTC_ac2fe.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wpointerarith  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Werror -std=gnu++17 -arch arm64   -Wpointer-arith -MD -MT CMakeFiles/cmTC_ac2fe.dir/src.cxx.o -MF CMakeFiles/cmTC_ac2fe.dir/src.cxx.o.d -o CMakeFiles/cmTC_ac2fe.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUhU0V/src.cxx
+        Linking CXX executable cmTC_ac2fe
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac2fe.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ac2fe.dir/src.cxx.o -o cmTC_ac2fe
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:165 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wwritestrings"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-j03pDv"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-j03pDv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wwritestrings"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-j03pDv'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9201f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9201f.dir/build.make CMakeFiles/cmTC_9201f.dir/build
+        Building CXX object CMakeFiles/cmTC_9201f.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wwritestrings  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Werror -std=gnu++17 -arch arm64   -Wwrite-strings -MD -MT CMakeFiles/cmTC_9201f.dir/src.cxx.o -MF CMakeFiles/cmTC_9201f.dir/src.cxx.o.d -o CMakeFiles/cmTC_9201f.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-j03pDv/src.cxx
+        Linking CXX executable cmTC_9201f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9201f.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9201f.dir/src.cxx.o -o cmTC_9201f
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:166 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wformatsecurity"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Qm51eh"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Qm51eh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wformatsecurity"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Qm51eh'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9b9fc/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9b9fc.dir/build.make CMakeFiles/cmTC_9b9fc.dir/build
+        Building CXX object CMakeFiles/cmTC_9b9fc.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wformatsecurity  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Werror -std=gnu++17 -arch arm64   -Wformat-security -MD -MT CMakeFiles/cmTC_9b9fc.dir/src.cxx.o -MF CMakeFiles/cmTC_9b9fc.dir/src.cxx.o.d -o CMakeFiles/cmTC_9b9fc.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Qm51eh/src.cxx
+        Linking CXX executable cmTC_9b9fc
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b9fc.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9b9fc.dir/src.cxx.o -o cmTC_9b9fc
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:167 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wshorten64to32"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-a7HFvk"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-a7HFvk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wshorten64to32"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-a7HFvk'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7cf1d/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7cf1d.dir/build.make CMakeFiles/cmTC_7cf1d.dir/build
+        Building CXX object CMakeFiles/cmTC_7cf1d.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wshorten64to32  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Werror -std=gnu++17 -arch arm64   -Wshorten-64-to-32 -MD -MT CMakeFiles/cmTC_7cf1d.dir/src.cxx.o -MF CMakeFiles/cmTC_7cf1d.dir/src.cxx.o.d -o CMakeFiles/cmTC_7cf1d.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-a7HFvk/src.cxx
+        Linking CXX executable cmTC_7cf1d
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cf1d.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7cf1d.dir/src.cxx.o -o cmTC_7cf1d
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:168 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wlogicalop"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-FT7pCh"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-FT7pCh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wlogicalop"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-FT7pCh'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_477ad/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_477ad.dir/build.make CMakeFiles/cmTC_477ad.dir/build
+        Building CXX object CMakeFiles/cmTC_477ad.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wlogicalop  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Werror -std=gnu++17 -arch arm64   -Wlogical-op -MD -MT CMakeFiles/cmTC_477ad.dir/src.cxx.o -MF CMakeFiles/cmTC_477ad.dir/src.cxx.o.d -o CMakeFiles/cmTC_477ad.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-FT7pCh/src.cxx
+        error: unknown warning option '-Wlogical-op'; did you mean '-Wlong-long'? [-Werror,-Wunknown-warning-option]
+        make[2]: *** [CMakeFiles/cmTC_477ad.dir/src.cxx.o] Error 1
+        make[1]: *** [cmTC_477ad/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:169 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wenumconversion"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-2Z4LDW"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-2Z4LDW"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wenumconversion"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-2Z4LDW'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1f4ca/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1f4ca.dir/build.make CMakeFiles/cmTC_1f4ca.dir/build
+        Building CXX object CMakeFiles/cmTC_1f4ca.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wenumconversion  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Werror -std=gnu++17 -arch arm64   -Wenum-conversion -MD -MT CMakeFiles/cmTC_1f4ca.dir/src.cxx.o -MF CMakeFiles/cmTC_1f4ca.dir/src.cxx.o.d -o CMakeFiles/cmTC_1f4ca.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-2Z4LDW/src.cxx
+        Linking CXX executable cmTC_1f4ca
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f4ca.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1f4ca.dir/src.cxx.o -o cmTC_1f4ca
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:170 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wcpp11extensions"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5tpXAP"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5tpXAP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wcpp11extensions"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5tpXAP'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a07c0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a07c0.dir/build.make CMakeFiles/cmTC_a07c0.dir/build
+        Building CXX object CMakeFiles/cmTC_a07c0.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wcpp11extensions  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Werror -std=gnu++17 -arch arm64   -Wc++11-extensions -MD -MT CMakeFiles/cmTC_a07c0.dir/src.cxx.o -MF CMakeFiles/cmTC_a07c0.dir/src.cxx.o.d -o CMakeFiles/cmTC_a07c0.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5tpXAP/src.cxx
+        Linking CXX executable cmTC_a07c0
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a07c0.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a07c0.dir/src.cxx.o -o cmTC_a07c0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:171 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wdoublepromotion"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uM84os"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uM84os"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wdoublepromotion"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uM84os'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8a516/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_8a516.dir/build.make CMakeFiles/cmTC_8a516.dir/build
+        Building CXX object CMakeFiles/cmTC_8a516.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wdoublepromotion  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Werror -std=gnu++17 -arch arm64   -Wdouble-promotion -MD -MT CMakeFiles/cmTC_8a516.dir/src.cxx.o -MF CMakeFiles/cmTC_8a516.dir/src.cxx.o.d -o CMakeFiles/cmTC_8a516.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uM84os/src.cxx
+        Linking CXX executable cmTC_8a516
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a516.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8a516.dir/src.cxx.o -o cmTC_8a516
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:174 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wshadow"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-jQTOZU"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-jQTOZU"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wshadow"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-jQTOZU'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_dbb0a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_dbb0a.dir/build.make CMakeFiles/cmTC_dbb0a.dir/build
+        Building CXX object CMakeFiles/cmTC_dbb0a.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wshadow  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Werror -std=gnu++17 -arch arm64   -Wshadow -MD -MT CMakeFiles/cmTC_dbb0a.dir/src.cxx.o -MF CMakeFiles/cmTC_dbb0a.dir/src.cxx.o.d -o CMakeFiles/cmTC_dbb0a.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-jQTOZU/src.cxx
+        Linking CXX executable cmTC_dbb0a
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbb0a.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_dbb0a.dir/src.cxx.o -o cmTC_dbb0a
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:176 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wnopsabi"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-9lzWV3"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-9lzWV3"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wnopsabi"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-9lzWV3'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_16ce1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_16ce1.dir/build.make CMakeFiles/cmTC_16ce1.dir/build
+        Building CXX object CMakeFiles/cmTC_16ce1.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wnopsabi  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Werror -std=gnu++17 -arch arm64   -Wno-psabi -MD -MT CMakeFiles/cmTC_16ce1.dir/src.cxx.o -MF CMakeFiles/cmTC_16ce1.dir/src.cxx.o.d -o CMakeFiles/cmTC_16ce1.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-9lzWV3/src.cxx
+        Linking CXX executable cmTC_16ce1
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16ce1.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_16ce1.dir/src.cxx.o -o cmTC_16ce1
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:177 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wnovariadicmacros"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wuCCvK"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wuCCvK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wnovariadicmacros"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wuCCvK'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eb149/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_eb149.dir/build.make CMakeFiles/cmTC_eb149.dir/build
+        Building CXX object CMakeFiles/cmTC_eb149.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wnovariadicmacros  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Werror -std=gnu++17 -arch arm64   -Wno-variadic-macros -MD -MT CMakeFiles/cmTC_eb149.dir/src.cxx.o -MF CMakeFiles/cmTC_eb149.dir/src.cxx.o.d -o CMakeFiles/cmTC_eb149.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-wuCCvK/src.cxx
+        Linking CXX executable cmTC_eb149
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb149.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_eb149.dir/src.cxx.o -o cmTC_eb149
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:178 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Wnolonglong"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-DC1QFE"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-DC1QFE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Wnolonglong"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-DC1QFE'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_15c54/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_15c54.dir/build.make CMakeFiles/cmTC_15c54.dir/build
+        Building CXX object CMakeFiles/cmTC_15c54.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Wnolonglong  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Werror -std=gnu++17 -arch arm64   -Wno-long-long -MD -MT CMakeFiles/cmTC_15c54.dir/src.cxx.o -MF CMakeFiles/cmTC_15c54.dir/src.cxx.o.d -o CMakeFiles/cmTC_15c54.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-DC1QFE/src.cxx
+        Linking CXX executable cmTC_15c54
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15c54.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_15c54.dir/src.cxx.o -o cmTC_15c54
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:180 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_fnochecknew"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZojMxe"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZojMxe"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_fnochecknew"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZojMxe'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a0ae9/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a0ae9.dir/build.make CMakeFiles/cmTC_a0ae9.dir/build
+        Building CXX object CMakeFiles/cmTC_a0ae9.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_fnochecknew  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -Werror -std=gnu++17 -arch arm64   -fno-check-new -MD -MT CMakeFiles/cmTC_a0ae9.dir/src.cxx.o -MF CMakeFiles/cmTC_a0ae9.dir/src.cxx.o.d -o CMakeFiles/cmTC_a0ae9.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZojMxe/src.cxx
+        Linking CXX executable cmTC_a0ae9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0ae9.dir/link.txt --verbose=1
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a0ae9.dir/src.cxx.o -o cmTC_a0ae9
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:181 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_fnocommon"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-xiyhQt"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-xiyhQt"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_fnocommon"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-xiyhQt'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b3e75/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b3e75.dir/build.make CMakeFiles/cmTC_b3e75.dir/build
+        Building CXX object CMakeFiles/cmTC_b3e75.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_fnocommon  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -std=gnu++17 -arch arm64   -fno-common -MD -MT CMakeFiles/cmTC_b3e75.dir/src.cxx.o -MF CMakeFiles/cmTC_b3e75.dir/src.cxx.o.d -o CMakeFiles/cmTC_b3e75.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-xiyhQt/src.cxx
+        Linking CXX executable cmTC_b3e75
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3e75.dir/link.txt --verbose=1
+        clang++: error: argument unused during compilation: '-fno-check-new' [-Werror,-Wunused-command-line-argument]
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b3e75.dir/src.cxx.o -o cmTC_b3e75
+        make[2]: *** [cmTC_b3e75] Error 1
+        make[1]: *** [cmTC_b3e75/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:182 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_fstrictaliasing"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0W6nwc"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0W6nwc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_fstrictaliasing"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0W6nwc'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_07198/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_07198.dir/build.make CMakeFiles/cmTC_07198.dir/build
+        Building CXX object CMakeFiles/cmTC_07198.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_fstrictaliasing  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -std=gnu++17 -arch arm64   -fstrict-aliasing -MD -MT CMakeFiles/cmTC_07198.dir/src.cxx.o -MF CMakeFiles/cmTC_07198.dir/src.cxx.o.d -o CMakeFiles/cmTC_07198.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0W6nwc/src.cxx
+        Linking CXX executable cmTC_07198
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07198.dir/link.txt --verbose=1
+        clang++: error: argument unused during compilation: '-fno-check-new' [-Werror,-Wunused-command-line-argument]
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_07198.dir/src.cxx.o -o cmTC_07198
+        make[2]: *** [cmTC_07198] Error 1
+        make[1]: *** [cmTC_07198/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:183 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_wd981"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8A1BnD"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8A1BnD"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_wd981"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8A1BnD'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2cbe1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2cbe1.dir/build.make CMakeFiles/cmTC_2cbe1.dir/build
+        Building CXX object CMakeFiles/cmTC_2cbe1.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_wd981  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -std=gnu++17 -arch arm64   -wd981 -MD -MT CMakeFiles/cmTC_2cbe1.dir/src.cxx.o -MF CMakeFiles/cmTC_2cbe1.dir/src.cxx.o.d -o CMakeFiles/cmTC_2cbe1.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8A1BnD/src.cxx
+        clang++: error: unknown argument: '-wd981'
+        make[2]: *** [CMakeFiles/cmTC_2cbe1.dir/src.cxx.o] Error 1
+        make[1]: *** [cmTC_2cbe1/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:184 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_wd2304"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-D9LluQ"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-D9LluQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_wd2304"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-D9LluQ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6643b/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6643b.dir/build.make CMakeFiles/cmTC_6643b.dir/build
+        Building CXX object CMakeFiles/cmTC_6643b.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_wd2304  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -std=gnu++17 -arch arm64   -wd2304 -MD -MT CMakeFiles/cmTC_6643b.dir/src.cxx.o -MF CMakeFiles/cmTC_6643b.dir/src.cxx.o.d -o CMakeFiles/cmTC_6643b.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-D9LluQ/src.cxx
+        clang++: error: unknown argument: '-wd2304'
+        make[2]: *** [CMakeFiles/cmTC_6643b.dir/src.cxx.o] Error 1
+        make[1]: *** [cmTC_6643b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:189 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_STRICTANSI"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-p8bwi4"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-p8bwi4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_STRICTANSI"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-p8bwi4'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_25c99/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_25c99.dir/build.make CMakeFiles/cmTC_25c99.dir/build
+        Building CXX object CMakeFiles/cmTC_25c99.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_STRICTANSI  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -std=gnu++17 -arch arm64   -strict-ansi -MD -MT CMakeFiles/cmTC_25c99.dir/src.cxx.o -MF CMakeFiles/cmTC_25c99.dir/src.cxx.o.d -o CMakeFiles/cmTC_25c99.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-p8bwi4/src.cxx
+        clang++: error: unknown argument: '-strict-ansi'
+        make[2]: *** [CMakeFiles/cmTC_25c99.dir/src.cxx.o] Error 1
+        make[1]: *** [cmTC_25c99/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:190 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_Qunusedarguments"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-nrbDgY"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-nrbDgY"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_Qunusedarguments"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-nrbDgY'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_43f42/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_43f42.dir/build.make CMakeFiles/cmTC_43f42.dir/build
+        Building CXX object CMakeFiles/cmTC_43f42.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_Qunusedarguments  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -std=gnu++17 -arch arm64   -Qunused-arguments -MD -MT CMakeFiles/cmTC_43f42.dir/src.cxx.o -MF CMakeFiles/cmTC_43f42.dir/src.cxx.o.d -o CMakeFiles/cmTC_43f42.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-nrbDgY/src.cxx
+        Linking CXX executable cmTC_43f42
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43f42.dir/link.txt --verbose=1
+        clang++: error: argument unused during compilation: '-fno-check-new' [-Werror,-Wunused-command-line-argument]
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_43f42.dir/src.cxx.o -o cmTC_43f42
+        make[2]: *** [cmTC_43f42] Error 1
+        make[1]: *** [cmTC_43f42/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:195 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_ansi"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0WlfYe"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0WlfYe"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_ansi"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0WlfYe'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eca64/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_eca64.dir/build.make CMakeFiles/cmTC_eca64.dir/build
+        Building CXX object CMakeFiles/cmTC_eca64.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_ansi  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -std=gnu++17 -arch arm64   -ansi -MD -MT CMakeFiles/cmTC_eca64.dir/src.cxx.o -MF CMakeFiles/cmTC_eca64.dir/src.cxx.o.d -o CMakeFiles/cmTC_eca64.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0WlfYe/src.cxx
+        Linking CXX executable cmTC_eca64
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eca64.dir/link.txt --verbose=1
+        clang++: error: argument unused during compilation: '-fno-check-new' [-Werror,-Wunused-command-line-argument]
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -Werror -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_eca64.dir/src.cxx.o -o cmTC_eca64
+        make[2]: *** [cmTC_eca64] Error 1
+        make[1]: *** [cmTC_eca64/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:324 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_OPENMP"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-w0XOUK"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-w0XOUK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_OPENMP"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-w0XOUK'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_18a66/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_18a66.dir/build.make CMakeFiles/cmTC_18a66.dir/build
+        Building CXX object CMakeFiles/cmTC_18a66.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_OPENMP  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new  -std=gnu++17 -arch arm64   -fopenmp -MD -MT CMakeFiles/cmTC_18a66.dir/src.cxx.o -MF CMakeFiles/cmTC_18a66.dir/src.cxx.o.d -o CMakeFiles/cmTC_18a66.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-w0XOUK/src.cxx
+        clang++: error: unsupported option '-fopenmp'
+        make[2]: *** [CMakeFiles/cmTC_18a66.dir/src.cxx.o] Error 1
+        make[1]: *** [cmTC_18a66/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckLanguage.cmake:140 (message)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:9 (check_language)"
+    checks:
+      - "Looking for a Fortran compiler"
+    message: |
+      Looking for a Fortran compiler failed with the following output:
+      -- The Fortran compiler identification is unknown
+      CMake Error at CMakeLists.txt:3 (project):
+        No CMAKE_Fortran_COMPILER could be found.
+      
+        Tell CMake where to find the compiler by setting either the environment
+        variable "FC" or the CMake cache entry CMAKE_Fortran_COMPILER to the full
+        path to the compiler, or to the compiler name if it is in the PATH.
+      
+      
+      -- Configuring incomplete, errors occurred!
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:513 (find_dependency)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ysGNbT"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ysGNbT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ysGNbT'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_79d1f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_79d1f.dir/build.make CMakeFiles/cmTC_79d1f.dir/build
+        Building C object CMakeFiles/cmTC_79d1f.dir/src.c.o
+        /usr/bin/clang -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -MD -MT CMakeFiles/cmTC_79d1f.dir/src.c.o -MF CMakeFiles/cmTC_79d1f.dir/src.c.o.d -o CMakeFiles/cmTC_79d1f.dir/src.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ysGNbT/src.c
+        Linking C executable cmTC_79d1f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79d1f.dir/link.txt --verbose=1
+        /usr/bin/clang  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_79d1f.dir/src.c.o -o cmTC_79d1f
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-6NFH25"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-6NFH25"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-6NFH25'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3c8d3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_3c8d3.dir/build.make CMakeFiles/cmTC_3c8d3.dir/build
+        Building C object CMakeFiles/cmTC_3c8d3.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_3c8d3.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_3c8d3.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_3c8d3.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-6NFH25/CheckFunctionExists.c
+        Linking C executable cmTC_3c8d3
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c8d3.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3c8d3.dir/CheckFunctionExists.c.o -o cmTC_3c8d3  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:295 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_FASTMATH"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-SIxYqm"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-SIxYqm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_FASTMATH"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-SIxYqm'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_adf8e/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_adf8e.dir/build.make CMakeFiles/cmTC_adf8e.dir/build
+        Building CXX object CMakeFiles/cmTC_adf8e.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_FASTMATH  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new  -std=gnu++17 -arch arm64   -ffast-math -MD -MT CMakeFiles/cmTC_adf8e.dir/src.cxx.o -MF CMakeFiles/cmTC_adf8e.dir/src.cxx.o.d -o CMakeFiles/cmTC_adf8e.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-SIxYqm/src.cxx
+        Linking CXX executable cmTC_adf8e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adf8e.dir/link.txt --verbose=1
+        clang++: warning: argument unused during compilation: '-fno-check-new' [-Wunused-command-line-argument]
+        /usr/bin/clang++  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wshorten-64-to-32 -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_adf8e.dir/src.cxx.o -o cmTC_adf8e
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-J6v3St"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-J6v3St"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-J6v3St'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_705a0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_705a0.dir/build.make CMakeFiles/cmTC_705a0.dir/build
+        Building CXX object CMakeFiles/cmTC_705a0.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_705a0.dir/src.cxx.o -MF CMakeFiles/cmTC_705a0.dir/src.cxx.o.d -o CMakeFiles/cmTC_705a0.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-J6v3St/src.cxx
+        Linking CXX executable cmTC_705a0
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_705a0.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_705a0.dir/src.cxx.o -o cmTC_705a0
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZCRdR5"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZCRdR5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZCRdR5'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_25911/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_25911.dir/build.make CMakeFiles/cmTC_25911.dir/build
+        Building C object CMakeFiles/cmTC_25911.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_25911.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_25911.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_25911.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZCRdR5/CheckFunctionExists.c
+        Linking C executable cmTC_25911
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25911.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_25911.dir/CheckFunctionExists.c.o -o cmTC_25911  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uEoBFZ"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uEoBFZ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uEoBFZ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_86dd8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_86dd8.dir/build.make CMakeFiles/cmTC_86dd8.dir/build
+        Building CXX object CMakeFiles/cmTC_86dd8.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_86dd8.dir/src.cxx.o -MF CMakeFiles/cmTC_86dd8.dir/src.cxx.o.d -o CMakeFiles/cmTC_86dd8.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-uEoBFZ/src.cxx
+        Linking CXX executable cmTC_86dd8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86dd8.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_86dd8.dir/src.cxx.o -o cmTC_86dd8
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-oRWV8v"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-oRWV8v"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-oRWV8v'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_85f23/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_85f23.dir/build.make CMakeFiles/cmTC_85f23.dir/build
+        Building C object CMakeFiles/cmTC_85f23.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_85f23.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_85f23.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_85f23.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-oRWV8v/CheckFunctionExists.c
+        Linking C executable cmTC_85f23
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85f23.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_85f23.dir/CheckFunctionExists.c.o -o cmTC_85f23  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-zF9n18"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-zF9n18"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-zF9n18'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b1e0a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b1e0a.dir/build.make CMakeFiles/cmTC_b1e0a.dir/build
+        Building CXX object CMakeFiles/cmTC_b1e0a.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_b1e0a.dir/src.cxx.o -MF CMakeFiles/cmTC_b1e0a.dir/src.cxx.o.d -o CMakeFiles/cmTC_b1e0a.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-zF9n18/src.cxx
+        Linking CXX executable cmTC_b1e0a
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1e0a.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b1e0a.dir/src.cxx.o -o cmTC_b1e0a
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-QEtf4C"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-QEtf4C"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-QEtf4C'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_87405/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_87405.dir/build.make CMakeFiles/cmTC_87405.dir/build
+        Building C object CMakeFiles/cmTC_87405.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_87405.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_87405.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_87405.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-QEtf4C/CheckFunctionExists.c
+        Linking C executable cmTC_87405
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87405.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_87405.dir/CheckFunctionExists.c.o -o cmTC_87405  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5NyuDn"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5NyuDn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5NyuDn'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c984d/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c984d.dir/build.make CMakeFiles/cmTC_c984d.dir/build
+        Building CXX object CMakeFiles/cmTC_c984d.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_c984d.dir/src.cxx.o -MF CMakeFiles/cmTC_c984d.dir/src.cxx.o.d -o CMakeFiles/cmTC_c984d.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-5NyuDn/src.cxx
+        Linking CXX executable cmTC_c984d
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c984d.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c984d.dir/src.cxx.o -o cmTC_c984d
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-NlP4u5"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-NlP4u5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-NlP4u5'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f0da6/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f0da6.dir/build.make CMakeFiles/cmTC_f0da6.dir/build
+        Building C object CMakeFiles/cmTC_f0da6.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_f0da6.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_f0da6.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_f0da6.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-NlP4u5/CheckFunctionExists.c
+        Linking C executable cmTC_f0da6
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0da6.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f0da6.dir/CheckFunctionExists.c.o -o cmTC_f0da6  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mEmbwm"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mEmbwm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mEmbwm'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b89c6/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b89c6.dir/build.make CMakeFiles/cmTC_b89c6.dir/build
+        Building CXX object CMakeFiles/cmTC_b89c6.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_b89c6.dir/src.cxx.o -MF CMakeFiles/cmTC_b89c6.dir/src.cxx.o.d -o CMakeFiles/cmTC_b89c6.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mEmbwm/src.cxx
+        Linking CXX executable cmTC_b89c6
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b89c6.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b89c6.dir/src.cxx.o -o cmTC_b89c6
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d5JYEP"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d5JYEP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d5JYEP'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_47de8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_47de8.dir/build.make CMakeFiles/cmTC_47de8.dir/build
+        Building C object CMakeFiles/cmTC_47de8.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_47de8.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_47de8.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_47de8.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d5JYEP/CheckFunctionExists.c
+        Linking C executable cmTC_47de8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47de8.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_47de8.dir/CheckFunctionExists.c.o -o cmTC_47de8  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-67YrUX"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-67YrUX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-67YrUX'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d99a7/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d99a7.dir/build.make CMakeFiles/cmTC_d99a7.dir/build
+        Building CXX object CMakeFiles/cmTC_d99a7.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_d99a7.dir/src.cxx.o -MF CMakeFiles/cmTC_d99a7.dir/src.cxx.o.d -o CMakeFiles/cmTC_d99a7.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-67YrUX/src.cxx
+        Linking CXX executable cmTC_d99a7
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d99a7.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d99a7.dir/src.cxx.o -o cmTC_d99a7
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-qE8F3z"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-qE8F3z"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-qE8F3z'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ac4e3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ac4e3.dir/build.make CMakeFiles/cmTC_ac4e3.dir/build
+        Building C object CMakeFiles/cmTC_ac4e3.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_ac4e3.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_ac4e3.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_ac4e3.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-qE8F3z/CheckFunctionExists.c
+        Linking C executable cmTC_ac4e3
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac4e3.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ac4e3.dir/CheckFunctionExists.c.o -o cmTC_ac4e3  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YoUjVS"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YoUjVS"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YoUjVS'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_da2a8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_da2a8.dir/build.make CMakeFiles/cmTC_da2a8.dir/build
+        Building CXX object CMakeFiles/cmTC_da2a8.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_da2a8.dir/src.cxx.o -MF CMakeFiles/cmTC_da2a8.dir/src.cxx.o.d -o CMakeFiles/cmTC_da2a8.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YoUjVS/src.cxx
+        Linking CXX executable cmTC_da2a8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da2a8.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_da2a8.dir/src.cxx.o -o cmTC_da2a8
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-PoZNl6"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-PoZNl6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-PoZNl6'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b06c9/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b06c9.dir/build.make CMakeFiles/cmTC_b06c9.dir/build
+        Building C object CMakeFiles/cmTC_b06c9.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_b06c9.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_b06c9.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_b06c9.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-PoZNl6/CheckFunctionExists.c
+        Linking C executable cmTC_b06c9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b06c9.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b06c9.dir/CheckFunctionExists.c.o -o cmTC_b06c9  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUSNZz"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUSNZz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUSNZz'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_35cf1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_35cf1.dir/build.make CMakeFiles/cmTC_35cf1.dir/build
+        Building CXX object CMakeFiles/cmTC_35cf1.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_35cf1.dir/src.cxx.o -MF CMakeFiles/cmTC_35cf1.dir/src.cxx.o.d -o CMakeFiles/cmTC_35cf1.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-YUSNZz/src.cxx
+        Linking CXX executable cmTC_35cf1
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35cf1.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_35cf1.dir/src.cxx.o -o cmTC_35cf1
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pzcSQj"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pzcSQj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pzcSQj'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e7ffa/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e7ffa.dir/build.make CMakeFiles/cmTC_e7ffa.dir/build
+        Building C object CMakeFiles/cmTC_e7ffa.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_e7ffa.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_e7ffa.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_e7ffa.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-pzcSQj/CheckFunctionExists.c
+        Linking C executable cmTC_e7ffa
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7ffa.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e7ffa.dir/CheckFunctionExists.c.o -o cmTC_e7ffa  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-07H9sA"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-07H9sA"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-07H9sA'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d3b2c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d3b2c.dir/build.make CMakeFiles/cmTC_d3b2c.dir/build
+        Building CXX object CMakeFiles/cmTC_d3b2c.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_d3b2c.dir/src.cxx.o -MF CMakeFiles/cmTC_d3b2c.dir/src.cxx.o.d -o CMakeFiles/cmTC_d3b2c.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-07H9sA/src.cxx
+        Linking CXX executable cmTC_d3b2c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3b2c.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d3b2c.dir/src.cxx.o -o cmTC_d3b2c
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Y3DOlC"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Y3DOlC"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Y3DOlC'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5fe79/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5fe79.dir/build.make CMakeFiles/cmTC_5fe79.dir/build
+        Building C object CMakeFiles/cmTC_5fe79.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_5fe79.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_5fe79.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_5fe79.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-Y3DOlC/CheckFunctionExists.c
+        Linking C executable cmTC_5fe79
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fe79.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5fe79.dir/CheckFunctionExists.c.o -o cmTC_5fe79  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d4ZPiM"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d4ZPiM"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d4ZPiM'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_081cb/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_081cb.dir/build.make CMakeFiles/cmTC_081cb.dir/build
+        Building CXX object CMakeFiles/cmTC_081cb.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_081cb.dir/src.cxx.o -MF CMakeFiles/cmTC_081cb.dir/src.cxx.o.d -o CMakeFiles/cmTC_081cb.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-d4ZPiM/src.cxx
+        Linking CXX executable cmTC_081cb
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_081cb.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_081cb.dir/src.cxx.o -o cmTC_081cb
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mrtWm2"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mrtWm2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mrtWm2'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ed921/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ed921.dir/build.make CMakeFiles/cmTC_ed921.dir/build
+        Building C object CMakeFiles/cmTC_ed921.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_ed921.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_ed921.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_ed921.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-mrtWm2/CheckFunctionExists.c
+        Linking C executable cmTC_ed921
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed921.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ed921.dir/CheckFunctionExists.c.o -o cmTC_ed921  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3oVy7O"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3oVy7O"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3oVy7O'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_473e5/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_473e5.dir/build.make CMakeFiles/cmTC_473e5.dir/build
+        Building CXX object CMakeFiles/cmTC_473e5.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_473e5.dir/src.cxx.o -MF CMakeFiles/cmTC_473e5.dir/src.cxx.o.d -o CMakeFiles/cmTC_473e5.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3oVy7O/src.cxx
+        Linking CXX executable cmTC_473e5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_473e5.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_473e5.dir/src.cxx.o -o cmTC_473e5
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0KxWFG"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0KxWFG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0KxWFG'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7c7f1/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_7c7f1.dir/build.make CMakeFiles/cmTC_7c7f1.dir/build
+        Building C object CMakeFiles/cmTC_7c7f1.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_7c7f1.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_7c7f1.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_7c7f1.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-0KxWFG/CheckFunctionExists.c
+        Linking C executable cmTC_7c7f1
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c7f1.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7c7f1.dir/CheckFunctionExists.c.o -o cmTC_7c7f1  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-OyoTUQ"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-OyoTUQ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-OyoTUQ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_026a9/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_026a9.dir/build.make CMakeFiles/cmTC_026a9.dir/build
+        Building CXX object CMakeFiles/cmTC_026a9.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_026a9.dir/src.cxx.o -MF CMakeFiles/cmTC_026a9.dir/src.cxx.o.d -o CMakeFiles/cmTC_026a9.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-OyoTUQ/src.cxx
+        Linking CXX executable cmTC_026a9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_026a9.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_026a9.dir/src.cxx.o -o cmTC_026a9
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3CuW3n"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3CuW3n"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3CuW3n'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_51c01/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_51c01.dir/build.make CMakeFiles/cmTC_51c01.dir/build
+        Building C object CMakeFiles/cmTC_51c01.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_51c01.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_51c01.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_51c01.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-3CuW3n/CheckFunctionExists.c
+        Linking C executable cmTC_51c01
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51c01.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_51c01.dir/CheckFunctionExists.c.o -o cmTC_51c01  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-KAgosa"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-KAgosa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-KAgosa'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_62061/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_62061.dir/build.make CMakeFiles/cmTC_62061.dir/build
+        Building CXX object CMakeFiles/cmTC_62061.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_62061.dir/src.cxx.o -MF CMakeFiles/cmTC_62061.dir/src.cxx.o.d -o CMakeFiles/cmTC_62061.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-KAgosa/src.cxx
+        Linking CXX executable cmTC_62061
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62061.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_62061.dir/src.cxx.o -o cmTC_62061
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8zXRHh"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8zXRHh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8zXRHh'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2835f/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2835f.dir/build.make CMakeFiles/cmTC_2835f.dir/build
+        Building C object CMakeFiles/cmTC_2835f.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_2835f.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_2835f.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_2835f.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8zXRHh/CheckFunctionExists.c
+        Linking C executable cmTC_2835f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2835f.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2835f.dir/CheckFunctionExists.c.o -o cmTC_2835f  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sv5fqr"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sv5fqr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sv5fqr'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e8a9c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e8a9c.dir/build.make CMakeFiles/cmTC_e8a9c.dir/build
+        Building CXX object CMakeFiles/cmTC_e8a9c.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_e8a9c.dir/src.cxx.o -MF CMakeFiles/cmTC_e8a9c.dir/src.cxx.o.d -o CMakeFiles/cmTC_e8a9c.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-sv5fqr/src.cxx
+        Linking CXX executable cmTC_e8a9c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8a9c.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e8a9c.dir/src.cxx.o -o cmTC_e8a9c
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-XiUY48"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-XiUY48"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-XiUY48'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_84a9e/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_84a9e.dir/build.make CMakeFiles/cmTC_84a9e.dir/build
+        Building C object CMakeFiles/cmTC_84a9e.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_84a9e.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_84a9e.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_84a9e.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-XiUY48/CheckFunctionExists.c
+        Linking C executable cmTC_84a9e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84a9e.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_84a9e.dir/CheckFunctionExists.c.o -o cmTC_84a9e  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-bCT9vl"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-bCT9vl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-bCT9vl'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_25192/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_25192.dir/build.make CMakeFiles/cmTC_25192.dir/build
+        Building CXX object CMakeFiles/cmTC_25192.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_25192.dir/src.cxx.o -MF CMakeFiles/cmTC_25192.dir/src.cxx.o.d -o CMakeFiles/cmTC_25192.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-bCT9vl/src.cxx
+        Linking CXX executable cmTC_25192
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25192.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_25192.dir/src.cxx.o -o cmTC_25192
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZIEm2h"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZIEm2h"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZIEm2h'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a34d9/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a34d9.dir/build.make CMakeFiles/cmTC_a34d9.dir/build
+        Building C object CMakeFiles/cmTC_a34d9.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_a34d9.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_a34d9.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_a34d9.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-ZIEm2h/CheckFunctionExists.c
+        Linking C executable cmTC_a34d9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a34d9.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a34d9.dir/CheckFunctionExists.c.o -o cmTC_a34d9  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:71 (check_cxx_compiler_flag)"
+      - "build/_deps/eigen-src/CMakeLists.txt:88 (ei_add_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_SUPPORT_std=cpp03"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8t7GdR"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8t7GdR"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "COMPILER_SUPPORT_std=cpp03"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8t7GdR'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2a485/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2a485.dir/build.make CMakeFiles/cmTC_2a485.dir/build
+        Building CXX object CMakeFiles/cmTC_2a485.dir/src.cxx.o
+        /usr/bin/clang++ -DCOMPILER_SUPPORT_std=cpp03  -std=gnu++17 -arch arm64   -std=c++03 -MD -MT CMakeFiles/cmTC_2a485.dir/src.cxx.o -MF CMakeFiles/cmTC_2a485.dir/src.cxx.o.d -o CMakeFiles/cmTC_2a485.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-8t7GdR/src.cxx
+        Linking CXX executable cmTC_2a485
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a485.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2a485.dir/src.cxx.o -o cmTC_2a485
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:300 (check_function_exists)"
+      - "build/_deps/eigen-src/cmake/FindBLAS.cmake:1298 (check_fortran_libraries)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "build/_deps/eigen-src/cmake/FindLAPACK.cmake:139 (find_dependency)"
+      - "build/_deps/eigen-src/test/CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-c9z6OR"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-c9z6OR"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/_deps/eigen-src/cmake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "BLAS_blas_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-c9z6OR'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a5054/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a5054.dir/build.make CMakeFiles/cmTC_a5054.dir/build
+        Building C object CMakeFiles/cmTC_a5054.dir/CheckFunctionExists.c.o
+        /usr/bin/clang   -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -MD -MT CMakeFiles/cmTC_a5054.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_a5054.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_a5054.dir/CheckFunctionExists.c.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles/CMakeScratch/TryCompile-c9z6OR/CheckFunctionExists.c
+        Linking C executable cmTC_a5054
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5054.dir/link.txt --verbose=1
+        /usr/bin/clang  -DCHECK_FUNCTION_EXISTS=sgemm_ -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a5054.dir/CheckFunctionExists.c.o -o cmTC_a5054  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libblas.tbd
+        
+      exitCode: 0
+...

@@ -26,8 +26,8 @@ void DiffusionModel::compute_mean_variance(const std::vector<double>& x_t, int t
     if (t < 0 || t >= 1000) { // Assuming a fixed number of timesteps
         throw std::out_of_range("Time step t is out of range.");
     }
-    mean.resize(x_t.size());
-    variance.resize(x_t.size());
+    mean.resize(output_size);
+    variance.resize(output_size);
     // Example mean and variance computation
     #pragma omp parallel for 
     for (int i = 0; i < output_size; ++i) {

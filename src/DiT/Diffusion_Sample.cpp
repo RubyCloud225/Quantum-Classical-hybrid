@@ -48,42 +48,63 @@ std::vector<std::unordered_map<std::string, std::vector<double>>> DiffusionSampl
     const std::unordered_map<std::string, double>& model_kwags,
     const std::string& device
 ) {
+    if (shape.size() != 4) {
+        throw std::invalid_argument("Shape must have exactly 4 dimensions");
+    }
+    for (int dim : shape) {
+        if (dim <= 0) {
+            throw std::invalid_argument("Shape dimensions must be positive");
+        }
+    }
+    if (!denoised_fn) {
+        throw std::invalid_argument("Denoised function must not be null");
+    }
+
+    // Validate device
+    if (device != "cpu" && device != "gpu") {
+        throw std::invalid_argument("Invalid device: " + device);
+    }
+
     std::vector<std::unordered_map<std::string, std::vector<double>>> samples;
-    #pragma omp parallel
-    {
-        std::vector<std::unordered_map<std::string, std::vector<double>>> progressive_samples;
-        std::normal_distribution<double> distribution_(0.0, 1.0);
-        std::default_random_engine generator_(std::random_device{}());
-        std::vector<double> mean, variance;
 
-        #pragma omp for nowait
-        for (int n = 0; n < shape[0]; ++n) {
-            std::unordered_map<std::string, std::vector<double>> sample;
-            std::vector<double> x_t(shape[1] * shape[2] * shape[3], 0.0);
+    std::cout << "Checking model_kwags size: " << model_kwags.size() << std::endl;
+    if (model_kwags.empty()) {
+        std::cout << "Throwing exception for empty model_kwags" << std::endl;
+        throw std::invalid_argument("Model keyword arguments must not be empty");
+    }
+    std::cout << "Passed model_kwags check" << std::endl;
 
-            for (int t = shape[0] - 1; t >= 0; --t) {
-                model_.compute_mean_variance(x_t, t, mean, variance);
+    std::vector<std::unordered_map<std::string, std::vector<double>>> progressive_samples;
+    std::normal_distribution<double> distribution_(0.0, 1.0);
+    std::default_random_engine generator_(std::random_device{}());
+    std::vector<double> mean, variance;
+
+    for (int n = 0; n < shape[0]; ++n) {
+        std::unordered_map<std::string, std::vector<double>> sample;
+        std::vector<double> x_t(shape[1] * shape[2] * shape[3], 0.0);
+
+        for (int t = shape[0] - 1; t >= 0; --t) {
+            model_.compute_mean_variance(x_t, t, mean, variance);
             for (size_t i = 0; i < x_t.size(); ++i) {
                 double noise = distribution_(generator_) * std::sqrt(variance[i]);
                 x_t[i] = mean[i] + noise;
             }
-            }
-
-            if (denoised_fn) {
-                x_t = denoised_fn(x_t);
-            }
-
-            if (clip_denoised) {
-                for (auto& value : x_t) {
-                    value = DiffusionSample::clamp(value, -1.0, 1.0);
-                }
-            }
-            // Store the sample in the progressive_samples vector
-            sample["sample"] = x_t;
-            progressive_samples.push_back(sample);
         }
-        #pragma omp critical
-        samples.insert(samples.end(), progressive_samples.begin(), progressive_samples.end());
+
+        x_t = denoised_fn(x_t);
+        if (x_t.empty()) {
+            throw std::invalid_argument("Denoised function returned empty vector");
+        }
+
+        if (clip_denoised) {
+            for (auto& value : x_t) {
+                value = DiffusionSample::clamp(value, -1.0, 1.0);
+            }
+        }
+        // Store the sample in the progressive_samples vector
+        sample["sample"] = x_t;
+        progressive_samples.push_back(sample);
     }
+    samples.insert(samples.end(), progressive_samples.begin(), progressive_samples.end());
     return samples;
 }

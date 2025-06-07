@@ -30,7 +30,7 @@ PYBIND11_MODULE(dit_wrapper, m) {
     //Wrapping EpisilonPredictor
     py::class_<EpsilonPredictor>(m, "EpsilonPredictor")
         .def(py::init<int, int>()) // input size, output size
-        .def("predictEpsilon", &EpsilonPredictor::predictEpilson, py::arg("x_t"), py::arg("t"));
+        .def("predictEpsilon", &EpsilonPredictor::predictEpsilon, py::arg("x_t"), py::arg("t"));
     
     //Wrapping DiffusionSample
     py::class_<DiffusionSample>(m, "DiffusionSample")

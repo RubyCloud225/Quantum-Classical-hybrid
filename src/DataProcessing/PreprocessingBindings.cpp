@@ -13,26 +13,18 @@
 
 namespace py = pybind11;
 
-
-py::dict run_preprocessing(
-    const std::string& input, 
-            std::string& tokens, 
-            std::string& totalTokens,
-            std::string& uniqueTokens,
-            std::string& totalWords,
-            std::string& sentences,
-            std::string& totalPunctuation) {
+py::dict run_preprocessing(const std::string& input) {
     // Tokenization
     Tokenizer tokenizer;
-    string str tokens = tokenizer.tokenize(input);
-    string str totalTokens = tokenizer.countTokens(tokens);
-    string str uniqueTokens = tokenizer.countUniqueTokens(tokens);
-    string str totalWords = tokenizer.countWords(tokens);
-    string str sentences = tokenizer.countSentences(input);
-    string str totalPunctuation = tokenizer.countPunctuation(input);
+    std::vector<std::string> tokens = tokenizer.tokenize(input);
+    int totalTokens = tokenizer.countTokens(tokens);
+    int uniqueTokens = tokenizer.countUniqueTokens(tokens);
+    int totalWords = tokenizer.countWords(tokens);
+    int sentences = tokenizer.countSentences(input);
+    int totalPunctuation = tokenizer.countPunctuation(input);
 
     // Positional Embeddings (optional to expose in return)
-    auto positionalEmbeddings = token.createPositionalEmbeddings(tokens);
+    auto positionalEmbeddings = tokenizer.createPositionalEmbeddings(tokens);
 
     // Gaussian noise setup
     std::vector<double> mean = {static_cast<double>(totalTokens), static_cast<double>(uniqueTokens)};
@@ -111,12 +103,12 @@ py::dict run_preprocessing(
     saveSamples(dataset, "sample_data.bin");
 
     // Return metadata to Python
-    result = py::dict("tokens" = totalTokens, "unique_tokens" = uniqueTokens, "words" = totalWords, "punctuation" = totalPunctuation);
-    if (!result.empty()) {
-        result["warning"]
-    }
+    py::dict result;
+    result["tokens"] = totalTokens;
+    result["unique_tokens"] = uniqueTokens;
+    result["words"] = totalWords;
+    result["punctuation"] = totalPunctuation;
     return result;
-                                
 }
 
 PYBIND11_MODULE(preprocessing, m) {

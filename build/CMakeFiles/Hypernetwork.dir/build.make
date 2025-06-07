@@ -76,379 +76,379 @@ CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o: CMakeFiles/Hypernetwo
 CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp
 CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp
 
 CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp > CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp > CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp -o CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DiTWrapper.cpp -o CMakeFiles/Hypernetwork.dir/src/Bindings/DiTWrapper.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DataWrapper.cpp
 CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DataWrapper.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DataWrapper.cpp
 
 CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DataWrapper.cpp > CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DataWrapper.cpp > CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DataWrapper.cpp -o CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/Bindings/DataWrapper.cpp -o CMakeFiles/Hypernetwork.dir/src/Bindings/DataWrapper.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/main.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/main.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/BetaSchedule.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/BetaSchedule.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/GaussianDiffusion.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/GaussianDiffusion.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/NN/EpsilonPredictor.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/NN/EpsilonPredictor.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_model.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/Diffusion_Sample.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/sampleData.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/sampleData.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/GaussianNoise.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/GaussianNoise.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/GaussianNoise.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/GaussianNoise.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/GaussianNoise.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/GaussianNoise.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/GaussianNoise.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/GaussianNoise.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LinearRegression.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LinearRegression.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LinearRegression.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LinearRegression.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LinearRegression.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LinearRegression.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LinearRegression.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LinearRegression.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/PreprocessingBindings.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/PreprocessingBindings.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/PreprocessingBindings.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/PreprocessingBindings.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/PreprocessingBindings.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/PreprocessingBindings.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/PreprocessingBindings.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/PreprocessingBindings.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tokenizer.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tokenizer.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/LayerNormalization.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/LayerNormalization.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_performance.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_performance.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LayerNormalization_edge_cases.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_basic_tests.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_basic_tests.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/LinearRegression_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/LinearRegression_edge_cases.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/sampleData_basic_tests.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/sampleData_basic_tests.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DataProcessing/tests/gaussianNoise_edge_cases.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_tests.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_tests.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/BetaSchedule_edge_cases.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/BetaSchedule_edge_cases.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_model_test.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_model_test.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Diffusion_sample_test.cpp.s
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o: CMakeFiles/Hypernetwork.dir/flags.make
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o: CMakeFiles/Hypernetwork.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o -MF CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o.d -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp > CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.i
 
 CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Gaussian_Diffusion_test.cpp -o CMakeFiles/Hypernetwork.dir/src/DiT/tests/Gaussian_Diffusion_test.cpp.s
 
 # Object files for target Hypernetwork
 Hypernetwork_OBJECTS = \

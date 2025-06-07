@@ -3,25 +3,78 @@
 #include <omp.h>
 
 EpsilonPredictor::EpsilonPredictor(int input_channels, int output_size) {
-    nn_.addConvolutionalLayer(input_channels, 64, 3, 1); // conv layer
-    nn_.addReluLayer(); // Activation
-    nn_.addPoolingLayer(2, 2, 2, 2, 0); // pooling layer using max pooling
-    nn_.addConvolutionalLayer(64, 128, 3, 1); // second conv layer
-    nn_.addReluLayer(); // activation
-    nn_.addPoolingLayer(2, 2, 2, 2, 0); // pooling layer
-    nn_.addFlatten(); // Flatten the output
-    nn_.addFullyConnectedLayer(128 * 7 * 7, output_size); // output layer
+    // Constructor left empty to avoid persistent nn_ member causing thread safety issues
 }
 
 std::vector<int> EpsilonPredictor::predictEpsilon(const std::vector<double>& x_t, int t) {
-    // Wrap x_t to make it a 2D vector of doubles
-    std::vector<std::vector<double>> input = {x_t}; 
+    // Create a new NeuralNetwork instance per call to ensure thread safety
+    NeuralNetwork nn;
+    nn.addConvolutionalLayer(1, 64, 3, 1); // conv layer, input_channels=1
+    nn.addReluLayer(); // Activation
+
+    // Calculate output size after first conv layer
+    int conv1_output_size = x_t.size() - 3 + 1; // input_size - kernel_size + 1 (stride=1)
+    int pool1_input_height = conv1_output_size;
+    int pool1_input_width = conv1_output_size;
+
+    nn.addPoolingLayer(pool1_input_height, pool1_input_width, 2, 2, 0); // pooling layer using max pooling
+
+    nn.addConvolutionalLayer(64, 128, 3, 1); // second conv layer
+    nn.addReluLayer(); // activation
+
+    // Calculate output size after second conv layer
+    int conv2_output_size = pool1_input_height / 2 - 3 + 1; // after pooling and conv2
+    int pool2_input_height = conv2_output_size;
+    int pool2_input_width = conv2_output_size;
+
+    nn.addPoolingLayer(pool2_input_height, pool2_input_width, 2, 2, 0); // pooling layer
+    nn.addFlatten(); // Flatten the output
+
+    // Calculate flatten size after second pooling layer
+    int flatten_size = pool2_input_height * pool2_input_width * 128;
+
+    nn.addFullyConnectedLayer(flatten_size, x_t.size()); // output layer
+
+    // Reshape x_t into a 2D vector with appropriate height and width
+    int length = x_t.size();
+    int height = static_cast<int>(std::sqrt(length));
+    int width = height;
+    if (height * width < length) {
+        width += 1;
+    }
+    std::vector<std::vector<double>> input(height, std::vector<double>(width, 0.0));
+
+    // Debug print input dimensions
+    std::cout << "EpsilonPredictor::predictEpsilon reshaped input dimensions: " << height << " x " << width << std::endl;
+
+    for (int i = 0; i < height * width; ++i) {
+        if (i < length) {
+            input[i / width][i % width] = x_t[i];
+        } else {
+            input[i / width][i % width] = 0.0; // pad with zeros
+        }
+    }
 
     // Call the forward method of the neural network
-    std::vector<std::vector<std::vector<double>>> raw_result = nn_.forward(input); // Assuming nn_.forward returns a 3D vector of doubles
+    std::vector<std::vector<std::vector<double>>> raw_result = nn.forward(input); // Assuming nn.forward returns a 3D vector of doubles
+
+    // Debug print raw_result dimensions after forward
+    if (!raw_result.empty() && !raw_result[0].empty()) {
+        std::cout << "EpsilonPredictor::predictEpsilon raw_result size: " << raw_result.size() << " x " << raw_result[0].size() << " x " << raw_result[0][0].size() << std::endl;
+    } else {
+        std::cout << "EpsilonPredictor::predictEpsilon raw_result is empty or malformed" << std::endl;
+    }
+
+    if (raw_result.empty() || raw_result[0].empty() || raw_result[0][0].empty()) {
+        return std::vector<int>(); // Return empty vector if output is empty to avoid length errors
+    }
+
     int dim1 = raw_result.size(); // Get the first dimension size
     int dim2 = raw_result[0].size(); // Get the second dimension size
     int dim3 = raw_result[0][0].size(); // Get the third dimension size
+
+    // Debug print dimensions
+    std::cout << "EpsilonPredictor::predictEpsilon raw_result dimensions: " << dim1 << " x " << dim2 << " x " << dim3 << std::endl;
 
     // Flatten the 3D result and convert to integers
     std::vector<int> result(dim1 * dim2 * dim3); // Preallocate the result vector

@@ -27,7 +27,7 @@ void testGaussianDiffusion() {
 
 void test_train_performance() {
     GaussianDiffusion diffusion(10, 0.01, 0.1);
-    std::vector<std::vector<double>> data = { 1000, std::vector<double>(1000, 0.5) }; // Dummy data
+    std::vector<std::vector<double>> data(1000, std::vector<double>(1000, 0.5)); // Fixed dummy data initialization
     auto start = std::chrono::high_resolution_clock::now();
     diffusion.train(data, 1);
     auto end = std::chrono::high_resolution_clock::now();

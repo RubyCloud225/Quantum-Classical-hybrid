@@ -1,8 +1,10 @@
 #include "FullyConnected.hpp"
 #include <vector>
+#include <algorithm> // for std::max
+#include <iostream>
+#include <ostream>
 
-// input connection- takes all the prevous outputs and calculates the weights
-std::vector<std::vector<std::vector<double>>> Inputweights(const std::vector<std::vector<std::vector<double>>>& input) {
+std::vector<std::vector<std::vector<double>>> FullyConnected::Inputweights(const std::vector<std::vector<std::vector<double>>>& input) const {
     std::vector<std::vector<std::vector<double>>> weights(input.size(), std::vector<std::vector<double>>(input[0].size(), std::vector<double>(input[0][0].size())));
     
     // Initialize weights with random values or zeros
@@ -14,33 +16,19 @@ std::vector<std::vector<std::vector<double>>> Inputweights(const std::vector<std
         }
     }
     
+    // Debug print weights dimensions
+    std::cout << "FullyConnected::Inputweights weights dimensions: " << weights.size() << " x " << weights[0].size() << " x " << weights[0][0].size() << std::endl;
+    
     return weights;
 }
-// z_j = sum(w_ij * x_i) + b_j
 
-//Forward pass
-std::vector<std::vector<std::vector<double>>> Forward(const std::vector<std::vector<std::vector<double>>>& input, const std::vector<std::vector<std::vector<double>>>& weights) {
+std::vector<std::vector<std::vector<double>>> FullyConnected::Activation(const std::vector<std::vector<std::vector<double>>>& input, std::vector<std::vector<std::vector<double>>> weights) const {
     std::vector<std::vector<std::vector<double>>> output(input.size(), std::vector<std::vector<double>>(weights[0].size(), std::vector<double>(weights[0][0].size())));
     
-    for (size_t i = 0; i < input.size(); ++i) {
-        for (size_t j = 0; j < weights[0].size(); ++j) {
-            for (size_t k = 0; k < weights[0][0].size(); ++k) {
-                double sum = 0.0;
-                for (size_t l = 0; l < input[i].size(); ++l) {
-                    sum += input[i][l][k] * weights[l][j][k];
-                }
-                output[i][j][k] = sum; // Add bias if needed
-            }
-        }
-    }
+    // Debug print input and weights dimensions
+    std::cout << "FullyConnected::Activation input dimensions: " << input.size() << " x " << input[0].size() << " x " << input[0][0].size() << std::endl;
+    std::cout << "FullyConnected::Activation weights dimensions: " << weights.size() << " x " << weights[0].size() << " x " << weights[0][0].size() << std::endl;
     
-    return output;
-}
-
-// Activation function
-// a_j = f(z_i)
-std::vector<std::vector<std::vector<double>>> Activation(const std::vector<std::vector<std::vector<double>>>& input, std::vector<std::vector<std::vector<double>>> weights) const {
-    std::vector<std::vector<std::vector<double>>> output(input.size(), std::vector<std::vector<double>>(weights[0].size(), std::vector<double>(weights[0][0].size())));
     for (size_t i = 0; i < input.size(); ++i) {
         for (size_t j = 0; j < weights[0].size(); ++j) {
             for (size_t k = 0; k < weights[0][0].size(); ++k) {
@@ -70,6 +58,3 @@ std::vector<std::vector<std::vector<double>>> Backward(const std::vector<std::ve
     
     return grad_input;
 }
-
-
-

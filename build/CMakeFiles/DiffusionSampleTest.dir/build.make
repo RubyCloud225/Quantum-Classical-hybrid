@@ -76,28 +76,60 @@ CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o: CM
 CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp
 CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o: CMakeFiles/DiffusionSampleTest.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -MF CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o.d -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -MF CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o.d -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp
 
 CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp > CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp > CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.i
 
 CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.s
+
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o: CMakeFiles/DiffusionSampleTest.dir/flags.make
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o: CMakeFiles/DiffusionSampleTest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o -MF CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o.d -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp
+
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp > CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.i
+
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.s
+
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o: CMakeFiles/DiffusionSampleTest.dir/flags.make
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o: /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o: CMakeFiles/DiffusionSampleTest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o -MF CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o.d -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp
+
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp > CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.i
+
+CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp -o CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.s
 
 # Object files for target DiffusionSampleTest
 DiffusionSampleTest_OBJECTS = \
-"CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o"
+"CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o" \
+"CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o" \
+"CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o"
 
 # External object files for target DiffusionSampleTest
 DiffusionSampleTest_EXTERNAL_OBJECTS =
 
 DiffusionSampleTest: CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o
+DiffusionSampleTest: CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o
+DiffusionSampleTest: CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o
 DiffusionSampleTest: CMakeFiles/DiffusionSampleTest.dir/build.make
 DiffusionSampleTest: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 DiffusionSampleTest: CMakeFiles/DiffusionSampleTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable DiffusionSampleTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Hypernetwork/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable DiffusionSampleTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DiffusionSampleTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

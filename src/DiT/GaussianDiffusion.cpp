@@ -1,6 +1,7 @@
 #include "GaussianDiffusion.hpp"
-#include "EpsilonPredictor.hpp"
+#include "NN/EpsilonPredictor.hpp"
 #include <omp.h>
+#include <stdexcept> // for std::invalid_argument
 
 // Adam Optimizer Constructor
 AdamOptimizer::AdamOptimizer(double learning_rate, double beta1, double beta2, double epsilon) : learning_rate_(learning_rate), beta1_(beta1), beta2_(beta2), epsilon_(epsilon), t_(0) {
@@ -25,6 +26,9 @@ void AdamOptimizer::update(std::vector<double>& params, std::vector<double>& gra
 
 // Gaussian Diffusion Constructor
 GaussianDiffusion::GaussianDiffusion(int num_timesteps, double beta_start, double beta_end) : num_timesteps_(num_timesteps), beta_start_(beta_start), beta_end_(beta_end), optimizer_(0.001, 0.9, 0.999, 1e-8) {
+    if (beta_start > beta_end) {
+        throw std::invalid_argument("beta_start must be less than or equal to beta_end");
+    }
     betas_.resize(num_timesteps_);
     for (int t = 0; t < num_timesteps_; ++t) {
         betas_[t] = beta_start + (beta_end - beta_start) * (static_cast<double>(t) / num_timesteps_);
@@ -33,6 +37,9 @@ GaussianDiffusion::GaussianDiffusion(int num_timesteps, double beta_start, doubl
 
 // Forward process
 std::vector<double> GaussianDiffusion::forward(const std::vector<double>& x_prev, int t) {
+    if (t < 0 || t >= num_timesteps_) {
+        throw std::invalid_argument("Invalid timestep: must be between 0 and num_timesteps - 1");
+    }
     std::vector<double> x_t(x_prev.size());
     std::default_random_engine generator;
     std::normal_distribution<double> noise(0.0, std::sqrt(betas_[t]));
@@ -83,12 +90,25 @@ void GaussianDiffusion::train(const std::vector<std::vector<double>>& data, int 
             std::vector<double> x_t = forward(sample, t);
             //Predict Epsilon
             EpsilonPredictor epsilon_predictor(input_size, output_size);
-            std::vector<int> epsilon_t = epsilon_predictor.predictEpsilon(x_t, t);
+
+            // Debug print before predictEpsilon
+            std::cout << "train epoch " << epoch << " sample size: " << sample.size() << " x_t size: " << x_t.size() << std::endl;
+
+            std::vector<int> epsilon_t_int = epsilon_predictor.predictEpsilon(x_t, t);
+
+            // Debug print after predictEpsilon
+            std::cout << "train epoch " << epoch << " epsilon_t_int size: " << epsilon_t_int.size() << std::endl;
+
+            std::vector<double> epsilon_t(epsilon_t_int.begin(), epsilon_t_int.end());
+
+            // Debug print sizes
+            std::cout << "train epoch " << epoch << " epsilon_t size: " << epsilon_t.size() << std::endl;
+
             // Calculate mean, variance and log variance
             double beta_t = betas_[t];
             std::vector<double> mu(x_t.size());
-            std::vector<double> variance(betas_[t]);
-            std::vector<double> log_var(x_t.size());
+            std::vector<double> variance(x_t.size(), beta_t);
+            std::vector<double> log_var(x_t.size(), 0.0);
 
             for (size_t i = 0; i < x_t.size(); ++i) {
                 mu[i] = (x_t[i] - beta_t * epsilon_t[i]) / std::sqrt(1 - beta_t);
@@ -104,7 +124,10 @@ void GaussianDiffusion::train(const std::vector<std::vector<double>>& data, int 
                 gradients[i] = (x_t[i] - x_start[i]) * sigmoid_derivative(x_start[i]);
             }
             std::vector<double> params(x_t.size());
-            optimizer_.update(params, gradients);
+            #pragma omp critical
+            {
+                optimizer_.update(params, gradients);
+            }
         }
     }
 }

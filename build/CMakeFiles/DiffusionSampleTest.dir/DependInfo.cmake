@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_Sample.cpp" "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o" "gcc" "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_Sample.cpp.o.d"
+  "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/Diffusion_model.cpp" "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o" "gcc" "CMakeFiles/DiffusionSampleTest.dir/src/DiT/Diffusion_model.cpp.o.d"
   "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/src/DiT/tests/Diffusion_sample_test.cpp" "CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o" "gcc" "CMakeFiles/DiffusionSampleTest.dir/src/DiT/tests/Diffusion_sample_test.cpp.o.d"
   )
 
