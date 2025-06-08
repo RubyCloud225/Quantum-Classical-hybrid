@@ -5,6 +5,7 @@
 #include <stdexcept>
 #include <random>
 #include <algorithm>
+#include <functional>
 #include <cmath>
 
 class DiffusionModel {

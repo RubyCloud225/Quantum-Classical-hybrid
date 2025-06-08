@@ -1,10 +1,10 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
-#include "tokenizer.hpp"
-#include "GaussianNoise.hpp"
-#include "LinearRegression.hpp"
-#include "LayerNormalization.hpp"
-#include "sampleData.hpp"
+#include "tokenizer/tokenizer.hpp"
+#include "models/GaussianNoise.hpp"
+#include "models/LinearRegression.hpp"
+#include "models/LayerNormalization.hpp"
+#include "models/sampleData.hpp"
 #include <iostream>
 #include <string>
 #include <vector>

@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find Python and pybind11 packages
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
-find_package(pybind11 REQUIRED)
+find_package(pybind11 REQUIRED PATHS /usr/local/lib/cmake/pybind11 /opt/homebrew/lib/cmake/pybind11 NO_DEFAULT_PATH)
 
 # Download and configure Eigen3
 include(FetchContent)
@@ -22,48 +22,55 @@ FetchContent_MakeAvailable(eigen)
 include_directories(
     ${PROJECT_SOURCE_DIR}/src/DiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
     ${eigen_SOURCE_DIR}
 )
 
+file(GLOB_RECURSE DATAPROCESSING_SOURCES src/DataProcessing/*.cpp)
+file(GLOB_RECURSE NORMALISER_SOURCES src/DataProcessing/normaliser/*.cpp)
+file(GLOB_RECURSE NORMALISER_TESTS src/DataProcessing/normaliser/tests/*.cpp)
+
+# Remove test files from Hypernetwork module sources
+list(FILTER DATAPROCESSING_SOURCES EXCLUDE REGEX ".*tests/.*")
+list(FILTER NORMALISER_SOURCES EXCLUDE REGEX ".*tests/.*")
+
 pybind11_add_module(Hypernetwork
-    src/Bindings/DiTWrapper.cpp
-    src/Bindings/DataWrapper.cpp
-    src/DiT/main.cpp
-    src/DiT/BetaSchedule.cpp
-    src/DiT/GaussianDiffusion.cpp
-    src/DiT/NN/EpsilonPredictor.cpp
-    src/DiT/Diffusion_model.cpp
-    src/DiT/Diffusion_Sample.cpp
-    src/DataProcessing/sampleData.cpp
-    src/DataProcessing/GaussianNoise.cpp
-    src/DataProcessing/LinearRegression.cpp
-    src/DataProcessing/PreprocessingBindings.cpp
-    src/DataProcessing/tokenizer.cpp
-    src/DataProcessing/LayerNormalization.cpp
-    src/DataProcessing/tests/LayerNormalization_performance.cpp
-    src/DataProcessing/tests/LayerNormalization_edge_cases.cpp
-    src/DataProcessing/tests/Integration_GaussianNoise_LayerNormalization.cpp
-    src/DataProcessing/tests/LinearRegression_basic_tests.cpp
-    src/DataProcessing/tests/LinearRegression_edge_cases.cpp
-    src/DataProcessing/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp
-    src/DataProcessing/tests/sampleData_basic_tests.cpp
-    src/DataProcessing/tests/gaussianNoise_edge_cases.cpp
-    src/DiT/tests/BetaSchedule_tests.cpp
-    src/DiT/tests/BetaSchedule_edge_cases.cpp
-    src/DiT/tests/Diffusion_model_test.cpp
-    src/DiT/tests/Diffusion_sample_test.cpp
-    src/DiT/tests/Gaussian_Diffusion_test.cpp
+    ${DATAPROCESSING_SOURCES}
+    ${NORMALISER_SOURCES}
 )
+
+# Add separate executable targets for normaliser tests
+foreach(test_file ${NORMALISER_TESTS})
+    get_filename_component(test_name ${test_file} NAME_WE)
+    set(test_sources ${test_file})
+    if(test_name STREQUAL "bert_test" OR test_name STREQUAL "bert_minimal_test")
+        list(APPEND test_sources src/DataProcessing/normaliser/bert.cpp)
+    endif()
+    add_executable(${test_name} ${test_sources})
+    target_include_directories(${test_name} PRIVATE
+        ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
+        ${PROJECT_SOURCE_DIR}/src/DataProcessing
+        ${Python3_INCLUDE_DIRS}
+        ${eigen_SOURCE_DIR}/Eigen
+    )
+    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
+    target_compile_options(${test_name} PRIVATE -g)
+endforeach()
+
+# Ensure OpenMP is linked to DiffusionSampleTest
+target_link_libraries(DiffusionSampleTest PRIVATE OpenMP::OpenMP_CXX)
 
 # Set the include directories for the Hypernetwork module
 target_link_libraries(Hypernetwork PRIVATE
     ${Python3_LIBRARIES}
-    ${Python3_INCLUDE_DIRS}
+    OpenMP::OpenMP_CXX
 )
 target_include_directories(Hypernetwork PRIVATE
     ${Python3_INCLUDE_DIRS}
     ${PROJECT_SOURCE_DIR}/src/DiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${PROJECT_SOURCE_DIR}/src/quantum_library
     ${eigen_SOURCE_DIR}/Eigen
 )
 # Set the output directory for the compiled module
@@ -76,18 +83,19 @@ set_target_properties(Hypernetwork PROPERTIES
 )
 
 # Add executable target for Diffusion Sample Test with debug flags
-add_executable(DiffusionSampleTest src/DiT/tests/Diffusion_sample_test.cpp src/DiT/Diffusion_model.cpp src/DiT/Diffusion_Sample.cpp)
+# add_executable(DiffusionSampleTest src/DiT/tests/Diffusion_sample_test.cpp src/DiT/Diffusion_model.cpp src/DiT/Diffusion_Sample.cpp)
 
-target_include_directories(DiffusionSampleTest PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/DiT
-    ${PROJECT_SOURCE_DIR}/src/DataProcessing
-)
+# target_include_directories(DiffusionSampleTest PRIVATE
+#     ${PROJECT_SOURCE_DIR}/src/DiT
+#     ${PROJECT_SOURCE_DIR}/src/DataProcessing
+# )
 
-target_compile_options(DiffusionSampleTest PRIVATE -g)
+# target_compile_options(DiffusionSampleTest PRIVATE -g)
 
-target_link_libraries(DiffusionSampleTest PRIVATE
-    ${Python3_LIBRARIES}
-)
+# target_link_libraries(DiffusionSampleTest PRIVATE
+#     ${Python3_LIBRARIES}
+#     OpenMP::OpenMP_CXX
+# )
 
 # Add executable target for Gaussian Diffusion Test with debug flags
 add_executable(GaussianDiffusionTest src/DiT/tests/Gaussian_Diffusion_test.cpp src/DiT/GaussianDiffusion.cpp src/DiT/NN/EpsilonPredictor.cpp src/DiT/NN/NeuralNetwork.cpp src/DiT/NN/Layers/ConvolutionalLayer.cpp src/DiT/NN/Layers/Flatten.cpp src/DiT/NN/Layers/FullyConnectedLayer.cpp src/DiT/NN/Layers/PoolingLayer.cpp src/DiT/NN/Layers/ReluLayer.cpp src/DiT/NN/NeuralNetwork.cpp)
