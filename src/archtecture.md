@@ -5,9 +5,9 @@ Raw Data → Tokenization → Quantum Encoding → Qubit Graph
                                   ↓
                            Compression + Removal
                                   ↓
-                   Classical Latent Diffusion Decoder
-                                  ↓
                          Quantum Decoder Layer
+                                   ↓
+                         Classical Latent Diffusion Decoder
                                   ↓
                         Error Circuit Estimation
                                   ↓
@@ -25,6 +25,8 @@ Starting with classical data $x$, you encode it into a quantum state $|\psi_{\te
 $$
 |\psi_{\text{encoded}}\rangle = U_{\text{encode}}(x) |0\rangle^{\otimes n}
 $$
+
+
 
 * $U_{\text{encode}}(x)$ is your parameterized encoding circuit.
 * $n$ = number of qubits.
