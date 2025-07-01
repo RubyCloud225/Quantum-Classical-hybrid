@@ -165,3 +165,26 @@ std::string BertNormaliser::utf32ToUtf8(const std::u32string& input) {
     }
     return output;
 }
+
+std::vector<std::string> BertNormaliser::pretok(const std::string& input) {
+    std::string cleaned = bertCleaning(input);
+    std::string noAccents = stripAccents(cleaned);
+    std::u32string utf32 = utf8ToUtf32(noAccents);
+    std::u32string processed;
+    for (char32_t ch : utf32) {
+        if (isChineseChar(ch)) {
+            processed.push_back(U ' ');
+            processed.push_back(ch);
+            processed.push_back(U' ');
+        } else {
+            processed.push_back(toLowerAscii(ch));
+        }
+    }
+    std::string output = utf32ToUtf8(processed);
+    std::istringstream iss(output);
+    std::vector<std::string> tokens;
+    std::string token;
+    while (iss >> token) {
+        tokens.push_back(token);
+    }
+    return tokens;

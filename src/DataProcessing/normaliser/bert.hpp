@@ -15,6 +15,7 @@ class BertNormaliser {
     static std::string stripAccents(const std::string& input);
     static std::u32string utf8ToUtf32(const std::string& input);
     static std::string utf32ToUtf8(const std::u32string& input);
+    static std::vector<std::string> pretok(const std::string& input);
 };
 
 #endif // BERT_HPP
