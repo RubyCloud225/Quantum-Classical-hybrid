@@ -9,6 +9,14 @@ QuantumCircuit::QuantumCircuit(int num_qubits) : n(num_qubits) {
     state[0] = 1; // |00..0>
 }
 
+QuantumCircuit::convert_to_ket(const std::vector<cpx>& initial_state) {
+    std::lock_guard<std::mutex> lock(mtx_);
+    if (initial_state.size() != (1 << n)) {
+        throw std::invalid_argument("Initial state size must match 2^n for n qubits.");
+    }
+    state = ket::Map(const_cast<cpx*>(initial_state.data()), initial_state.size());
+}
+
 void QuantumCircuit::apply_gate(const gate& g, int target) {
     // Apply the gate to the target qubit
     std::lock_guard<std::mutex> lock(mtx_);

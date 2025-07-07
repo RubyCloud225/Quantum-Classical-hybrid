@@ -13,6 +13,7 @@ class QuantumCircuit {
     public:
         // Constructor
         QuantumCircuit(int num_qubits);
+        void convert_to_ket(const std::vector<cpx>& initial_state);
         void apply_gate(const gate& g, int target);
         void apply_cnot(int control, int target);
         void apply_parallel_gates(const std::vector<gate>& gates, const std::vector<int>& targets);
