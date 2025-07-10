@@ -15,18 +15,18 @@ As the hardware becomes more advanced, we could move to a fully quantum model.
 ## Architecture Overview
 
 ```txt
-[ Text Input ]
-   ↓
-Tokenizer (classical)
-   ↓
-Qubit Encoder 
-   ↓
-Quantum Compression Layer
-   ↓
-Quantum Decoder (qubit state → classical vector)
-   ↓
-Diffusion Transformer (DiT, 12-layer)
-   ↓
+      [ Text Input ]
+            ↓
+   Tokenizer (classical)
+            ↓
+      Qubit Encoder 
+            ↓
+   Quantum Compression Layer
+            ↓
+   Quantum Decoder (qubit state → classical vector)
+            ↓
+   Diffusion Transformer (DiT, 12-layer)
+            ↓
 [ Output: prediction / reconstruction ]
 
  
