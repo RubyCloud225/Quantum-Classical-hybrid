@@ -27,6 +27,6 @@ As the hardware becomes more advanced, we could move to a fully quantum model.
             ↓
    Diffusion Transformer (DiT, 12-layer)
             ↓
-[ Output: prediction / reconstruction ]
+      [ Output: prediction / reconstruction ]
 
  
