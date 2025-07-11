@@ -1,5 +1,4 @@
 #include "model_circuit.hpp"
-
 #include <vector>
 #include <complex>
 #include <iostream>
