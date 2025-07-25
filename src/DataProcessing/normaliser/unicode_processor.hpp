@@ -1,24 +1,27 @@
 #ifndef UNICODE_PROCESSOR_HPP
 #define UNICODE_PROCESSOR_HPP
 
-#include <string> // for std::string
-#include <stdexcept> // For std::runtime_error
+#include <string>
+#include <stdexcept>
 
-// ICU library
-#include <unicode/unistr.h> // For UnicodeString
-#include <unicode/normalizer.h> // For Normalizer2
-#include <unicode/uchar.h> // For Unicode character properties
-#include <unicode/ustream.h> // For UnicodeString output
-#include <unicode/unorm2.h> // For normalization functions
+// ICU headers
+#include <unicode/unistr.h>       // UnicodeString
+#include <unicode/uchar.h>        // u_charType
+#include <unicode/normalizer2.h>  // Normalizer2
+#include <unicode/errorcode.h>    // ErrorCode
+
+enum class NormalizationMode {
+    NFC,
+    NFD,
+    NFKC,
+    NFKD
+};
 
 class UnicodeProcessor {
-    public:
-    // normalise a Unicode string to NFC form
-    // returns normalised string
-    static std::string normaliseString(const std::string& input, UNormalizationMode mode);
-    // Remove combining diacritical marks from a Unicode string
+public:
+    static std::string normaliseString(const std::string& input, NormalizationMode mode);
     static std::string removeDiacritics(const std::string& input);
-    private:
+private:
     UnicodeProcessor() = delete;
 };
 

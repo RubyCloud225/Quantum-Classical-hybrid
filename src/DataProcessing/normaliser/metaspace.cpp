@@ -13,20 +13,23 @@
 #include "metaspace.hpp"
 #include <sstream>
 #include <iostream>
+#include <string>
+#include <vector>
 
 MetaspaceNormaliser::MetaspaceNormaliser(char replacement, bool prependScheme)
     : replacement_(replacement), prependScheme_(prependScheme) {}
 
-void MetaspaceNormaliser::setReplacement(char replacement) {
+void MetaspaceNormaliser::setReplacement(char replacement, bool prependScheme) {
     replacement_ = replacement;
+    prependScheme_ = prependScheme;
 }
 
 char MetaspaceNormaliser::getReplacement() const {
     return replacement_;
 }
 
-void MetaspaceNormaliser::setPrependScheme(bool enabled) {
-    prependScheme_ = enabled;
+void MetaspaceNormaliser::setPrependScheme(bool scheme) {
+    prependScheme_ = scheme;
 }
 
 bool MetaspaceNormaliser::getPrependScheme() const {

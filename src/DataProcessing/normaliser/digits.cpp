@@ -8,7 +8,7 @@
 #include <cctype>
 #include <iostream>
 
-std::vector<std::string> DigitNormaliser::normaliseDigits(const std::string& input, bool debug = false) {
+std::vector<std::string> DigitNormaliser::normaliseDigits(const std::string& input, bool debug /*= false*/) {
     std::vector<std::string> tokens;
     for (char ch : input) {
         if (std::isdigit(ch)) {

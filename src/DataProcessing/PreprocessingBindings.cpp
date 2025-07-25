@@ -6,6 +6,7 @@
 #include "normaliser/digits.hpp"
 #include "normaliser/metaspace.hpp"
 #include "normaliser/prepend.hpp"
+#include "normaliser/replace.hpp"
 #include "normaliser/unicode_processor.hpp"
 #include "models/GaussianNoise.hpp"
 #include "models/LinearRegression.hpp"
@@ -122,21 +123,21 @@ PYBIND11_MODULE(preprocessing, m) {
     py::class_<BertNormaliser>(m, "BertNormaliser")
         .def(py::init<>())
         .def("bertCleaning", &BertNormaliser::bertCleaning, py::arg("input"))
-        .def("stripAccounts", &BertNormaliser::stripAccounts, py::arg("input"))
+        .def("stripAccents", &BertNormaliser::stripAccents, py::arg("input"))
         .def("utf8ToUtf32", &BertNormaliser::utf8ToUtf32, py::arg("input"))
         .def("utf32ToUtf8", &BertNormaliser::utf32ToUtf8, py::arg("input"))
         .def("pretok", &BertNormaliser::pretok, py::arg("input"));
-    py::class_<ByteNormaliser>(m, "ByteNormaliser")
-        .def("ByteNormalise", &ByteNormaliser::ByteNormalise, py::arg("input"), py::arg("debug") = false)
-        .def("pretok", &ByteNormaliser::pretok, py::arg("input"), py::arg("debug") = false);
+    py::class_<ByteNormalizer>(m, "ByteNormalizer")
+        .def("ByteNormalise", &ByteNormalizer::ByteNormalise, py::arg("input"), py::arg("debug") = false)
+        .def("pretok", &ByteNormalizer::pretok, py::arg("input"), py::arg("debug") = false);
     py::class_<DigitNormaliser>(m, "DigitNormaliser")
         .def("normaliseDigits", &DigitNormaliser::normaliseDigits, py::arg("input"), py::arg("debug") = false);
     py::class_<MetaspaceNormaliser>(m, "MetaspaceNormaliser")
         .def(py::init<>())
-        .def("setReplacement", &MetaspaceNormaliser::setReplacement, py::arg("replacement"))
+        .def("setReplacement", &MetaspaceNormaliser::setReplacement, py::arg("replacement"), py::arg("prependScheme") = false)
         .def("getReplacement", &MetaspaceNormaliser::getReplacement)
-        .def("setPrependScheme", &MetaspaceNormaliser::setPrependScheme, py::arg("enabled"))
         .def("getPrependScheme", &MetaspaceNormaliser::getPrependScheme)
+        .def("setPrependScheme", &MetaspaceNormaliser::setPrependScheme)
         .def("pretok", &MetaspaceNormaliser::pretok, py::arg("input"), py::arg("debug") = false);
     py::class_<Prepend>(m, "Prepend")
         .def(py::init<const std::string&, const std::string&>(), py::arg("filename"), py::arg("text"))
@@ -148,11 +149,10 @@ PYBIND11_MODULE(preprocessing, m) {
         .def("applyReplace", &Replace::applyReplace, py::arg("content"))
         .def("clone", &Replace::clone)
         .def("serialise", &Replace::serialise)
-        .def_static("deserialise", &Replace::deserialise, py::arg("serialisedData"))
+        .def("deserialise", &Replace::deserialise, py::arg("serialisedData"))
         .def_property("pattern", &Replace::getPattern, nullptr)
         .def_property("replace", &Replace::getReplace, nullptr);
     py::class_<UnicodeProcessor>(m, "UnicodeProcessor")
-        .def(py::init<>())
-        .def("normaliseString", &UnicodeProcessor::normaliseString, py::arg("input"), py::arg("mode") = UNormalizationMode::NFC)
-        .def("removeDiacritics", &UnicodeProcessor::removeDiacritics, py::arg("input"));
+        .def_static("normaliseString", &UnicodeProcessor::normaliseString, py::arg("input"), py::arg("mode") = UNormalization2Mode::UNORM2_COMPOSE)
+        .def_static("removeDiacritics", &UnicodeProcessor::removeDiacritics, py::arg("input"));
 }

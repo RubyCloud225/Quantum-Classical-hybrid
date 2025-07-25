@@ -17,7 +17,7 @@ int main() {
         Replace replace("foo", "bar");
         std::string input = "foo foo foo";
         std::string expectedOutput = "bar bar bar";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -27,7 +27,7 @@ int main() {
         Replace replace("xyz", "abc");
         std::string input = "foo bar baz";
         std::string expectedOutput = "foo bar baz";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -37,7 +37,7 @@ int main() {
         Replace replace("foo", "bar");
         std::string input = "foo foo foo";
         std::string expectedOutput = "bar bar bar";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -47,7 +47,7 @@ int main() {
         Replace replace("", "bar");
         std::string input = "foo bar baz";
         std::string expectedOutput = "foo bar baz";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -57,7 +57,7 @@ int main() {
         Replace replace("foo", "");
         std::string input = "foo bar baz";
         std::string expectedOutput = " bar baz";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -67,7 +67,7 @@ int main() {
         Replace replace("a\\b", "c");
         std::string input = "a\\b";
         std::string expectedOutput = "c";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -77,7 +77,7 @@ int main() {
         Replace replace("FOO", "bar");
         std::string input = "FOO bar baz";
         std::string expectedOutput = "FOO bar baz";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -87,7 +87,7 @@ int main() {
         Replace replace("ä", "a");
         std::string input = "föö bar baz";
         std::string expectedOutput = "föö bar baz";
-        std::string actualOutput = replace.replace(input);
+        std::string actualOutput = Replace.replace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }

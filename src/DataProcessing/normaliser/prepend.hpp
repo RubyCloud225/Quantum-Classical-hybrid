@@ -15,5 +15,5 @@ class Prepend {
     private:
     std::string filename;
     std::string text;
-}
+};
 #endif // PREPEND_HPP

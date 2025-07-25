@@ -8,6 +8,8 @@
 #include <exception>
 #include <algorithm>
 #include <stdexcept>
+#include <string>
+#include <vector>
 
 struct GlobalInitLogger {
     GlobalInitLogger() {
@@ -173,7 +175,7 @@ std::vector<std::string> BertNormaliser::pretok(const std::string& input) {
     std::u32string processed;
     for (char32_t ch : utf32) {
         if (isChineseChar(ch)) {
-            processed.push_back(U ' ');
+            processed.push_back(U' ');
             processed.push_back(ch);
             processed.push_back(U' ');
         } else {
@@ -188,3 +190,4 @@ std::vector<std::string> BertNormaliser::pretok(const std::string& input) {
         tokens.push_back(token);
     }
     return tokens;
+}

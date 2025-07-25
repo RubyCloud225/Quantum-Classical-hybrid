@@ -6,7 +6,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find Python and pybind11 packages
-find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
+find_package(
+    Python3 REQUIRED COMPONENTS Interpreter Development)
+find_package(benchmark REQUIRED)
+if(EXISTS "/opt/homebrew/include/benchmark/benchmark.h")
+    message(STATUS "Google Benchmark found")
+else()
+    message(FATAL_ERROR "Google Benchmark not found in /opt/homebrew/include. Did you run `brew install benchmark`?")
+endif()
 execute_process(
     COMMAND python3 -m pybind11 --cmakedir
     OUTPUT_VARIABLE PYBIND11_CMAKE_DIR
@@ -41,9 +48,21 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/src/quantum_library
     ${PROJECT_SOURCE_DIR}/src/Qubit_graph
     /opt/homebrew/include/eigen3
-    /opt/homebrew/opt/icu4c@77/include
+    /opt/homebrew/include
+    $ENV{HOME}/icu-install/include
     ${Python3_INCLUDE_DIRS}
 )
+link_directories(
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${PROJECT_SOURCE_DIR}/src/quantum_library
+    ${PROJECT_SOURCE_DIR}/src/Qubit_graph
+    /opt/homebrew/lib
+    $ENV{HOME}/icu-install/lib
+)
+
 
 file(GLOB_RECURSE DATAPROCESSING_SOURCES src/DataProcessing/*.cpp)
 file(GLOB_RECURSE NORMALISER_SOURCES src/DataProcessing/normaliser/*.cpp)
@@ -81,6 +100,8 @@ target_link_libraries(quantum_classical_hybrid PRIVATE
     OpenMP::OpenMP_CXX
     icuuc
     icui18n
+    benchmark
+    benchmark_main
 )
 target_include_directories(quantum_classical_hybrid PRIVATE
     ${Python3_INCLUDE_DIRS}
@@ -88,7 +109,7 @@ target_include_directories(quantum_classical_hybrid PRIVATE
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
     ${PROJECT_SOURCE_DIR}/src/Bindings
     ${PROJECT_SOURCE_DIR}/src/quantum_library
-    /opt/homebrew/opt/icu4c@77/include
+    $ENV{HOME}/icu-install/include
 )
 # Set the output directory and output name for the compiled module
 set_target_properties(quantum_classical_hybrid PROPERTIES
@@ -133,7 +154,7 @@ target_include_directories(GaussianDiffusionTest PRIVATE
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/NN
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
     /opt/homebrew/opt/libomp/include
-    /opt/homebrew/opt/icu4c/include
+    $ENV{HOME}/icu-install/include
 )
 
 target_compile_options(GaussianDiffusionTest PRIVATE -g)
@@ -165,7 +186,7 @@ set(OpenMP_CXX_INCLUDE_DIR /opt/homebrew/opt/libomp/include)
 # Add OpenMP include directory explicitly to compiler flags
 add_compile_options(
     -I/opt/homebrew/opt/libomp/include
-    -I/opt/homebrew/opt/icu4c@77/include
+    -I$ENV{HOME}/icu-install/include
 )
 add_definitions(-fopenmp)
 

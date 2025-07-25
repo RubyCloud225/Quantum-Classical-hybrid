@@ -27,13 +27,13 @@ Replace Replace::clone() const {
 }
 
 // serialize the Replace object
-std::string Replace::serialize() const {
+std::string Replace::serialise() const {
     std::ostringstream oss;
     oss << regexPattern << "\n" << replaceWith;
     return oss.str();
 }
 // deserialize a Replace object from a string
-Replace Replace::deserialize(const std::string& serialisedData) {
+Replace Replace::deserialise(const std::string& serialisedData) {
     std::istringstream iss(serialisedData);
     std::string pattern, replace;
     if (!std::getline(iss, pattern) || !std::getline(iss, replace)) {

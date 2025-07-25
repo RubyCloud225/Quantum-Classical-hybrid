@@ -2,8 +2,9 @@
 #include "byte_level.hpp"
 #include <sstream>
 #include <iomanip>
+#include <iostream>
 
-std::vector<std::string> ByteNormaliser::pretok(const std::string& input, bool debug) {
+std::vector<std::string> ByteNormalizer::pretok(const std::string& input, bool debug) {
     std::ostringstream oss;
     for (unsigned char ch : input) {
         if (ch == ' ') {
@@ -24,7 +25,7 @@ std::vector<std::string> ByteNormaliser::pretok(const std::string& input, bool d
     }
     return tokens;
 }
-std::vector<std::string> ByteNormaliser::ByteNormalise(const std::string& input, bool debug) {
+std::vector<std::string> ByteNormalizer::ByteNormalise(const std::string& input, bool debug) {
     std::vector<std::string> output;
     for (unsigned char ch : input) {
         std::string token;

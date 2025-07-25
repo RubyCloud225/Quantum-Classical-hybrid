@@ -1,4 +1,4 @@
-#include "../DiT/GaussianDiffusion.hpp"
+#include "../ClassicalDiT/GaussianDiffusion.hpp"
 #include <iostream>
 #include <vector>
 #include <chrono>

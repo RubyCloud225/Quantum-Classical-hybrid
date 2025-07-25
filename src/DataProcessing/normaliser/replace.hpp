@@ -23,11 +23,11 @@ class Replace {
     // add in for different types of DATA: byte, unicode, etc
     // Serialise and deserialize methods
     std::string serialise() const;
-    static std::string deserialise(const std::string& serialisedData);
+    Replace deserialise(const std::string& serialisedData);
     // std::string replace(const std::string& content) const;
     // internal values
-    std::string getPattern() const { return str; }
-    std::string getReplace() const { return s2; }
+    std::string getPattern() const { return regexPattern; }
+    std::string getReplace() const { return replaceWith; }
     private:
     std::string regexPattern; // The regex pattern to match
     std::string replaceWith; // The string to replace with

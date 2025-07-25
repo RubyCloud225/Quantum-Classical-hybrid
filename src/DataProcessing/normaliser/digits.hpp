@@ -6,7 +6,7 @@
 
 class DigitNormaliser {
     public:
-    static std::vector<std::string> normaliseDigits(const std::string& input, bool debug = false);
+    std::vector<std::string> normaliseDigits(const std::string& input, bool debug = false);
 };
 
 #endif // DIGITS_HPP

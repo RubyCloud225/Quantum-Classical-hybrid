@@ -63,7 +63,12 @@
         "set": "cpp",
         "span": "cpp",
         "typeindex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "any": "cpp",
+        "cinttypes": "cpp",
+        "condition_variable": "cpp",
+        "future": "cpp",
+        "strstream": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "python.analysis.extraPaths": [
