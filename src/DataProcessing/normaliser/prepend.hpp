@@ -16,3 +16,4 @@ class Prepend {
     std::string filename;
     std::string text;
 }
+#endif // PREPEND_HPP

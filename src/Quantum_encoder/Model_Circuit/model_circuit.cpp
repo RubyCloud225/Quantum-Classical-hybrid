@@ -76,7 +76,7 @@ std::vector<ModelCircuit::Complex> ModelCircuit::apply_unitary_to_encoded_state(
     }
     // Apply CNOT gates between the first qubit and all other qubits
     for (int i = 1; i < num_qubits; ++i) {
-        apply_cnot(state_vector, i, (i + 1) % num_qubits, i);
+        apply_cnot(state_vector, i, (i + 1) % num_qubits);
     }
     return state_vector; // Return the transformed state vector
 
@@ -106,3 +106,10 @@ double measure_projection_onto_one(const std::vector<Complex>& state_vector) {
     double overlap = measure_overlap_with_one(state_vector);
     return overlap; // Return the probability of measuring one
 }
+
+// Quantum circuit that encodes a parameterized graph state
+//  takes classical data applies a single qubit unitary gate - theta and lambda
+// applies a hadamard gate to each qubit
+// applies a cnot gate between each pair of qubits
+// and returns the final state vector
+//

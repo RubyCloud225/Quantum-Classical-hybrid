@@ -1,4 +1,4 @@
-#include DIGITS_HPP
+#ifndef DIGITS_HPP
 #define DIGITS_HPP
 
 #include <string>

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(HypernetworkModel LANGUAGES CXX)
+project(quantum_classical_hybrid LANGUAGES CXX)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -7,23 +7,42 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Find Python and pybind11 packages
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
-find_package(pybind11 REQUIRED PATHS /usr/local/lib/cmake/pybind11 /opt/homebrew/lib/cmake/pybind11 NO_DEFAULT_PATH)
+execute_process(
+    COMMAND python3 -m pybind11 --cmakedir
+    OUTPUT_VARIABLE PYBIND11_CMAKE_DIR
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+list(APPEND CMAKE_PREFIX_PATH ${PYBIND11_CMAKE_DIR})
+find_package(pybind11 REQUIRED)
+
+# Set pybind11_DIR to Homebrew path to fix find_package error
+# set(pybind11_DIR /opt/homebrew/lib/cmake/pybind11)
+
+# Ensure pybind11 is found from Homebrew path
+if(NOT pybind11_FOUND)
+    find_package(pybind11 REQUIRED PATHS /opt/homebrew/lib/cmake/pybind11)
+endif()
 
 # Download and configure Eigen3
-include(FetchContent)
-FetchContent_Declare(
-  eigen
-  GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-  GIT_TAG 3.4.0
-)
-FetchContent_MakeAvailable(eigen)
+#include(FetchContent)
+#FetchContent_Declare(
+#  eigen
+#  GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+#  GIT_TAG 3.4.0
+#)
+#FetchContent_MakeAvailable(eigen)
 
 # Find the required libraries
 include_directories(
-    ${PROJECT_SOURCE_DIR}/src/DiT
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
     ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
-    ${eigen_SOURCE_DIR}
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${PROJECT_SOURCE_DIR}/src/quantum_library
+    ${PROJECT_SOURCE_DIR}/src/Qubit_graph
+    /opt/homebrew/include/eigen3
+    /opt/homebrew/opt/icu4c@77/include
+    ${Python3_INCLUDE_DIRS}
 )
 
 file(GLOB_RECURSE DATAPROCESSING_SOURCES src/DataProcessing/*.cpp)
@@ -34,7 +53,7 @@ file(GLOB_RECURSE NORMALISER_TESTS src/DataProcessing/normaliser/tests/*.cpp)
 list(FILTER DATAPROCESSING_SOURCES EXCLUDE REGEX ".*tests/.*")
 list(FILTER NORMALISER_SOURCES EXCLUDE REGEX ".*tests/.*")
 
-pybind11_add_module(Hypernetwork
+pybind11_add_module(quantum_classical_hybrid
     ${DATAPROCESSING_SOURCES}
     ${NORMALISER_SOURCES}
 )
@@ -51,30 +70,29 @@ foreach(test_file ${NORMALISER_TESTS})
         ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
         ${PROJECT_SOURCE_DIR}/src/DataProcessing
         ${Python3_INCLUDE_DIRS}
-        ${eigen_SOURCE_DIR}/Eigen
     )
     target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
     target_compile_options(${test_name} PRIVATE -g)
 endforeach()
 
-# Ensure OpenMP is linked to DiffusionSampleTest
-target_link_libraries(DiffusionSampleTest PRIVATE OpenMP::OpenMP_CXX)
-
-# Set the include directories for the Hypernetwork module
-target_link_libraries(Hypernetwork PRIVATE
+# Set the include directories for the quantum_classical_hybrid module
+target_link_libraries(quantum_classical_hybrid PRIVATE
     ${Python3_LIBRARIES}
     OpenMP::OpenMP_CXX
+    icuuc
+    icui18n
 )
-target_include_directories(Hypernetwork PRIVATE
+target_include_directories(quantum_classical_hybrid PRIVATE
     ${Python3_INCLUDE_DIRS}
-    ${PROJECT_SOURCE_DIR}/src/DiT
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
     ${PROJECT_SOURCE_DIR}/src/Bindings
     ${PROJECT_SOURCE_DIR}/src/quantum_library
-    ${eigen_SOURCE_DIR}/Eigen
+    /opt/homebrew/opt/icu4c@77/include
 )
-# Set the output directory for the compiled module
-set_target_properties(Hypernetwork PROPERTIES
+# Set the output directory and output name for the compiled module
+set_target_properties(quantum_classical_hybrid PROPERTIES
+    OUTPUT_NAME "quantum-classical-hybrid"
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
@@ -98,13 +116,24 @@ set_target_properties(Hypernetwork PROPERTIES
 # )
 
 # Add executable target for Gaussian Diffusion Test with debug flags
-add_executable(GaussianDiffusionTest src/DiT/tests/Gaussian_Diffusion_test.cpp src/DiT/GaussianDiffusion.cpp src/DiT/NN/EpsilonPredictor.cpp src/DiT/NN/NeuralNetwork.cpp src/DiT/NN/Layers/ConvolutionalLayer.cpp src/DiT/NN/Layers/Flatten.cpp src/DiT/NN/Layers/FullyConnectedLayer.cpp src/DiT/NN/Layers/PoolingLayer.cpp src/DiT/NN/Layers/ReluLayer.cpp src/DiT/NN/NeuralNetwork.cpp)
+add_executable(GaussianDiffusionTest 
+    src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp 
+    src/ClassicalDiT/GaussianDiffusion.cpp 
+    src/ClassicalDiT/NN/EpsilonPredictor.cpp 
+    src/ClassicalDiT/NN/NeuralNetwork.cpp 
+    src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp 
+    src/ClassicalDiT/NN/Layers/Flatten.cpp 
+    src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp 
+    src/ClassicalDiT/NN/Layers/PoolingLayer.cpp 
+    src/ClassicalDiT/NN/Layers/ReluLayer.cpp 
+    )
 
 target_include_directories(GaussianDiffusionTest PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/DiT
-    ${PROJECT_SOURCE_DIR}/src/DiT/NN
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/NN
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
     /opt/homebrew/opt/libomp/include
+    /opt/homebrew/opt/icu4c/include
 )
 
 target_compile_options(GaussianDiffusionTest PRIVATE -g)
@@ -134,7 +163,10 @@ set(OpenMP_LINK_FLAGS "-L/opt/homebrew/opt/libomp/lib -lomp")
 set(OpenMP_CXX_INCLUDE_DIR /opt/homebrew/opt/libomp/include)
 
 # Add OpenMP include directory explicitly to compiler flags
-add_compile_options(-I/opt/homebrew/opt/libomp/include)
+add_compile_options(
+    -I/opt/homebrew/opt/libomp/include
+    -I/opt/homebrew/opt/icu4c@77/include
+)
 add_definitions(-fopenmp)
 
 # Also set environment variables for the build process
@@ -152,6 +184,8 @@ endif()
 
 target_link_libraries(GaussianDiffusionTest PRIVATE
     ${Python3_LIBRARIES}
+    icuuc
+    icui18n
 )
 
 
