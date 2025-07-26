@@ -3,8 +3,10 @@
 #include <iostream>
 #include <chrono>
 
+ByteNormalizer ByteNormalizer;
+
 void testEmptyInput() {
-    auto result = ByteNormalizer::ByteNormaliser("", true);
+    auto result = ByteNormalizer.ByteNormalise("", true);
     assert(result.empty());
 }
 
@@ -14,21 +16,21 @@ void testSpacesOnly () {
 
 void testMixedWhitespaceAndSymbols() {
     std::string input = " \t\n\r!@#";
-    auto result = ByteNormalizer::ByteNormaliser(input, true);
+    auto result = ByteNormalizer.ByteNormalise(input, true);
     assert(result[0] == "Ġ");
     assert(result[4] == "!");
 }
 
 void testUTF8Characters() {
     std::string input = u8"é漢字";
-    auto result = ByteNormalizer::ByteNormaliser(input, true);
+    auto result = ByteNormalizer.ByteNormalise(input, true);
     assert(!result.empty()); // at least multibyte encoded output
 }
 
 void testPerformance() {
     std::string input(1000000, 'a');
     auto start = std::chrono::high_resolution_clock::now();
-    auto result = ByteNormalizer::ByteNormaliser(input);
+    auto result = ByteNormalizer.ByteNormalise(input);
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> duration = end - start;
     std::cout << "Performance test: " << duration.count() << " seconds\n";

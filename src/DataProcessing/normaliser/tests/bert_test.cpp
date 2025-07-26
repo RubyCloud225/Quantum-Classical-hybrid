@@ -2,38 +2,40 @@
 #include <cassert>
 #include "bert.hpp"
 
+BertNormaliser BertNormaliser;
+
 void testWhitespaceNormlisation() {
     std::string input = "   Hello\t\n World!   ";
     std::string expected = "Hello World!";
-    std::string result = BertNormaliser::bertCleaning(input);
+    std::string result = BertNormaliser.bertCleaning(input);
     assert(result == expected);
 }
 
 void testControlCharacterRemoval() {
     std::string input = "Hello\x01World\x02!";
     std::string expected = "HelloWorld!";
-    std::string result = BertNormaliser::bertCleaning(input);
+    std::string result = BertNormaliser.bertCleaning(input);
     assert(result == expected);
 }
 
 void testChineseCharacterHandling() {
     std::string input = "Hello 你好 World!";
     std::string expected = "Hello 你好 World!";
-    std::string result = BertNormaliser::bertCleaning(input);
+    std::string result = BertNormaliser.bertCleaning(input);
     assert(result == expected);
 }
 
 void testAccentStripping() {
     std::string input = "Café résumé naïve";
     std::string expected = "Cafe resume naive";
-    std::string result = BertNormaliser::stripAccents(input);
+    std::string result = BertNormaliser.stripAccents(input);
     assert(result == expected);
 }
 
 void testMixedInput() {
     std::string input = "  Hello\x01 World! Café résumé 你好  ";
     std::string expected = "Hello World! Cafe resume 你好";
-    std::string result = BertNormaliser::bertCleaning(input);
+    std::string result = BertNormaliser.bertCleaning(input);
     assert(result == expected);
 }
 

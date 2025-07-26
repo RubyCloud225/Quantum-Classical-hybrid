@@ -43,10 +43,12 @@ endif()
 include_directories(
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
-    ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
+    #${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
     ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${PROJECT_SOURCE_DIR}/src/quantum_library
-    ${PROJECT_SOURCE_DIR}/src/Qubit_graph
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/Compression
+    #${PROJECT_SOURCE_DIR}/src/quantum_library
+    #${PROJECT_SOURCE_DIR}/src/Qubit_graph
     /opt/homebrew/include/eigen3
     /opt/homebrew/include
     $ENV{HOME}/icu-install/include
@@ -55,10 +57,12 @@ include_directories(
 link_directories(
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
-    ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
+    #${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
     ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${PROJECT_SOURCE_DIR}/src/quantum_library
-    ${PROJECT_SOURCE_DIR}/src/Qubit_graph
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/Compression
+    #${PROJECT_SOURCE_DIR}/src/quantum_library
+    #${PROJECT_SOURCE_DIR}/src/Qubit_graph
     /opt/homebrew/lib
     $ENV{HOME}/icu-install/lib
 )
@@ -77,16 +81,122 @@ pybind11_add_module(quantum_classical_hybrid
     ${NORMALISER_SOURCES}
 )
 
+
 # Add separate executable targets for normaliser tests
 foreach(test_file ${NORMALISER_TESTS})
     get_filename_component(test_name ${test_file} NAME_WE)
     set(test_sources ${test_file})
-    if(test_name STREQUAL "bert_test" OR test_name STREQUAL "bert_minimal_test")
-        list(APPEND test_sources src/DataProcessing/normaliser/bert.cpp)
+
+    # Attempt to match the module name by stripping "_test" suffix
+    string(REPLACE "_test" "" module_name ${test_name})
+    set(module_path "${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/${module_name}.cpp")
+    if(EXISTS ${module_path})
+        list(APPEND test_sources ${module_path})
     endif()
+
     add_executable(${test_name} ${test_sources})
     target_include_directories(${test_name} PRIVATE
         ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
+        ${PROJECT_SOURCE_DIR}/src/DataProcessing
+        ${Python3_INCLUDE_DIRS}
+    )
+    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
+    target_compile_options(${test_name} PRIVATE -g)
+endforeach()
+# Manual fix: map bert_minimal_test to bert.cpp
+if(test_name STREQUAL "bert_minimal_test")
+    list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/bert.cpp)
+endif()
+
+# Add separate executable targets for model tests
+file(GLOB_RECURSE MODEL_TESTS src/DataProcessing/models/tests/*.cpp)
+foreach(test_file ${MODEL_TESTS})
+    get_filename_component(test_name ${test_file} NAME_WE)
+    set(test_sources ${test_file})
+
+    # Attempt to match the module name by stripping "_test" suffix
+    string(REPLACE "_test" "" module_name ${test_name})
+    set(module_path "${PROJECT_SOURCE_DIR}/src/DataProcessing/models/${module_name}.cpp")
+    if(EXISTS ${module_path})
+        list(APPEND test_sources ${module_path})
+    endif()
+
+    add_executable(${test_name} ${test_sources})
+    target_include_directories(${test_name} PRIVATE
+        ${PROJECT_SOURCE_DIR}/src/DataProcessing/models
+        ${PROJECT_SOURCE_DIR}/src/DataProcessing
+        ${Python3_INCLUDE_DIRS}
+    )
+    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
+    target_compile_options(${test_name} PRIVATE -g)
+endforeach()
+
+# Add executable targets for all quantum encoder tests
+file(GLOB_RECURSE QUANTUM_ENCODER_TESTS src/Quantum_encoder/tests/*.cpp)
+foreach(test_file ${QUANTUM_ENCODER_TESTS})
+    get_filename_component(test_name ${test_file} NAME_WE)
+    set(test_sources ${test_file})
+
+    # Attempt to match the module name by stripping "_test" suffix
+    string(REPLACE "_test" "" module_name ${test_name})
+
+    # Search for a matching .cpp module anywhere under src/Quantum.encoder (excluding tests)
+    file(GLOB_RECURSE candidate_sources RELATIVE ${PROJECT_SOURCE_DIR}
+        ${PROJECT_SOURCE_DIR}/src/Quantum_encoder/*.cpp
+    )
+    list(FILTER candidate_sources EXCLUDE REGEX ".*tests/.*")
+    set(module_path "")
+    foreach(candidate ${candidate_sources})
+        get_filename_component(candidate_name ${candidate} NAME_WE)
+        if(candidate_name STREQUAL module_name)
+            set(module_path "${PROJECT_SOURCE_DIR}/${candidate}")
+            break()
+        endif()
+    endforeach()
+
+    if(EXISTS ${module_path})
+        list(APPEND test_sources ${module_path})
+    endif()
+
+    add_executable(${test_name} ${test_sources})
+    target_include_directories(${test_name} PRIVATE
+        ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+        ${Python3_INCLUDE_DIRS}
+    )
+    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
+    target_compile_options(${test_name} PRIVATE -g)
+endforeach()
+
+# Add executable targets for all ClassicalDiT tests
+file(GLOB_RECURSE CLASSICAL_DIT_TESTS src/ClassicalDiT/tests/*.cpp)
+foreach(test_file ${CLASSICAL_DIT_TESTS})
+    get_filename_component(test_name ${test_file} NAME_WE)
+    set(test_sources ${test_file})
+
+    # Attempt to match the module name by stripping "_test" suffix
+    string(REPLACE "_test" "" module_name ${test_name})
+
+    # Search for a matching .cpp module anywhere under src/ClassicalDiT (excluding tests)
+    file(GLOB_RECURSE candidate_sources RELATIVE ${PROJECT_SOURCE_DIR}
+        ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/*.cpp
+    )
+    list(FILTER candidate_sources EXCLUDE REGEX ".*tests/.*")
+    set(module_path "")
+    foreach(candidate ${candidate_sources})
+        get_filename_component(candidate_name ${candidate} NAME_WE)
+        if(candidate_name STREQUAL module_name)
+            set(module_path "${PROJECT_SOURCE_DIR}/${candidate}")
+            break()
+        endif()
+    endforeach()
+
+    if(EXISTS ${module_path})
+        list(APPEND test_sources ${module_path})
+    endif()
+
+    add_executable(${test_name} ${test_sources})
+    target_include_directories(${test_name} PRIVATE
+        ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
         ${PROJECT_SOURCE_DIR}/src/DataProcessing
         ${Python3_INCLUDE_DIRS}
     )
@@ -108,7 +218,8 @@ target_include_directories(quantum_classical_hybrid PRIVATE
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
     ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${PROJECT_SOURCE_DIR}/src/quantum_library
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/Compression
     $ENV{HOME}/icu-install/include
 )
 # Set the output directory and output name for the compiled module

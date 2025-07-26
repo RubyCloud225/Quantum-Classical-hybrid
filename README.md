@@ -30,3 +30,4 @@ As the hardware becomes more advanced, we could move to a fully quantum model.
       [ Output: prediction / reconstruction ]
 
  
+![CI](https://github.com/RubyCloud225/Quantum-Classical-hybrid/actions/workflows/ci.yml/badge.svg)

@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-matrix:
+    name: Build and Test on ${{ matrix.os }} with ${{ matrix.compiler }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-14, ubuntu-22.04, windows-latest]
+        compiler: [gcc]
+
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
+
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v3
+
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache
+          build
+          ${{ matrix.os == 'windows-latest' && 'C:/tools' || '' }}
+        key: ${{ runner.os }}-build-${{ hashFiles('**/CMakeLists.txt') }}
+
+    - name: 🧰 Install dependencies
+      if: matrix.os == 'macos-14'
+      run: |
+        brew install cmake gcc@15 libomp python@3 benchmark
+        echo "/opt/homebrew/opt/gcc@15/bin" >> $GITHUB_PATH
+        echo "CMAKE_C_COMPILER=/opt/homebrew/bin/gcc-15" >> $GITHUB_ENV
+        echo "CMAKE_CXX_COMPILER=/opt/homebrew/bin/g++-15" >> $GITHUB_ENV
+
+    - name: 🧰 Install dependencies
+      if: matrix.os == 'ubuntu-22.04'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++ gcc libomp-dev python3 python3-pip gcovr
+        echo "CMAKE_C_COMPILER=gcc" >> $GITHUB_ENV
+        echo "CMAKE_CXX_COMPILER=g++" >> $GITHUB_ENV
+
+    - name: 🧰 Install dependencies
+      if: matrix.os == 'windows-latest'
+      shell: pwsh
+      run: |
+        choco install -y cmake mingw
+        echo "CMAKE_C_COMPILER=C:/tools/mingw64/bin/gcc.exe" >> $Env:GITHUB_ENV
+        echo "CMAKE_CXX_COMPILER=C:/tools/mingw64/bin/g++.exe" >> $Env:GITHUB_ENV
+
+    - name: 🛠️ Configure CMake
+      run: |
+        cmake -S . -B build ^
+          -DCMAKE_C_COMPILER=$env:CMAKE_C_COMPILER ^
+          -DCMAKE_CXX_COMPILER=$env:CMAKE_CXX_COMPILER ^
+          -DCMAKE_BUILD_TYPE=Debug ^
+          -DCMAKE_CXX_FLAGS="--coverage" ^
+          -DCMAKE_EXE_LINKER_FLAGS="--coverage"
+      shell: ${{ matrix.os == 'windows-latest' && 'pwsh' || 'bash' }}
+
+    - name: 🧪 Build
+      run: |
+        cmake --build build -- -j$(nproc || sysctl -n hw.logicalcpu)
+      shell: ${{ matrix.os == 'windows-latest' && 'pwsh' || 'bash' }}
+
+    - name: 🚀 Run Tests
+      run: |
+        cd build
+        find . -type f -executable -name "*_test" -exec {} \;
+      shell: ${{ matrix.os == 'windows-latest' && 'pwsh' || 'bash' }}
+
+    - name: 📊 Generate Coverage Report
+      if: matrix.os == 'ubuntu-22.04'
+      run: |
+        cd build
+        gcovr --root .. --exclude-directories tests --xml-pretty -o coverage.xml
