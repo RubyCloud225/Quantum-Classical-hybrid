@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <stdexcept>
+#include "utils/logger.hpp"
 
 void saveSamples(const std::vector<SampleData>& samples, const std::string& filename) {
     std::ofstream out(filename, std::ios::binary);
@@ -19,6 +20,7 @@ void saveSamples(const std::vector<SampleData>& samples, const std::string& file
         out.write(reinterpret_cast<const char*>(&sample.nll), sizeof(sample.nll));
         out.write(reinterpret_cast<const char*>(&sample.entopy), sizeof(sample.entopy));
     }
+    Logger::log("Saved " + std::to_string(samples.size()) + " samples to " + filename, LogLevel::INFO, __FILE__, __LINE__);
     out.close();
 }
 
@@ -45,7 +47,11 @@ std::vector<SampleData> loadSamples(const std::string& filename) {
         if (in.fail()) {
             throw std::runtime_error("Error reading sample from file");
         }
+        Logger::log("Loaded sample with token embedding size: " + std::to_string(size) + 
+                    ", noise size: " + std::to_string(noise_size) + 
+                    ", target value: " + std::to_string(sample.target_value), LogLevel::INFO, __FILE__, __LINE__);
     }
+    Logger::log("Loaded " + std::to_string(samples.size()) + " samples from " + filename, LogLevel::INFO, __FILE__, __LINE__);
     in.close();
     return samples;
 }

@@ -1,4 +1,5 @@
 #include "unicode_processor.hpp"
+#include "utils/logger.hpp"
 
 std::string UnicodeProcessor::normaliseString(const std::string& input, NormalizationMode mode) {
     UErrorCode errorCode = U_ZERO_ERROR;
@@ -20,10 +21,12 @@ std::string UnicodeProcessor::normaliseString(const std::string& input, Normaliz
         default:
             throw std::runtime_error("Unsupported normalization mode");
     }
+    Logger::log("Using normalization mode: " + std::to_string(static_cast<int>(mode)), LogLevel::INFO, __FILE__, __LINE__);
 
     if (U_FAILURE(errorCode) || !normalizer) {
         throw std::runtime_error("Failed to get normalizer instance");
     }
+    Logger::log("Normalizing string: " + input, LogLevel::INFO, __FILE__, __LINE__);
 
     icu::UnicodeString unicodeInput = icu::UnicodeString::fromUTF8(input);
     icu::UnicodeString normalized;
@@ -32,6 +35,7 @@ std::string UnicodeProcessor::normaliseString(const std::string& input, Normaliz
     if (U_FAILURE(errorCode)) {
         throw std::runtime_error("Normalization failed");
     }
+    Logger::log("Normalization completed successfully", LogLevel::INFO, __FILE__, __LINE__);
 
     std::string result;
     normalized.toUTF8String(result);
@@ -51,6 +55,7 @@ std::string UnicodeProcessor::removeDiacritics(const std::string& input) {
         }
         i += U16_LENGTH(c);
     }
+    Logger::log("Removing diacritics from string: " + input, LogLevel::INFO, __FILE__, __LINE__);
 
     std::string result;
     uResult.toUTF8String(result);

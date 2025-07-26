@@ -1,5 +1,6 @@
 #include "HybridEncoder.hpp"
 #include <cmath>
+#include "utils/logger.hpp"
 #include <iostream>
 
 HybridEncoder::HybridEncoder(const std::vector<double>& input) {
@@ -21,9 +22,11 @@ void HybridEncoder::normaliseAndEncode(const std::vector<double>& input) {
         double amplitude = normalized_input[i];
         hybridEncodedGates.push_back({angleGates[i], amplitude});
     }
+    Logger::log("HybridEncoder encoded " + std::to_string(hybridEncodedGates.size()) + " gates", INFO);
 }
 
 std::vector<HybridGate> HybridEncoder::getHybridEncodedGates() const {
+    Logger::log("Retrieving hybrid encoded gates", INFO);
     return hybridEncodedGates;
 }
 
@@ -41,8 +44,7 @@ void HybridEncoder::printHybridGates() const {
                 axisStr = "Z";
                 break;
         }
-        std::cout << "Hybrid Gate: " << axisStr 
-                  << ", Angle: " << hg.angleGate.angle 
-                  << " radians, Amplitude: " << hg.amplitude << std::endl;
+        Logger::log("Hybrid Gate: " + axisStr + ", Angle: " + std::to_string(hg.angleGate.angle) + 
+                      ", Amplitude: " + std::to_string(hg.amplitude), INFO);
     }
 }

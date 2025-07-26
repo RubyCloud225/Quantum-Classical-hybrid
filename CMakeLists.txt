@@ -41,12 +41,15 @@ endif()
 
 # Find the required libraries
 include_directories(
+    ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
     #${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
     ${PROJECT_SOURCE_DIR}/src/Bindings
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
     ${PROJECT_SOURCE_DIR}/src/Compression
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing/models
     #${PROJECT_SOURCE_DIR}/src/quantum_library
     #${PROJECT_SOURCE_DIR}/src/Qubit_graph
     /opt/homebrew/include/eigen3
@@ -61,6 +64,7 @@ link_directories(
     ${PROJECT_SOURCE_DIR}/src/Bindings
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
     ${PROJECT_SOURCE_DIR}/src/Compression
+    ${PROJECT_SOURCE_DIR}/src/utils
     #${PROJECT_SOURCE_DIR}/src/quantum_library
     #${PROJECT_SOURCE_DIR}/src/Qubit_graph
     /opt/homebrew/lib
@@ -93,7 +97,21 @@ foreach(test_file ${NORMALISER_TESTS})
     if(EXISTS ${module_path})
         list(APPEND test_sources ${module_path})
     endif()
-
+    if(test_name STREQUAL "bert_minimal_test")
+        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/bert.cpp)
+    endif()
+    if(test_name STREQUAL "byte_test")
+        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/byte_level.cpp)
+    endif()
+    if(test_name STREQUAL "bert_test")
+        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/bert.cpp)
+    endif()
+    if(test_name STREQUAL "prepend_test")
+        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/prepend.cpp)
+    endif()
+    if(test_name STREQUAL "replace_test")
+        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/replace.cpp)
+    endif()
     add_executable(${test_name} ${test_sources})
     target_include_directories(${test_name} PRIVATE
         ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
@@ -103,10 +121,6 @@ foreach(test_file ${NORMALISER_TESTS})
     target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
     target_compile_options(${test_name} PRIVATE -g)
 endforeach()
-# Manual fix: map bert_minimal_test to bert.cpp
-if(test_name STREQUAL "bert_minimal_test")
-    list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/bert.cpp)
-endif()
 
 # Add separate executable targets for model tests
 file(GLOB_RECURSE MODEL_TESTS src/DataProcessing/models/tests/*.cpp)
@@ -198,6 +212,10 @@ foreach(test_file ${CLASSICAL_DIT_TESTS})
     target_include_directories(${test_name} PRIVATE
         ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
         ${PROJECT_SOURCE_DIR}/src/DataProcessing
+        ${PROJECT_SOURCE_DIR}/src/Bindings
+        ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+        ${PROJECT_SOURCE_DIR}/src/Compression
+        ${PROJECT_SOURCE_DIR}/src/utils
         ${Python3_INCLUDE_DIRS}
     )
     target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
@@ -214,6 +232,7 @@ target_link_libraries(quantum_classical_hybrid PRIVATE
     benchmark_main
 )
 target_include_directories(quantum_classical_hybrid PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/utils
     ${Python3_INCLUDE_DIRS}
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
@@ -264,6 +283,10 @@ target_include_directories(GaussianDiffusionTest PRIVATE
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/NN
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/Compression
+    ${PROJECT_SOURCE_DIR}/src/utils
     /opt/homebrew/opt/libomp/include
     $ENV{HOME}/icu-install/include
 )

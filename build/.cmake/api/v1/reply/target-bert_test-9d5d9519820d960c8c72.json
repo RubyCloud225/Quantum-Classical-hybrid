@@ -1,0 +1,275 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "bert_test"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"link_directories",
+			"target_link_libraries",
+			"set_property",
+			"find_package",
+			"target_compile_options",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 115,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 331,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 690,
+				"parent" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 122,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 116,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu++17 -arch arm64   -fopenmp"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-fopenmp"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Bindings"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Compression"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/opt/homebrew/include/eigen3"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/opt/homebrew/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/catherinepemblington/icu-install/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/opt/homebrew/opt/libomp/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"id" : "bert_test::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Bindings",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Compression",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/opt/homebrew/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-L/Users/catherinepemblington/icu-install/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT -Wl,-rpath,/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing -Wl,-rpath,/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Bindings -Wl,-rpath,/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder -Wl,-rpath,/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Compression -Wl,-rpath,/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils -Wl,-rpath,/opt/homebrew/lib -Wl,-rpath,/Users/catherinepemblington/icu-install/lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "bert_test",
+	"nameOnDisk" : "bert_test",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/DataProcessing/normaliser/tests/bert_test.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/DataProcessing/normaliser/bert.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

@@ -3,12 +3,13 @@
 #include <string>
 #include <regex>
 #include <set>
+#include "logger.hpp"
 
 Prepend::Prepend(std::string filename, std::string text) {
     this-> filename = filename;
 }
 
-std::set<std::string> extract_normalised(const std::string& text) {
+std::set<std::string> Prepend::extract_normalised(const std::string& text) {
     std::set<std::string> matches;
     // match floating-pont numbers- (TODO this is basic)
     std::regex re("\\d+(?:\\.\\d+)?");
@@ -18,28 +19,29 @@ std::set<std::string> extract_normalised(const std::string& text) {
         std::smatch match = *i;
         matches.insert(match.str());
     }
+    Logger::log("Extracted " + std::to_string(matches.size()) + " normalised values from text", LogLevel::INFO, __FILE__, __LINE__);
     return matches;
 }
 
-std::string build_commend_block(const std::string& text) {
-    std::string commend_block = ""; // === Normalised values ===\n";
-    for (const auto& match : extract_normalised(text)) {
-        commend_block += match + "\n";
+std::string Prepend::build_comment_block(const std::set<std::string>& values) {
+    std::string comment_block = ""; // === Normalised values ===\n";
+    for (const auto& match : values) {
+        comment_block += match + "\n";
     }
-    commend_block += "===\n";
-    return commend_block;
+    comment_block += "===\n";
+    Logger::log("Built comment block with " + std::to_string(values.size()) + " values", LogLevel::INFO, __FILE__, __LINE__);
+    return comment_block;
 }
 
-void write_commend_block(const std::string& text, const std::string& filename) {
-    std::string commend_block = build_commend_block(text);
+void Prepend::write_comment_block(const std::string& text, const std::string& filename) {
+    std::set<std::string> normalised_values = extract_normalised(text);
+    std::string comment_block = build_comment_block(normalised_values);
     std::ofstream file(filename);
     if (file.is_open()) {
-        file << commend_block;
+        file << comment_block;
         file.close();
     } else {
-        std::cout << "Unable to open file" << std::endl;
+        Logger::log("Failed to open file " + filename + " for writing", LogLevel::ERROR, __FILE__, __LINE__);
     }
-    std::set<std::string> normalised_values = extract_normalised(text);
-    std::cout << commend_block << std::endl;
+    Logger::log("Wrote comment block to " + filename, LogLevel::INFO, __FILE__, __LINE__);
 }
-

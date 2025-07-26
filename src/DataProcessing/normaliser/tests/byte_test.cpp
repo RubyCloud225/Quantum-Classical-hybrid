@@ -2,16 +2,20 @@
 #include <cassert>
 #include <iostream>
 #include <chrono>
+#include "utils/logger.hpp"
 
 ByteNormalizer ByteNormalizer;
 
 void testEmptyInput() {
     auto result = ByteNormalizer.ByteNormalise("", true);
     assert(result.empty());
+    Logger::log("Empty input test passed", INFO);
 }
 
 void testSpacesOnly () {
-    
+    auto result = ByteNormalizer.ByteNormalise("   \t\n\r", true);
+    assert(result.empty());
+    Logger::log("Spaces only test passed", INFO);
 }
 
 void testMixedWhitespaceAndSymbols() {
@@ -19,12 +23,16 @@ void testMixedWhitespaceAndSymbols() {
     auto result = ByteNormalizer.ByteNormalise(input, true);
     assert(result[0] == "Ġ");
     assert(result[4] == "!");
+    assert(result[5] == "@");
+    assert(result[6] == "#");
+    Logger::log("Mixed whitespace and symbols test passed", INFO);
 }
 
 void testUTF8Characters() {
     std::string input = u8"é漢字";
     auto result = ByteNormalizer.ByteNormalise(input, true);
     assert(!result.empty()); // at least multibyte encoded output
+    Logger::log("UTF8 characters test passed", INFO);
 }
 
 void testPerformance() {
@@ -35,6 +43,7 @@ void testPerformance() {
     std::chrono::duration<double> duration = end - start;
     std::cout << "Performance test: " << duration.count() << " seconds\n";
     assert(result.size() == input.size());
+    Logger::log("Performance test passed", INFO);
 }
 
 int main() {
@@ -43,6 +52,6 @@ int main() {
     testMixedWhitespaceAndSymbols();
     testUTF8Characters();
     testPerformance();
-    std::cout << "All byte-level normaliser tests passed.\n";
+    Logger::log("All ByteNormalizer tests passed", INFO);
     return 0;
 }

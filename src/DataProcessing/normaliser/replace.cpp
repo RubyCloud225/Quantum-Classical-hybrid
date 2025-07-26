@@ -18,16 +18,19 @@ Replace::Replace(const std::string& regexPattern, const std::string& replaceWith
 // applied a find and replace operation on the content using the regex pattern and replacement string
 std::string Replace::applyReplace(const std::string& content) const {
     std::regex re(regexPattern);
+    Logger::log("Applying regex replace with pattern: " + regexPattern + " and replacement: " + replaceWith, LogLevel::INFO, __FILE__, __LINE__);
     return std::regex_replace(content, re, replaceWith);
 }
 
 // creates a clone of the Replace object with the same regex pattern and replacement string
 Replace Replace::clone() const {
+    Logger::log("Cloning Replace object with pattern: " + regexPattern + " and replacement: " + replaceWith, LogLevel::INFO, __FILE__, __LINE__);
     return Replace(regexPattern, replaceWith);
 }
 
 // serialize the Replace object
 std::string Replace::serialise() const {
+    Logger::log("Serializing Replace object with pattern: " + regexPattern + " and replacement: " + replaceWith, LogLevel::INFO, __FILE__, __LINE__);
     std::ostringstream oss;
     oss << regexPattern << "\n" << replaceWith;
     return oss.str();
@@ -36,6 +39,7 @@ std::string Replace::serialise() const {
 Replace Replace::deserialise(const std::string& serialisedData) {
     std::istringstream iss(serialisedData);
     std::string pattern, replace;
+    Logger::log("Deserializing Replace object from data: " + serialisedData, LogLevel::INFO, __FILE__, __LINE__);
     if (!std::getline(iss, pattern) || !std::getline(iss, replace)) {
         throw std::runtime_error("Failed to deserialize Replace object");
     }

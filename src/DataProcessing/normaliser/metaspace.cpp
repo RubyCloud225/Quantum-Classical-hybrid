@@ -22,18 +22,23 @@ MetaspaceNormaliser::MetaspaceNormaliser(char replacement, bool prependScheme)
 void MetaspaceNormaliser::setReplacement(char replacement, bool prependScheme) {
     replacement_ = replacement;
     prependScheme_ = prependScheme;
+    Logger::log("MetaspaceNormaliser replacement set to: " + std::string(1, replacement) +
+                     ", prepend scheme: " + (prependScheme ? "true" : "false"), LogLevel::INFO, __FILE__, __LINE__);
 }
 
 char MetaspaceNormaliser::getReplacement() const {
     return replacement_;
+    Logger::log("MetaspaceNormaliser getReplacement called, returning: " + std::string(1, replacement_), LogLevel::INFO, __FILE__, __LINE__);
 }
 
 void MetaspaceNormaliser::setPrependScheme(bool scheme) {
     prependScheme_ = scheme;
+    Logger::log("MetaspaceNormaliser prepend scheme set to: " + std::string(scheme ? "true" : "false"), LogLevel::INFO, __FILE__, __LINE__);
 }
 
 bool MetaspaceNormaliser::getPrependScheme() const {
     return prependScheme_;
+    Logger::log("MetaspaceNormaliser getPrependScheme called, returning: " + std::string(prependScheme_ ? "true" : "false"), LogLevel::INFO, __FILE__, __LINE__);
 }
 
 std::vector<std::string> MetaspaceNormaliser::pretok(const std::string& input, bool debug) const {
@@ -64,6 +69,6 @@ std::vector<std::string> MetaspaceNormaliser::pretok(const std::string& input, b
             std::cout << "Metaspace token: " << t << std::endl;
         }
     }
-
+    Logger::log("MetaspaceNormaliser pretok completed with " + std::to_string(tokens.size()) + " tokens", LogLevel::INFO, __FILE__, __LINE__);
     return tokens;
 }

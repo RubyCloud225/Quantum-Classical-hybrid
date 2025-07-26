@@ -1210,6 +1210,7 @@ src/DataProcessing/normaliser/bert.o: src/DataProcessing/normaliser/bert.cpp.o
 # target to build an object file
 src/DataProcessing/normaliser/bert.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/bert.cpp.o
 .PHONY : src/DataProcessing/normaliser/bert.cpp.o
 
@@ -1219,6 +1220,7 @@ src/DataProcessing/normaliser/bert.i: src/DataProcessing/normaliser/bert.cpp.i
 # target to preprocess a source file
 src/DataProcessing/normaliser/bert.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/bert.cpp.i
 .PHONY : src/DataProcessing/normaliser/bert.cpp.i
 
@@ -1228,6 +1230,7 @@ src/DataProcessing/normaliser/bert.s: src/DataProcessing/normaliser/bert.cpp.s
 # target to generate assembly for a file
 src/DataProcessing/normaliser/bert.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/bert.cpp.s
 .PHONY : src/DataProcessing/normaliser/bert.cpp.s
 
@@ -1237,6 +1240,7 @@ src/DataProcessing/normaliser/byte_level.o: src/DataProcessing/normaliser/byte_l
 # target to build an object file
 src/DataProcessing/normaliser/byte_level.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
 .PHONY : src/DataProcessing/normaliser/byte_level.cpp.o
 
 src/DataProcessing/normaliser/byte_level.i: src/DataProcessing/normaliser/byte_level.cpp.i
@@ -1245,6 +1249,7 @@ src/DataProcessing/normaliser/byte_level.i: src/DataProcessing/normaliser/byte_l
 # target to preprocess a source file
 src/DataProcessing/normaliser/byte_level.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i
 .PHONY : src/DataProcessing/normaliser/byte_level.cpp.i
 
 src/DataProcessing/normaliser/byte_level.s: src/DataProcessing/normaliser/byte_level.cpp.s
@@ -1253,6 +1258,7 @@ src/DataProcessing/normaliser/byte_level.s: src/DataProcessing/normaliser/byte_l
 # target to generate assembly for a file
 src/DataProcessing/normaliser/byte_level.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
 .PHONY : src/DataProcessing/normaliser/byte_level.cpp.s
 
 src/DataProcessing/normaliser/digits.o: src/DataProcessing/normaliser/digits.cpp.o

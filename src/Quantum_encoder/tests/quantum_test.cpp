@@ -2,6 +2,7 @@
 #include <iostream>
 #include <complex>
 #include <cassert>
+#include "utils/logger.hpp"
 #include <cmath>
 
 using namespace std;
@@ -14,6 +15,7 @@ bool approx_equal(const ket& a, const ket& b, double eps = 1e-6) {
             return false;
         }
     }
+    Logger::log("Vectors are approximately equal within tolerance: " + std::to_string(eps), INFO);
     return true;
 }
 
@@ -22,7 +24,7 @@ void test_initial_state() {
     ket expected(4);
     expected << 1, 0, 0, 0; // |00>
     assert(approx_equal(qc.get_state(), expected));
-    cout << "test_initial_state passed." << endl;
+    Logger::log("test_initial_state passed", INFO);
 }
 
 void test_hadamard_gate() {
@@ -33,7 +35,7 @@ void test_hadamard_gate() {
     ket expected(2);
     expected << amp, amp; // |+>
     assert(approx_equal(result, expected));
-    cout << "test_hadamard_gate passed." << endl;
+    Logger::log("test_hadamard_gate passed", INFO);
 }
 
 void test_pauli_x_gate() {
@@ -43,7 +45,7 @@ void test_pauli_x_gate() {
     ket expected(2);
     expected << 0, 1; // |1>
     assert(approx_equal(result, expected));
-    cout << "test_pauli_x_gate passed." << endl;
+    Logger::log("test_pauli_x_gate passed", INFO);
 }
 
 void test_cnot_gate() {
@@ -56,7 +58,7 @@ void test_cnot_gate() {
     ket expected(4);
     expected << amp, 0, 0, amp; // |01> + |11>
     assert(approx_equal(result, expected));
-    cout << "test_cnot_gate passed." << endl;
+    Logger::log("test_cnot_gate passed", INFO);
 }
 
 void test_parallel_gates() {
@@ -70,7 +72,7 @@ void test_parallel_gates() {
     ket expected(4);
     expected << 1.0 / sqrt(2.0), 0, 0, 1.0 / sqrt(2.0); // |00> + |11>
     assert(approx_equal(result, expected));
-    cout << "test_parallel_gates passed." << endl;
+    Logger::log("test_parallel_gates passed", INFO);
 }
 void test_reset() {
     QuantumCircuit qc(2);
@@ -85,8 +87,7 @@ void test_reset() {
     ket expected(4);
     expected << 1, 0, 0, 0; // |00>
     assert(approx_equal(qc.get_state(), expected));
-    
-    cout << "test_reset passed." << endl;
+    Logger::log("test_reset passed", INFO);
 }
 
 void run_tests() {

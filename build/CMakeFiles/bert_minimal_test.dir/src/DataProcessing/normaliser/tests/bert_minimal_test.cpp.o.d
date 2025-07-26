@@ -237,6 +237,25 @@ CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minima
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/limits \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ctime \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/parse_numbers.h \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils/logger.hpp \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/fstream \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/codecvt.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/basic_file.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++io.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/fstream.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/mutex \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/std_mutex.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/unique_lock.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/condition_variable \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/shared_ptr.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/shared_ptr_base.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/allocated_ptr.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/unique_ptr.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ext/aligned_buffer.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ext/concurrence.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/thread \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/std_thread.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/this_thread_sleep.h \
  /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/stl_uninitialized.h \

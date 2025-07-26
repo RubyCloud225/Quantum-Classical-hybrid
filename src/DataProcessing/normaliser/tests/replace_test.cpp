@@ -3,6 +3,7 @@
 #include <cassert>
 #include <string>
 #include <regex>
+#include "utils/logger.hpp"
 
 void printTestStatus(const std::string& testName, bool status) {
     std::cout << (status ? "PASS: " : "FAIL: ") << testName << std::endl;
@@ -137,4 +138,5 @@ int main() {
         assert(actualOutput == expectedOutput);
     }
     std::cout << "--- All Tests Completed ---" << std::endl;
+    Logger::log("All Replace class tests completed successfully", INFO);
 }

@@ -57,10 +57,6 @@ CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegressi
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tuple \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/utility \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/stl_relops.h \
- /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/numeric \
- /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/stl_numeric.h \
- /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/pstl/glue_numeric_defs.h \
- /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/pstl/execution_defs.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/stdexcept \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/exception \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/exception_ptr.h \
@@ -192,4 +188,88 @@ CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegressi
  /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/errno.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_types/_errno_t.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/charconv.h \
- /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/basic_string.tcc
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/basic_string.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/cmath \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/math.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/specfun.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/limits \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/gamma.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/special_function_util.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/bessel_function.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/beta_function.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/ell_integral.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/exp_integral.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/hypergeometric.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/legendre_function.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/modified_bessel_func.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/poly_hermite.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/poly_laguerre.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/riemann_zeta.tcc \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils/logger.hpp \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ostream \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/ostream.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ios \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/ios_base.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ext/atomicity.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/gthr.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/gthr-default.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/pthread.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/pthread/sched.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/pthread/pthread_impl.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_pthread/_pthread_t.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/pthread/qos.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/qos.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/sys/_types/_mach_port_t.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/atomic_word.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/locale_classes.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/locale_classes.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/system_error \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/error_constants.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/streambuf \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/streambuf.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/basic_ios.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/locale_facets.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/cwctype \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/wctype.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_wctype.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_types/_wctrans_t.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/ctype_base.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/streambuf_iterator.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/ctype_inline.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/locale_facets.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/basic_ios.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/ostream.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/istream \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/istream.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/fstream \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/codecvt.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/basic_file.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++io.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/fstream.tcc \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ctime \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/mutex \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/chrono.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ratio \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/cstdint \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/parse_numbers.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/std_mutex.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/unique_lock.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/condition_variable \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/shared_ptr.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/shared_ptr_base.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/allocated_ptr.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/unique_ptr.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ext/aligned_buffer.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ext/concurrence.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/thread \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/std_thread.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/this_thread_sleep.h

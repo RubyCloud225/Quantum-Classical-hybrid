@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o"
+  "CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o.d"
   "CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o"
   "CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o.d"
   "bert_minimal_test"

@@ -11,7 +11,7 @@ class Prepend {
     Prepend(std::string filename, std::string text);
     std::set<std::string> extract_normalised(const std::string& text);
     std::string build_comment_block(const std::set<std::string>& values);
-    void write_comment_block(const std::string& filename, const std::string& content);
+    void write_comment_block(const std::string& text, const std::string& filename);
     private:
     std::string filename;
     std::string text;
