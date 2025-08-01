@@ -1,6 +1,6 @@
 #include "GaussianDiffusion.hpp"
 #include "NN/EpsilonPredictor.hpp"
-#include <omp.h>
+//#include <omp.h>
 #include <stdexcept> // for std::invalid_argument
 
 // Adam Optimizer Constructor
@@ -14,7 +14,10 @@ void AdamOptimizer::update(std::vector<double>& params, std::vector<double>& gra
         m_.resize(params.size(), 0);
         v_.resize(params.size(), 0);
     }
-    #pragma omp parallel for
+    //#pragma omp parallel for
+    if (params.size() != gradients.size() || params.size() != m_.size() || params.size() != v_.size()) {
+        throw std::invalid_argument("Parameter and gradient sizes must match.");
+    }
     for (size_t i = 0; i < params.size(); ++i) {
         m_[i] = beta1_ * m_[i] + (1 - beta1_) * gradients[i];
         v_[i] = beta2_ * v_[i] + (1 - beta2_) * gradients[i] * gradients[i];
@@ -124,7 +127,7 @@ void GaussianDiffusion::train(const std::vector<std::vector<double>>& data, int 
                 gradients[i] = (x_t[i] - x_start[i]) * sigmoid_derivative(x_start[i]);
             }
             std::vector<double> params(x_t.size());
-            #pragma omp critical
+            //#pragma omp critical
             {
                 optimizer_.update(params, gradients);
             }

@@ -8,7 +8,7 @@
 // return the data
 
 #include "replace.hpp"
-
+#include "utils/logger.hpp"
 #include <sstream>
 
 // creates an object and initializes it with the regex pattern and replacement string

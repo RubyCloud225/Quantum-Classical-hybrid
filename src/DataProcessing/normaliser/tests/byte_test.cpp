@@ -9,13 +9,13 @@ ByteNormalizer ByteNormalizer;
 void testEmptyInput() {
     auto result = ByteNormalizer.ByteNormalise("", true);
     assert(result.empty());
-    Logger::log("Empty input test passed", INFO);
+    Logger::log("Empty input test passed", LogLevel::INFO, __FILE__, __LINE__);
 }
 
 void testSpacesOnly () {
     auto result = ByteNormalizer.ByteNormalise("   \t\n\r", true);
     assert(result.empty());
-    Logger::log("Spaces only test passed", INFO);
+    Logger::log("Spaces only test passed", LogLevel::INFO, __FILE__, __LINE__);
 }
 
 void testMixedWhitespaceAndSymbols() {
@@ -25,14 +25,14 @@ void testMixedWhitespaceAndSymbols() {
     assert(result[4] == "!");
     assert(result[5] == "@");
     assert(result[6] == "#");
-    Logger::log("Mixed whitespace and symbols test passed", INFO);
+    Logger::log("Mixed whitespace and symbols test passed", LogLevel::INFO, __FILE__, __LINE__);
 }
 
 void testUTF8Characters() {
     std::string input = u8"é漢字";
     auto result = ByteNormalizer.ByteNormalise(input, true);
     assert(!result.empty()); // at least multibyte encoded output
-    Logger::log("UTF8 characters test passed", INFO);
+    Logger::log("UTF8 characters test passed", LogLevel::INFO, __FILE__, __LINE__);
 }
 
 void testPerformance() {
@@ -43,7 +43,7 @@ void testPerformance() {
     std::chrono::duration<double> duration = end - start;
     std::cout << "Performance test: " << duration.count() << " seconds\n";
     assert(result.size() == input.size());
-    Logger::log("Performance test passed", INFO);
+    Logger::log("Performance test passed", LogLevel::INFO, __FILE__, __LINE__);
 }
 
 int main() {
@@ -52,6 +52,6 @@ int main() {
     testMixedWhitespaceAndSymbols();
     testUTF8Characters();
     testPerformance();
-    Logger::log("All ByteNormalizer tests passed", INFO);
+    Logger::log("All ByteNormalizer tests passed", LogLevel::INFO, __FILE__, __LINE__);
     return 0;
 }

@@ -7,7 +7,7 @@
 #include <ctime>
 #include <mutex>
 
-enum class LogLevel { INFO = 0, WARNING = 1, ERROR = 2 };
+enum class LogLevel { INFO = 0, WARNING = 1, ERROR = 2, FATAL = 3, DEBUG = 4, TRACE = 5, RESULT = 6, ITERATIONS = 7 };
 
 class Logger {
 public:
@@ -76,6 +76,11 @@ private:
             case LogLevel::INFO:    return "INFO";
             case LogLevel::WARNING: return "WARNING";
             case LogLevel::ERROR:   return "ERROR";
+            case LogLevel::DEBUG:   return "DEBUG";
+            case LogLevel::RESULT:  return "RESULT";
+            case LogLevel::ITERATIONS: return "ITERATIONS";
+            case LogLevel::FATAL:   return "FATAL";
+            case LogLevel::TRACE:   return "TRACE";
             default:               return "UNKNOWN";
         }
     }

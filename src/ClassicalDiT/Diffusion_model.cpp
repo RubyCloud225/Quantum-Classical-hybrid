@@ -13,7 +13,8 @@ DiffusionModel::DiffusionModel(int input_size, int output_size) : input_size(inp
 
 // Helper function to clamp values in a vector to a specified range
 void clamp_vector(std::vector<double>& vec, double min_val, double max_val) {
-    #pragma omp parallel for
+    //#pragma omp parallel for
+    if (vec.empty()) return; // No need to clamp if the vector is empty
     for (size_t i = 0; i < vec.size(); ++i) {
        vec[i] = std::clamp(vec[i], min_val, max_val);
     }
@@ -29,7 +30,7 @@ void DiffusionModel::compute_mean_variance(const std::vector<double>& x_t, int t
     mean.resize(output_size);
     variance.resize(output_size);
     // Example mean and variance computation
-    #pragma omp parallel for 
+    //#pragma omp parallel for 
     for (int i = 0; i < output_size; ++i) {
         mean[i] = x_t[i % input_size] * (1.0 - t / 1000.0); // Placeholder computation
         variance[i] = 1.0 - t / 1000.0; // Placeholder computation
@@ -58,7 +59,7 @@ std::vector<double> DiffusionModel::sample(
 
     // Sample from the normal distribution
     std::vector<double> sample(x.size());
-    #pragma omp parallel for 
+    //#pragma omp parallel for 
     for (size_t i = 0; i < x.size(); ++i) {
         sample[i] = x_start[i] + std::sqrt(variance[i]) * normal_dist(generator);
     }

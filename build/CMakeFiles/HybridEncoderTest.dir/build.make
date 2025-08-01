@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HybridEncoderTest.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/HybridEncoderTest.dir/codegen:
 .PHONY : CMakeFiles/HybridEncoderTest.dir/codegen
 
 CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o: CMakeFiles/HybridEncoderTest.dir/flags.make
-CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp
+CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp
 CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o: CMakeFiles/HybridEncoderTest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o -MF CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o.d -o CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o -MF CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o.d -o CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp
 
 CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp > CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp > CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.i
 
 CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp -o CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/Quantum_encoder/tests/HybridEncoderTest.cpp -o CMakeFiles/HybridEncoderTest.dir/src/Quantum_encoder/tests/HybridEncoderTest.cpp.s
 
 # Object files for target HybridEncoderTest
 HybridEncoderTest_OBJECTS = \
@@ -98,7 +98,7 @@ HybridEncoderTest: CMakeFiles/HybridEncoderTest.dir/build.make
 HybridEncoderTest: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 HybridEncoderTest: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
 HybridEncoderTest: CMakeFiles/HybridEncoderTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable HybridEncoderTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable HybridEncoderTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HybridEncoderTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -110,6 +110,6 @@ CMakeFiles/HybridEncoderTest.dir/clean:
 .PHONY : CMakeFiles/HybridEncoderTest.dir/clean
 
 CMakeFiles/HybridEncoderTest.dir/depend:
-	cd /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/HybridEncoderTest.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/HybridEncoderTest.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/HybridEncoderTest.dir/depend
 

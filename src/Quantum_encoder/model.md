@@ -88,7 +88,7 @@ $$
 
 ---
 
-## ⚙️ Training via Stochastic Gradient Descent
+## Training via Stochastic Gradient Descent
 
 We optimize the model classically using **stochastic gradient descent (SGD)**.
 
@@ -105,7 +105,7 @@ Where:
 
 ---
 
-## �� Quantum Gradient Derivation
+## Quantum Gradient Derivation
 
 We compute gradients based on **expectation values** of observables like the Pauli-Z operator $\sigma_z$:
 
@@ -121,7 +121,7 @@ $$
 
 ---
 
-## 🧩 Unitary Gate Parameter Gradients
+## Unitary Gate Parameter Gradients
 
 Each elementary gate contributes to the derivative of $U(\boldsymbol{\theta})$:
 

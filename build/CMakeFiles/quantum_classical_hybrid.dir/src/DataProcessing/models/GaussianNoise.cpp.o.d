@@ -1,6 +1,6 @@
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o: \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.hpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/GaussianNoise.cpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/GaussianNoise.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -258,7 +258,7 @@ CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/istream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/istream.tcc \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ctime \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils/logger.hpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/utils/logger.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/fstream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/codecvt.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/basic_file.h \

@@ -1,8 +1,7 @@
 #include "LayerNormalization.hpp"
 #include "utils/logger.hpp"
-#ifndef __APPLE__
-#include "LayerNormalizationKernels.cuh"
-#endif
+//#include "utils/Logger.hpp"
+//#include "LayerNormalizationKernels.cuh"
 #include <numeric>
 #include <cmath>
 #include <stdexcept>

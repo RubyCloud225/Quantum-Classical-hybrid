@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gaussianNoise_test.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/gaussianNoise_test.dir/codegen:
 .PHONY : CMakeFiles/gaussianNoise_test.dir/codegen
 
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o: CMakeFiles/gaussianNoise_test.dir/flags.make
-CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp
+CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o: CMakeFiles/gaussianNoise_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o -MF CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o.d -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o -MF CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o.d -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp
 
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp > CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp > CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.i
 
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/gaussianNoise_test.cpp -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/tests/gaussianNoise_test.cpp.s
 
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: CMakeFiles/gaussianNoise_test.dir/flags.make
-CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
+CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/GaussianNoise.cpp
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: CMakeFiles/gaussianNoise_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -MF CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o.d -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -MF CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o.d -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/GaussianNoise.cpp
 
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp > CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/GaussianNoise.cpp > CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i
 
 CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/GaussianNoise.cpp -o CMakeFiles/gaussianNoise_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s
 
 # Object files for target gaussianNoise_test
 gaussianNoise_test_OBJECTS = \
@@ -114,7 +114,7 @@ gaussianNoise_test: CMakeFiles/gaussianNoise_test.dir/build.make
 gaussianNoise_test: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 gaussianNoise_test: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
 gaussianNoise_test: CMakeFiles/gaussianNoise_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable gaussianNoise_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable gaussianNoise_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gaussianNoise_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +126,6 @@ CMakeFiles/gaussianNoise_test.dir/clean:
 .PHONY : CMakeFiles/gaussianNoise_test.dir/clean
 
 CMakeFiles/gaussianNoise_test.dir/depend:
-	cd /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/gaussianNoise_test.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/gaussianNoise_test.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/gaussianNoise_test.dir/depend
 

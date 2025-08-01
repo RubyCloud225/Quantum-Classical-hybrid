@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include <cmath>
 #include "utils/logger.hpp"
+#include <math.h>
 
 void LinearRegression::fit(const std::vector<std::pair<double, double>>& data) {
     if (data.empty()) {

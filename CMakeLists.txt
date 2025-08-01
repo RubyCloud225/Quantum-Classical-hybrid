@@ -9,11 +9,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(
     Python3 REQUIRED COMPONENTS Interpreter Development)
 find_package(benchmark REQUIRED)
-if(EXISTS "/opt/homebrew/include/benchmark/benchmark.h")
-    message(STATUS "Google Benchmark found")
-else()
-    message(FATAL_ERROR "Google Benchmark not found in /opt/homebrew/include. Did you run `brew install benchmark`?")
-endif()
+#if(EXISTS "/opt/homebrew/include/benchmark/benchmark.h")
+#    message(STATUS "Google Benchmark found")
+#else()
+#    message(FATAL_ERROR "Google Benchmark not found in /opt/homebrew/include. Did you run `brew install benchmark`?")
+#endif()
 execute_process(
     COMMAND python3 -m pybind11 --cmakedir
     OUTPUT_VARIABLE PYBIND11_CMAKE_DIR
@@ -228,8 +228,8 @@ target_link_libraries(quantum_classical_hybrid PRIVATE
     OpenMP::OpenMP_CXX
     icuuc
     icui18n
-    benchmark
-    benchmark_main
+#    benchmark
+#    benchmark_main
 )
 target_include_directories(quantum_classical_hybrid PRIVATE
     ${PROJECT_SOURCE_DIR}/src/utils

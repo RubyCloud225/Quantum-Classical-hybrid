@@ -9,7 +9,7 @@
 // get prepend scheme
 // set prepend scheme
 
-
+#include "utils/logger.hpp"
 #include "metaspace.hpp"
 #include <sstream>
 #include <iostream>

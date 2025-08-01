@@ -1,0 +1,285 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "quantum_classical_hybrid",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BetaSchedule_edge_cases::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BetaSchedule_edge_cases-526a0b29f52dcd511eda.json",
+					"name" : "BetaSchedule_edge_cases",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BetaSchedule_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BetaSchedule_tests-7b6d62463cda565bda4d.json",
+					"name" : "BetaSchedule_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Diffusion_model_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Diffusion_model_test-a4146200cde3e7d91374.json",
+					"name" : "Diffusion_model_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Diffusion_sample_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Diffusion_sample_test-3d2b8a3533bb99cbe2e5.json",
+					"name" : "Diffusion_sample_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GaussianDiffusionTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GaussianDiffusionTest-f03d9af7fbd5777403dd.json",
+					"name" : "GaussianDiffusionTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Gaussian_Diffusion_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Gaussian_Diffusion_test-c14056fa5e05cac06df0.json",
+					"name" : "Gaussian_Diffusion_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HybridEncoderTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HybridEncoderTest-83f485938bc37311c1ad.json",
+					"name" : "HybridEncoderTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Integration_GaussianNoise_LayerNormalization::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Integration_GaussianNoise_LayerNormalization-f38122edc03091bc1254.json",
+					"name" : "Integration_GaussianNoise_LayerNormalization",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Integration_LinearRegression_GaussianNoise_LayerNormalization::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Integration_LinearRegression_GaussianNoise_LayerNormalization-ba62da05f0ad0ce53058.json",
+					"name" : "Integration_LinearRegression_GaussianNoise_LayerNormalization",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LayerNormalization_edge_cases::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LayerNormalization_edge_cases-2f06e3cec7a4f14af0e7.json",
+					"name" : "LayerNormalization_edge_cases",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LayerNormalization_performance::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LayerNormalization_performance-41fa193be916b414f89e.json",
+					"name" : "LayerNormalization_performance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LayerNormalizing_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LayerNormalizing_tests-a36fafed5189b8e3470e.json",
+					"name" : "LayerNormalizing_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LinearRegression_basic_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LinearRegression_basic_tests-a9f1a4366e60f622c981.json",
+					"name" : "LinearRegression_basic_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LinearRegression_edge_cases::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LinearRegression_edge_cases-f4dbddfbb6881d8e5980.json",
+					"name" : "LinearRegression_edge_cases",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bert_minimal_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bert_minimal_test-db7715dce24bdc6af258.json",
+					"name" : "bert_minimal_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bert_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bert_test-556acafd3c62753fba81.json",
+					"name" : "bert_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "byte_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-byte_test-96b2a1c4209ce0bfc040.json",
+					"name" : "byte_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gaussianNoise_edge_cases::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gaussianNoise_edge_cases-fb4a3929f60dd4db3fd6.json",
+					"name" : "gaussianNoise_edge_cases",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gaussianNoise_performance_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gaussianNoise_performance_test-d8fffdbfd2621b443f70.json",
+					"name" : "gaussianNoise_performance_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gaussianNoise_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gaussianNoise_test-46fc40fdf4e20b28a8e6.json",
+					"name" : "gaussianNoise_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gaussianNoise_thorough_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gaussianNoise_thorough_test-0f043ea7e42e406a98a5.json",
+					"name" : "gaussianNoise_thorough_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "prepend_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-prepend_test-d6df4cec5ed9cd46c5e1.json",
+					"name" : "prepend_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "quantum_classical_hybrid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-quantum_classical_hybrid-0db7dcdfd00492e62961.json",
+					"name" : "quantum_classical_hybrid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "quantum_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-quantum_test-19b0ae0a4b4af07e49a6.json",
+					"name" : "quantum_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "replace_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-replace_test-60efd49cee5bcdf6efbe.json",
+					"name" : "replace_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sampleData_basic_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sampleData_basic_tests-bbaa909a8cf5a8da553b.json",
+					"name" : "sampleData_basic_tests",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build",
+		"source" : "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

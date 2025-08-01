@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/CMakeLists.txt"
+  "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/CMakeLists.txt"
   "CMakeFiles/4.0.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.0.1/CMakeSystem.cmake"
   "/opt/homebrew/lib/cmake/benchmark/benchmarkConfig.cmake"

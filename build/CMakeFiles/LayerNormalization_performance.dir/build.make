@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LayerNormalization_performance.dir/depend.make
@@ -73,18 +73,18 @@ CMakeFiles/LayerNormalization_performance.dir/codegen:
 .PHONY : CMakeFiles/LayerNormalization_performance.dir/codegen
 
 CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o: CMakeFiles/LayerNormalization_performance.dir/flags.make
-CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp
+CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp
 CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o: CMakeFiles/LayerNormalization_performance.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o -MF CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o.d -o CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o -MF CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o.d -o CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp
 
 CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp > CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp > CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.i
 
 CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp -o CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/tests/LayerNormalization_performance.cpp -o CMakeFiles/LayerNormalization_performance.dir/src/DataProcessing/models/tests/LayerNormalization_performance.cpp.s
 
 # Object files for target LayerNormalization_performance
 LayerNormalization_performance_OBJECTS = \
@@ -98,7 +98,7 @@ LayerNormalization_performance: CMakeFiles/LayerNormalization_performance.dir/bu
 LayerNormalization_performance: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 LayerNormalization_performance: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
 LayerNormalization_performance: CMakeFiles/LayerNormalization_performance.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable LayerNormalization_performance"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable LayerNormalization_performance"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LayerNormalization_performance.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -110,6 +110,6 @@ CMakeFiles/LayerNormalization_performance.dir/clean:
 .PHONY : CMakeFiles/LayerNormalization_performance.dir/clean
 
 CMakeFiles/LayerNormalization_performance.dir/depend:
-	cd /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/LayerNormalization_performance.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/LayerNormalization_performance.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/LayerNormalization_performance.dir/depend
 

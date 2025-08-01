@@ -1,5 +1,5 @@
 CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o: \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -237,7 +237,7 @@ CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minima
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/limits \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ctime \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/parse_numbers.h \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils/logger.hpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/utils/logger.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/fstream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/codecvt.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/basic_file.h \
@@ -256,7 +256,7 @@ CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minima
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/thread \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/std_thread.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/this_thread_sleep.h \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.hpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/bert.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/stl_uninitialized.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/stl_vector.h \

@@ -1,6 +1,6 @@
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o: \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.hpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/LinearRegression.cpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/LinearRegression.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -205,7 +205,7 @@ CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegressi
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/poly_hermite.tcc \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/poly_laguerre.tcc \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tr1/riemann_zeta.tcc \
- /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils/logger.hpp \
+ /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/utils/logger.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/ostream.h \
@@ -272,4 +272,5 @@ CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegressi
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ext/concurrence.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/thread \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/std_thread.h \
- /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/this_thread_sleep.h
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/this_thread_sleep.h \
+ /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/math.h

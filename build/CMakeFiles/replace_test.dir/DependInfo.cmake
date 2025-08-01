@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/replace.cpp.o" "gcc" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/replace.cpp.o.d"
-  "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/tests/replace_test.cpp" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/tests/replace_test.cpp.o" "gcc" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/tests/replace_test.cpp.o.d"
+  "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/replace.cpp.o" "gcc" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/replace.cpp.o.d"
+  "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/tests/replace_test.cpp" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/tests/replace_test.cpp.o" "gcc" "CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/tests/replace_test.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

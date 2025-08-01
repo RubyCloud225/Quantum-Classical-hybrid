@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Diffusion_model_test.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/Diffusion_model_test.dir/codegen:
 .PHONY : CMakeFiles/Diffusion_model_test.dir/codegen
 
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o: CMakeFiles/Diffusion_model_test.dir/flags.make
-CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp
+CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o: CMakeFiles/Diffusion_model_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o -MF CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o.d -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o -MF CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o.d -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp
 
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp > CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp > CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.i
 
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/tests/Diffusion_model_test.cpp -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.s
 
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: CMakeFiles/Diffusion_model_test.dir/flags.make
-CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
+CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/Diffusion_model.cpp
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: CMakeFiles/Diffusion_model_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -MF CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o.d -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -MF CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o.d -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/Diffusion_model.cpp
 
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp > CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/Diffusion_model.cpp > CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
 
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/Diffusion_model.cpp -o CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
 
 # Object files for target Diffusion_model_test
 Diffusion_model_test_OBJECTS = \
@@ -114,7 +114,7 @@ Diffusion_model_test: CMakeFiles/Diffusion_model_test.dir/build.make
 Diffusion_model_test: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 Diffusion_model_test: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
 Diffusion_model_test: CMakeFiles/Diffusion_model_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Diffusion_model_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Diffusion_model_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Diffusion_model_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -126,6 +126,6 @@ CMakeFiles/Diffusion_model_test.dir/clean:
 .PHONY : CMakeFiles/Diffusion_model_test.dir/clean
 
 CMakeFiles/Diffusion_model_test.dir/depend:
-	cd /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/Diffusion_model_test.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/Diffusion_model_test.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Diffusion_model_test.dir/depend
 
