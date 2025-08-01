@@ -18,7 +18,7 @@ int main() {
         Replace replace("foo", "bar");
         std::string input = "foo foo foo";
         std::string expectedOutput = "bar bar bar";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -28,7 +28,7 @@ int main() {
         Replace replace("xyz", "abc");
         std::string input = "foo bar baz";
         std::string expectedOutput = "foo bar baz";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -38,7 +38,7 @@ int main() {
         Replace replace("foo", "bar");
         std::string input = "foo foo foo";
         std::string expectedOutput = "bar bar bar";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -48,7 +48,7 @@ int main() {
         Replace replace("", "bar");
         std::string input = "foo bar baz";
         std::string expectedOutput = "foo bar baz";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -58,7 +58,7 @@ int main() {
         Replace replace("foo", "");
         std::string input = "foo bar baz";
         std::string expectedOutput = " bar baz";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -68,7 +68,7 @@ int main() {
         Replace replace("a\\b", "c");
         std::string input = "a\\b";
         std::string expectedOutput = "c";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -78,7 +78,7 @@ int main() {
         Replace replace("FOO", "bar");
         std::string input = "FOO bar baz";
         std::string expectedOutput = "FOO bar baz";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -88,7 +88,7 @@ int main() {
         Replace replace("ä", "a");
         std::string input = "föö bar baz";
         std::string expectedOutput = "föö bar baz";
-        std::string actualOutput = Replace.replace(input);
+        std::string actualOutput = replace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -99,7 +99,7 @@ int main() {
         Replace clone = replace.clone();
         std::string input = "foo bar baz";
         std::string expectedOutput = "bar bar baz";
-        std::string actualOutput = clone.replace(input);
+        std::string actualOutput = clone.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -111,7 +111,7 @@ int main() {
         Replace deserialisedReplace = Replace::deserialise(serialisedData);
         std::string input = "foo bar baz";
         std::string expectedOutput = "bar bar baz";
-        std::string actualOutput = deserialisedReplace.replace(input);
+        std::string actualOutput = deserialisedReplace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -122,7 +122,7 @@ int main() {
         Replace deserialisedReplace = Replace::deserialise(invalidData);
         std::string input = "foo bar baz";
         std::string expectedOutput = "foo bar baz";
-        std::string actualOutput = deserialisedReplace.replace(input);
+        std::string actualOutput = deserialisedReplace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
@@ -133,10 +133,10 @@ int main() {
         Replace deserialisedReplace = Replace::deserialise(emptyData);
         std::string input = "foo bar baz";
         std::string expectedOutput = "foo bar baz";
-        std::string actualOutput = deserialisedReplace.replace(input);
+        std::string actualOutput = deserialisedReplace.applyReplace(input);
         printTestStatus(testName, actualOutput == expectedOutput);
         assert(actualOutput == expectedOutput);
     }
     std::cout << "--- All Tests Completed ---" << std::endl;
-    Logger::log("All Replace class tests completed successfully", INFO);
+    Logger::log("All Replace class tests completed successfully", LogLevel::INFO, __FILE__, __LINE__);
 }

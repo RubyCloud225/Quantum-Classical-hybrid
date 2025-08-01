@@ -917,3 +917,75 @@ events:
         
       exitCode: 2
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:331 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KGwNsO"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KGwNsO"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KGwNsO'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f1bd3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f1bd3.dir/build.make CMakeFiles/cmTC_f1bd3.dir/build
+        Building CXX object CMakeFiles/cmTC_f1bd3.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_f1bd3.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_f1bd3.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_f1bd3.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KGwNsO/OpenMPCheckVersion.cpp
+        clang++: error: unsupported option '-fopenmp'
+        make[1]: *** [CMakeFiles/cmTC_f1bd3.dir/OpenMPCheckVersion.cpp.o] Error 1
+        make: *** [cmTC_f1bd3/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:331 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-IEELRn"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-IEELRn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-IEELRn'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6acdc/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6acdc.dir/build.make CMakeFiles/cmTC_6acdc.dir/build
+        Building CXX object CMakeFiles/cmTC_6acdc.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_6acdc.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_6acdc.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_6acdc.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-IEELRn/OpenMPCheckVersion.cpp
+        clang++: error: unsupported option '-fopenmp'
+        make[1]: *** [CMakeFiles/cmTC_6acdc.dir/OpenMPCheckVersion.cpp.o] Error 1
+        make: *** [cmTC_6acdc/fast] Error 2
+        
+      exitCode: 2
+...

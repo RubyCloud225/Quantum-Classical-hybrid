@@ -149,7 +149,7 @@ PYBIND11_MODULE(preprocessing, m) {
         .def("applyReplace", &Replace::applyReplace, py::arg("content"))
         .def("clone", &Replace::clone)
         .def("serialise", &Replace::serialise)
-        .def("deserialise", &Replace::deserialise, py::arg("serialisedData"))
+        .def_static("deserialise", &Replace::deserialise, py::arg("serialisedData"))
         .def_property("pattern", &Replace::getPattern, nullptr)
         .def_property("replace", &Replace::getReplace, nullptr);
     py::class_<UnicodeProcessor>(m, "UnicodeProcessor")
