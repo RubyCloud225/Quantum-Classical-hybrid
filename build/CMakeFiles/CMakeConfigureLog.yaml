@@ -989,3 +989,159 @@ events:
         
       exitCode: 2
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:10 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-HNCTWI"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-HNCTWI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-HNCTWI'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f54f0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f54f0.dir/build.make CMakeFiles/cmTC_f54f0.dir/build
+        Building CXX object CMakeFiles/cmTC_f54f0.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_f54f0.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_f54f0.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_f54f0.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-HNCTWI/OpenMPTryFlag.cpp
+        /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-HNCTWI/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_f54f0.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_f54f0/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:10 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-6eMyJi"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-6eMyJi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-6eMyJi'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_274d9/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_274d9.dir/build.make CMakeFiles/cmTC_274d9.dir/build
+        Building CXX object CMakeFiles/cmTC_274d9.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_274d9.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_274d9.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_274d9.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-6eMyJi/OpenMPTryFlag.cpp
+        /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-6eMyJi/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_274d9.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_274d9/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:10 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-Qngvsc"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-Qngvsc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-Qngvsc'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_88d1a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_88d1a.dir/build.make CMakeFiles/cmTC_88d1a.dir/build
+        Building CXX object CMakeFiles/cmTC_88d1a.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_88d1a.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_88d1a.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_88d1a.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-Qngvsc/OpenMPTryFlag.cpp
+        /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-Qngvsc/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_88d1a.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_88d1a/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:10 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lUehmN"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lUehmN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lUehmN'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b950a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b950a.dir/build.make CMakeFiles/cmTC_b950a.dir/build
+        Building CXX object CMakeFiles/cmTC_b950a.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_b950a.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_b950a.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_b950a.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lUehmN/OpenMPTryFlag.cpp
+        /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lUehmN/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_b950a.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_b950a/fast] Error 2
+        
+      exitCode: 2
+...
