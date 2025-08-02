@@ -4,21 +4,37 @@ project(quantum_classical_hybrid LANGUAGES CXX)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#set(OpenMP_CXX_FLAGS "-Xpreprocessor -fopenmp")
+#set(OpenMP_C_FLAGS "-Xpreprocessor -fopenmp")
+#set(OpenMP_CXX_LIB_NAMES "omp")
+#set(OpenMP_C_LIB_NAMES "omp")
+#set(OpenMP_libomp_LIBRARY "/opt/homebrew/opt/libomp/lib/libomp.dylib")
+#set(OpenMP_LIBRARIES "/opt/homebrew/opt/libomp/lib/libomp.dylib")
+#set(CMAKE_C_COMPILER "/opt/homebrew/opt/llvm/bin/clang" CACHE STRING "C compiler")
+#set(CMAKE_CXX_COMPILER "/opt/homebrew/opt/llvm/bin/clang++" CACHE STRING "C++ compiler")
 
-export CC=/opt/homebrew/opt/llvm/bin/clang
-export CXX=/opt/homebrew/opt/llvm/bin/clang++
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+if(APPLE)
+    set(OPENMP_ROOT "/opt/homebrew/opt/libomp" CACHE PATH "Path to libomp")
+    set(OpenMP_ROOT "${OPENMP_ROOT}" CACHE PATH "Path to libomp")
+    set(OpenMP_DIR "${OPENMP_ROOT}/lib/cmake/omp" CACHE PATH "Path to OpenMP cmake dir")
+    set(OpenMP_omp_LIBRARY "${OPENMP_ROOT}/lib/libomp.dylib" CACHE FILEPATH "OpenMP libomp library")
+    set(OpenMP_LIBRARIES "${OpenMP_omp_LIBRARY}" CACHE FILEPATH "OpenMP libraries")
+    set(OpenMP_INCLUDE_DIR "${OPENMP_ROOT}/include" CACHE PATH "OpenMP include dir")
+endif()
+
+find_package(OpenMP REQUIRED)
+
+
+project(quantum_classical_hybrid LANGUAGES CXX)
 
 if(APPLE)
     set(CMAKE_OSX_ARCHITECTURES arm64)
-    find_package(OpenMP REQUIRED)
+#   find_package(OpenMP REQUIRED)
     if(OpenMP_FOUND)
         message(STATUS "OpenMP found on macOS")
-        target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
-        target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS})
-        target_include_directories(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_INCLUDE_DIR})
+        #target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
+        #target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS})
+        #target_include_directories(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_INCLUDE_DIR})
     else()
         message(FATAL_ERROR "OpenMP not found on macOS")
     endif()

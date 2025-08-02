@@ -1145,3 +1145,120 @@ events:
         
       exitCode: 2
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:18 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-MDM1MR"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-MDM1MR"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-MDM1MR'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_28978/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_28978.dir/build.make CMakeFiles/cmTC_28978.dir/build
+        Building CXX object CMakeFiles/cmTC_28978.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++   -Xpreprocessor -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_28978.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_28978.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_28978.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-MDM1MR/OpenMPCheckVersion.cpp
+        /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-MDM1MR/OpenMPCheckVersion.cpp:3:10: fatal error: 'omp.h' file not found
+            3 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_28978.dir/OpenMPCheckVersion.cpp.o] Error 1
+        make: *** [cmTC_28978/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:20 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-R7L72M"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-R7L72M"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-R7L72M'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_78d5a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_78d5a.dir/build.make CMakeFiles/cmTC_78d5a.dir/build
+        Building CXX object CMakeFiles/cmTC_78d5a.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++   -Xpreprocessor -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_78d5a.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_78d5a.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_78d5a.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-R7L72M/OpenMPCheckVersion.cpp
+        /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-R7L72M/OpenMPCheckVersion.cpp:3:10: fatal error: 'omp.h' file not found
+            3 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_78d5a.dir/OpenMPCheckVersion.cpp.o] Error 1
+        make: *** [cmTC_78d5a/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:20 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-DPm5dh"
+      binary: "/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-DPm5dh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: "arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-DPm5dh'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_47fd0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_47fd0.dir/build.make CMakeFiles/cmTC_47fd0.dir/build
+        Building CXX object CMakeFiles/cmTC_47fd0.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++   -Xpreprocessor -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_47fd0.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_47fd0.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_47fd0.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-DPm5dh/OpenMPCheckVersion.cpp
+        /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/CMakeScratch/TryCompile-DPm5dh/OpenMPCheckVersion.cpp:3:10: fatal error: 'omp.h' file not found
+            3 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_47fd0.dir/OpenMPCheckVersion.cpp.o] Error 1
+        make: *** [cmTC_47fd0/fast] Error 2
+        
+      exitCode: 2
+...
