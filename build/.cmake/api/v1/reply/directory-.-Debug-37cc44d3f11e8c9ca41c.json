@@ -1,0 +1,105 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 251,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 272,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 288,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 314,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"include/pybind11"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "share/cmake/pybind11",
+			"paths" : 
+			[
+				"/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/pybind11Config.cmake",
+				"/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/pybind11ConfigVersion.cmake",
+				"tools/FindPythonLibsNew.cmake",
+				"tools/pybind11Common.cmake",
+				"tools/pybind11Tools.cmake",
+				"tools/pybind11NewTools.cmake",
+				"tools/pybind11GuessPythonExtSuffix.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "share/cmake/pybind11",
+			"exportName" : "pybind11Targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "pybind11_headers::@6890427a1f51a3e7e1df",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"CMakeFiles/Export/890f2caa8fc1b4df326ed06c7ff9ddbd/pybind11Targets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "share/pkgconfig",
+			"paths" : 
+			[
+				"/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/pybind11.pc"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

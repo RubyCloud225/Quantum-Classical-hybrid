@@ -21,37 +21,55 @@
 namespace py = pybind11;
 
 py::dict run_preprocessing(const std::string& input) {
-    // Tokenization
+    // === Normalisation step ===
+    BertNormaliser bertNormaliser;
+    std::string normalizedText = bertNormaliser.bertCleaning(input);
+    normalizedText = bertNormaliser.stripAccents(normalizedText);
+
+    // --- Byte normalization ---//
+    ByteNormalizer byteNormalizer;
+    std::vector<std::string> byteNormalizedTokens = byteNormalizer.ByteNormalise(normalizedText, true);
+    // join tokens back to a single string
+    //-------- Digits ---------------//
+    DigitNormaliser digitNormaliser;
+    std::string digitNormalizedText = digitNormaliser.normaliseDigits(byteNormalizedTokens, true);
+    // --- Metaspace normalization ---//
+    MetaspaceNormaliser metaspaceNormaliser;
+    metaspaceNormaliser.setReplacement("Ġ", true);
+    metaspaceNormaliser.setReplacement(" ", true);
+    std::string metaspaceNormalizedText = metaspaceNormaliser.pretok(digitNormalizedText, true);
+
+    
+    //===== Prepend normalization ===//
+    Prepend prepend;
+    std::set<std::string> normalizedValues = prepend.extract_normalised(digitNormalizedText);
+    
+    // === Tokenization on normalized text ===//
     Tokenizer tokenizer;
-    std::vector<std::string> tokens = tokenizer.tokenize(input);
+    std::vector<std::string> tokens = tokenizer.tokenize(normalizedText);
     int totalTokens = tokenizer.countTokens(tokens);
     int uniqueTokens = tokenizer.countUniqueTokens(tokens);
     int totalWords = tokenizer.countWords(tokens);
-    int sentences = tokenizer.countSentences(input);
-    int totalPunctuation = tokenizer.countPunctuation(input);
+    int sentences = tokenizer.countSentences(normalizedText);
+    int totalPunctuation = tokenizer.countPunctuation(normalizedText);
 
-    // Positional Embeddings (optional to expose in return)
-    auto positionalEmbeddings = tokenizer.createPositionalEmbeddings(tokens);
-
-    // Gaussian noise setup
+    // === Gaussian noise generation, regression, normalization ===
     std::vector<double> mean = {static_cast<double>(totalTokens), static_cast<double>(uniqueTokens)};
     std::vector<std::vector<double>> covariance = {{1.0, 0.0}, {0.0, 1.0}};
     std::vector<double> weights = {1.0, 1.0};
     GaussianNoise noise(mean, covariance, weights);
 
-    // Generate noise samples
     std::vector<std::vector<double>> noiseSamples;
     for (int i = 0; i < 10; ++i) {
         noiseSamples.push_back(noise.generateNoise());
     }
 
-    // Linear regression data
     std::vector<std::pair<double, double>> regressionData;
     for (const auto& ns : noiseSamples) {
         regressionData.emplace_back(ns[0], static_cast<double>(totalTokens));
     }
 
-    // Train/test split
+    // Shuffle and split train/test
     std::random_device rd;
     std::mt19937 g(rd());
     std::shuffle(regressionData.begin(), regressionData.end(), g);
@@ -59,17 +77,14 @@ py::dict run_preprocessing(const std::string& input) {
     std::vector<std::pair<double, double>> trainData(regressionData.begin(), regressionData.begin() + trainSize);
     std::vector<std::pair<double, double>> testData(regressionData.begin() + trainSize, regressionData.end());
 
-    // Fit regression model
     LinearRegression lr;
     lr.fit(trainData);
 
-    // Predict Y for test data
     std::vector<double> predictedY;
     for (const auto& [x, _] : testData) {
         predictedY.push_back(lr.predict(x));
     }
 
-    // Normalize NLL
     std::vector<double> nllValues;
     for (const auto& sample : noiseSamples) {
         try {
@@ -83,7 +98,6 @@ py::dict run_preprocessing(const std::string& input) {
     norm.resetParameters();
     std::vector<double> normalizedNLL = norm.forward(nllValues);
 
-    // Compute density and entropy (reuse last sample)
     double density = noise.calculateDensity(noiseSamples[0]);
     double entropy = noise.calculateEntropy();
 
@@ -99,17 +113,15 @@ py::dict run_preprocessing(const std::string& input) {
         };
         sample.noise = noiseSamples[i];
         sample.target_value = static_cast<double>(totalTokens);
-        sample.normalized_noise = normalizedNLL;  // technically normalized NLL
+        sample.normalized_noise = normalizedNLL;
         sample.density = density;
         sample.nll = nllValues[i];
         sample.entopy = entropy;
         dataset.push_back(sample);
     }
 
-    // Save dataset to file
     saveSamples(dataset, "sample_data.bin");
 
-    // Return metadata to Python
     py::dict result;
     result["tokens"] = totalTokens;
     result["unique_tokens"] = uniqueTokens;

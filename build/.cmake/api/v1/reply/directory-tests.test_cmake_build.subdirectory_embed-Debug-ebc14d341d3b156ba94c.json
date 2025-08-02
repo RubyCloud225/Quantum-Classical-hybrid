@@ -1,0 +1,69 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"tests/test_cmake_build/subdirectory_embed/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 38,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"tests/test_cmake_build/subdirectory_embed/libtest_embed_lib.a"
+			],
+			"targetId" : "test_embed_lib::@b4d49c6de2ac950e03b0",
+			"targetIndex" : 21,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/test_export/test_export-Targets.cmake",
+			"exportName" : "test_export",
+			"exportTargets" : 
+			[
+				{
+					"id" : "test_embed_lib::@b4d49c6de2ac950e03b0",
+					"index" : 21
+				}
+			],
+			"paths" : 
+			[
+				"tests/test_cmake_build/subdirectory_embed/CMakeFiles/Export/9a282866c0d7f57df5589da22fb4c609/test_export.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "tests/test_cmake_build/subdirectory_embed",
+		"source" : "tests/test_cmake_build/subdirectory_embed"
+	}
+}
