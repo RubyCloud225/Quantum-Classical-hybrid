@@ -86,10 +86,24 @@ CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.s: cm
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.s"
 	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/tests/byte_test.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.s
 
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o: CMakeFiles/byte_test.dir/flags.make
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/bert.cpp
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o: CMakeFiles/byte_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o -MF CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o.d -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/bert.cpp
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/bert.cpp > CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.i
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/bert.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.s
+
 CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o: CMakeFiles/byte_test.dir/flags.make
 CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/byte_level.cpp
 CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o: CMakeFiles/byte_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o"
 	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o -MF CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o.d -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/byte_level.cpp
 
 CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i: cmake_force
@@ -100,21 +114,103 @@ CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s"
 	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/byte_level.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
 
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o: CMakeFiles/byte_test.dir/flags.make
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o: CMakeFiles/byte_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o -MF CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o.d -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp > CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.i
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.s
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o: CMakeFiles/byte_test.dir/flags.make
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o: CMakeFiles/byte_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o -MF CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o.d -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp > CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o: CMakeFiles/byte_test.dir/flags.make
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o: CMakeFiles/byte_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o -MF CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o.d -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp > CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.i
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.s
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o: CMakeFiles/byte_test.dir/flags.make
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o: CMakeFiles/byte_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o -MF CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o.d -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp > CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.i
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.s
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: CMakeFiles/byte_test.dir/flags.make
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: CMakeFiles/byte_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -MF CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o.d -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp > CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+
+CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp -o CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+
 # Object files for target byte_test
 byte_test_OBJECTS = \
 "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.o" \
-"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o"
+"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o" \
+"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o" \
+"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o" \
+"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o" \
+"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o" \
+"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o" \
+"CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o"
 
 # External object files for target byte_test
 byte_test_EXTERNAL_OBJECTS =
 
 byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.o
+byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o
 byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o
+byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o
+byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o
+byte_test: CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
 byte_test: CMakeFiles/byte_test.dir/build.make
 byte_test: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 byte_test: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
 byte_test: CMakeFiles/byte_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable byte_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable byte_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/byte_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

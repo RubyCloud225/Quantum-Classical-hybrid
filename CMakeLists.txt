@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(quantum_classical_hybrid LANGUAGES CXX)
 
+
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -62,10 +63,8 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Link OpenMP
-if (OpenMP_FOUND)
-    target_compile_options(GaussianDiffusionTest PRIVATE -stdlib=libc++)
-    target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS})
-    target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
+if(OpenMP_CXX_FOUND)
+    message(STATUS "OpenMP found: ${OpenMP_CXX_LIBRARIES}")
 else()
     message(FATAL_ERROR "OpenMP not found")
 endif()
@@ -145,147 +144,99 @@ file(GLOB_RECURSE NORMALISER_TESTS src/DataProcessing/normaliser/tests/*.cpp)
 list(FILTER DATAPROCESSING_SOURCES EXCLUDE REGEX ".*tests/.*")
 list(FILTER NORMALISER_SOURCES EXCLUDE REGEX ".*tests/.*")
 
+
 pybind11_add_module(quantum_classical_hybrid
     ${DATAPROCESSING_SOURCES}
     ${NORMALISER_SOURCES}
 )
 
 
-# Add separate executable targets for normaliser tests
-foreach(test_file ${NORMALISER_TESTS})
-    get_filename_component(test_name ${test_file} NAME_WE)
-    set(test_sources ${test_file})
-
-    # Attempt to match the module name by stripping "_test" suffix
-    string(REPLACE "_test" "" module_name ${test_name})
-    set(module_path "${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/${module_name}.cpp")
-    if(EXISTS ${module_path})
-        list(APPEND test_sources ${module_path})
-    endif()
-    if(test_name STREQUAL "bert_minimal_test")
-        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/bert.cpp)
-    endif()
-    if(test_name STREQUAL "byte_test")
-        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/byte_level.cpp)
-    endif()
-    if(test_name STREQUAL "bert_test")
-        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/bert.cpp)
-    endif()
-    if(test_name STREQUAL "prepend_test")
-        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/prepend.cpp)
-    endif()
-    if(test_name STREQUAL "replace_test")
-        list(APPEND test_sources ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/replace.cpp)
-    endif()
-    add_executable(${test_name} ${test_sources})
-    target_include_directories(${test_name} PRIVATE
-        ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
-        ${PROJECT_SOURCE_DIR}/src/DataProcessing
-        ${Python3_INCLUDE_DIRS}
-    )
-    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
-    target_compile_options(${test_name} PRIVATE -g)
-endforeach()
 
 # Add separate executable targets for model tests
-file(GLOB_RECURSE MODEL_TESTS src/DataProcessing/models/tests/*.cpp)
-foreach(test_file ${MODEL_TESTS})
-    get_filename_component(test_name ${test_file} NAME_WE)
-    set(test_sources ${test_file})
+#file(GLOB_RECURSE MODEL_TESTS src/DataProcessing/models/tests/*.cpp)
+#foreach(test_file ${MODEL_TESTS})
+#    get_filename_component(test_name ${test_file} NAME_WE)
+#    set(test_sources ${test_file})
 
     # Attempt to match the module name by stripping "_test" suffix
-    string(REPLACE "_test" "" module_name ${test_name})
-    set(module_path "${PROJECT_SOURCE_DIR}/src/DataProcessing/models/${module_name}.cpp")
-    if(EXISTS ${module_path})
-        list(APPEND test_sources ${module_path})
-    endif()
+#    string(REPLACE "_test" "" module_name ${test_name})
+#    set(module_path "${PROJECT_SOURCE_DIR}/src/DataProcessing/models/${module_name}.cpp")
+#    if(EXISTS ${module_path})
+#        list(APPEND test_sources ${module_path})
+#    endif()
 
-    add_executable(${test_name} ${test_sources})
-    target_include_directories(${test_name} PRIVATE
-        ${PROJECT_SOURCE_DIR}/src/DataProcessing/models
-        ${PROJECT_SOURCE_DIR}/src/DataProcessing
-        ${Python3_INCLUDE_DIRS}
-    )
-    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
-    target_compile_options(${test_name} PRIVATE -g)
-endforeach()
+#    add_executable(${test_name} ${test_sources})
+#    target_include_directories(${test_name} PRIVATE
+#        ${PROJECT_SOURCE_DIR}/src/DataProcessing/models
+#        ${PROJECT_SOURCE_DIR}/src/DataProcessing
+#        ${Python3_INCLUDE_DIRS}
+#    )
+#    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
+#    target_compile_options(${test_name} PRIVATE -g)
+#endforeach()
 
-# Add executable targets for all quantum encoder tests
-file(GLOB_RECURSE QUANTUM_ENCODER_TESTS src/Quantum_encoder/tests/*.cpp)
-foreach(test_file ${QUANTUM_ENCODER_TESTS})
-    get_filename_component(test_name ${test_file} NAME_WE)
-    set(test_sources ${test_file})
 
-    # Attempt to match the module name by stripping "_test" suffix
-    string(REPLACE "_test" "" module_name ${test_name})
-
-    # Search for a matching .cpp module anywhere under src/Quantum.encoder (excluding tests)
-    file(GLOB_RECURSE candidate_sources RELATIVE ${PROJECT_SOURCE_DIR}
-        ${PROJECT_SOURCE_DIR}/src/Quantum_encoder/*.cpp
-    )
-    list(FILTER candidate_sources EXCLUDE REGEX ".*tests/.*")
-    set(module_path "")
-    foreach(candidate ${candidate_sources})
-        get_filename_component(candidate_name ${candidate} NAME_WE)
-        if(candidate_name STREQUAL module_name)
-            set(module_path "${PROJECT_SOURCE_DIR}/${candidate}")
-            break()
-        endif()
+# --- Universal function to add test executables with all required sources (multi-module version) ---
+function(add_test_executable_with_sources test_dir module_dirs)
+    file(GLOB_RECURSE TEST_FILES ${test_dir}/*.cpp)
+    list(FILTER TEST_FILES EXCLUDE REGEX ".*/main.cpp$")
+    set(MODULE_SOURCES "")
+    foreach(module_dir IN LISTS module_dirs)
+        file(GLOB_RECURSE MODULE_SOURCES_TMP RELATIVE ${PROJECT_SOURCE_DIR}
+             ${PROJECT_SOURCE_DIR}/${module_dir}/*.cpp)
+        list(FILTER MODULE_SOURCES_TMP EXCLUDE REGEX ".*/main.cpp$")
+        list(FILTER MODULE_SOURCES_TMP EXCLUDE REGEX ".*tests/.*")
+        list(APPEND MODULE_SOURCES ${MODULE_SOURCES_TMP})
     endforeach()
 
-    if(EXISTS ${module_path})
-        list(APPEND test_sources ${module_path})
-    endif()
+    foreach(test_file ${TEST_FILES})
+        get_filename_component(test_name ${test_file} NAME_WE)
+        set(test_sources ${test_file})
 
-    add_executable(${test_name} ${test_sources})
-    target_include_directories(${test_name} PRIVATE
-        ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-        ${Python3_INCLUDE_DIRS}
-    )
-    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
-    target_compile_options(${test_name} PRIVATE -g)
-endforeach()
+        foreach(source ${MODULE_SOURCES})
+            list(APPEND test_sources ${PROJECT_SOURCE_DIR}/${source})
+        endforeach()
 
-# Add executable targets for all ClassicalDiT tests
-file(GLOB_RECURSE CLASSICAL_DIT_TESTS src/ClassicalDiT/tests/*.cpp)
-foreach(test_file ${CLASSICAL_DIT_TESTS})
-    get_filename_component(test_name ${test_file} NAME_WE)
-    set(test_sources ${test_file})
-
-    # Attempt to match the module name by stripping "_test" suffix
-    string(REPLACE "_test" "" module_name ${test_name})
-
-    # Search for a matching .cpp module anywhere under src/ClassicalDiT (excluding tests)
-    file(GLOB_RECURSE candidate_sources RELATIVE ${PROJECT_SOURCE_DIR}
-        ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/*.cpp
-    )
-    list(FILTER candidate_sources EXCLUDE REGEX ".*tests/.*")
-    set(module_path "")
-    foreach(candidate ${candidate_sources})
-        get_filename_component(candidate_name ${candidate} NAME_WE)
-        if(candidate_name STREQUAL module_name)
-            set(module_path "${PROJECT_SOURCE_DIR}/${candidate}")
-            break()
+        if(NOT TARGET ${test_name})
+            add_executable(${test_name} ${test_sources})
+            target_include_directories(${test_name} PRIVATE
+                ${Python3_INCLUDE_DIRS}
+            )
+            target_link_libraries(${test_name} PRIVATE
+                ${Python3_LIBRARIES}
+                OpenMP::OpenMP_CXX
+                icuuc
+                icui18n
+            )
+            target_compile_options(${test_name} PRIVATE -g)
         endif()
     endforeach()
+endfunction()
 
-    if(EXISTS ${module_path})
-        list(APPEND test_sources ${module_path})
+# Update your calls to include all relevant module directories per test
+
+add_test_executable_with_sources(
+    "${PROJECT_SOURCE_DIR}/src/ClassicalDiT/tests"
+    "src/ClassicalDiT;src/DataProcessing/models"
+)
+
+add_test_executable_with_sources(
+    "${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/tests"
+    "src/DataProcessing/normaliser"
+)
+
+foreach(target IN LISTS TEST_FILES)
+    if(TARGET ${target})
+        target_include_directories(${target} PRIVATE
+            ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
+        )
     endif()
-
-    add_executable(${test_name} ${test_sources})
-    target_include_directories(${test_name} PRIVATE
-        ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
-        ${PROJECT_SOURCE_DIR}/src/DataProcessing
-        ${PROJECT_SOURCE_DIR}/src/Bindings
-        ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-        ${PROJECT_SOURCE_DIR}/src/Compression
-        ${PROJECT_SOURCE_DIR}/src/utils
-        ${Python3_INCLUDE_DIRS}
-    )
-    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
-    target_compile_options(${test_name} PRIVATE -g)
 endforeach()
+
+add_test_executable_with_sources(
+    "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/tests"
+    "src/Quantum_encoder"
+)
 
 # Set the include directories for the quantum_classical_hybrid module
 target_link_libraries(quantum_classical_hybrid PRIVATE
@@ -331,6 +282,7 @@ set_target_properties(quantum_classical_hybrid PROPERTIES
 #     OpenMP::OpenMP_CXX
 # )
 
+
 # Add executable target for Gaussian Diffusion Test with debug flags
 add_executable(GaussianDiffusionTest 
     src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp 
@@ -343,20 +295,54 @@ add_executable(GaussianDiffusionTest
     src/ClassicalDiT/NN/Layers/PoolingLayer.cpp 
     src/ClassicalDiT/NN/Layers/ReluLayer.cpp 
     )
-
-target_include_directories(GaussianDiffusionTest PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
-    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/NN
-    ${PROJECT_SOURCE_DIR}/src/DataProcessing
-    ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-    ${PROJECT_SOURCE_DIR}/src/Compression
-    ${PROJECT_SOURCE_DIR}/src/utils
-    /opt/homebrew/opt/libomp/include
-    $ENV{HOME}/icu-install/include
+add_library(Quantum_encoder SHARED
+    src/Quantum_encoder/converttoqubit/AngleEncoder.cpp
+    src/Quantum_encoder/converttoqubit/HybridEncoder.cpp
+    src/Quantum_encoder/Model_Circuit/model_circuit.cpp
 )
+target_include_directories(Quantum_encoder PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${Python3_INCLUDE_DIRS}
+)
+# set and include directors for Integration tests
+#add_executable(integration_test
+#    src/DataProcessing/models/tests/Integration_GaussianNoise_LayerNormalization.cpp
+#    src/DataProcessing/models/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp
+#    src/DataProcessing/models/GaussianNoise.cpp
+#    src/DataProcessing/models/LayerNormalization.cpp
+#    src/DataProcessing/models/LinearRegression.cpp
+#)
 
-target_compile_options(GaussianDiffusionTest PRIVATE -g)
+#target_include_directories(integration_test PRIVATE
+#    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
+#    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+#    ${PROJECT_SOURCE_DIR}/src/Bindings
+#    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+#${PROJECT_SOURCE_DIR}/src/utils
+#    ${PROJECT_SOURCE_DIR}/src/Compression
+#    ${Python3_INCLUDE_DIRS}
+#)
+#target_link_libraries(integration_test PRIVATE
+#    ${Python3_LIBRARIES}
+#    OpenMP::OpenMP_CXX
+#    icuuc
+#    icui18n
+#)
+
+#target_include_directories(Gaussian_Diffusion_Test PRIVATE
+#    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
+#    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/NN
+#    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+#    ${PROJECT_SOURCE_DIR}/src/Bindings
+#    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+#    ${PROJECT_SOURCE_DIR}/src/Compression
+#    ${PROJECT_SOURCE_DIR}/src/utils
+#    /opt/homebrew/opt/libomp/include
+#    $ENV{HOME}/icu-install/include
+#)
+
+#target_compile_options(Gaussian_Diffusion_Test PRIVATE -g)
 
 # Enable OpenMP support for GaussianDiffusionTest
 # Configure CMake to use GCC installed via Homebrew for OpenMP support
@@ -409,4 +395,7 @@ target_link_libraries(GaussianDiffusionTest PRIVATE
     icui18n
 )
 
-
+add_test_executable_with_sources(
+    "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/convert_classical_state_to_Quantum.md/tests"
+    "src/Quantum_encoder"
+)

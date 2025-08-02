@@ -6,7 +6,7 @@ CXX_DEFINES = -Dquantum_classical_hybrid_EXPORTS
 
 CXX_INCLUDES = -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/Bindings -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/Quantum_encoder -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/Compression -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/utils -I/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models -I/opt/homebrew/include/eigen3 -I/opt/homebrew/include -I/Users/catherinepemblington/icu-install/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -isystem /opt/homebrew/lib/python3.13/site-packages/pybind11/include -isystem /opt/homebrew/opt/libomp/include
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden   -fopenmp -flto -fopenmp
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden   -fopenmp -flto -fopenmp
 
-CXX_FLAGS = -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden   -fopenmp -flto -fopenmp
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden   -fopenmp -flto -fopenmp
 

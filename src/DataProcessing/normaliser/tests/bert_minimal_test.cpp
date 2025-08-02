@@ -2,7 +2,7 @@
 #include <cassert>
 #include <chrono>
 #include "utils/logger.hpp"
-#include "bert.hpp"
+#include "../bert.hpp"
 
 BertNormaliser normaliser;
 

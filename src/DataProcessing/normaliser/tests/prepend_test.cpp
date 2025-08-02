@@ -1,5 +1,5 @@
 #include "utils/benchmark.hpp"
-#include "prepend.hpp"
+#include "../prepend.hpp"
 #include <random>
 #include <sstream>
 #include <cassert>

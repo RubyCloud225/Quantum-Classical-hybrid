@@ -5,6 +5,7 @@
 #include <ctime>
 #include "utils/logger.hpp"
 
+
 GaussianNoise::GaussianNoise(const std::vector<double>& mean, const std::vector<std::vector<double>>& covariance, const std::vector<double>& weights)
     : mean_(mean), covariance_(covariance), weights_(weights), distribution_(0.0, 1.0) {
 

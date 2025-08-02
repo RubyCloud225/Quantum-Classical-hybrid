@@ -25,7 +25,6 @@ void testBetaSchedule() {
 
     std::cout << "BetaSchedule test passed." << std::endl;
 }
-
 int main() {
     testBetaSchedule();
     return 0;

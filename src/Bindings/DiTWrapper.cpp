@@ -44,15 +44,15 @@ PYBIND11_MODULE(dit_wrapper, m) {
     m.def("gradients", &NormalDist::gradients, py::arg("y"), py::arg("x_start_pred"), py::arg("eps_pred"), py::arg("dfd_y"), py::arg("dfd_mu"), py::arg("dfd_sigma"));
     
     // Wrape main loop function (for training)
-    m.def("train_diffusion_model", &train_diffusion_model, 
-          py::arg("initial_beta"),
-          py::arg("total_epochs"),
-          py::arg("learning_rate"),
-          py::arg("beta1"),
-          py::arg("beta2"),
-          py::arg("epsilon"),
-          py::arg("input_size"),
-          py::arg("output_size"),
-          py::arg("epochs"),
-          py::arg("sample_data_path"));
+   //m.def("train_diffusion_model", &train_diffusion_model, 
+    //      py::arg("initial_beta"),
+    //      py::arg("total_epochs"),
+    //      py::arg("learning_rate"),
+    //      py::arg("beta1"),
+    //      py::arg("beta2"),
+    //      py::arg("epsilon"),
+    //      py::arg("input_size"),
+    //      py::arg("output_size"),
+    //      py::arg("epochs"),
+    //      py::arg("sample_data_path"));
 }

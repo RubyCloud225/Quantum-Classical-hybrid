@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "bert.hpp"
+#include "../bert.hpp"
 #include "utils/logger.hpp"
 
 BertNormaliser BertNormaliser;

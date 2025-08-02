@@ -1,7 +1,5 @@
 #include "LayerNormalization.hpp"
 #include "utils/logger.hpp"
-//#include "utils/Logger.hpp"
-//#include "LayerNormalizationKernels.cuh"
 #include <numeric>
 #include <cmath>
 #include <stdexcept>

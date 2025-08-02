@@ -4,6 +4,10 @@
 #include "utils/logger.hpp"
 #include <math.h>
 
+LinearRegression::LinearRegression() : slope(0.0), intercept(0.0) {
+    Logger::log("Initialized LinearRegression model", LogLevel::INFO, __FILE__, __LINE__);
+}
+
 void LinearRegression::fit(const std::vector<std::pair<double, double>>& data) {
     if (data.empty()) {
         throw std::invalid_argument("Data cannot be empty");
@@ -27,6 +31,9 @@ void LinearRegression::fit(const std::vector<std::pair<double, double>>& data) {
     intercept = (sum_y - slope * sum_x) / n;
 
     Logger::log("Fitted LinearRegression model with slope: " + std::to_string(slope) + " intercept: " + std::to_string(intercept), LogLevel::INFO, __FILE__, __LINE__);
+}
+double LinearRegression::predict(double x) const {
+    return slope * x + intercept;
 }
 
 void LinearRegression::reshapeData(const std::vector<double>& x, const std::vector<double>& y, std::vector<std::pair<double, double>>& reshapedData) const {

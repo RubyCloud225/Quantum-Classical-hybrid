@@ -1,4 +1,6 @@
 #include "NormalDist.hpp"
+#include <cmath>
+#include <stdexcept>
 
 namespace NormalDist {
     double log_prob(double y, double mean, double sigma) {
@@ -16,7 +18,7 @@ namespace NormalDist {
     double log_prob_from_predictions(double y, double x_start_pred, double eps_pred) {
         double mean = compute_mean(x_start_pred, eps_pred);
         double sigma = compute_sigma(x_start_pred, eps_pred);
-        if (sigma =< 0) {
+        if (sigma <= 0) {
             throw std::invalid_argument("Sigma must be positive");
         }
         return log_prob(y, mean, sigma);

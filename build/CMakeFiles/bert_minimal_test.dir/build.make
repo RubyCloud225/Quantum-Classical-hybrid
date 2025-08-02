@@ -100,21 +100,117 @@ CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.s"
 	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/bert.cpp -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.s
 
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o: CMakeFiles/bert_minimal_test.dir/flags.make
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/byte_level.cpp
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o: CMakeFiles/bert_minimal_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o -MF CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o.d -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/byte_level.cpp
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/byte_level.cpp > CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/byte_level.cpp -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o: CMakeFiles/bert_minimal_test.dir/flags.make
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o: CMakeFiles/bert_minimal_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o -MF CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o.d -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp > CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.i
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/digits.cpp -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.s
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o: CMakeFiles/bert_minimal_test.dir/flags.make
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o: CMakeFiles/bert_minimal_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o -MF CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o.d -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp > CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/metaspace.cpp -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o: CMakeFiles/bert_minimal_test.dir/flags.make
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o: CMakeFiles/bert_minimal_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o -MF CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o.d -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp > CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.i
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/prepend.cpp -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.s
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o: CMakeFiles/bert_minimal_test.dir/flags.make
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o: CMakeFiles/bert_minimal_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o -MF CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o.d -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp > CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.i
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/replace.cpp -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.s
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: CMakeFiles/bert_minimal_test.dir/flags.make
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: CMakeFiles/bert_minimal_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -MF CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o.d -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -c /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp > CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+
+CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/normaliser/unicode_processor.cpp -o CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+
 # Object files for target bert_minimal_test
 bert_minimal_test_OBJECTS = \
 "CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o" \
-"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o"
+"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o" \
+"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o" \
+"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o" \
+"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o" \
+"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o" \
+"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o" \
+"CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o"
 
 # External object files for target bert_minimal_test
 bert_minimal_test_EXTERNAL_OBJECTS =
 
 bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o
 bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o
+bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o
+bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o
+bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o
+bert_minimal_test: CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
 bert_minimal_test: CMakeFiles/bert_minimal_test.dir/build.make
 bert_minimal_test: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 bert_minimal_test: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
 bert_minimal_test: CMakeFiles/bert_minimal_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bert_minimal_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bert_minimal_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bert_minimal_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
