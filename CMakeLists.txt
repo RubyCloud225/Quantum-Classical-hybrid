@@ -5,10 +5,52 @@ project(quantum_classical_hybrid LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+if(APPLE)
+    set(CMAKE_OSX_ARCHITECTURES arm64)
+    find_package(OpenMP REQUIRED)
+    if(OpenMP_FOUND)
+        message(STATUS "OpenMP found on macOS")
+#        target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
+#        target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS})
+#        target_include_directories(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_INCLUDE_DIR})
+    else()
+        message(FATAL_ERROR "OpenMP not found on macOS")
+    endif()
+
+elseif(WIN32)
+    message(STATUS "Configuring for Windows MSVC")
+    # Enable OpenMP for MSVC
+#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /openmp")
+    add_compile_options(/openmp)
+
+elseif(UNIX AND NOT APPLE)
+    message(STATUS "Configuring for Linux")
+    # Use GCC and OpenMP
+    find_package(OpenMP REQUIRED)
+    if(NOT OpenMP_FOUND)
+        message(FATAL_ERROR "OpenMP not found on Linux")
+    endif()
+else()
+    message(FATAL_ERROR "Unsupported platform")
+endif()
+
+# Set the CMAKE_BUILD_TYPE if not already set
+if (NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build." FORCE)
+endif()
+
+# Link OpenMP
+#if (OpenMP_FOUND)
+#    target_compile_options(GaussianDiffusionTest PRIVATE -stdlib=libc++)
+#    target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS})
+#    target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
+#else()
+#    message(FATAL_ERROR "OpenMP not found")
+
 # Find Python and pybind11 packages
 find_package(
     Python3 REQUIRED COMPONENTS Interpreter Development)
-find_package(benchmark REQUIRED)
+#find_package(benchmark REQUIRED)
 #if(EXISTS "/opt/homebrew/include/benchmark/benchmark.h")
 #    message(STATUS "Google Benchmark found")
 #else()
@@ -338,6 +380,7 @@ if(OpenMP_CXX_FOUND)
 endif()
 
 target_link_libraries(GaussianDiffusionTest PRIVATE
+    OpenMP::OpenMP_CXX
     ${Python3_LIBRARIES}
     icuuc
     icui18n
