@@ -156,6 +156,73 @@ $$
 
 ---
 
+## Hamiltonian Mapping Layer
+
+The physical device is modeled as:
+
+$$
+\H(t) = H_0 + \sum_{j} u_j(t) H_{c,j}
+$$
+
+where $H_0$ is the drift hamiltonian (static ), and $H_{c,j}$ are the control hamiltonians (dynamic).
+The control amplitudes $u_j(t)$ are the control parameters.
+
+time evolution:
+$$
+\U_T = \mathcal{T} \exp\left( -\frac{i}{\hbar} \int_0^T H(t) \, dt \right)
+$$
+
+where $\mathcal{T}$ is the time-ordering operator.
+The time-evolution operator $\U_T\$ is the solution to the time-dependent Schröder equation.
+
+---
+
+## RL Model
+
+state RL agent: 
+- Slice index k 
+- selected observables $\langle Z\rangle, \langle X\rangle$ overlap with $\psi_{\text{target}}$
+- selected control parameters $u_j$
+
+action RL agent:
+- select next control parameters $u_j$
+
+reward 
+
+Terminal: fidelity $\F = |\langle\psi_{\text{target}} | \psi_T\rangle|^2$
+
+- Optional shaping: leakage penalty, energy cost
+
+Episode:
+
+Reset to $\|0\dots0\rangle$
+
+For each time slice:
+RL outputs $\u_j$
+
+Simulate $\psi \to e^{-iH(t_k)\Delta t} \psi$
+
+Return reward to update policy
+
+---
+
+## Gate -> Hamiltonian Mapping
+
+- Gate set: $\{U_1, U_2, \dots, U_n\}$
+- Hamiltonian set: $\{H_1, H_2, \dots, H_n \}$
+
+To connect your circuit to hardware controls:
+
+${R_x(\theta) = e^{-i(\theta/2)\sigma_x} → H_x = \sigma_x/2}$
+${R_z(\phi) = e^{-i(\phi/2)\sigma_z} → H_z = \sigma_z/2}$
+
+CNOT: generated via interaction term ${H_{\text{CX}}}$ (e.g., cross-resonance Hamiltonian)
+
+These mappings allow an initial guess for u_j(t) or curriculum learning.
+
+⸻
+
+
 ## 📦 Summary
 
 | Step                | Description                             |                  |
@@ -165,6 +232,7 @@ $$
 | Measurement         | Compute ( P(q\_0 = 1                    | x; \theta) )     |
 | Gradient            | Use observable-based gradient rule      |                  |
 | Training            | Optimize parameters using classical SGD |                  |
+| Gate -> Hamiltonian | Map gate set to Hamiltonian set         |                  |
 
 ---
 
@@ -182,3 +250,4 @@ $$
 * Schuld, M., Bocharov, A., Svore, K.M., & Wiebe, N. (2018). *Circuit-centric quantum classifiers*.
 * Mitarai, K., Negoro, M., Kitagawa, M., & Fujii, K. (2018). *Quantum circuit learning*.
 * Nielsen, M. A., & Chuang, I. L. (2000). *Quantum Computation and Quantum Information*.
+* Liu, Y (2025). *Superconducting quantum computing optimisation based on multi-bjective deep reinforcmenet learning*.

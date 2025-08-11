@@ -75,6 +75,6 @@
         "./NN/test_",
         "./NN/test_"
     ],
-    "cmake.sourceDirectory": "/Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11",
+    "cmake.sourceDirectory": "/Users/catherinepemblington/Documents/Quantum-Classical-hybrid",
     "C_Cpp.dimInactiveRegions": false
 }
