@@ -175,6 +175,86 @@ $$
 where $\mathcal{T}$ is the time-ordering operator.
 The time-evolution operator $\U_T\$ is the solution to the time-dependent Schröder equation.
 
+where:
+
+## Single Transmon (Duffing model)
+
+For transmon i:
+
+$${H_{\text{transmon},i} = \omega_i\, a_i^\dagger a_i •	\frac{\alpha_i}{2} \, a_i^\dagger a_i^\dagger a_i a_i}$$
+
+where:
+
+	•	${\omega_i}$ = fundamental transition frequency of the qubit (GHz in simulation)
+	•	${\alpha_i < 0}$ = anharmonicity (negative for transmons)
+	•	${a_i, a_i^\dagger}$ = annihilation / creation operators for mode i
+
+In number-operator form (numerically stable):
+
+${a_i^\dagger a_i^\dagger a_i a_i = n_i (n_i - 1) with n_i = a_i^\dagger a_i.}$
+
+⸻
+
+## Coupling Between Qubits
+
+For two transmons i and j, a simple exchange (hopping) coupling:
+
+$${H_{\text{coupling},ij} = g_{ij} \left(a_i^\dagger a_j + a_j^\dagger a_i\right)}$$ 
+
+${g_{ij}}$ = coupling strength (GHz)
+This produces an XY-type interaction in the computational subspace.
+
+⸻
+
+## Drift Hamiltonian ${H_0}$
+
+The system drift is the sum of single-transmon Hamiltonians plus all couplings:
+
+$${H_0 = \sum_{i=1}^N \left[ \omega_i\, n_i + \frac{\alpha_i}{2} n_i(n_i - 1) \right] •	\sum_{i<j} g_{ij} \left(a_i^\dagger a_j + a_j^\dagger a_i\right)}$$
+
+This ${H_0}$ is time-independent and captures the fixed device physics.
+
+⸻
+
+## Control Hamiltonians \{H_{c,j}\}
+
+We define a set of time-dependent control channels that the RL agent will modulate.
+	•	X-drive on qubit i:
+$${H_{X,i} = a_i + a_i^\dagger}$$
+
+corresponding (in RWA) to a resonant microwave drive that generates X-axis rotations.
+	•	Z-control on qubit i:
+
+$${H_{Z,i} = n_i}$$
+corresponding to flux detuning / Stark shifts that modulate the Z-axis rotation rate.
+
+The full time-dependent Hamiltonian is:
+
+$${H(t) = H_0 + \sum_{i=1}^N \left[ u_{X,i}(t) H_{X,i} + u_{Z,i}(t) H_{Z,i} \right]}$$
+
+where ${u_{X,i}(t), u_{Z,i}(t)}$ are control amplitudes (to be learned).
+
+⸻
+
+## Time Evolution
+
+In simulation, for each time slice \Delta t:
+
+${U_k = \exp\left(-i\, H(t_k)\, \Delta t\right) \psi_{k+1} = U_k\, \psi_k}$
+
+The RL agent outputs ${u_{X,i}(t_k), u_{Z,i}(t_k)}$ each slice;
+the goal is to match the final ${\psi_T}$ to the target ${\psi_{\text{target}}}$ from your gate-level circuit.
+
+⸻
+
+## Fidelity as Reward
+
+The training reward is based on state fidelity:
+
+$${\mathcal{F} = \left|\langle \psi_{\text{target}} | \psi_T \rangle\right|^2}$$
+
+plus optional penalties for leakage, energy, or bandwidth.
+
 ---
 
 ## RL Model
@@ -218,7 +298,7 @@ ${R_z(\phi) = e^{-i(\phi/2)\sigma_z} → H_z = \sigma_z/2}$
 
 CNOT: generated via interaction term ${H_{\text{CX}}}$ (e.g., cross-resonance Hamiltonian)
 
-These mappings allow an initial guess for u_j(t) or curriculum learning.
+These mappings allow an initial guess for ${u_j(t)}$ or curriculum learning.
 
 ⸻
 
