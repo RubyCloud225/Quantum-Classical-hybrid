@@ -1,10 +1,10 @@
-# 🧠 Hybrid Quantum-Classical Model with Parametrized Quantum Circuits
+# Hybrid Quantum-Classical Model with Parametrized Quantum Circuits
 
 This project implements a hybrid quantum-classical machine learning model using **variational quantum circuits (VQCs)**. It combines quantum state preparation, a unitary ansatz (model), and classical gradient-based optimization.
 
 ---
 
-## 📌 Overview
+## Overview
 
 This model follows three key stages:
 
@@ -14,7 +14,7 @@ This model follows three key stages:
 
 ---
 
-## 1. 🧬 State Preparation: Encoding Classical Data into Quantum States
+## 1. State Preparation: Encoding Classical Data into Quantum States
 
 To utilize quantum computation for machine learning, we begin by **embedding classical input** $\mathbf{x} \in \mathbb{R}^n$ into a quantum state $|\phi(x)\rangle$.
 
@@ -33,7 +33,7 @@ $$
 
 ---
 
-## 2. 🔁 Model Circuit: The Parametrized Quantum Ansatz
+## 2. Model Circuit: The Parametrized Quantum Ansatz
 
 We define a **trainable quantum circuit** (also called an *ansatz*) using unitary operators:
 
@@ -72,7 +72,7 @@ $$
 
 ---
 
-## 3. 📏 Measurement and Prediction
+## 3. Measurement and Prediction
 
 After applying the quantum model, measurement is performed to extract probabilities:
 
@@ -234,16 +234,62 @@ $${H(t) = H_0 + \sum_{i=1}^N \left[ u_{X,i}(t) H_{X,i} + u_{Z,i}(t) H_{Z,i} \rig
 
 where ${u_{X,i}(t), u_{Z,i}(t)}$ are control amplitudes (to be learned).
 
-⸻
+extend this to a physical lab RWA rotating frame 
 
-## Time Evolution
+generate a carrier frequency for each qubit at the desired frequency
 
-In simulation, for each time slice \Delta t:
+this equates to $${H_{\text{lab}, i}(t) = \varepsilion_i(t)cos(\omega_{d,i} t + \phi_i(t)) (a_i + a_i^\dagger)}$$
 
-${U_k = \exp\left(-i\, H(t_k)\, \Delta t\right) \psi_{k+1} = U_k\, \psi_k}$
+where $\omega_{d,i}$ is desired frequency, $\varepsilion_i(t)$ is the amplitude, and $\phi_i(t)$ is the phase of the drive.
 
-The RL agent outputs ${u_{X,i}(t_k), u_{Z,i}(t_k)}$ each slice;
-the goal is to match the final ${\psi_T}$ to the target ${\psi_{\text{target}}}$ from your gate-level circuit.
+$${\mathcal{E}_i(t) = \tfrac{1}{2}\varepsilon_i(t) e^{-i\phi_i}}$$
+
+then RWA = $${H_{\text{lab}, i}(t) = \mathcal{E}_i(t)(a_i^\dagger) = \mathcal{E}_i^*(t)(a_i)}$$
+
+in our case we are looking at working with qubits in a rotating frame, so we can set 
+
+$${u_{X,i}(t) \equiv 2\Re[\mathcal{E}i(t)] \quad\text{and}\quad}$$
+
+and
+
+$${u{Y,i}(t) \equiv -2\Im[\mathcal{E}_i(t)]}$$
+
+so we can represent the in phase / quadrature pair with the same a + a^dagger and i(a - a^dagger) operators
+
+## Time-dependent Simulation 
+
+following through we then divide total control time $\text{T}$ into $\text{M}$ time steps of duration $\Delta t = \text{T}/\text{M}$
+
+on slice $\text{k}$ we have assumed the controls constant: 
+$$\mathcal{u}_{x,u}(t) = \mathcal{u}_{x,u}^{(k)}$$ for $$t\in[t_k,t_k+\Delta t)$$
+
+then: 
+$${H^{(k)} = H_0 + \sum_{i} \big( u_{X,i}^{(k)} H_{X,i} + u_{Z,i}^{(k)} H_{Z,i} \big)}$$
+
+Propagator $\text{u}(k)$ for Hermitian ${H^(k)}$:
+
+use a spectral decomposition:
+
+- Diagonalize ${H^{(k)}}$:
+
+$${H^{(k)} = V^{(k)} \Lambda^{(k)} \left( V^{(k)} \right)^\dagger}$$
+
+where ${V^{(k)}}$ contains eigenvectors and ${\Lambda^{(k)}}$ is diagonal with eigenvalues^${\lambda_m^{(k)}}$.
+
+- Exponentiate the Diagonal:
+$${D^{(k)} = \mathrm{diag}\left( e^{-i \lambda_1^{(k)} \Delta t}, \dots, e^{-i \lambda_D^{(k)} \Delta t} \right)}$$
+
+- Recompose
+$${U^{(k)} = V^{(k)} D^{(k)} \left ( V^{(k)} \right)^\dagger}$$
+
+State update:
+
+$${|\psi_{k+1}\rangle = U_k\,|\psi_k\rangle,\qquad U_{\text{tot}} = U_M \cdots U_2 U_1}$$
+
+Target: given $${\psi_{\text{target}}}$$ from your VQE / gate layer, maximize fidelity
+
+$${\mathcal{F} = |\langle\psi_{\text{target}} | \psi_T\rangle|^2}$$
+
 
 ⸻
 

@@ -4,6 +4,7 @@
 #include <vector>
 #include <complex>
 #include <cmath>
+#include <utility> // for std::pair
 
 using cplx = std::complex<double>;
 
@@ -20,9 +21,10 @@ class H_map_Single_Transmon{
     // a_i, a^dagger_i creation operators for mode i
     // ni = a^dagger_i a_i
     // building the matrix first
+    // build 
     public:
         // Helper to index into row-major 1D vector
-        inline size_t idx(sixe_t row, size_t col, size_t dim);
+        inline size_t idx(size_t row, size_t col, size_t dim);
         // annihilation operator a (d x d) as a dense matrix - create matrix to calculate H_0
         std::vector<cplx> annihilation_op(size_t d);
         // matrix Multplication: C = A * B
@@ -36,7 +38,9 @@ class H_map_Single_Transmon{
         // Hermintian Symmetrize (A + A†)/2
         std::vector<cplx> hermitian_sym(const std::vector<cplx> &A, size_t d);
         // build single transmon Hamiltonian Hamiltonian H = omega * n + (alpha/2) * n(n-1)
-        Std::vector<cplx> build_transmons_H(double omega, double alpha, size_t d)
+        std::vector<cplx> build_transmons_H(double omega, double alpha, size_t d);
+        // build the Control Hamiltonian H_c,j = (a^dagger + a) / 2
+        std::pair<std::vector<cplx>, std::vector<cplx>> build_control_H(size_t d);
 
 }
 
@@ -54,3 +58,5 @@ class H_map_Single_Transmon{
 //}
 
 // / Tensor product 
+
+#endif // H_MAP_HPP
