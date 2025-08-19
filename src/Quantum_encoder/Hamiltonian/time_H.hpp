@@ -12,7 +12,6 @@ using cplx = std::complex<double>;
 
 class Time {
     public:
-    struct Mat {
         // Minimal complex matrix exponentiation for Hermitian matrices
         struct Mat;
         struct Vec;
@@ -30,8 +29,9 @@ class Time {
         inline void applyTimeStep(Vec& psi, const Mat& U);
         inline void stepControlled(Vec& psi, const Mat& H0, const std::vector<Mat>& HX, const std::vector<Mat>& HZ, const std::vector<double>& uX, const std::vector<double>& uZ, double dt);
         inline double unitaryError(const Mat& U);
-
-    }
+    private:
+        inline Mat identity(int d);
+        inline Mat;
 }
 
 #endif // TIME_H_HPP
