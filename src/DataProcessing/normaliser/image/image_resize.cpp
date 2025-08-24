@@ -17,12 +17,12 @@ namespace ImageNormalliser {
     // -------- Load -------------
     inline Image loadImage(const std::string& path, int desired_channels = 3) {
         int w, h, c;
-        unsigned char* pixels = stbi_load(path.c_str(), &w, &h, &c, desired_channels);
+        //unsigned char* pixels = stbi_load(path.c_str(), &w, &h, &c, desired_channels);
         if (!pixels) {
             throw std::runtime_error("Failed to load image: " + path);
         }
         Image img{w, h, desired_channels, std::vector<unsigned char>(pixels, pixels + w * h * desired_channels)};
-        stbi_image_free(pixels);
+        //stbi_image_free(pixels);
         return img;
     }
     // ---------- Resize ----------
@@ -33,9 +33,9 @@ namespace ImageNormalliser {
         out.channels = input.channels;
         out.data.resize(target_size * target_size * input.channels);
 
-        stbir_resize_uint8(
-            input.data.data(), input.width, input.height, 0, out.data.data(), out.height, 0, input.channels
-        );
+        //stbir_resize_uint8(
+        //    input.data.data(), input.width, input.height, 0, out.data.data(), out.height, 0, input.channels
+        //);
         return out;
     }
     // -------- Extract sequential patches ----------
