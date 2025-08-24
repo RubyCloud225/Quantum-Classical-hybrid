@@ -5,6 +5,12 @@
 #include <vector>
 #include <string>
 
+struct PatchToken {
+    int row;
+    int col;
+    std::vector<double> embedding;
+};
+
 struct SampleData {
     std::vector<double> token_embedding; // include frequency, positional embedding, and token id
     std::vector<double> noise; // noise vector
@@ -13,6 +19,7 @@ struct SampleData {
     double density; // density value
     double nll; // negative log likelihood value
     double entopy; // KL divergence value
+    std::vector<PatchToken> imageTokens; // image tokens
 };
 
 // Function to generate sample data

@@ -18,6 +18,7 @@
         graph Entanglement -> Measurement
 
 
+
 to calculate realistic noise models and to simulate the quantum circuit we will circuit largrangian formulation of the quantum circuit. 
 The circuit Lagrangian formulation is a mathematical framework that allows us to describe the quantum circuit in a way that is amenable to optimization. 
 The circuit Lagrangian formulation is based on the idea of representing the quantum circuit as a sequence of unitary operations, and th ence as a sequence of Lagrangian multipliers.

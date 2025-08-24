@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -arch arm64 -bundle -Wl,-headerpad_max_install_names -Xlinker -undefined -Xlinker dynamic_lookup -o cross_module_gil_utils.cpython-313-darwin.so CMakeFiles/cross_module_gil_utils.dir/cross_module_gil_utils.cpp.o

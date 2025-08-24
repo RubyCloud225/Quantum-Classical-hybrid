@@ -1,6 +1,6 @@
 CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/GaussianDiffusion.cpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/GaussianDiffusion.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -257,10 +257,10 @@ CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o:
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/ostream.tcc \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/istream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/istream.tcc \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/EpsilonPredictor.hpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/NeuralNetwork.hpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.hpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.hpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/Layers/Flatten.hpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/Layers/FullyConnected.hpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.hpp
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnected.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.hpp

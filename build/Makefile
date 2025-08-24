@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Hypernetwork/external/pybind11
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -85,64 +85,12 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/opt/homebrew/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles 0
 .PHONY : all
-
-# The main codegen target
-codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles 0
-.PHONY : codegen
 
 # The main clean target
 clean:
@@ -165,334 +113,1379 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named uninstall
+# Target rules for targets named quantum_classical_hybrid
 
 # Build rule for target.
-uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
-.PHONY : uninstall
+quantum_classical_hybrid: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quantum_classical_hybrid
+.PHONY : quantum_classical_hybrid
 
 # fast build rule for target.
-uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
+quantum_classical_hybrid/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/build
+.PHONY : quantum_classical_hybrid/fast
 
 #=============================================================================
-# Target rules for targets named pybind11_tests
+# Target rules for targets named BetaSchedule_tests
 
 # Build rule for target.
-pybind11_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11_tests
-.PHONY : pybind11_tests
+BetaSchedule_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BetaSchedule_tests
+.PHONY : BetaSchedule_tests
 
 # fast build rule for target.
-pybind11_tests/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/pybind11_tests.dir/build.make tests/CMakeFiles/pybind11_tests.dir/build
-.PHONY : pybind11_tests/fast
+BetaSchedule_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/build
+.PHONY : BetaSchedule_tests/fast
 
 #=============================================================================
-# Target rules for targets named pybind11_cross_module_tests
+# Target rules for targets named Diffusion_model_test
 
 # Build rule for target.
-pybind11_cross_module_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pybind11_cross_module_tests
-.PHONY : pybind11_cross_module_tests
+Diffusion_model_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Diffusion_model_test
+.PHONY : Diffusion_model_test
 
 # fast build rule for target.
-pybind11_cross_module_tests/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/pybind11_cross_module_tests.dir/build.make tests/CMakeFiles/pybind11_cross_module_tests.dir/build
-.PHONY : pybind11_cross_module_tests/fast
+Diffusion_model_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/build
+.PHONY : Diffusion_model_test/fast
 
 #=============================================================================
-# Target rules for targets named cross_module_interleaved_error_already_set
+# Target rules for targets named Diffusion_sample_test
 
 # Build rule for target.
-cross_module_interleaved_error_already_set: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_module_interleaved_error_already_set
-.PHONY : cross_module_interleaved_error_already_set
+Diffusion_sample_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Diffusion_sample_test
+.PHONY : Diffusion_sample_test
 
 # fast build rule for target.
-cross_module_interleaved_error_already_set/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cross_module_interleaved_error_already_set.dir/build.make tests/CMakeFiles/cross_module_interleaved_error_already_set.dir/build
-.PHONY : cross_module_interleaved_error_already_set/fast
+Diffusion_sample_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/build
+.PHONY : Diffusion_sample_test/fast
 
 #=============================================================================
-# Target rules for targets named cross_module_gil_utils
+# Target rules for targets named Gaussian_Diffusion_test
 
 # Build rule for target.
-cross_module_gil_utils: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cross_module_gil_utils
-.PHONY : cross_module_gil_utils
+Gaussian_Diffusion_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Gaussian_Diffusion_test
+.PHONY : Gaussian_Diffusion_test
 
 # fast build rule for target.
-cross_module_gil_utils/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/cross_module_gil_utils.dir/build.make tests/CMakeFiles/cross_module_gil_utils.dir/build
-.PHONY : cross_module_gil_utils/fast
+Gaussian_Diffusion_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/build
+.PHONY : Gaussian_Diffusion_test/fast
 
 #=============================================================================
-# Target rules for targets named exo_planet_pybind11
+# Target rules for targets named bert_minimal_test
 
 # Build rule for target.
-exo_planet_pybind11: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exo_planet_pybind11
-.PHONY : exo_planet_pybind11
+bert_minimal_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bert_minimal_test
+.PHONY : bert_minimal_test
 
 # fast build rule for target.
-exo_planet_pybind11/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/exo_planet_pybind11.dir/build.make tests/CMakeFiles/exo_planet_pybind11.dir/build
-.PHONY : exo_planet_pybind11/fast
+bert_minimal_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/build
+.PHONY : bert_minimal_test/fast
 
 #=============================================================================
-# Target rules for targets named exo_planet_c_api
+# Target rules for targets named bert_test
 
 # Build rule for target.
-exo_planet_c_api: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exo_planet_c_api
-.PHONY : exo_planet_c_api
+bert_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bert_test
+.PHONY : bert_test
 
 # fast build rule for target.
-exo_planet_c_api/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/exo_planet_c_api.dir/build.make tests/CMakeFiles/exo_planet_c_api.dir/build
-.PHONY : exo_planet_c_api/fast
+bert_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/build
+.PHONY : bert_test/fast
 
 #=============================================================================
-# Target rules for targets named home_planet_very_lonely_traveler
+# Target rules for targets named byte_test
 
 # Build rule for target.
-home_planet_very_lonely_traveler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 home_planet_very_lonely_traveler
-.PHONY : home_planet_very_lonely_traveler
+byte_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 byte_test
+.PHONY : byte_test
 
 # fast build rule for target.
-home_planet_very_lonely_traveler/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/home_planet_very_lonely_traveler.dir/build.make tests/CMakeFiles/home_planet_very_lonely_traveler.dir/build
-.PHONY : home_planet_very_lonely_traveler/fast
+byte_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/build
+.PHONY : byte_test/fast
 
 #=============================================================================
-# Target rules for targets named eigen_tensor_avoid_stl_array
+# Target rules for targets named prepend_test
 
 # Build rule for target.
-eigen_tensor_avoid_stl_array: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 eigen_tensor_avoid_stl_array
-.PHONY : eigen_tensor_avoid_stl_array
+prepend_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prepend_test
+.PHONY : prepend_test
 
 # fast build rule for target.
-eigen_tensor_avoid_stl_array/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/eigen_tensor_avoid_stl_array.dir/build.make tests/CMakeFiles/eigen_tensor_avoid_stl_array.dir/build
-.PHONY : eigen_tensor_avoid_stl_array/fast
+prepend_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/build
+.PHONY : prepend_test/fast
 
 #=============================================================================
-# Target rules for targets named pytest
+# Target rules for targets named replace_test
 
 # Build rule for target.
-pytest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pytest
-.PHONY : pytest
+replace_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 replace_test
+.PHONY : replace_test
 
 # fast build rule for target.
-pytest/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/pytest.dir/build.make tests/CMakeFiles/pytest.dir/build
-.PHONY : pytest/fast
+replace_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/build
+.PHONY : replace_test/fast
 
 #=============================================================================
-# Target rules for targets named memcheck
+# Target rules for targets named GaussianDiffusionTest
 
 # Build rule for target.
-memcheck: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 memcheck
-.PHONY : memcheck
+GaussianDiffusionTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GaussianDiffusionTest
+.PHONY : GaussianDiffusionTest
 
 # fast build rule for target.
-memcheck/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/memcheck.dir/build.make tests/CMakeFiles/memcheck.dir/build
-.PHONY : memcheck/fast
+GaussianDiffusionTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/build
+.PHONY : GaussianDiffusionTest/fast
 
 #=============================================================================
-# Target rules for targets named check
+# Target rules for targets named Quantum_encoder
 
 # Build rule for target.
-check: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check
-.PHONY : check
+Quantum_encoder: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Quantum_encoder
+.PHONY : Quantum_encoder
 
 # fast build rule for target.
-check/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/check.dir/build.make tests/CMakeFiles/check.dir/build
-.PHONY : check/fast
+Quantum_encoder/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/build
+.PHONY : Quantum_encoder/fast
 
-#=============================================================================
-# Target rules for targets named test_cmake_build
+src/ClassicalDiT/BetaSchedule.o: src/ClassicalDiT/BetaSchedule.cpp.o
+.PHONY : src/ClassicalDiT/BetaSchedule.o
 
-# Build rule for target.
-test_cmake_build: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_cmake_build
-.PHONY : test_cmake_build
+# target to build an object file
+src/ClassicalDiT/BetaSchedule.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/BetaSchedule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o
+.PHONY : src/ClassicalDiT/BetaSchedule.cpp.o
 
-# fast build rule for target.
-test_cmake_build/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/test_cmake_build.dir/build.make tests/test_cmake_build/CMakeFiles/test_cmake_build.dir/build
-.PHONY : test_cmake_build/fast
+src/ClassicalDiT/BetaSchedule.i: src/ClassicalDiT/BetaSchedule.cpp.i
+.PHONY : src/ClassicalDiT/BetaSchedule.i
 
-#=============================================================================
-# Target rules for targets named test_build_subdirectory_function
+# target to preprocess a source file
+src/ClassicalDiT/BetaSchedule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/BetaSchedule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
+.PHONY : src/ClassicalDiT/BetaSchedule.cpp.i
 
-# Build rule for target.
-test_build_subdirectory_function: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_build_subdirectory_function
-.PHONY : test_build_subdirectory_function
+src/ClassicalDiT/BetaSchedule.s: src/ClassicalDiT/BetaSchedule.cpp.s
+.PHONY : src/ClassicalDiT/BetaSchedule.s
 
-# fast build rule for target.
-test_build_subdirectory_function/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/test_build_subdirectory_function.dir/build.make tests/test_cmake_build/CMakeFiles/test_build_subdirectory_function.dir/build
-.PHONY : test_build_subdirectory_function/fast
+# target to generate assembly for a file
+src/ClassicalDiT/BetaSchedule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/BetaSchedule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
+.PHONY : src/ClassicalDiT/BetaSchedule.cpp.s
 
-#=============================================================================
-# Target rules for targets named test_build_subdirectory_target
+src/ClassicalDiT/Diffusion_Sample.o: src/ClassicalDiT/Diffusion_Sample.cpp.o
+.PHONY : src/ClassicalDiT/Diffusion_Sample.o
 
-# Build rule for target.
-test_build_subdirectory_target: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_build_subdirectory_target
-.PHONY : test_build_subdirectory_target
+# target to build an object file
+src/ClassicalDiT/Diffusion_Sample.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
+.PHONY : src/ClassicalDiT/Diffusion_Sample.cpp.o
 
-# fast build rule for target.
-test_build_subdirectory_target/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/test_build_subdirectory_target.dir/build.make tests/test_cmake_build/CMakeFiles/test_build_subdirectory_target.dir/build
-.PHONY : test_build_subdirectory_target/fast
+src/ClassicalDiT/Diffusion_Sample.i: src/ClassicalDiT/Diffusion_Sample.cpp.i
+.PHONY : src/ClassicalDiT/Diffusion_Sample.i
 
-#=============================================================================
-# Target rules for targets named test_build_subdirectory_embed
+# target to preprocess a source file
+src/ClassicalDiT/Diffusion_Sample.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
+.PHONY : src/ClassicalDiT/Diffusion_Sample.cpp.i
 
-# Build rule for target.
-test_build_subdirectory_embed: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_build_subdirectory_embed
-.PHONY : test_build_subdirectory_embed
+src/ClassicalDiT/Diffusion_Sample.s: src/ClassicalDiT/Diffusion_Sample.cpp.s
+.PHONY : src/ClassicalDiT/Diffusion_Sample.s
 
-# fast build rule for target.
-test_build_subdirectory_embed/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/test_build_subdirectory_embed.dir/build.make tests/test_cmake_build/CMakeFiles/test_build_subdirectory_embed.dir/build
-.PHONY : test_build_subdirectory_embed/fast
+# target to generate assembly for a file
+src/ClassicalDiT/Diffusion_Sample.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
+.PHONY : src/ClassicalDiT/Diffusion_Sample.cpp.s
 
-#=============================================================================
-# Target rules for targets named mock_install
+src/ClassicalDiT/Diffusion_model.o: src/ClassicalDiT/Diffusion_model.cpp.o
+.PHONY : src/ClassicalDiT/Diffusion_model.o
 
-# Build rule for target.
-mock_install: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mock_install
-.PHONY : mock_install
+# target to build an object file
+src/ClassicalDiT/Diffusion_model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/Diffusion_model.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o
+.PHONY : src/ClassicalDiT/Diffusion_model.cpp.o
 
-# fast build rule for target.
-mock_install/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/mock_install.dir/build.make tests/test_cmake_build/CMakeFiles/mock_install.dir/build
-.PHONY : mock_install/fast
+src/ClassicalDiT/Diffusion_model.i: src/ClassicalDiT/Diffusion_model.cpp.i
+.PHONY : src/ClassicalDiT/Diffusion_model.i
 
-#=============================================================================
-# Target rules for targets named test_build_installed_function
+# target to preprocess a source file
+src/ClassicalDiT/Diffusion_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+.PHONY : src/ClassicalDiT/Diffusion_model.cpp.i
 
-# Build rule for target.
-test_build_installed_function: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_build_installed_function
-.PHONY : test_build_installed_function
+src/ClassicalDiT/Diffusion_model.s: src/ClassicalDiT/Diffusion_model.cpp.s
+.PHONY : src/ClassicalDiT/Diffusion_model.s
 
-# fast build rule for target.
-test_build_installed_function/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/test_build_installed_function.dir/build.make tests/test_cmake_build/CMakeFiles/test_build_installed_function.dir/build
-.PHONY : test_build_installed_function/fast
+# target to generate assembly for a file
+src/ClassicalDiT/Diffusion_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+.PHONY : src/ClassicalDiT/Diffusion_model.cpp.s
 
-#=============================================================================
-# Target rules for targets named test_build_installed_target
+src/ClassicalDiT/GaussianDiffusion.o: src/ClassicalDiT/GaussianDiffusion.cpp.o
+.PHONY : src/ClassicalDiT/GaussianDiffusion.o
 
-# Build rule for target.
-test_build_installed_target: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_build_installed_target
-.PHONY : test_build_installed_target
+# target to build an object file
+src/ClassicalDiT/GaussianDiffusion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
+.PHONY : src/ClassicalDiT/GaussianDiffusion.cpp.o
 
-# fast build rule for target.
-test_build_installed_target/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/test_build_installed_target.dir/build.make tests/test_cmake_build/CMakeFiles/test_build_installed_target.dir/build
-.PHONY : test_build_installed_target/fast
+src/ClassicalDiT/GaussianDiffusion.i: src/ClassicalDiT/GaussianDiffusion.cpp.i
+.PHONY : src/ClassicalDiT/GaussianDiffusion.i
 
-#=============================================================================
-# Target rules for targets named test_build_installed_embed
+# target to preprocess a source file
+src/ClassicalDiT/GaussianDiffusion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+.PHONY : src/ClassicalDiT/GaussianDiffusion.cpp.i
 
-# Build rule for target.
-test_build_installed_embed: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_build_installed_embed
-.PHONY : test_build_installed_embed
+src/ClassicalDiT/GaussianDiffusion.s: src/ClassicalDiT/GaussianDiffusion.cpp.s
+.PHONY : src/ClassicalDiT/GaussianDiffusion.s
 
-# fast build rule for target.
-test_build_installed_embed/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/CMakeFiles/test_build_installed_embed.dir/build.make tests/test_cmake_build/CMakeFiles/test_build_installed_embed.dir/build
-.PHONY : test_build_installed_embed/fast
+# target to generate assembly for a file
+src/ClassicalDiT/GaussianDiffusion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+.PHONY : src/ClassicalDiT/GaussianDiffusion.cpp.s
 
-#=============================================================================
-# Target rules for targets named test_subdirectory_target
+src/ClassicalDiT/NN/EpsilonPredictor.o: src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
+.PHONY : src/ClassicalDiT/NN/EpsilonPredictor.o
 
-# Build rule for target.
-test_subdirectory_target: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_subdirectory_target
-.PHONY : test_subdirectory_target
+# target to build an object file
+src/ClassicalDiT/NN/EpsilonPredictor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
+.PHONY : src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
 
-# fast build rule for target.
-test_subdirectory_target/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/subdirectory_target/CMakeFiles/test_subdirectory_target.dir/build.make tests/test_cmake_build/subdirectory_target/CMakeFiles/test_subdirectory_target.dir/build
-.PHONY : test_subdirectory_target/fast
+src/ClassicalDiT/NN/EpsilonPredictor.i: src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+.PHONY : src/ClassicalDiT/NN/EpsilonPredictor.i
 
-#=============================================================================
-# Target rules for targets named check_subdirectory_target
+# target to preprocess a source file
+src/ClassicalDiT/NN/EpsilonPredictor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+.PHONY : src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
 
-# Build rule for target.
-check_subdirectory_target: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check_subdirectory_target
-.PHONY : check_subdirectory_target
+src/ClassicalDiT/NN/EpsilonPredictor.s: src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+.PHONY : src/ClassicalDiT/NN/EpsilonPredictor.s
 
-# fast build rule for target.
-check_subdirectory_target/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/subdirectory_target/CMakeFiles/check_subdirectory_target.dir/build.make tests/test_cmake_build/subdirectory_target/CMakeFiles/check_subdirectory_target.dir/build
-.PHONY : check_subdirectory_target/fast
+# target to generate assembly for a file
+src/ClassicalDiT/NN/EpsilonPredictor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+.PHONY : src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
 
-#=============================================================================
-# Target rules for targets named test_subdirectory_embed
+src/ClassicalDiT/NN/Layers/ConvolutionalLayer.o: src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.o
 
-# Build rule for target.
-test_subdirectory_embed: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_subdirectory_embed
-.PHONY : test_subdirectory_embed
+# target to build an object file
+src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
 
-# fast build rule for target.
-test_subdirectory_embed/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/subdirectory_embed/CMakeFiles/test_subdirectory_embed.dir/build.make tests/test_cmake_build/subdirectory_embed/CMakeFiles/test_subdirectory_embed.dir/build
-.PHONY : test_subdirectory_embed/fast
+src/ClassicalDiT/NN/Layers/ConvolutionalLayer.i: src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.i
 
-#=============================================================================
-# Target rules for targets named check_subdirectory_embed
+# target to preprocess a source file
+src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
 
-# Build rule for target.
-check_subdirectory_embed: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 check_subdirectory_embed
-.PHONY : check_subdirectory_embed
+src/ClassicalDiT/NN/Layers/ConvolutionalLayer.s: src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.s
 
-# fast build rule for target.
-check_subdirectory_embed/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/subdirectory_embed/CMakeFiles/check_subdirectory_embed.dir/build.make tests/test_cmake_build/subdirectory_embed/CMakeFiles/check_subdirectory_embed.dir/build
-.PHONY : check_subdirectory_embed/fast
+# target to generate assembly for a file
+src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
 
-#=============================================================================
-# Target rules for targets named test_embed_lib
+src/ClassicalDiT/NN/Layers/Flatten.o: src/ClassicalDiT/NN/Layers/Flatten.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/Flatten.o
 
-# Build rule for target.
-test_embed_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_embed_lib
-.PHONY : test_embed_lib
+# target to build an object file
+src/ClassicalDiT/NN/Layers/Flatten.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/Flatten.cpp.o
 
-# fast build rule for target.
-test_embed_lib/fast:
-	$(MAKE) $(MAKESILENT) -f tests/test_cmake_build/subdirectory_embed/CMakeFiles/test_embed_lib.dir/build.make tests/test_cmake_build/subdirectory_embed/CMakeFiles/test_embed_lib.dir/build
-.PHONY : test_embed_lib/fast
+src/ClassicalDiT/NN/Layers/Flatten.i: src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/Flatten.i
+
+# target to preprocess a source file
+src/ClassicalDiT/NN/Layers/Flatten.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+
+src/ClassicalDiT/NN/Layers/Flatten.s: src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/Flatten.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/NN/Layers/Flatten.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+
+src/ClassicalDiT/NN/Layers/FullyConnectedLayer.o: src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.o
+
+# target to build an object file
+src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+
+src/ClassicalDiT/NN/Layers/FullyConnectedLayer.i: src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.i
+
+# target to preprocess a source file
+src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+
+src/ClassicalDiT/NN/Layers/FullyConnectedLayer.s: src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+
+src/ClassicalDiT/NN/Layers/PoolingLayer.o: src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.o
+
+# target to build an object file
+src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+
+src/ClassicalDiT/NN/Layers/PoolingLayer.i: src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.i
+
+# target to preprocess a source file
+src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+
+src/ClassicalDiT/NN/Layers/PoolingLayer.s: src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+
+src/ClassicalDiT/NN/Layers/ReluLayer.o: src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.o
+
+# target to build an object file
+src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+.PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+
+src/ClassicalDiT/NN/Layers/ReluLayer.i: src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.i
+
+# target to preprocess a source file
+src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+.PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+
+src/ClassicalDiT/NN/Layers/ReluLayer.s: src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+.PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+
+src/ClassicalDiT/NN/NeuralNetwork.o: src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+.PHONY : src/ClassicalDiT/NN/NeuralNetwork.o
+
+# target to build an object file
+src/ClassicalDiT/NN/NeuralNetwork.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+.PHONY : src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+
+src/ClassicalDiT/NN/NeuralNetwork.i: src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+.PHONY : src/ClassicalDiT/NN/NeuralNetwork.i
+
+# target to preprocess a source file
+src/ClassicalDiT/NN/NeuralNetwork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+.PHONY : src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+
+src/ClassicalDiT/NN/NeuralNetwork.s: src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+.PHONY : src/ClassicalDiT/NN/NeuralNetwork.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/NN/NeuralNetwork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+.PHONY : src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+
+src/ClassicalDiT/NormalDist.o: src/ClassicalDiT/NormalDist.cpp.o
+.PHONY : src/ClassicalDiT/NormalDist.o
+
+# target to build an object file
+src/ClassicalDiT/NormalDist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NormalDist.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NormalDist.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NormalDist.cpp.o
+.PHONY : src/ClassicalDiT/NormalDist.cpp.o
+
+src/ClassicalDiT/NormalDist.i: src/ClassicalDiT/NormalDist.cpp.i
+.PHONY : src/ClassicalDiT/NormalDist.i
+
+# target to preprocess a source file
+src/ClassicalDiT/NormalDist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NormalDist.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NormalDist.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NormalDist.cpp.i
+.PHONY : src/ClassicalDiT/NormalDist.cpp.i
+
+src/ClassicalDiT/NormalDist.s: src/ClassicalDiT/NormalDist.cpp.s
+.PHONY : src/ClassicalDiT/NormalDist.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/NormalDist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/NormalDist.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NormalDist.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NormalDist.cpp.s
+.PHONY : src/ClassicalDiT/NormalDist.cpp.s
+
+src/ClassicalDiT/tests/BetaSchedule_tests.o: src/ClassicalDiT/tests/BetaSchedule_tests.cpp.o
+.PHONY : src/ClassicalDiT/tests/BetaSchedule_tests.o
+
+# target to build an object file
+src/ClassicalDiT/tests/BetaSchedule_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/tests/BetaSchedule_tests.cpp.o
+.PHONY : src/ClassicalDiT/tests/BetaSchedule_tests.cpp.o
+
+src/ClassicalDiT/tests/BetaSchedule_tests.i: src/ClassicalDiT/tests/BetaSchedule_tests.cpp.i
+.PHONY : src/ClassicalDiT/tests/BetaSchedule_tests.i
+
+# target to preprocess a source file
+src/ClassicalDiT/tests/BetaSchedule_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/tests/BetaSchedule_tests.cpp.i
+.PHONY : src/ClassicalDiT/tests/BetaSchedule_tests.cpp.i
+
+src/ClassicalDiT/tests/BetaSchedule_tests.s: src/ClassicalDiT/tests/BetaSchedule_tests.cpp.s
+.PHONY : src/ClassicalDiT/tests/BetaSchedule_tests.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/tests/BetaSchedule_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/tests/BetaSchedule_tests.cpp.s
+.PHONY : src/ClassicalDiT/tests/BetaSchedule_tests.cpp.s
+
+src/ClassicalDiT/tests/Diffusion_model_test.o: src/ClassicalDiT/tests/Diffusion_model_test.cpp.o
+.PHONY : src/ClassicalDiT/tests/Diffusion_model_test.o
+
+# target to build an object file
+src/ClassicalDiT/tests/Diffusion_model_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.o
+.PHONY : src/ClassicalDiT/tests/Diffusion_model_test.cpp.o
+
+src/ClassicalDiT/tests/Diffusion_model_test.i: src/ClassicalDiT/tests/Diffusion_model_test.cpp.i
+.PHONY : src/ClassicalDiT/tests/Diffusion_model_test.i
+
+# target to preprocess a source file
+src/ClassicalDiT/tests/Diffusion_model_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.i
+.PHONY : src/ClassicalDiT/tests/Diffusion_model_test.cpp.i
+
+src/ClassicalDiT/tests/Diffusion_model_test.s: src/ClassicalDiT/tests/Diffusion_model_test.cpp.s
+.PHONY : src/ClassicalDiT/tests/Diffusion_model_test.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/tests/Diffusion_model_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/tests/Diffusion_model_test.cpp.s
+.PHONY : src/ClassicalDiT/tests/Diffusion_model_test.cpp.s
+
+src/ClassicalDiT/tests/Diffusion_sample_test.o: src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o
+.PHONY : src/ClassicalDiT/tests/Diffusion_sample_test.o
+
+# target to build an object file
+src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o
+.PHONY : src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o
+
+src/ClassicalDiT/tests/Diffusion_sample_test.i: src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i
+.PHONY : src/ClassicalDiT/tests/Diffusion_sample_test.i
+
+# target to preprocess a source file
+src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i
+.PHONY : src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i
+
+src/ClassicalDiT/tests/Diffusion_sample_test.s: src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s
+.PHONY : src/ClassicalDiT/tests/Diffusion_sample_test.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s
+.PHONY : src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s
+
+src/ClassicalDiT/tests/Gaussian_Diffusion_test.o: src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.o
+.PHONY : src/ClassicalDiT/tests/Gaussian_Diffusion_test.o
+
+# target to build an object file
+src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.o
+.PHONY : src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.o
+
+src/ClassicalDiT/tests/Gaussian_Diffusion_test.i: src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.i
+.PHONY : src/ClassicalDiT/tests/Gaussian_Diffusion_test.i
+
+# target to preprocess a source file
+src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.i
+.PHONY : src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.i
+
+src/ClassicalDiT/tests/Gaussian_Diffusion_test.s: src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.s
+.PHONY : src/ClassicalDiT/tests/Gaussian_Diffusion_test.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.s
+.PHONY : src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp.s
+
+src/DataProcessing/models/GaussianNoise.o: src/DataProcessing/models/GaussianNoise.cpp.o
+.PHONY : src/DataProcessing/models/GaussianNoise.o
+
+# target to build an object file
+src/DataProcessing/models/GaussianNoise.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/GaussianNoise.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o
+.PHONY : src/DataProcessing/models/GaussianNoise.cpp.o
+
+src/DataProcessing/models/GaussianNoise.i: src/DataProcessing/models/GaussianNoise.cpp.i
+.PHONY : src/DataProcessing/models/GaussianNoise.i
+
+# target to preprocess a source file
+src/DataProcessing/models/GaussianNoise.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+.PHONY : src/DataProcessing/models/GaussianNoise.cpp.i
+
+src/DataProcessing/models/GaussianNoise.s: src/DataProcessing/models/GaussianNoise.cpp.s
+.PHONY : src/DataProcessing/models/GaussianNoise.s
+
+# target to generate assembly for a file
+src/DataProcessing/models/GaussianNoise.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+.PHONY : src/DataProcessing/models/GaussianNoise.cpp.s
+
+src/DataProcessing/models/LayerNormalization.o: src/DataProcessing/models/LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/models/LayerNormalization.o
+
+# target to build an object file
+src/DataProcessing/models/LayerNormalization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/LayerNormalization.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o
+.PHONY : src/DataProcessing/models/LayerNormalization.cpp.o
+
+src/DataProcessing/models/LayerNormalization.i: src/DataProcessing/models/LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/models/LayerNormalization.i
+
+# target to preprocess a source file
+src/DataProcessing/models/LayerNormalization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/LayerNormalization.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/LayerNormalization.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/LayerNormalization.cpp.i
+.PHONY : src/DataProcessing/models/LayerNormalization.cpp.i
+
+src/DataProcessing/models/LayerNormalization.s: src/DataProcessing/models/LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/models/LayerNormalization.s
+
+# target to generate assembly for a file
+src/DataProcessing/models/LayerNormalization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/LayerNormalization.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/LayerNormalization.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/LayerNormalization.cpp.s
+.PHONY : src/DataProcessing/models/LayerNormalization.cpp.s
+
+src/DataProcessing/models/LinearRegression.o: src/DataProcessing/models/LinearRegression.cpp.o
+.PHONY : src/DataProcessing/models/LinearRegression.o
+
+# target to build an object file
+src/DataProcessing/models/LinearRegression.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/LinearRegression.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/LinearRegression.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/LinearRegression.cpp.o
+.PHONY : src/DataProcessing/models/LinearRegression.cpp.o
+
+src/DataProcessing/models/LinearRegression.i: src/DataProcessing/models/LinearRegression.cpp.i
+.PHONY : src/DataProcessing/models/LinearRegression.i
+
+# target to preprocess a source file
+src/DataProcessing/models/LinearRegression.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/LinearRegression.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/LinearRegression.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/LinearRegression.cpp.i
+.PHONY : src/DataProcessing/models/LinearRegression.cpp.i
+
+src/DataProcessing/models/LinearRegression.s: src/DataProcessing/models/LinearRegression.cpp.s
+.PHONY : src/DataProcessing/models/LinearRegression.s
+
+# target to generate assembly for a file
+src/DataProcessing/models/LinearRegression.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/LinearRegression.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/LinearRegression.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/LinearRegression.cpp.s
+.PHONY : src/DataProcessing/models/LinearRegression.cpp.s
+
+src/DataProcessing/models/sampleData.o: src/DataProcessing/models/sampleData.cpp.o
+.PHONY : src/DataProcessing/models/sampleData.o
+
+# target to build an object file
+src/DataProcessing/models/sampleData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/sampleData.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/sampleData.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/sampleData.cpp.o
+.PHONY : src/DataProcessing/models/sampleData.cpp.o
+
+src/DataProcessing/models/sampleData.i: src/DataProcessing/models/sampleData.cpp.i
+.PHONY : src/DataProcessing/models/sampleData.i
+
+# target to preprocess a source file
+src/DataProcessing/models/sampleData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/sampleData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/sampleData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/sampleData.cpp.i
+.PHONY : src/DataProcessing/models/sampleData.cpp.i
+
+src/DataProcessing/models/sampleData.s: src/DataProcessing/models/sampleData.cpp.s
+.PHONY : src/DataProcessing/models/sampleData.s
+
+# target to generate assembly for a file
+src/DataProcessing/models/sampleData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/src/DataProcessing/models/sampleData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/sampleData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/sampleData.cpp.s
+.PHONY : src/DataProcessing/models/sampleData.cpp.s
+
+src/DataProcessing/normaliser/bert.o: src/DataProcessing/normaliser/bert.cpp.o
+.PHONY : src/DataProcessing/normaliser/bert.o
+
+# target to build an object file
+src/DataProcessing/normaliser/bert.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/bert.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/bert.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/bert.cpp.o
+.PHONY : src/DataProcessing/normaliser/bert.cpp.o
+
+src/DataProcessing/normaliser/bert.i: src/DataProcessing/normaliser/bert.cpp.i
+.PHONY : src/DataProcessing/normaliser/bert.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/bert.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/bert.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/bert.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/bert.cpp.i
+.PHONY : src/DataProcessing/normaliser/bert.cpp.i
+
+src/DataProcessing/normaliser/bert.s: src/DataProcessing/normaliser/bert.cpp.s
+.PHONY : src/DataProcessing/normaliser/bert.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/bert.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/bert.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/bert.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/bert.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/bert.cpp.s
+.PHONY : src/DataProcessing/normaliser/bert.cpp.s
+
+src/DataProcessing/normaliser/byte_level.o: src/DataProcessing/normaliser/byte_level.cpp.o
+.PHONY : src/DataProcessing/normaliser/byte_level.o
+
+# target to build an object file
+src/DataProcessing/normaliser/byte_level.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+.PHONY : src/DataProcessing/normaliser/byte_level.cpp.o
+
+src/DataProcessing/normaliser/byte_level.i: src/DataProcessing/normaliser/byte_level.cpp.i
+.PHONY : src/DataProcessing/normaliser/byte_level.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/byte_level.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+.PHONY : src/DataProcessing/normaliser/byte_level.cpp.i
+
+src/DataProcessing/normaliser/byte_level.s: src/DataProcessing/normaliser/byte_level.cpp.s
+.PHONY : src/DataProcessing/normaliser/byte_level.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/byte_level.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+.PHONY : src/DataProcessing/normaliser/byte_level.cpp.s
+
+src/DataProcessing/normaliser/digits.o: src/DataProcessing/normaliser/digits.cpp.o
+.PHONY : src/DataProcessing/normaliser/digits.o
+
+# target to build an object file
+src/DataProcessing/normaliser/digits.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/digits.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/digits.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/digits.cpp.o
+.PHONY : src/DataProcessing/normaliser/digits.cpp.o
+
+src/DataProcessing/normaliser/digits.i: src/DataProcessing/normaliser/digits.cpp.i
+.PHONY : src/DataProcessing/normaliser/digits.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/digits.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/digits.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/digits.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/digits.cpp.i
+.PHONY : src/DataProcessing/normaliser/digits.cpp.i
+
+src/DataProcessing/normaliser/digits.s: src/DataProcessing/normaliser/digits.cpp.s
+.PHONY : src/DataProcessing/normaliser/digits.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/digits.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/digits.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/digits.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/digits.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/digits.cpp.s
+.PHONY : src/DataProcessing/normaliser/digits.cpp.s
+
+src/DataProcessing/normaliser/image_resize.o: src/DataProcessing/normaliser/image_resize.cpp.o
+.PHONY : src/DataProcessing/normaliser/image_resize.o
+
+# target to build an object file
+src/DataProcessing/normaliser/image_resize.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
+.PHONY : src/DataProcessing/normaliser/image_resize.cpp.o
+
+src/DataProcessing/normaliser/image_resize.i: src/DataProcessing/normaliser/image_resize.cpp.i
+.PHONY : src/DataProcessing/normaliser/image_resize.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/image_resize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
+.PHONY : src/DataProcessing/normaliser/image_resize.cpp.i
+
+src/DataProcessing/normaliser/image_resize.s: src/DataProcessing/normaliser/image_resize.cpp.s
+.PHONY : src/DataProcessing/normaliser/image_resize.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/image_resize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
+.PHONY : src/DataProcessing/normaliser/image_resize.cpp.s
+
+src/DataProcessing/normaliser/metaspace.o: src/DataProcessing/normaliser/metaspace.cpp.o
+.PHONY : src/DataProcessing/normaliser/metaspace.o
+
+# target to build an object file
+src/DataProcessing/normaliser/metaspace.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+.PHONY : src/DataProcessing/normaliser/metaspace.cpp.o
+
+src/DataProcessing/normaliser/metaspace.i: src/DataProcessing/normaliser/metaspace.cpp.i
+.PHONY : src/DataProcessing/normaliser/metaspace.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/metaspace.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+.PHONY : src/DataProcessing/normaliser/metaspace.cpp.i
+
+src/DataProcessing/normaliser/metaspace.s: src/DataProcessing/normaliser/metaspace.cpp.s
+.PHONY : src/DataProcessing/normaliser/metaspace.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/metaspace.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+.PHONY : src/DataProcessing/normaliser/metaspace.cpp.s
+
+src/DataProcessing/normaliser/prepend.o: src/DataProcessing/normaliser/prepend.cpp.o
+.PHONY : src/DataProcessing/normaliser/prepend.o
+
+# target to build an object file
+src/DataProcessing/normaliser/prepend.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/prepend.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/prepend.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/prepend.cpp.o
+.PHONY : src/DataProcessing/normaliser/prepend.cpp.o
+
+src/DataProcessing/normaliser/prepend.i: src/DataProcessing/normaliser/prepend.cpp.i
+.PHONY : src/DataProcessing/normaliser/prepend.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/prepend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/prepend.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/prepend.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/prepend.cpp.i
+.PHONY : src/DataProcessing/normaliser/prepend.cpp.i
+
+src/DataProcessing/normaliser/prepend.s: src/DataProcessing/normaliser/prepend.cpp.s
+.PHONY : src/DataProcessing/normaliser/prepend.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/prepend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/prepend.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/prepend.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/prepend.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/prepend.cpp.s
+.PHONY : src/DataProcessing/normaliser/prepend.cpp.s
+
+src/DataProcessing/normaliser/replace.o: src/DataProcessing/normaliser/replace.cpp.o
+.PHONY : src/DataProcessing/normaliser/replace.o
+
+# target to build an object file
+src/DataProcessing/normaliser/replace.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/replace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/replace.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/replace.cpp.o
+.PHONY : src/DataProcessing/normaliser/replace.cpp.o
+
+src/DataProcessing/normaliser/replace.i: src/DataProcessing/normaliser/replace.cpp.i
+.PHONY : src/DataProcessing/normaliser/replace.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/replace.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/replace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/replace.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/replace.cpp.i
+.PHONY : src/DataProcessing/normaliser/replace.cpp.i
+
+src/DataProcessing/normaliser/replace.s: src/DataProcessing/normaliser/replace.cpp.s
+.PHONY : src/DataProcessing/normaliser/replace.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/replace.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/replace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/replace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/replace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/replace.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/replace.cpp.s
+.PHONY : src/DataProcessing/normaliser/replace.cpp.s
+
+src/DataProcessing/normaliser/tests/bert_minimal_test.o: src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/bert_minimal_test.o
+
+# target to build an object file
+src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.o
+
+src/DataProcessing/normaliser/tests/bert_minimal_test.i: src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/bert_minimal_test.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.i
+
+src/DataProcessing/normaliser/tests/bert_minimal_test.s: src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/bert_minimal_test.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/bert_minimal_test.cpp.s
+
+src/DataProcessing/normaliser/tests/bert_test.o: src/DataProcessing/normaliser/tests/bert_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/bert_test.o
+
+# target to build an object file
+src/DataProcessing/normaliser/tests/bert_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/tests/bert_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/bert_test.cpp.o
+
+src/DataProcessing/normaliser/tests/bert_test.i: src/DataProcessing/normaliser/tests/bert_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/bert_test.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/tests/bert_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/tests/bert_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/bert_test.cpp.i
+
+src/DataProcessing/normaliser/tests/bert_test.s: src/DataProcessing/normaliser/tests/bert_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/bert_test.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/tests/bert_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/tests/bert_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/bert_test.cpp.s
+
+src/DataProcessing/normaliser/tests/byte_test.o: src/DataProcessing/normaliser/tests/byte_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/byte_test.o
+
+# target to build an object file
+src/DataProcessing/normaliser/tests/byte_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/byte_test.cpp.o
+
+src/DataProcessing/normaliser/tests/byte_test.i: src/DataProcessing/normaliser/tests/byte_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/byte_test.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/tests/byte_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/byte_test.cpp.i
+
+src/DataProcessing/normaliser/tests/byte_test.s: src/DataProcessing/normaliser/tests/byte_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/byte_test.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/tests/byte_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/byte_test.cpp.s
+
+src/DataProcessing/normaliser/tests/prepend_test.o: src/DataProcessing/normaliser/tests/prepend_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/prepend_test.o
+
+# target to build an object file
+src/DataProcessing/normaliser/tests/prepend_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/tests/prepend_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/prepend_test.cpp.o
+
+src/DataProcessing/normaliser/tests/prepend_test.i: src/DataProcessing/normaliser/tests/prepend_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/prepend_test.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/tests/prepend_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/tests/prepend_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/prepend_test.cpp.i
+
+src/DataProcessing/normaliser/tests/prepend_test.s: src/DataProcessing/normaliser/tests/prepend_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/prepend_test.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/tests/prepend_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/tests/prepend_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/prepend_test.cpp.s
+
+src/DataProcessing/normaliser/tests/replace_test.o: src/DataProcessing/normaliser/tests/replace_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/replace_test.o
+
+# target to build an object file
+src/DataProcessing/normaliser/tests/replace_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/tests/replace_test.cpp.o
+.PHONY : src/DataProcessing/normaliser/tests/replace_test.cpp.o
+
+src/DataProcessing/normaliser/tests/replace_test.i: src/DataProcessing/normaliser/tests/replace_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/replace_test.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/tests/replace_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/tests/replace_test.cpp.i
+.PHONY : src/DataProcessing/normaliser/tests/replace_test.cpp.i
+
+src/DataProcessing/normaliser/tests/replace_test.s: src/DataProcessing/normaliser/tests/replace_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/replace_test.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/tests/replace_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/tests/replace_test.cpp.s
+.PHONY : src/DataProcessing/normaliser/tests/replace_test.cpp.s
+
+src/DataProcessing/normaliser/unicode_processor.o: src/DataProcessing/normaliser/unicode_processor.cpp.o
+.PHONY : src/DataProcessing/normaliser/unicode_processor.o
+
+# target to build an object file
+src/DataProcessing/normaliser/unicode_processor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
+.PHONY : src/DataProcessing/normaliser/unicode_processor.cpp.o
+
+src/DataProcessing/normaliser/unicode_processor.i: src/DataProcessing/normaliser/unicode_processor.cpp.i
+.PHONY : src/DataProcessing/normaliser/unicode_processor.i
+
+# target to preprocess a source file
+src/DataProcessing/normaliser/unicode_processor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+.PHONY : src/DataProcessing/normaliser/unicode_processor.cpp.i
+
+src/DataProcessing/normaliser/unicode_processor.s: src/DataProcessing/normaliser/unicode_processor.cpp.s
+.PHONY : src/DataProcessing/normaliser/unicode_processor.s
+
+# target to generate assembly for a file
+src/DataProcessing/normaliser/unicode_processor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+.PHONY : src/DataProcessing/normaliser/unicode_processor.cpp.s
+
+src/DataProcessing/tokenizer/tokenizer.o: src/DataProcessing/tokenizer/tokenizer.cpp.o
+.PHONY : src/DataProcessing/tokenizer/tokenizer.o
+
+# target to build an object file
+src/DataProcessing/tokenizer/tokenizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o
+.PHONY : src/DataProcessing/tokenizer/tokenizer.cpp.o
+
+src/DataProcessing/tokenizer/tokenizer.i: src/DataProcessing/tokenizer/tokenizer.cpp.i
+.PHONY : src/DataProcessing/tokenizer/tokenizer.i
+
+# target to preprocess a source file
+src/DataProcessing/tokenizer/tokenizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.i
+.PHONY : src/DataProcessing/tokenizer/tokenizer.cpp.i
+
+src/DataProcessing/tokenizer/tokenizer.s: src/DataProcessing/tokenizer/tokenizer.cpp.s
+.PHONY : src/DataProcessing/tokenizer/tokenizer.s
+
+# target to generate assembly for a file
+src/DataProcessing/tokenizer/tokenizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.s
+.PHONY : src/DataProcessing/tokenizer/tokenizer.cpp.s
+
+src/DataProcessing/tokenizer/tokenizer_test.o: src/DataProcessing/tokenizer/tokenizer_test.cpp.o
+.PHONY : src/DataProcessing/tokenizer/tokenizer_test.o
+
+# target to build an object file
+src/DataProcessing/tokenizer/tokenizer_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o
+.PHONY : src/DataProcessing/tokenizer/tokenizer_test.cpp.o
+
+src/DataProcessing/tokenizer/tokenizer_test.i: src/DataProcessing/tokenizer/tokenizer_test.cpp.i
+.PHONY : src/DataProcessing/tokenizer/tokenizer_test.i
+
+# target to preprocess a source file
+src/DataProcessing/tokenizer/tokenizer_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.i
+.PHONY : src/DataProcessing/tokenizer/tokenizer_test.cpp.i
+
+src/DataProcessing/tokenizer/tokenizer_test.s: src/DataProcessing/tokenizer/tokenizer_test.cpp.s
+.PHONY : src/DataProcessing/tokenizer/tokenizer_test.s
+
+# target to generate assembly for a file
+src/DataProcessing/tokenizer/tokenizer_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.s
+.PHONY : src/DataProcessing/tokenizer/tokenizer_test.cpp.s
+
+src/Quantum_encoder/Model_Circuit/model_circuit.o: src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o
+.PHONY : src/Quantum_encoder/Model_Circuit/model_circuit.o
+
+# target to build an object file
+src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o
+.PHONY : src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o
+
+src/Quantum_encoder/Model_Circuit/model_circuit.i: src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i
+.PHONY : src/Quantum_encoder/Model_Circuit/model_circuit.i
+
+# target to preprocess a source file
+src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i
+.PHONY : src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i
+
+src/Quantum_encoder/Model_Circuit/model_circuit.s: src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s
+.PHONY : src/Quantum_encoder/Model_Circuit/model_circuit.s
+
+# target to generate assembly for a file
+src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s
+.PHONY : src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s
+
+src/Quantum_encoder/converttoqubit/AngleEncoder.o: src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o
+.PHONY : src/Quantum_encoder/converttoqubit/AngleEncoder.o
+
+# target to build an object file
+src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o
+.PHONY : src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o
+
+src/Quantum_encoder/converttoqubit/AngleEncoder.i: src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i
+.PHONY : src/Quantum_encoder/converttoqubit/AngleEncoder.i
+
+# target to preprocess a source file
+src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i
+.PHONY : src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i
+
+src/Quantum_encoder/converttoqubit/AngleEncoder.s: src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s
+.PHONY : src/Quantum_encoder/converttoqubit/AngleEncoder.s
+
+# target to generate assembly for a file
+src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s
+.PHONY : src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s
+
+src/Quantum_encoder/converttoqubit/HybridEncoder.o: src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o
+.PHONY : src/Quantum_encoder/converttoqubit/HybridEncoder.o
+
+# target to build an object file
+src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o
+.PHONY : src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o
+
+src/Quantum_encoder/converttoqubit/HybridEncoder.i: src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i
+.PHONY : src/Quantum_encoder/converttoqubit/HybridEncoder.i
+
+# target to preprocess a source file
+src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i
+.PHONY : src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i
+
+src/Quantum_encoder/converttoqubit/HybridEncoder.s: src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s
+.PHONY : src/Quantum_encoder/converttoqubit/HybridEncoder.s
+
+# target to generate assembly for a file
+src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s
+.PHONY : src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s
 
 # Help Target
 help:
@@ -500,38 +1493,134 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... codegen"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... check"
-	@echo "... check_subdirectory_embed"
-	@echo "... check_subdirectory_target"
-	@echo "... memcheck"
-	@echo "... mock_install"
-	@echo "... pytest"
-	@echo "... test_build_installed_embed"
-	@echo "... test_build_installed_function"
-	@echo "... test_build_installed_target"
-	@echo "... test_build_subdirectory_embed"
-	@echo "... test_build_subdirectory_function"
-	@echo "... test_build_subdirectory_target"
-	@echo "... test_cmake_build"
-	@echo "... uninstall"
-	@echo "... cross_module_gil_utils"
-	@echo "... cross_module_interleaved_error_already_set"
-	@echo "... eigen_tensor_avoid_stl_array"
-	@echo "... exo_planet_c_api"
-	@echo "... exo_planet_pybind11"
-	@echo "... home_planet_very_lonely_traveler"
-	@echo "... pybind11_cross_module_tests"
-	@echo "... pybind11_tests"
-	@echo "... test_embed_lib"
-	@echo "... test_subdirectory_embed"
-	@echo "... test_subdirectory_target"
+	@echo "... BetaSchedule_tests"
+	@echo "... Diffusion_model_test"
+	@echo "... Diffusion_sample_test"
+	@echo "... GaussianDiffusionTest"
+	@echo "... Gaussian_Diffusion_test"
+	@echo "... Quantum_encoder"
+	@echo "... bert_minimal_test"
+	@echo "... bert_test"
+	@echo "... byte_test"
+	@echo "... prepend_test"
+	@echo "... quantum_classical_hybrid"
+	@echo "... replace_test"
+	@echo "... src/ClassicalDiT/BetaSchedule.o"
+	@echo "... src/ClassicalDiT/BetaSchedule.i"
+	@echo "... src/ClassicalDiT/BetaSchedule.s"
+	@echo "... src/ClassicalDiT/Diffusion_Sample.o"
+	@echo "... src/ClassicalDiT/Diffusion_Sample.i"
+	@echo "... src/ClassicalDiT/Diffusion_Sample.s"
+	@echo "... src/ClassicalDiT/Diffusion_model.o"
+	@echo "... src/ClassicalDiT/Diffusion_model.i"
+	@echo "... src/ClassicalDiT/Diffusion_model.s"
+	@echo "... src/ClassicalDiT/GaussianDiffusion.o"
+	@echo "... src/ClassicalDiT/GaussianDiffusion.i"
+	@echo "... src/ClassicalDiT/GaussianDiffusion.s"
+	@echo "... src/ClassicalDiT/NN/EpsilonPredictor.o"
+	@echo "... src/ClassicalDiT/NN/EpsilonPredictor.i"
+	@echo "... src/ClassicalDiT/NN/EpsilonPredictor.s"
+	@echo "... src/ClassicalDiT/NN/Layers/ConvolutionalLayer.o"
+	@echo "... src/ClassicalDiT/NN/Layers/ConvolutionalLayer.i"
+	@echo "... src/ClassicalDiT/NN/Layers/ConvolutionalLayer.s"
+	@echo "... src/ClassicalDiT/NN/Layers/Flatten.o"
+	@echo "... src/ClassicalDiT/NN/Layers/Flatten.i"
+	@echo "... src/ClassicalDiT/NN/Layers/Flatten.s"
+	@echo "... src/ClassicalDiT/NN/Layers/FullyConnectedLayer.o"
+	@echo "... src/ClassicalDiT/NN/Layers/FullyConnectedLayer.i"
+	@echo "... src/ClassicalDiT/NN/Layers/FullyConnectedLayer.s"
+	@echo "... src/ClassicalDiT/NN/Layers/PoolingLayer.o"
+	@echo "... src/ClassicalDiT/NN/Layers/PoolingLayer.i"
+	@echo "... src/ClassicalDiT/NN/Layers/PoolingLayer.s"
+	@echo "... src/ClassicalDiT/NN/Layers/ReluLayer.o"
+	@echo "... src/ClassicalDiT/NN/Layers/ReluLayer.i"
+	@echo "... src/ClassicalDiT/NN/Layers/ReluLayer.s"
+	@echo "... src/ClassicalDiT/NN/NeuralNetwork.o"
+	@echo "... src/ClassicalDiT/NN/NeuralNetwork.i"
+	@echo "... src/ClassicalDiT/NN/NeuralNetwork.s"
+	@echo "... src/ClassicalDiT/NormalDist.o"
+	@echo "... src/ClassicalDiT/NormalDist.i"
+	@echo "... src/ClassicalDiT/NormalDist.s"
+	@echo "... src/ClassicalDiT/tests/BetaSchedule_tests.o"
+	@echo "... src/ClassicalDiT/tests/BetaSchedule_tests.i"
+	@echo "... src/ClassicalDiT/tests/BetaSchedule_tests.s"
+	@echo "... src/ClassicalDiT/tests/Diffusion_model_test.o"
+	@echo "... src/ClassicalDiT/tests/Diffusion_model_test.i"
+	@echo "... src/ClassicalDiT/tests/Diffusion_model_test.s"
+	@echo "... src/ClassicalDiT/tests/Diffusion_sample_test.o"
+	@echo "... src/ClassicalDiT/tests/Diffusion_sample_test.i"
+	@echo "... src/ClassicalDiT/tests/Diffusion_sample_test.s"
+	@echo "... src/ClassicalDiT/tests/Gaussian_Diffusion_test.o"
+	@echo "... src/ClassicalDiT/tests/Gaussian_Diffusion_test.i"
+	@echo "... src/ClassicalDiT/tests/Gaussian_Diffusion_test.s"
+	@echo "... src/DataProcessing/models/GaussianNoise.o"
+	@echo "... src/DataProcessing/models/GaussianNoise.i"
+	@echo "... src/DataProcessing/models/GaussianNoise.s"
+	@echo "... src/DataProcessing/models/LayerNormalization.o"
+	@echo "... src/DataProcessing/models/LayerNormalization.i"
+	@echo "... src/DataProcessing/models/LayerNormalization.s"
+	@echo "... src/DataProcessing/models/LinearRegression.o"
+	@echo "... src/DataProcessing/models/LinearRegression.i"
+	@echo "... src/DataProcessing/models/LinearRegression.s"
+	@echo "... src/DataProcessing/models/sampleData.o"
+	@echo "... src/DataProcessing/models/sampleData.i"
+	@echo "... src/DataProcessing/models/sampleData.s"
+	@echo "... src/DataProcessing/normaliser/bert.o"
+	@echo "... src/DataProcessing/normaliser/bert.i"
+	@echo "... src/DataProcessing/normaliser/bert.s"
+	@echo "... src/DataProcessing/normaliser/byte_level.o"
+	@echo "... src/DataProcessing/normaliser/byte_level.i"
+	@echo "... src/DataProcessing/normaliser/byte_level.s"
+	@echo "... src/DataProcessing/normaliser/digits.o"
+	@echo "... src/DataProcessing/normaliser/digits.i"
+	@echo "... src/DataProcessing/normaliser/digits.s"
+	@echo "... src/DataProcessing/normaliser/image_resize.o"
+	@echo "... src/DataProcessing/normaliser/image_resize.i"
+	@echo "... src/DataProcessing/normaliser/image_resize.s"
+	@echo "... src/DataProcessing/normaliser/metaspace.o"
+	@echo "... src/DataProcessing/normaliser/metaspace.i"
+	@echo "... src/DataProcessing/normaliser/metaspace.s"
+	@echo "... src/DataProcessing/normaliser/prepend.o"
+	@echo "... src/DataProcessing/normaliser/prepend.i"
+	@echo "... src/DataProcessing/normaliser/prepend.s"
+	@echo "... src/DataProcessing/normaliser/replace.o"
+	@echo "... src/DataProcessing/normaliser/replace.i"
+	@echo "... src/DataProcessing/normaliser/replace.s"
+	@echo "... src/DataProcessing/normaliser/tests/bert_minimal_test.o"
+	@echo "... src/DataProcessing/normaliser/tests/bert_minimal_test.i"
+	@echo "... src/DataProcessing/normaliser/tests/bert_minimal_test.s"
+	@echo "... src/DataProcessing/normaliser/tests/bert_test.o"
+	@echo "... src/DataProcessing/normaliser/tests/bert_test.i"
+	@echo "... src/DataProcessing/normaliser/tests/bert_test.s"
+	@echo "... src/DataProcessing/normaliser/tests/byte_test.o"
+	@echo "... src/DataProcessing/normaliser/tests/byte_test.i"
+	@echo "... src/DataProcessing/normaliser/tests/byte_test.s"
+	@echo "... src/DataProcessing/normaliser/tests/prepend_test.o"
+	@echo "... src/DataProcessing/normaliser/tests/prepend_test.i"
+	@echo "... src/DataProcessing/normaliser/tests/prepend_test.s"
+	@echo "... src/DataProcessing/normaliser/tests/replace_test.o"
+	@echo "... src/DataProcessing/normaliser/tests/replace_test.i"
+	@echo "... src/DataProcessing/normaliser/tests/replace_test.s"
+	@echo "... src/DataProcessing/normaliser/unicode_processor.o"
+	@echo "... src/DataProcessing/normaliser/unicode_processor.i"
+	@echo "... src/DataProcessing/normaliser/unicode_processor.s"
+	@echo "... src/DataProcessing/tokenizer/tokenizer.o"
+	@echo "... src/DataProcessing/tokenizer/tokenizer.i"
+	@echo "... src/DataProcessing/tokenizer/tokenizer.s"
+	@echo "... src/DataProcessing/tokenizer/tokenizer_test.o"
+	@echo "... src/DataProcessing/tokenizer/tokenizer_test.i"
+	@echo "... src/DataProcessing/tokenizer/tokenizer_test.s"
+	@echo "... src/Quantum_encoder/Model_Circuit/model_circuit.o"
+	@echo "... src/Quantum_encoder/Model_Circuit/model_circuit.i"
+	@echo "... src/Quantum_encoder/Model_Circuit/model_circuit.s"
+	@echo "... src/Quantum_encoder/converttoqubit/AngleEncoder.o"
+	@echo "... src/Quantum_encoder/converttoqubit/AngleEncoder.i"
+	@echo "... src/Quantum_encoder/converttoqubit/AngleEncoder.s"
+	@echo "... src/Quantum_encoder/converttoqubit/HybridEncoder.o"
+	@echo "... src/Quantum_encoder/converttoqubit/HybridEncoder.i"
+	@echo "... src/Quantum_encoder/converttoqubit/HybridEncoder.s"
 .PHONY : help
 
 
@@ -543,7 +1632,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,6 +1,6 @@
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/tests/../Diffusion_Sample.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/tests/../Diffusion_Sample.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -277,7 +277,7 @@ CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_tes
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/pstl/glue_algorithm_defs.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iterator \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/stream_iterator.h \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/tests/../Diffusion_model.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/tests/../Diffusion_model.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/cassert \
  /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/assert.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/stdlib.h \

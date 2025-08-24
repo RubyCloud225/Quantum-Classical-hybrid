@@ -1,6 +1,6 @@
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NormalDist.cpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NormalDist.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/cmath \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \

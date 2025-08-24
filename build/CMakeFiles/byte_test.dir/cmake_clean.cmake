@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/byte_level.cpp.o.d"
   "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o"
   "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/digits.cpp.o.d"
+  "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o"
+  "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o.d"
   "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o"
   "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/metaspace.cpp.o.d"
   "CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/prepend.cpp.o"

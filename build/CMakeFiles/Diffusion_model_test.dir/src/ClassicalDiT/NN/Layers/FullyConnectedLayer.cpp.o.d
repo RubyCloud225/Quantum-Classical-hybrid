@@ -1,6 +1,6 @@
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/NN/Layers/FullyConnected.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnected.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \

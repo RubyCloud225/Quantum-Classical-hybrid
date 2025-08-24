@@ -8,43 +8,48 @@
 
 namespace py = pybind11;
 
+static void apply_hybrid_encoding_wrapper(ModelCircuit& mc, const std::vector<HybridGate>& hybridGates, const Hamiltonian* hamiltonian = nullptr) {
+    mc.apply_hybrid_encoding(hybridGates, hamiltonian);
+}
+
 PYBIND11_MODULE(model_circuit, m) {
     // Existing ModelCircuit binding
     py::class_<ModelCircuit>(m, "ModelCircuit")
-        .def(py::init<>())
-        .def("apply_unitary_to_encoded_state", &ModelCircuit::apply_unitary_to_encoded_state,
-             py::arg("encoded_state"), py::arg("unitary_matrix"), py::arg("target_qubit"))
-        .def("Measure_projection_onto_zero", &ModelCircuit::measure_projection_onto_zero,
-             py::arg("state_vector"))
-        .def("Measure_projection_onto_one", &ModelCircuit::measure_projection_onto_one,
-             py::arg("state_vector"));
+    .def(py::init<>())
+        .def_static("apply_hybrid_encoding", apply_hybrid_encoding_wrapper,
+                    py::arg("hybridGates"),
+                    py::arg("hamiltonian") = nullptr,
+                    "Apply hybrid encoding to a circuit with optional Hamiltonian.");
 
-    // RotationAxis enum
+    // Free functions for measurement
+    m.def("measure_overlap_with_zero", &measure_overlap_with_zero,
+        py::arg("state_vector"),
+        "Measure overlap with |0> state.");
+
+    m.def("measure_overlap_with_one", &measure_overlap_with_one,
+        py::arg("state_vector"),
+        "Measure overlap with |1> state.");
+
+    m.def("measure_projection_onto_zero", &measure_projection_onto_zero,
+        py::arg("state_vector"),
+        "Measure projection onto |0> state.");
+
+    m.def("measure_projection_onto_one", &measure_projection_onto_one,
+        py::arg("state_vector"),
+        "Measure projection onto |1> state.");
+    
+    // Add HybridGate + RotationAxis bindings
     py::enum_<RotationAxis>(m, "RotationAxis")
         .value("X", RotationAxis::X)
         .value("Y", RotationAxis::Y)
-        .value("Z", RotationAxis::Z)
-        .export_values();
+        .value("Z", RotationAxis::Z);
 
-    // RotationGate struct
-    py::class_<RotationGate>(m, "RotationGate")
-        .def_readonly("type", &RotationGate::type)
-        .def_readonly("angle", &RotationGate::angle);
-
-    // HybridGate struct
     py::class_<HybridGate>(m, "HybridGate")
-        .def_readonly("angleGate", &HybridGate::angleGate)
-        .def_readonly("amplitude", &HybridGate::amplitude);
-
-    // AngleEncoder class
-    py::class_<AngleEncoder>(m, "AngleEncoder")
-        .def(py::init<const std::vector<double>&, RotationAxis>(), py::arg("input"), py::arg("axis") = RotationAxis::Y)
-        .def("get_gates", &AngleEncoder::get_gates)
-        .def("printGates", &AngleEncoder::printGates);
-
-    // HybridEncoder class
-    py::class_<HybridEncoder>(m, "HybridEncoder")
-        .def(py::init<const std::vector<double>&>())
-        .def("getHybridEncodedGates", &HybridEncoder::getHybridEncodedGates)
-        .def("printHybridGates", &HybridEncoder::printHybridGates);
+        .def(py::init<RotationAxis, double, int>(),
+            py::arg("axis"),
+            py::arg("angle"),
+            py::arg("target_qubit"))
+        .def_readwrite("axis", &HybridGate::axis)
+        .def_readwrite("angle", &HybridGate::angle)
+        .def_readwrite("target_qubit", &HybridGate::target_qubit);
 }

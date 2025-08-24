@@ -1,6 +1,6 @@
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/LayerNormalization.cpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/DataProcessing/models/LayerNormalization.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -55,7 +55,7 @@ CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormaliza
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/uses_allocator.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/uses_allocator_args.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tuple \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/utils/logger.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/utils/logger.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/ostream.h \

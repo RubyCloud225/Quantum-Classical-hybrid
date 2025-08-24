@@ -1,6 +1,6 @@
 CMakeFiles/BetaSchedule_tests.dir/src/ClassicalDiT/BetaSchedule.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/BetaSchedule.cpp \
- /Users/catherinepemblington/Documents/Quantum_Classical_hybrid/src/ClassicalDiT/BetaSchedule.hpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp \
+ /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \

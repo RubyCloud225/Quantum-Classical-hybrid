@@ -134,7 +134,7 @@ double measure_projection_onto_one(const std::vector<Complex>& state_vector) {
 // and returns the final state vector
 //
 // Hybrid encoding: apply a sequence of parameterized rotation gates to each qubit
-std::vector<ModelCircuit::Complex> ModelCircuit::apply_hybrid_encoding(const std::vector<HybridGate>& hybridGates) {
+std::vector<ModelCircuit::Complex> ModelCircuit::apply_hybrid_encoding(const std::vector<HybridGate>& hybridGates, const Time::Mat* hamiltonian = nullptr) {
     int num_qubits = hybridGates.size();
     std::vector<Complex> state_vector(1 << num_qubits, Complex(0.0, 0.0));
     state_vector[0] = Complex(1.0, 0.0);  // Start in |0...0>
@@ -170,6 +170,10 @@ std::vector<ModelCircuit::Complex> ModelCircuit::apply_hybrid_encoding(const std
         apply_gate(state_vector, rotation_matrix, i);
     }
 
+    if (hamiltonian != nullptr) {
+        Time::Vec time_zero = {0.0};
+        state_vector = Time::spectralPropagator(*hamiltonian, state_vector, time_zero);
+    }
     Logger::log("Applied hybrid encoding gates to state.", LogLevel::INFO, __FILE__, __LINE__);
     return state_vector;
 }

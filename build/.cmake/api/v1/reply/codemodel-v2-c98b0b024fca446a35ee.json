@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "quantum_classical_hybrid",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BetaSchedule_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BetaSchedule_tests-Release-0c1eabb88475cfe19fcf.json",
+					"name" : "BetaSchedule_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Diffusion_model_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Diffusion_model_test-Release-c07ec3627779be67087d.json",
+					"name" : "Diffusion_model_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Diffusion_sample_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Diffusion_sample_test-Release-7b1121695ff0cbe2d3a6.json",
+					"name" : "Diffusion_sample_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GaussianDiffusionTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GaussianDiffusionTest-Release-a14dea50ddcae5bc1899.json",
+					"name" : "GaussianDiffusionTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Gaussian_Diffusion_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Gaussian_Diffusion_test-Release-2d7e553a3e592e1ad45d.json",
+					"name" : "Gaussian_Diffusion_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Quantum_encoder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Quantum_encoder-Release-04a9e2700999bd761b45.json",
+					"name" : "Quantum_encoder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bert_minimal_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bert_minimal_test-Release-1ea56939ace5c68f7bfb.json",
+					"name" : "bert_minimal_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bert_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bert_test-Release-75415a7aa2b409e999e0.json",
+					"name" : "bert_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "byte_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-byte_test-Release-1361c5bd64fe58b248a6.json",
+					"name" : "byte_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "prepend_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-prepend_test-Release-998bbffd2301143a6433.json",
+					"name" : "prepend_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "quantum_classical_hybrid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-quantum_classical_hybrid-Release-9134b4b2257db185174b.json",
+					"name" : "quantum_classical_hybrid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "replace_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-replace_test-Release-d94e82653f5dbc881483.json",
+					"name" : "replace_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build",
+		"source" : "/Users/catherinepemblington/Documents/Quantum-Classical-hybrid"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

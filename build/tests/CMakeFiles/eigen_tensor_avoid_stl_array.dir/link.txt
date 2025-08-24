@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -arch arm64 -bundle -Wl,-headerpad_max_install_names -Xlinker -undefined -Xlinker dynamic_lookup -o eigen_tensor_avoid_stl_array.cpython-313-darwin.so CMakeFiles/eigen_tensor_avoid_stl_array.dir/eigen_tensor_avoid_stl_array.cpp.o

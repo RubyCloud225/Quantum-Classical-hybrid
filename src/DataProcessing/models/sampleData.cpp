@@ -19,6 +19,16 @@ void saveSamples(const std::vector<SampleData>& samples, const std::string& file
         out.write(reinterpret_cast<const char*>(&sample.density), sizeof(sample.density));
         out.write(reinterpret_cast<const char*>(&sample.nll), sizeof(sample.nll));
         out.write(reinterpret_cast<const char*>(&sample.entopy), sizeof(sample.entopy));
+        // Image tokens
+        size_t image_tokens_count = sample.imageTokens.size();
+        out.write(reinterpret_cast<const char*>(&image_tokens_count), sizeof(image_tokens_count));
+        for (const auto& token : sample.imageTokens) {
+            out.write(reinterpret_cast<const char*>(&token.row), sizeof(token.row));
+            out.write(reinterpret_cast<const char*>(&token.col), sizeof(token.col));
+            int embedding_size = static_cast<int>(token.embedding.size());
+            out.write(reinterpret_cast<const char*>(&embedding_size), sizeof(embedding_size));
+            out.write(reinterpret_cast<const char*>(token.embedding.data()), embedding_size * sizeof(double));
+        }
     }
     Logger::log("Saved " + std::to_string(samples.size()) + " samples to " + filename, LogLevel::INFO, __FILE__, __LINE__);
     out.close();
@@ -42,6 +52,20 @@ std::vector<SampleData> loadSamples(const std::string& filename) {
         in.read(reinterpret_cast<char*>(&sample.density), sizeof(sample.density));
         in.read(reinterpret_cast<char*>(&sample.nll), sizeof(sample.nll));
         in.read(reinterpret_cast<char*>(&sample.entopy), sizeof(sample.entopy));
+        // read imageTokens
+        size_t image_tokens_count;
+        in.read(reinterpret_cast<char*>(&image_tokens_count), sizeof(image_tokens_count));
+        sample.imageTokens.resize(image_tokens_count);
+        for (size_t i = 0; i < image_tokens_count; ++i) {
+            PatchToken token;
+            in.read(reinterpret_cast<char*>(&token.row), sizeof(token.row));
+            in.read(reinterpret_cast<char*>(&token.col), sizeof(token.col));
+            int embedding_size;
+            in.read(reinterpret_cast<char*>(&embedding_size), sizeof(embedding_size));
+            token.embedding.resize(embedding_size);
+            in.read(reinterpret_cast<char*>(token.embedding.data()), embedding_size * sizeof(double));
+            sample.imageTokens[i] = std::move(token);
+        }
         samples.push_back(sample);
         // Check for read errors
         if (in.fail()) {
