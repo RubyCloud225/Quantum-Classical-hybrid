@@ -5,14 +5,6 @@ project(quantum_classical_hybrid LANGUAGES CXX)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-#set(OpenMP_CXX_FLAGS "-Xpreprocessor -fopenmp")
-#set(OpenMP_C_FLAGS "-Xpreprocessor -fopenmp")
-#set(OpenMP_CXX_LIB_NAMES "omp")
-#set(OpenMP_C_LIB_NAMES "omp")
-#set(OpenMP_libomp_LIBRARY "/opt/homebrew/opt/libomp/lib/libomp.dylib")
-#set(OpenMP_LIBRARIES "/opt/homebrew/opt/libomp/lib/libomp.dylib")
-#set(CMAKE_C_COMPILER "/opt/homebrew/opt/llvm/bin/clang" CACHE STRING "C compiler")
-#set(CMAKE_CXX_COMPILER "/opt/homebrew/opt/llvm/bin/clang++" CACHE STRING "C++ compiler")
 
 if(APPLE)
     set(OPENMP_ROOT "/opt/homebrew/opt/libomp" CACHE PATH "Path to libomp")
@@ -30,12 +22,8 @@ project(quantum_classical_hybrid LANGUAGES CXX)
 
 if(APPLE)
     set(CMAKE_OSX_ARCHITECTURES arm64)
-#   find_package(OpenMP REQUIRED)
     if(OpenMP_FOUND)
         message(STATUS "OpenMP found on macOS")
-        #target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
-        #target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS})
-        #target_include_directories(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_INCLUDE_DIR})
     else()
         message(FATAL_ERROR "OpenMP not found on macOS")
     endif()
@@ -72,12 +60,6 @@ endif()
 # Find Python and pybind11 packages
 find_package(
     Python3 REQUIRED COMPONENTS Interpreter Development)
-#find_package(benchmark REQUIRED)
-#if(EXISTS "/opt/homebrew/include/benchmark/benchmark.h")
-#    message(STATUS "Google Benchmark found")
-#else()
-#    message(FATAL_ERROR "Google Benchmark not found in /opt/homebrew/include. Did you run `brew install benchmark`?")
-#endif()
 execute_process(
     COMMAND python3 -m pybind11 --cmakedir
     OUTPUT_VARIABLE PYBIND11_CMAKE_DIR
@@ -86,36 +68,20 @@ execute_process(
 list(APPEND CMAKE_PREFIX_PATH ${PYBIND11_CMAKE_DIR})
 find_package(pybind11 REQUIRED)
 
-# Set pybind11_DIR to Homebrew path to fix find_package error
-# set(pybind11_DIR /opt/homebrew/lib/cmake/pybind11)
-
-# Ensure pybind11 is found from Homebrew path
 if(NOT pybind11_FOUND)
     find_package(pybind11 REQUIRED PATHS /opt/homebrew/lib/cmake/pybind11)
 endif()
-
-# Download and configure Eigen3
-#include(FetchContent)
-#FetchContent_Declare(
-#  eigen
-#  GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-#  GIT_TAG 3.4.0
-#)
-#FetchContent_MakeAvailable(eigen)
 
 # Find the required libraries
 include_directories(
     ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
-    #${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
     ${PROJECT_SOURCE_DIR}/src/Bindings
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
     ${PROJECT_SOURCE_DIR}/src/Compression
     ${PROJECT_SOURCE_DIR}/src/utils
     ${PROJECT_SOURCE_DIR}/src/DataProcessing/models
-    #${PROJECT_SOURCE_DIR}/src/quantum_library
-    #${PROJECT_SOURCE_DIR}/src/Qubit_graph
     /opt/homebrew/include/eigen3
     /opt/homebrew/include
     $ENV{HOME}/icu-install/include
@@ -124,13 +90,10 @@ include_directories(
 link_directories(
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
-    #${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
     ${PROJECT_SOURCE_DIR}/src/Bindings
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
     ${PROJECT_SOURCE_DIR}/src/Compression
     ${PROJECT_SOURCE_DIR}/src/utils
-    #${PROJECT_SOURCE_DIR}/src/quantum_library
-    #${PROJECT_SOURCE_DIR}/src/Qubit_graph
     /opt/homebrew/lib
     $ENV{HOME}/icu-install/lib
 )
@@ -149,32 +112,6 @@ pybind11_add_module(quantum_classical_hybrid
     ${DATAPROCESSING_SOURCES}
     ${NORMALISER_SOURCES}
 )
-
-
-
-# Add separate executable targets for model tests
-#file(GLOB_RECURSE MODEL_TESTS src/DataProcessing/models/tests/*.cpp)
-#foreach(test_file ${MODEL_TESTS})
-#    get_filename_component(test_name ${test_file} NAME_WE)
-#    set(test_sources ${test_file})
-
-    # Attempt to match the module name by stripping "_test" suffix
-#    string(REPLACE "_test" "" module_name ${test_name})
-#    set(module_path "${PROJECT_SOURCE_DIR}/src/DataProcessing/models/${module_name}.cpp")
-#    if(EXISTS ${module_path})
-#        list(APPEND test_sources ${module_path})
-#    endif()
-
-#    add_executable(${test_name} ${test_sources})
-#    target_include_directories(${test_name} PRIVATE
-#        ${PROJECT_SOURCE_DIR}/src/DataProcessing/models
-#        ${PROJECT_SOURCE_DIR}/src/DataProcessing
-#        ${Python3_INCLUDE_DIRS}
-#    )
-#    target_link_libraries(${test_name} PRIVATE ${Python3_LIBRARIES} OpenMP::OpenMP_CXX)
-#    target_compile_options(${test_name} PRIVATE -g)
-#endforeach()
-
 
 # --- Universal function to add test executables with all required sources (multi-module version) ---
 function(add_test_executable_with_sources test_dir module_dirs)
@@ -244,8 +181,6 @@ target_link_libraries(quantum_classical_hybrid PRIVATE
     OpenMP::OpenMP_CXX
     icuuc
     icui18n
-#    benchmark
-#    benchmark_main
 )
 target_include_directories(quantum_classical_hybrid PRIVATE
     ${PROJECT_SOURCE_DIR}/src/utils
@@ -266,22 +201,6 @@ set_target_properties(quantum_classical_hybrid PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
 )
-
-# Add executable target for Diffusion Sample Test with debug flags
-# add_executable(DiffusionSampleTest src/DiT/tests/Diffusion_sample_test.cpp src/DiT/Diffusion_model.cpp src/DiT/Diffusion_Sample.cpp)
-
-# target_include_directories(DiffusionSampleTest PRIVATE
-#     ${PROJECT_SOURCE_DIR}/src/DiT
-#     ${PROJECT_SOURCE_DIR}/src/DataProcessing
-# )
-
-# target_compile_options(DiffusionSampleTest PRIVATE -g)
-
-# target_link_libraries(DiffusionSampleTest PRIVATE
-#     ${Python3_LIBRARIES}
-#     OpenMP::OpenMP_CXX
-# )
-
 
 # Add executable target for Gaussian Diffusion Test with debug flags
 add_executable(GaussianDiffusionTest 
@@ -305,47 +224,6 @@ target_include_directories(Quantum_encoder PRIVATE
     ${PROJECT_SOURCE_DIR}/src/utils
     ${Python3_INCLUDE_DIRS}
 )
-# set and include directors for Integration tests
-#add_executable(integration_test
-#    src/DataProcessing/models/tests/Integration_GaussianNoise_LayerNormalization.cpp
-#    src/DataProcessing/models/tests/Integration_LinearRegression_GaussianNoise_LayerNormalization.cpp
-#    src/DataProcessing/models/GaussianNoise.cpp
-#    src/DataProcessing/models/LayerNormalization.cpp
-#    src/DataProcessing/models/LinearRegression.cpp
-#)
-
-#target_include_directories(integration_test PRIVATE
-#    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
-#    ${PROJECT_SOURCE_DIR}/src/DataProcessing
-#    ${PROJECT_SOURCE_DIR}/src/Bindings
-#    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-#${PROJECT_SOURCE_DIR}/src/utils
-#    ${PROJECT_SOURCE_DIR}/src/Compression
-#    ${Python3_INCLUDE_DIRS}
-#)
-#target_link_libraries(integration_test PRIVATE
-#    ${Python3_LIBRARIES}
-#    OpenMP::OpenMP_CXX
-#    icuuc
-#    icui18n
-#)
-
-#target_include_directories(Gaussian_Diffusion_Test PRIVATE
-#    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
-#    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT/NN
-#    ${PROJECT_SOURCE_DIR}/src/DataProcessing
-#    ${PROJECT_SOURCE_DIR}/src/Bindings
-#    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-#    ${PROJECT_SOURCE_DIR}/src/Compression
-#    ${PROJECT_SOURCE_DIR}/src/utils
-#    /opt/homebrew/opt/libomp/include
-#    $ENV{HOME}/icu-install/include
-#)
-
-#target_compile_options(Gaussian_Diffusion_Test PRIVATE -g)
-
-# Enable OpenMP support for GaussianDiffusionTest
-# Configure CMake to use GCC installed via Homebrew for OpenMP support
 
 # Set C and C++ compilers to GCC and G++ from Homebrew
 set(CMAKE_C_COMPILER /opt/homebrew/bin/gcc-15)
@@ -359,12 +237,6 @@ set(OpenMP_C_LIB_NAMES "gomp")
 
 # Explicitly set OpenMP_gomp_LIBRARY path to GCC libgomp.dylib
 set(OpenMP_gomp_LIBRARY /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib)
-
-# Remove setting OpenMP_omp_LIBRARY and OpenMP_LIBRARY to libomp.dylib to avoid conflict
-# set(OpenMP_omp_LIBRARY /opt/homebrew/opt/libomp/lib/libomp.dylib)
-# set(OpenMP_LIBRARY /opt/homebrew/opt/libomp/lib/libomp.dylib)
-# set(OpenMP_LIBRARIES /opt/homebrew/opt/libomp/lib/libomp.dylib)
-# set(OpenMP_CXX_LIBRARIES /opt/homebrew/opt/libomp/lib/libomp.dylib)
 set(OpenMP_LINK_FLAGS "-L/opt/homebrew/opt/libomp/lib -lomp")
 set(OpenMP_CXX_INCLUDE_DIR /opt/homebrew/opt/libomp/include)
 
