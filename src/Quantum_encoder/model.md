@@ -20,16 +20,14 @@ To utilize quantum computation for machine learning, we begin by **embedding cla
 
 Several encoding methods exist, such as:
 
-* **Angle encoding**: $x_i \rightarrow R_y(x_i)$
-* **Amplitude encoding**: $\mathbf{x} \rightarrow \sum_i x_i |i\rangle$
+* **Angle encoding**: $${x_i \rightarrow R_y(x_i)}$$
+* **Amplitude encoding**: $${\mathbf{x} \rightarrow \sum_i x_i |i\rangle}$$
 
 here we are using a hybrid state to convert 
 
 Resulting quantum state:
 
-$$
-|\phi(x)\rangle
-$$
+$$ {|\phi(x)\rangle}$$
 
 ---
 
