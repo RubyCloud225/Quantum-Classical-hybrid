@@ -1,6 +1,6 @@
 CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \

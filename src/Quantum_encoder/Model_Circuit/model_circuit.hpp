@@ -23,6 +23,7 @@ class ModelCircuit {
     double measure_overlap_with_one(const std::vector<Complex>& state_vector);
     double measure_projection_onto_zero(const std::vector<Complex>& state_vector);
     double measure_projection_onto_one(const std::vector<Complex>& state_vector);
+    std::vector<Complex> apply_propagator(const Time::Mat& hamiltonian, const std::vector<Complex>& state_vector, const Time::Vec& time_zero);
     private:
     void initialize_circuit_matrix(int num_qubits);   
 };

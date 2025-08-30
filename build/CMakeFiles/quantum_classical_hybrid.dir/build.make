@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/quantum_classical_hybrid.dir/depend.make
@@ -73,200 +73,200 @@ CMakeFiles/quantum_classical_hybrid.dir/codegen:
 .PHONY : CMakeFiles/quantum_classical_hybrid.dir/codegen
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/digits.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.s
 
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image_resize.cpp
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image_resize.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image/image_resize.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image/image_resize.cpp
 
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image_resize.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.i
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image/image_resize.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i
 
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image_resize.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.s
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/image/image_resize.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/metaspace.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/prepend.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/replace.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/unicode_processor.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.s
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/flags.make
-CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp
+CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o: CMakeFiles/quantum_classical_hybrid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o -MF CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o.d -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp > CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.i
 
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/tokenizer/tokenizer_test.cpp -o CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.s
 
 # Object files for target quantum_classical_hybrid
 quantum_classical_hybrid_OBJECTS = \
@@ -277,7 +277,7 @@ quantum_classical_hybrid_OBJECTS = \
 "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o" \
 "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o" \
 "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o" \
-"CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o" \
+"CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o" \
 "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o" \
 "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o" \
 "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o" \
@@ -288,30 +288,30 @@ quantum_classical_hybrid_OBJECTS = \
 # External object files for target quantum_classical_hybrid
 quantum_classical_hybrid_EXTERNAL_OBJECTS =
 
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/build.make
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
-/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared module /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so"
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LinearRegression.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/sampleData.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/bert.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/digits.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/metaspace.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/prepend.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/replace.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/unicode_processor.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.o
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/build.make
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
+/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so: CMakeFiles/quantum_classical_hybrid.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared module /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/quantum_classical_hybrid.dir/link.txt --verbose=$(VERBOSE)
-	/usr/bin/strip -x /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so
+	/usr/bin/strip -x /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so
 
 # Rule to build all files generated by this target.
-CMakeFiles/quantum_classical_hybrid.dir/build: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so
+CMakeFiles/quantum_classical_hybrid.dir/build: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so
 .PHONY : CMakeFiles/quantum_classical_hybrid.dir/build
 
 CMakeFiles/quantum_classical_hybrid.dir/clean:
@@ -319,6 +319,6 @@ CMakeFiles/quantum_classical_hybrid.dir/clean:
 .PHONY : CMakeFiles/quantum_classical_hybrid.dir/clean
 
 CMakeFiles/quantum_classical_hybrid.dir/depend:
-	cd /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles/quantum_classical_hybrid.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/quantum_classical_hybrid.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/quantum_classical_hybrid.dir/depend
 

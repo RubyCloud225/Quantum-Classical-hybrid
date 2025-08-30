@@ -4,8 +4,6 @@
 #include <string>
 #include <stdexcept>
 #include <algorithm>
-#include "stb_image.h"
-#include "stb_image_resize.h"
 
 namespace ImageNormaliser {
     //lightweight container for image data
@@ -16,12 +14,16 @@ namespace ImageNormaliser {
         std::vector<unsigned char> data; // pixel buffer [H * W * C]
     };
     //-------- Load-----------------
-    inline Image loadImage(const std::string& path, int desired_channels = 3);
+    inline Image loadImage(const std::string& path, int desired_channels = 3, bool flip_vertically = false, unsigned char* pixels = nullptr);
     //---------Resize --------------
     inline Image resizeImage(const Image& input, int target_size);
     // --------- Extract Sequential Patches ---------
     inline std::vector<Image> extractPathesSequential(const Image& input, int patch_size);
     // ----------- Flatten Patch to Float Vector [0,1] -------
     inline std::vector<float> flattenPathToFloat(const Image& patch);
+    // ----------- Free Image Pixels -------------
+    unsigned char* pixels;
+    int patch_size;
+
 }
 #endif //image_resize

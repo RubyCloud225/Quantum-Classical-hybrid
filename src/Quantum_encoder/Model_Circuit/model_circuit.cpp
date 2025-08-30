@@ -1,6 +1,7 @@
 #include "model_circuit.hpp"
 #include <vector>
 #include "utils/logger.hpp"
+#include "Hamiltonian/time_H.hpp"
 #include <complex>
 #include <iostream>
 #include <cmath>
@@ -83,7 +84,7 @@ std::vector<ModelCircuit::Complex> ModelCircuit::apply_unitary_to_encoded_state(
 }
 
 // measurement
-double measure_overlap_with_zero(const std::vector<Complex>& state_vector) {
+double ModelCircuit::measure_overlap_with_zero(const std::vector<Complex>& state_vector) {
     std::vector<Complex> zero_state = {Complex(1, 0), Complex(0, 0)};
     Complex init = Complex(0, 0);
     auto result = std::inner_product(
@@ -98,7 +99,7 @@ double measure_overlap_with_zero(const std::vector<Complex>& state_vector) {
     return std::norm(result);
 }
 
-double measure_overlap_with_one(const std::vector<Complex>& state_vector) {
+double ModelCircuit::measure_overlap_with_one(const std::vector<Complex>& state_vector) {
     std::vector<Complex> one_state = {Complex(0, 0), Complex(1, 0)};
     Complex init = Complex(0, 0);
     auto result = std::inner_product(
@@ -113,18 +114,35 @@ double measure_overlap_with_one(const std::vector<Complex>& state_vector) {
     return std::norm(result);
 }
 
-double measure_projection_onto_zero(const std::vector<Complex>& state_vector) {
+double ModelCircuit::measure_projection_onto_zero(const std::vector<Complex>& state_vector) {
     // Measure the projection of the state vector onto the zero state
     double overlap = measure_overlap_with_zero(state_vector);
     Logger::log("Measured projection onto zero state: " + std::to_string(overlap),LogLevel::INFO, __FILE__, __LINE__);
     return overlap; // Return the probability of measuring zero
 }
 
-double measure_projection_onto_one(const std::vector<Complex>& state_vector) {
+double ModelCircuit::measure_projection_onto_one(const std::vector<Complex>& state_vector) {
     // Measure the projection of the state vector onto the one state
     double overlap = measure_overlap_with_one(state_vector);
     Logger::log("Measured projection onto one state: " + std::to_string(overlap), LogLevel::INFO, __FILE__, __LINE__);
     return overlap; // Return the probability of measuring one
+}
+
+std::vector<ModelCircuit::Complex> ModelCircuit::apply_propagator(const Time::Mat& hamiltonian, const std::vector<ModelCircuit::Complex>& state_vector, const Time::Vec& time_zero) {
+    // Compute the propagator matrix using the spectral propagator
+    double dt = 0.1; // Replace with the appropriate time step value
+    Time::Mat propagator = Time::spectralPropagator(hamiltonian, dt);
+
+    // Apply the propagator to the state vector
+    std::vector<Complex> new_state_vector(state_vector.size(), Complex(0.0, 0.0));
+
+    for (int i = 0; i < propagator.nrows; ++i) {
+        for (int j = 0; j < propagator.ncols; ++j) {
+            new_state_vector[i] += propagator(i, j) * state_vector[j];
+        }
+    }
+
+    return new_state_vector;
 }
 
 // Quantum circuit that encodes a parameterized graph state
@@ -134,7 +152,7 @@ double measure_projection_onto_one(const std::vector<Complex>& state_vector) {
 // and returns the final state vector
 //
 // Hybrid encoding: apply a sequence of parameterized rotation gates to each qubit
-std::vector<ModelCircuit::Complex> ModelCircuit::apply_hybrid_encoding(const std::vector<HybridGate>& hybridGates, const Time::Mat* hamiltonian = nullptr) {
+std::vector<Complex> ModelCircuit::apply_hybrid_encoding(const std::vector<HybridGate>& hybridGates, const Time::Mat* hamiltonian) {
     int num_qubits = hybridGates.size();
     std::vector<Complex> state_vector(1 << num_qubits, Complex(0.0, 0.0));
     state_vector[0] = Complex(1.0, 0.0);  // Start in |0...0>
@@ -171,8 +189,9 @@ std::vector<ModelCircuit::Complex> ModelCircuit::apply_hybrid_encoding(const std
     }
 
     if (hamiltonian != nullptr) {
-        Time::Vec time_zero = {0.0};
-        state_vector = Time::spectralPropagator(*hamiltonian, state_vector, time_zero);
+        Time::Vec time_zero; // Initialize time vector if needed
+        // Apply the propagator to the state vector
+        state_vector = apply_propagator(*hamiltonian, state_vector, time_zero);
     }
     Logger::log("Applied hybrid encoding gates to state.", LogLevel::INFO, __FILE__, __LINE__);
     return state_vector;

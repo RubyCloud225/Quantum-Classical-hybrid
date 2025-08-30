@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1052,44 +1052,44 @@ src/DataProcessing/normaliser/digits.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/digits.cpp.s
 .PHONY : src/DataProcessing/normaliser/digits.cpp.s
 
-src/DataProcessing/normaliser/image_resize.o: src/DataProcessing/normaliser/image_resize.cpp.o
-.PHONY : src/DataProcessing/normaliser/image_resize.o
+src/DataProcessing/normaliser/image/image_resize.o: src/DataProcessing/normaliser/image/image_resize.cpp.o
+.PHONY : src/DataProcessing/normaliser/image/image_resize.o
 
 # target to build an object file
-src/DataProcessing/normaliser/image_resize.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image_resize.cpp.o
-.PHONY : src/DataProcessing/normaliser/image_resize.cpp.o
+src/DataProcessing/normaliser/image/image_resize.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.o
+.PHONY : src/DataProcessing/normaliser/image/image_resize.cpp.o
 
-src/DataProcessing/normaliser/image_resize.i: src/DataProcessing/normaliser/image_resize.cpp.i
-.PHONY : src/DataProcessing/normaliser/image_resize.i
+src/DataProcessing/normaliser/image/image_resize.i: src/DataProcessing/normaliser/image/image_resize.cpp.i
+.PHONY : src/DataProcessing/normaliser/image/image_resize.i
 
 # target to preprocess a source file
-src/DataProcessing/normaliser/image_resize.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image_resize.cpp.i
-.PHONY : src/DataProcessing/normaliser/image_resize.cpp.i
+src/DataProcessing/normaliser/image/image_resize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.i
+.PHONY : src/DataProcessing/normaliser/image/image_resize.cpp.i
 
-src/DataProcessing/normaliser/image_resize.s: src/DataProcessing/normaliser/image_resize.cpp.s
-.PHONY : src/DataProcessing/normaliser/image_resize.s
+src/DataProcessing/normaliser/image/image_resize.s: src/DataProcessing/normaliser/image/image_resize.cpp.s
+.PHONY : src/DataProcessing/normaliser/image/image_resize.s
 
 # target to generate assembly for a file
-src/DataProcessing/normaliser/image_resize.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image_resize.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image_resize.cpp.s
-.PHONY : src/DataProcessing/normaliser/image_resize.cpp.s
+src/DataProcessing/normaliser/image/image_resize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/src/DataProcessing/normaliser/image/image_resize.cpp.s
+.PHONY : src/DataProcessing/normaliser/image/image_resize.cpp.s
 
 src/DataProcessing/normaliser/metaspace.o: src/DataProcessing/normaliser/metaspace.cpp.o
 .PHONY : src/DataProcessing/normaliser/metaspace.o
@@ -1576,9 +1576,9 @@ help:
 	@echo "... src/DataProcessing/normaliser/digits.o"
 	@echo "... src/DataProcessing/normaliser/digits.i"
 	@echo "... src/DataProcessing/normaliser/digits.s"
-	@echo "... src/DataProcessing/normaliser/image_resize.o"
-	@echo "... src/DataProcessing/normaliser/image_resize.i"
-	@echo "... src/DataProcessing/normaliser/image_resize.s"
+	@echo "... src/DataProcessing/normaliser/image/image_resize.o"
+	@echo "... src/DataProcessing/normaliser/image/image_resize.i"
+	@echo "... src/DataProcessing/normaliser/image/image_resize.s"
 	@echo "... src/DataProcessing/normaliser/metaspace.o"
 	@echo "... src/DataProcessing/normaliser/metaspace.i"
 	@echo "... src/DataProcessing/normaliser/metaspace.s"

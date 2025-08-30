@@ -1,6 +1,6 @@
 CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.cpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/byte_level.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/string \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -243,7 +243,7 @@ CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/normaliser/byte_level
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/locale_conv.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/quoted_string.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/utils/logger.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils/logger.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/fstream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/basic_file.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++io.h \

@@ -1,4 +1,3 @@
-#pragma once
 #include <vector>
 #include <string>
 #include <stdexcept>
@@ -14,8 +13,11 @@ namespace ImageNormalliser {
         int channels;
         std::vector<unsigned char> data;
     };
+
+    unsigned char* pixels = nullptr; // Image pixel buffer
+    int patch_size = 16; // Example patch size
     // -------- Load -------------
-    inline Image loadImage(const std::string& path, int desired_channels = 3) {
+    inline Image loadImage(const std::string& path, int desired_channels = 3, bool flip_vertically = false, unsigned char* pixels = nullptr) {
         int w, h, c;
         //unsigned char* pixels = stbi_load(path.c_str(), &w, &h, &c, desired_channels);
         if (!pixels) {
@@ -27,6 +29,11 @@ namespace ImageNormalliser {
     }
     // ---------- Resize ----------
     inline Image resizeImage(const Image& input, int target_size) {
+        int total_pixels = target_size * target_size * input.channels;
+        int total_input_pixels = input.width * input.height * input.channels;
+        if (total_pixels <= 0 || total_input_pixels <= 0) {
+            throw std::runtime_error("Invalid image dimensions for resizing.");
+        }
         Image out;
         out.width = target_size;
         out.height = target_size;
@@ -43,7 +50,7 @@ namespace ImageNormalliser {
         std::vector<Image> patches;
         patches.reserve((input.width / patch_size) * (input.height / patch_size));
         // Always row-major order: top-left -> right -> down
-        for (int y = 0; y + patch_size <= input.height; y += path_size) {
+        for (int y = 0; y + patch_size <= input.height; y += patch_size) {
             for (int x = 0; x + patch_size <= input.width; x += patch_size) {
                 Image patch;
                 patch.width = patch_size;
@@ -55,7 +62,7 @@ namespace ImageNormalliser {
                     int srcY = y + py;
                     const unsigned char* srcRow = &input.data[(srcY * input.width + x) * input.channels];
                     unsigned char* dstRow = &patch.data[(py * patch.width) * input.channels];
-                    std::copy(srcRow, srcRow = patch_size * input.channels, dstRow);
+                    std::copy(srcRow, srcRow + patch_size * input.channels, dstRow);
                 }
                 patches.push_back(std::move(patch));
             }

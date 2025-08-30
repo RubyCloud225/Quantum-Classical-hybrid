@@ -1,7 +1,7 @@
 CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.hpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -56,7 +56,7 @@ CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/uses_allocator.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/uses_allocator_args.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/tuple \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/ostream.h \
@@ -259,9 +259,9 @@ CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/stl_numeric.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/pstl/glue_numeric_defs.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/pstl/execution_defs.h \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.hpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.hpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnected.hpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnected.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.hpp \
  /opt/homebrew/opt/libomp/include/omp.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/stdlib.h

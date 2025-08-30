@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid
+CMAKE_SOURCE_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build
+CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Diffusion_sample_test.dir/depend.make
@@ -73,242 +73,242 @@ CMakeFiles/Diffusion_sample_test.dir/codegen:
 .PHONY : CMakeFiles/Diffusion_sample_test.dir/codegen
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/tests/Diffusion_sample_test.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/tests/Diffusion_sample_test.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/BetaSchedule.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/EpsilonPredictor.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/Flatten.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/Layers/ReluLayer.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NN/NeuralNetwork.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp > CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/NormalDist.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/GaussianNoise.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/GaussianNoise.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LayerNormalization.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LayerNormalization.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/LinearRegression.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/LinearRegression.cpp.s
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o: CMakeFiles/Diffusion_sample_test.dir/flags.make
-CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o: /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
+CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o: CMakeFiles/Diffusion_sample_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o -c /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o"
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o -MF CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o.d -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.i
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp > CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.i
 
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.s
+	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp -o CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.s
 
 # Object files for target Diffusion_sample_test
 Diffusion_sample_test_OBJECTS = \
@@ -354,7 +354,7 @@ Diffusion_sample_test: CMakeFiles/Diffusion_sample_test.dir/build.make
 Diffusion_sample_test: /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/lib/libpython3.13.dylib
 Diffusion_sample_test: /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib
 Diffusion_sample_test: CMakeFiles/Diffusion_sample_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable Diffusion_sample_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable Diffusion_sample_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Diffusion_sample_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -366,6 +366,6 @@ CMakeFiles/Diffusion_sample_test.dir/clean:
 .PHONY : CMakeFiles/Diffusion_sample_test.dir/clean
 
 CMakeFiles/Diffusion_sample_test.dir/depend:
-	cd /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/build/CMakeFiles/Diffusion_sample_test.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/Diffusion_sample_test.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Diffusion_sample_test.dir/depend
 

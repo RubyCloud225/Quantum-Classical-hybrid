@@ -1,6 +1,6 @@
 CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/vector \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \
@@ -235,7 +235,7 @@ CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o:
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/basic_file.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++io.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/fstream.tcc \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/utils/logger.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/utils/logger.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ctime \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/mutex \

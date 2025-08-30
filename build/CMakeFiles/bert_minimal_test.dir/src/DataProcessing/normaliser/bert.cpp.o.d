@@ -1,6 +1,6 @@
 CMakeFiles/bert_minimal_test.dir/src/DataProcessing/normaliser/bert.cpp.o: \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp \
- /Users/catherinepemblington/Documents/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.hpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.cpp \
+ /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/normaliser/bert.hpp \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/string \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/bits/requires_hosted.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/aarch64-apple-darwin24/bits/c++config.h \

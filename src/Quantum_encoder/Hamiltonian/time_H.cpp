@@ -20,6 +20,11 @@
 
 namespace Time {
     using cplx = std::complex<double>;
+    Time::Vec Time::toVec(const std::vector<cplx>& vec) {
+        Time::Vec result;
+        result.data = vec; // Assuming Vec has a `data` member
+        return result;
+    };
 
     // Minimal complex matrix exponentiation for Hermitian matrices
     struct Mat {
@@ -232,7 +237,7 @@ namespace Time {
 
     // --------- Spectral Propagator -------------
 
-    inline Mat spectralPropagator(const Mat& H_in, double dt) {
+    Mat spectralPropagator(const Mat& H_in, double dt) {
         if (H_in.nrows != H_in.ncols) {
             throw std::invalid_argument("Matrix must be square for spectral propagator");
         }
