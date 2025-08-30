@@ -20,53 +20,65 @@
 
 namespace Time {
     using cplx = std::complex<double>;
-    Time::Vec Time::toVec(const std::vector<cplx>& vec) {
-        Time::Vec result;
-        result.data = vec; // Assuming Vec has a `data` member
+
+    // Mat class implementation
+    Mat::Mat(int rows, int cols, cplx fill) : nrows(rows), ncols(cols), a(static_cast<size_t>(rows * cols), fill) {}
+    
+    cplx& Mat::operator()(int row, int col) {
+        if (row < 0 || row >= nrows || col < 0 || col >= ncols) {
+            throw std::out_of_range("Matrix index out of bounds");
+        }
+        return a[static_cast<size_t>(row * ncols + col)];
+    }
+    
+    const cplx& Mat::operator()(int row, int col) const {
+        if (row < 0 || row >= nrows || col < 0 || col >= ncols) {
+            throw std::out_of_range("Matrix index out of bounds");
+        }
+        return a[static_cast<size_t>(row * ncols + col)];
+    }
+    
+    Mat Mat::identity(int n) {
+        Mat I(n, n);
+        for (int i = 0; i < n; ++i) {
+            I(i, i) = cplx(1.0, 0.0);
+        }
+        return I;
+    }
+
+    // Vec class implementation
+    Vec::Vec(int n, cplx fill) : data(static_cast<size_t>(n), fill) {}
+    
+    int Vec::size() const {
+        return static_cast<int>(data.size());
+    }
+    
+    cplx& Vec::operator[](int i) {
+        if (i < 0 || i >= static_cast<int>(data.size())) {
+            throw std::out_of_range("Vector index out of bounds");
+        }
+        return data[static_cast<size_t>(i)];
+    }
+    
+    const cplx& Vec::operator[](int i) const {
+        if (i < 0 || i >= static_cast<int>(data.size())) {
+            throw std::out_of_range("Vector index out of bounds");
+        }
+        return data[static_cast<size_t>(i)];
+    }
+
+    Vec toVec(const std::vector<cplx>& vec) {
+        Vec result(static_cast<int>(vec.size()));
+        for (size_t i = 0; i < vec.size(); ++i) {
+            result.data[i] = vec[i];
+        }
         return result;
-    };
+    }
 
     // Minimal complex matrix exponentiation for Hermitian matrices
-    struct Mat {
-        int nrows{0}, ncols{0};
-        std::vector<cplx> a; // row major
-
-        Mat() = default;
-        Mat(int rows, int cols, cplx fill=cplx(0.0,0.0)) : nrows(rows), ncols(cols), a(static_cast<size_t>(rows*cols), fill) {
-            if (rows <= 0 || cols <= 0) {
-                throw std::invalid_argument("Matrix dimensions must be positive");
-            }
-        }
-        inline cplx& operator()(int rows, int cols) {
-            return a[static_cast<size_t>(rows)*ncols + static_cast<size_t>(cols)];
-        }
-        inline const cplx& operator()(int rows, int cols) const {
-            return a[static_cast<size_t>(rows)*ncols + static_cast<size_t>(cols)];
-        }
-        static Mat identity(int n) {
-            Mat I(n,n);
-            for (int i = 0; i < n; ++i) I(i, i) = cplx(1.0, 0.0);
-            return I;
-        }
-    };
-
-    struct Vec {
-        std::vector<cplx> v;
-        Vec() = default;
-        explicit Vec(int n, cplx fill=cplx(0.0,0.0)) : v(static_cast<size_t>(n), fill) {}
-        inline int size() const {
-            return static_cast<int>(v.size());
-        }
-        inline cplx& operator[](int i) {
-            return v[static_cast<size_t>(i)];
-        }
-        inline const cplx& operator[](int i) const {
-            return v[static_cast<size_t>(i)];
-        }
-    };
 
     // basic ops
-    inline Mat adjoint(const Mat& M) {
+    Mat adjoint(const Mat& M) {
         Mat R(M.ncols, M.nrows);
         for (int r=0; r < M.nrows; ++r) {
             for (int c=0; c < M.ncols; ++c) {
@@ -76,7 +88,7 @@ namespace Time {
         return R;
     }
 
-    inline Mat hermitianize(const Mat& A) {
+    Mat hermitianize(const Mat& A) {
         if (A.nrows != A.ncols) throw std::invalid_argument("Matrix must be square for hermitianization");
         Mat R = A;
         for (int i = 0; i < A.nrows; ++i) {
@@ -92,7 +104,7 @@ namespace Time {
         return R;
     }
 
-    inline Mat operator*(const Mat& A, const Mat& B) {
+    Mat operator*(const Mat& A, const Mat& B) {
         if (A.ncols!= B.nrows) {
             throw std::invalid_argument("Matrix dimensions do not match for multiplication");
         }
@@ -109,30 +121,30 @@ namespace Time {
         return R;
     }
 
-    inline Vec operator*(const Mat& A, const Vec& x) {
+    Vec operator*(const Mat& A, const Vec& x) {
         if (A.ncols!= x.size()) {
             throw std::invalid_argument("Matrix and vector dimensions do not match for multiplication");
         }
         Vec y(A.nrows);
         for (int i = 0; i < A.nrows; ++i) {
             cplx s(0.0, 0.0);
-            for (int j = 0; j < A.ncols; ++ j) s+= A(i,j)*x.v[static_cast<size_t>(j)];
-            y.v[static_cast<size_t>(i)] = s;
+            for (int j = 0; j < A.ncols; ++ j) s+= A(i,j)*x.data[static_cast<size_t>(j)];
+            y.data[static_cast<size_t>(i)] = s;
         }
         return y;
     }
 
-    inline Mat operator*(const cplx& s, const Mat& A) {
+    Mat operator*(const cplx& s, const Mat& A) {
         Mat R(A.nrows, A.ncols);
         for (size_t k = 0; k < A.a.size(); ++k) R.a[k] = s * A.a[k];
         return R;
     }
 
-    inline Mat operator*(const Mat& A, const cplx& s) {
+    Mat operator*(const Mat& A, const cplx& s) {
         return s * A; // scalar multiplication is commutative
     }
 
-    inline double frobenius_norm(const Mat& A) {
+    double frobenius_norm(const Mat& A) {
         double ss = 0.0;
         for (const auto& z : A.a) {
             ss += std::norm(z);
@@ -142,12 +154,9 @@ namespace Time {
 
     // -------- Jacobi diagonalization for Hermitian matrices --------
     // Return eigenvalues (real) and eigenvectors (unitary matrix) of a Hermitian matrix
-    struct EigResult {
-        std::vector<double> lambda; // real
-        Mat V; // unitary matrix
-    };
 
-    inline EigResult jacobiHermitian(Mat H, int maxSweeps=100, double tol = 1e-12) {
+    EigResult jacobiHermitian(const Mat& H_in, int maxSweeps, double tol) {
+        Mat H = H_in;
         if (H.ncols != H.nrows) {
             throw std::invalid_argument("Matrix must be square for Jacobi diagonalization");
         }
@@ -258,7 +267,18 @@ namespace Time {
 
     //----------- VQE control composition and step -------------
 
-    inline Mat composeHamiltonian(const Mat& H0, const std::vector<Mat>& HX, const std::vector<Mat>& HZ, const std::vector<double>& uX, const std::vector<double>& uZ) {
+    Mat operator+(const Mat& A, const Mat& B) {
+        if (A.nrows != B.nrows || A.ncols != B.ncols) {
+            throw std::invalid_argument("Matrix dimensions must match for addition");
+        }
+        Mat R(A.nrows, A.ncols);
+        for (size_t i = 0; i < A.a.size(); ++i) {
+            R.a[i] = A.a[i] + B.a[i];
+        }
+        return R;
+    }
+
+    Mat composeHamiltonian(const Mat& H0, const std::vector<Mat>& HX, const std::vector<Mat>& HZ, const std::vector<double>& uX, const std::vector<double>& uZ) {
         if (HX.size() != uX.size()) {
             throw std::invalid_argument("HX and uX must have the same size");
         }
@@ -275,11 +295,11 @@ namespace Time {
         return hermitianize(H); // ensure Hermitian
     }
 
-    inline void applyTimeStep(Vec& psi, const Mat& U) {
+    void applyTimeStep(Vec& psi, const Mat& U) {
         psi = U * psi;
     }
 
-    inline void stepControlled(Vec& psi, const Mat& H0, const std::vector<Mat>& HX, const std::vector<Mat>& HZ, const std::vector<double>& uX, const std::vector<double>& uZ, double dt) {
+    void stepControlled(Vec& psi, const Mat& H0, const std::vector<Mat>& HX, const std::vector<Mat>& HZ, const std::vector<double>& uX, const std::vector<double>& uZ, double dt) {
         // compose the hamiltonian
         Mat Hk = composeHamiltonian(H0,HX,HZ,uX,uZ);
         // compose the spectral propagator
@@ -288,7 +308,7 @@ namespace Time {
         applyTimeStep(psi, Uk);
     }
 
-    inline double unitaryError(const Mat& U) {
+    double unitaryError(const Mat& U) {
         // Compute || U U† - I ||_F
         if (U.nrows != U.ncols) {
             throw std::invalid_argument("Matrix must be square for unitarity error");

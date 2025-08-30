@@ -214,10 +214,44 @@ add_executable(GaussianDiffusionTest
     src/ClassicalDiT/NN/Layers/PoolingLayer.cpp 
     src/ClassicalDiT/NN/Layers/ReluLayer.cpp 
     )
+
+# Add main program executable
+add_executable(main_program
+    src/ClassicalDiT/main.cpp
+    src/ClassicalDiT/BetaSchedule.cpp
+    src/ClassicalDiT/GaussianDiffusion.cpp
+    src/ClassicalDiT/Diffusion_model.cpp
+    src/ClassicalDiT/Diffusion_Sample.cpp
+    src/ClassicalDiT/NN/EpsilonPredictor.cpp
+    src/ClassicalDiT/NN/NeuralNetwork.cpp
+    src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp
+    src/ClassicalDiT/NN/Layers/Flatten.cpp
+    src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp
+    src/ClassicalDiT/NN/Layers/PoolingLayer.cpp
+    src/ClassicalDiT/NN/Layers/ReluLayer.cpp
+    src/DataProcessing/models/sampleData.cpp
+)
+target_link_libraries(main_program PRIVATE
+    OpenMP::OpenMP_CXX
+    ${Python3_LIBRARIES}
+    icuuc
+    icui18n
+)
+target_include_directories(main_program PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${Python3_INCLUDE_DIRS}
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/Compression
+    $ENV{HOME}/icu-install/include
+)
 add_library(Quantum_encoder SHARED
     src/Quantum_encoder/converttoqubit/AngleEncoder.cpp
     src/Quantum_encoder/converttoqubit/HybridEncoder.cpp
     src/Quantum_encoder/Model_Circuit/model_circuit.cpp
+    src/Quantum_encoder/Hamiltonian/time_H.cpp
 )
 target_include_directories(Quantum_encoder PRIVATE
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder

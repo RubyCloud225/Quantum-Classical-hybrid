@@ -9,21 +9,21 @@ EpsilonPredictor::EpsilonPredictor(int input_channels, int output_size) {
 std::vector<int> EpsilonPredictor::predictEpsilon(const std::vector<double>& x_t, int t) {
     // Create a new NeuralNetwork instance per call to ensure thread safety
     NeuralNetwork nn;
-    nn.addConvolutionalLayer(1, 64, 3, 1); // conv layer, input_channels=1
+    nn.addConvolutionalLayer(1, 64, 1, 1); // conv layer, input_channels=1, kernel_size=1
     nn.addReluLayer(); // Activation
 
     // Calculate output size after first conv layer
-    int conv1_output_size = x_t.size() - 3 + 1; // input_size - kernel_size + 1 (stride=1)
+    int conv1_output_size = x_t.size(); // input_size - kernel_size + 1 (stride=1, kernel=1)
     int pool1_input_height = conv1_output_size;
     int pool1_input_width = conv1_output_size;
 
     nn.addPoolingLayer(pool1_input_height, pool1_input_width, 2, 2, 0); // pooling layer using max pooling
 
-    nn.addConvolutionalLayer(64, 128, 3, 1); // second conv layer
+    nn.addConvolutionalLayer(64, 128, 1, 1); // second conv layer, kernel_size=1
     nn.addReluLayer(); // activation
 
     // Calculate output size after second conv layer
-    int conv2_output_size = pool1_input_height / 2 - 3 + 1; // after pooling and conv2
+    int conv2_output_size = pool1_input_height / 2; // after pooling and conv2 (kernel=1)
     int pool2_input_height = conv2_output_size;
     int pool2_input_width = conv2_output_size;
 
@@ -88,4 +88,4 @@ std::vector<int> EpsilonPredictor::predictEpsilon(const std::vector<double>& x_t
         }
     }
     return result;
-}
+};

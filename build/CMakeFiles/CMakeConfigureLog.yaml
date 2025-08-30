@@ -17,7 +17,7 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /usr/bin/c++ 
+      Compiler: /usr/bin/clang++ 
       Build flags: 
       Id flags:  
       
@@ -39,13 +39,13 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi"
-      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi"
+      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libomp/lib"
       CMAKE_OSX_ARCHITECTURES: ""
       CMAKE_OSX_DEPLOYMENT_TARGET: ""
       CMAKE_OSX_SYSROOT: ""
@@ -53,19 +53,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi'
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2f21c/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2f21c.dir/build.make CMakeFiles/cmTC_2f21c.dir/build
-        Building CXX object CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6e481/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6e481.dir/build.make CMakeFiles/cmTC_6e481.dir/build
+        Building CXX object CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/clang++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks"
@@ -79,13 +79,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_2f21c
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f21c.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_6e481
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e481.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin24.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_2f21c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_6e481 -L/opt/homebrew/opt/libomp/lib -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -93,12 +93,13 @@ events:
         LTO support using: LLVM version 17.0.0 (static support for 29, runtime is 29)
         TAPI support using: Apple TAPI version 17.0.0 (tapi-1700.0.3.5)
         Library search paths:
+        	/opt/homebrew/opt/libomp/lib
         	/usr/local/lib
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2f21c
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/libomp/lib -v -Wl,-v CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_6e481
         
       exitCode: 0
   -
@@ -144,19 +145,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi']
+        ignore line: [Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2f21c/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2f21c.dir/build.make CMakeFiles/cmTC_2f21c.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6e481/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6e481.dir/build.make CMakeFiles/cmTC_6e481.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/clang++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-F3QJbi -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-W0dTi2 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin24.6.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks"]
@@ -170,13 +171,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_2f21c]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f21c.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_6e481]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e481.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin24.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_2f21c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.0.0 15.5 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_6e481 -L/opt/homebrew/opt/libomp/lib -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -193,28 +194,31 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_2f21c] ==> ignore
+          arg [cmTC_6e481] ==> ignore
+          arg [-L/opt/homebrew/opt/libomp/lib] ==> dir [/opt/homebrew/opt/libomp/lib]
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_2f21c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_6e481.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
         linker tool for 'CXX': /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
-        Library search paths: [;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        Library search paths: [;/opt/homebrew/opt/libomp/lib;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
         Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
         remove lib [System]
         remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/opt/homebrew/opt/libomp/lib] ==> [/opt/homebrew/opt/libomp/lib]
         collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+        collapse library dir [/opt/homebrew/opt/libomp/lib] ==> [/opt/homebrew/opt/libomp/lib]
         collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
         collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib]
         collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
         collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
         implicit libs: [c++]
         implicit objs: []
-        implicit dirs: [/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
+        implicit dirs: [/opt/homebrew/opt/libomp/lib;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift]
         implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks]
       
       
@@ -241,12 +245,12 @@ events:
       - "CMakeLists.txt:18 (find_package)"
     description: "Detecting CXX OpenMP compiler info"
     directories:
-      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-J6Kkkb"
-      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-J6Kkkb"
+      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KqHOFU"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KqHOFU"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libomp/lib"
       CMAKE_OSX_ARCHITECTURES: ""
       CMAKE_OSX_DEPLOYMENT_TARGET: ""
       CMAKE_OSX_SYSROOT: ""
@@ -254,18 +258,18 @@ events:
       variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-J6Kkkb'
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KqHOFU'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_80ebf/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_80ebf.dir/build.make CMakeFiles/cmTC_80ebf.dir/build
-        Building CXX object CMakeFiles/cmTC_80ebf.dir/OpenMPTryFlag.cpp.o
-        /usr/bin/c++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_80ebf.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_80ebf.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_80ebf.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-J6Kkkb/OpenMPTryFlag.cpp
-        /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-J6Kkkb/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e2c3a/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e2c3a.dir/build.make CMakeFiles/cmTC_e2c3a.dir/build
+        Building CXX object CMakeFiles/cmTC_e2c3a.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/clang++   -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_e2c3a.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e2c3a.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e2c3a.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KqHOFU/OpenMPTryFlag.cpp
+        /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-KqHOFU/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
             2 | #include <omp.h>
               |          ^~~~~~~
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_80ebf.dir/OpenMPTryFlag.cpp.o] Error 1
-        make: *** [cmTC_80ebf/fast] Error 2
+        make[1]: *** [CMakeFiles/cmTC_e2c3a.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_e2c3a/fast] Error 2
         
       exitCode: 2
   -
@@ -276,12 +280,12 @@ events:
       - "CMakeLists.txt:18 (find_package)"
     description: "Trying CXX OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib'"
     directories:
-      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-5TvoNL"
-      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-5TvoNL"
+      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-n5LLka"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-n5LLka"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libomp/lib"
       CMAKE_OSX_ARCHITECTURES: ""
       CMAKE_OSX_DEPLOYMENT_TARGET: ""
       CMAKE_OSX_SYSROOT: ""
@@ -289,18 +293,18 @@ events:
       variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-5TvoNL'
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-n5LLka'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a34d6/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a34d6.dir/build.make CMakeFiles/cmTC_a34d6.dir/build
-        Building CXX object CMakeFiles/cmTC_a34d6.dir/OpenMPTryFlag.cpp.o
-        /usr/bin/c++   -std=gnu++17 -arch arm64   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_a34d6.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_a34d6.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_a34d6.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-5TvoNL/OpenMPTryFlag.cpp
-        /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-5TvoNL/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_081c6/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_081c6.dir/build.make CMakeFiles/cmTC_081c6.dir/build
+        Building CXX object CMakeFiles/cmTC_081c6.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/clang++   -std=gnu++17 -arch arm64   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_081c6.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_081c6.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_081c6.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-n5LLka/OpenMPTryFlag.cpp
+        /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-n5LLka/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
             2 | #include <omp.h>
               |          ^~~~~~~
         1 error generated.
-        make[1]: *** [CMakeFiles/cmTC_a34d6.dir/OpenMPTryFlag.cpp.o] Error 1
-        make: *** [cmTC_a34d6/fast] Error 2
+        make[1]: *** [CMakeFiles/cmTC_081c6.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_081c6/fast] Error 2
         
       exitCode: 2
   -
@@ -311,12 +315,12 @@ events:
       - "CMakeLists.txt:18 (find_package)"
     description: "Trying CXX OpenMP compiler with '/opt/homebrew/opt/libomp/lib/libomp.dylib' and '/opt/homebrew/opt/libomp/include'"
     directories:
-      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lsOdiX"
-      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lsOdiX"
+      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-3JzJz9"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-3JzJz9"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libomp/lib"
       CMAKE_OSX_ARCHITECTURES: ""
       CMAKE_OSX_DEPLOYMENT_TARGET: ""
       CMAKE_OSX_SYSROOT: ""
@@ -324,15 +328,15 @@ events:
       variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
       cached: true
       stdout: |
-        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lsOdiX'
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-3JzJz9'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c639b/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c639b.dir/build.make CMakeFiles/cmTC_c639b.dir/build
-        Building CXX object CMakeFiles/cmTC_c639b.dir/OpenMPTryFlag.cpp.o
-        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -std=gnu++17 -arch arm64   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_c639b.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_c639b.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_c639b.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-lsOdiX/OpenMPTryFlag.cpp
-        Linking CXX executable cmTC_c639b
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c639b.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c639b.dir/OpenMPTryFlag.cpp.o -o cmTC_c639b  /opt/homebrew/opt/libomp/lib/libomp.dylib
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d85c8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_d85c8.dir/build.make CMakeFiles/cmTC_d85c8.dir/build
+        Building CXX object CMakeFiles/cmTC_d85c8.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/clang++  -I/opt/homebrew/opt/libomp/include -std=gnu++17 -arch arm64   -Xclang -fopenmp -MD -MT CMakeFiles/cmTC_d85c8.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_d85c8.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_d85c8.dir/OpenMPTryFlag.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-3JzJz9/OpenMPTryFlag.cpp
+        Linking CXX executable cmTC_d85c8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d85c8.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/libomp/lib  CMakeFiles/cmTC_d85c8.dir/OpenMPTryFlag.cpp.o -o cmTC_d85c8  /opt/homebrew/opt/libomp/lib/libomp.dylib
         
       exitCode: 0
   -
@@ -343,12 +347,12 @@ events:
       - "CMakeLists.txt:18 (find_package)"
     description: "Detecting CXX OpenMP version"
     directories:
-      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-ZsS80a"
-      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-ZsS80a"
+      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-9sfVpp"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-9sfVpp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libomp/lib"
       CMAKE_OSX_ARCHITECTURES: ""
       CMAKE_OSX_DEPLOYMENT_TARGET: ""
       CMAKE_OSX_SYSROOT: ""
@@ -356,15 +360,15 @@ events:
       variable: "OpenMP_SPECTEST_CXX_"
       cached: true
       stdout: |
-        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-ZsS80a'
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-9sfVpp'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6af55/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6af55.dir/build.make CMakeFiles/cmTC_6af55.dir/build
-        Building CXX object CMakeFiles/cmTC_6af55.dir/OpenMPCheckVersion.cpp.o
-        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_6af55.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_6af55.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_6af55.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-ZsS80a/OpenMPCheckVersion.cpp
-        Linking CXX executable cmTC_6af55
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6af55.dir/link.txt --verbose=1
-        /usr/bin/c++  -Xclang -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6af55.dir/OpenMPCheckVersion.cpp.o -o cmTC_6af55
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_80158/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_80158.dir/build.make CMakeFiles/cmTC_80158.dir/build
+        Building CXX object CMakeFiles/cmTC_80158.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/clang++  -I/opt/homebrew/opt/libomp/include -Xclang -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_80158.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_80158.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_80158.dir/OpenMPCheckVersion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-9sfVpp/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_80158
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80158.dir/link.txt --verbose=1
+        /usr/bin/clang++  -Xclang -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/libomp/lib  CMakeFiles/cmTC_80158.dir/OpenMPCheckVersion.cpp.o -o cmTC_80158
         
       exitCode: 0
   -
@@ -381,12 +385,12 @@ events:
     checks:
       - "Performing Test HAS_FLTO_THIN"
     directories:
-      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-JVdQ5o"
-      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-JVdQ5o"
+      source: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-XNgkz8"
+      binary: "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-XNgkz8"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: "-L/opt/homebrew/opt/libomp/lib"
       CMAKE_OSX_ARCHITECTURES: "arm64"
       CMAKE_OSX_DEPLOYMENT_TARGET: ""
       CMAKE_OSX_SYSROOT: ""
@@ -394,15 +398,15 @@ events:
       variable: "HAS_FLTO_THIN"
       cached: true
       stdout: |
-        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-JVdQ5o'
+        Change Dir: '/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-XNgkz8'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_96f58/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_96f58.dir/build.make CMakeFiles/cmTC_96f58.dir/build
-        Building CXX object CMakeFiles/cmTC_96f58.dir/src.cxx.o
-        /usr/bin/c++ -DHAS_FLTO_THIN  -std=gnu++17 -arch arm64   -flto -MD -MT CMakeFiles/cmTC_96f58.dir/src.cxx.o -MF CMakeFiles/cmTC_96f58.dir/src.cxx.o.d -o CMakeFiles/cmTC_96f58.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-JVdQ5o/src.cxx
-        Linking CXX executable cmTC_96f58
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96f58.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_96f58.dir/src.cxx.o -o cmTC_96f58  -flto
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9b641/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_9b641.dir/build.make CMakeFiles/cmTC_9b641.dir/build
+        Building CXX object CMakeFiles/cmTC_9b641.dir/src.cxx.o
+        /usr/bin/clang++ -DHAS_FLTO_THIN  -std=gnu++17 -arch arm64   -flto -MD -MT CMakeFiles/cmTC_9b641.dir/src.cxx.o -MF CMakeFiles/cmTC_9b641.dir/src.cxx.o.d -o CMakeFiles/cmTC_9b641.dir/src.cxx.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles/CMakeScratch/TryCompile-XNgkz8/src.cxx
+        Linking CXX executable cmTC_9b641
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b641.dir/link.txt --verbose=1
+        /usr/bin/clang++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/libomp/lib  CMakeFiles/cmTC_9b641.dir/src.cxx.o -o cmTC_9b641  -flto
         
       exitCode: 0
 ...

@@ -27,6 +27,18 @@ int main() {
     DiffusionModel diffusion_model(input_size, outsize_size); // Example input and output sizes
     // Example data for the forward process
     std::vector<SampleData> loadedSamples = loadSamples("path/to/sample_data.bin");
+    if (loadedSamples.empty()) {
+        std::cout << "No samples loaded, creating dummy sample data." << std::endl;
+        SampleData dummy;
+        dummy.token_embedding = {0.1, 0.2, 0.3};
+        dummy.normalized_noise = {0.01, 0.02, 0.03};
+        dummy.noise = {0.001, 0.002, 0.003};
+        dummy.target_value = 1.0;
+        dummy.density = 0.5;
+        dummy.nll = 0.1;
+        dummy.entopy = 0.05;
+        loadedSamples.push_back(dummy);
+    }
     // log to verify
     for (int i = 0; i < 3 && i < loadedSamples.size(); ++i) {
         const auto& s = loadedSamples[i];
@@ -52,8 +64,13 @@ int main() {
         std::vector<double> nll_losses_epoch;
         std::vector<double> entropy_losses;
         //update beta for the current epoch
-        double current_beta = beta_schedule.update(nll_losses_epoch, entropy_losses, epoch);
-        std::cout << "Epoch: " << epoch << ", Current Beta: " << current_beta << std::endl;
+        if (epoch >= 0 && epoch < total_epochs) {
+            double current_beta = beta_schedule.update(nll_losses_epoch, entropy_losses, epoch);
+            std::cout << "Epoch: " << epoch << ", Current Beta: " << current_beta << std::endl;
+        } else {
+            std::cerr << "Epoch out of range: " << epoch << std::endl;
+            break;
+        }
         // Update parameters using Adam optimizer
         std::vector<double> params = {0.1, 0.2, 0.3}; // Example parameters
         std::vector<double> gradients = {0.01, 0.02, 0.03}; // Example gradients
@@ -103,7 +120,17 @@ int main() {
         model_kwags["dummy_param1"] = 1.0;
         model_kwags["dummy_param2"] = 2.0;
         model_kwags["dummy_param3"] = 3.0;
-        auto progressive_sample = sampler.p_sample_loop_progressive(shape, clip_denoised, nullptr, model_kwags, "cpu");
+        
+        // Create a simple denoised function
+        auto denoised_fn = [](const std::vector<double>& x) -> std::vector<double> {
+            std::vector<double> result = x;
+            for (auto& val : result) {
+                val = val * 0.9; // Simple denoising operation
+            }
+            return result;
+        };
+        
+        auto progressive_sample = sampler.p_sample_loop_progressive(shape, clip_denoised, denoised_fn, model_kwags, "cpu");
         int step = 0;
         for (const auto& sample : progressive_sample) {
             std::cout << "Step: " << step << ", Sample: ";

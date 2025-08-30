@@ -1,0 +1,168 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "quantum_classical_hybrid",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "BetaSchedule_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BetaSchedule_tests-Debug-ad8e1ef62eb9b780076f.json",
+					"name" : "BetaSchedule_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Diffusion_model_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Diffusion_model_test-Debug-2fc6915c6f66b10c89a1.json",
+					"name" : "Diffusion_model_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Diffusion_sample_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Diffusion_sample_test-Debug-e19cc4726b1b0f6ca061.json",
+					"name" : "Diffusion_sample_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GaussianDiffusionTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GaussianDiffusionTest-Debug-a68c3603464c27ad1b0a.json",
+					"name" : "GaussianDiffusionTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Gaussian_Diffusion_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Gaussian_Diffusion_test-Debug-6c3cfe151ed1a9142f0e.json",
+					"name" : "Gaussian_Diffusion_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Quantum_encoder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Quantum_encoder-Debug-de9e4194f8fff43ea0c8.json",
+					"name" : "Quantum_encoder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bert_minimal_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bert_minimal_test-Debug-af7212321e4e630002df.json",
+					"name" : "bert_minimal_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bert_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bert_test-Debug-59d74fb755d1074fa699.json",
+					"name" : "bert_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "byte_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-byte_test-Debug-8b56d82dcdd0b9af4cc5.json",
+					"name" : "byte_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main_program::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main_program-Debug-2cba79ffa898e1b4dcd9.json",
+					"name" : "main_program",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "prepend_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-prepend_test-Debug-552984c386f5a908718d.json",
+					"name" : "prepend_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "quantum_classical_hybrid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-quantum_classical_hybrid-Debug-b39f48cc22bf3b96e36d.json",
+					"name" : "quantum_classical_hybrid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "replace_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-replace_test-Debug-6ff8361f8856418d9f11.json",
+					"name" : "replace_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build",
+		"source" : "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

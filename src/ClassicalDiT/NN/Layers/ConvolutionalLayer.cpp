@@ -70,7 +70,7 @@ std::vector<std::vector<std::vector<double>>> ConvolutionalLayer::forwardPass(co
                                 std::cout << "kernels_ size: " << kernels_.size() << " x " << kernels_[0].size() << " x " << kernels_[0][0].size() << std::endl;
                                 std::cout << "Accessing kernels_[" << oc << "][" << ic << "][" << ki * kernel_size_ + kj << "]" << std::endl;
 
-                                double input_value = input[input_row][input_col][ic];
+                                double input_value = input[ic][input_row][input_col];
                                 int kernel_index = ki * kernel_size_ + kj;
                                 double kernel_weight = kernels_[oc][ic][kernel_index];
                                 sum += input_value * kernel_weight;

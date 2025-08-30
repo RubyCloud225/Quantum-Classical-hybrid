@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o"
+  "CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o.d"
   "CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o"
   "CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o.d"
   "CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o"

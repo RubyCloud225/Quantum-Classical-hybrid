@@ -283,4 +283,5 @@ CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o: \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/cassert \
  /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/assert.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/stdlib.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_assert.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_static_assert.h

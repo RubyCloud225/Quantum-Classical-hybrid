@@ -184,6 +184,7 @@ CMakeFiles/byte_test.dir/src/DataProcessing/normaliser/tests/byte_test.cpp.o: \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/cassert \
  /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/assert.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/stdlib.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_assert.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX15.sdk/usr/include/_static_assert.h \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/iostream \
  /opt/homebrew/Cellar/gcc/15.1.0/include/c++/15/ostream \

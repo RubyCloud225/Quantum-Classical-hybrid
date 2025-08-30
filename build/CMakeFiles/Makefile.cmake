@@ -76,5 +76,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/prepend_test.dir/DependInfo.cmake"
   "CMakeFiles/replace_test.dir/DependInfo.cmake"
   "CMakeFiles/GaussianDiffusionTest.dir/DependInfo.cmake"
+  "CMakeFiles/main_program.dir/DependInfo.cmake"
   "CMakeFiles/Quantum_encoder.dir/DependInfo.cmake"
   )

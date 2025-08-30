@@ -260,6 +260,19 @@ GaussianDiffusionTest/fast:
 .PHONY : GaussianDiffusionTest/fast
 
 #=============================================================================
+# Target rules for targets named main_program
+
+# Build rule for target.
+main_program: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main_program
+.PHONY : main_program
+
+# fast build rule for target.
+main_program/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/build
+.PHONY : main_program/fast
+
+#=============================================================================
 # Target rules for targets named Quantum_encoder
 
 # Build rule for target.
@@ -281,6 +294,7 @@ src/ClassicalDiT/BetaSchedule.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/BetaSchedule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/BetaSchedule.cpp.o
 .PHONY : src/ClassicalDiT/BetaSchedule.cpp.o
 
 src/ClassicalDiT/BetaSchedule.i: src/ClassicalDiT/BetaSchedule.cpp.i
@@ -292,6 +306,7 @@ src/ClassicalDiT/BetaSchedule.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/BetaSchedule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/BetaSchedule.cpp.i
 .PHONY : src/ClassicalDiT/BetaSchedule.cpp.i
 
 src/ClassicalDiT/BetaSchedule.s: src/ClassicalDiT/BetaSchedule.cpp.s
@@ -303,6 +318,7 @@ src/ClassicalDiT/BetaSchedule.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/BetaSchedule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/BetaSchedule.cpp.s
 .PHONY : src/ClassicalDiT/BetaSchedule.cpp.s
 
 src/ClassicalDiT/Diffusion_Sample.o: src/ClassicalDiT/Diffusion_Sample.cpp.o
@@ -314,6 +330,7 @@ src/ClassicalDiT/Diffusion_Sample.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
 .PHONY : src/ClassicalDiT/Diffusion_Sample.cpp.o
 
 src/ClassicalDiT/Diffusion_Sample.i: src/ClassicalDiT/Diffusion_Sample.cpp.i
@@ -325,6 +342,7 @@ src/ClassicalDiT/Diffusion_Sample.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
 .PHONY : src/ClassicalDiT/Diffusion_Sample.cpp.i
 
 src/ClassicalDiT/Diffusion_Sample.s: src/ClassicalDiT/Diffusion_Sample.cpp.s
@@ -336,6 +354,7 @@ src/ClassicalDiT/Diffusion_Sample.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
 .PHONY : src/ClassicalDiT/Diffusion_Sample.cpp.s
 
 src/ClassicalDiT/Diffusion_model.o: src/ClassicalDiT/Diffusion_model.cpp.o
@@ -347,6 +366,7 @@ src/ClassicalDiT/Diffusion_model.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_model.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/Diffusion_model.cpp.o
 .PHONY : src/ClassicalDiT/Diffusion_model.cpp.o
 
 src/ClassicalDiT/Diffusion_model.i: src/ClassicalDiT/Diffusion_model.cpp.i
@@ -358,6 +378,7 @@ src/ClassicalDiT/Diffusion_model.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/Diffusion_model.cpp.i
 .PHONY : src/ClassicalDiT/Diffusion_model.cpp.i
 
 src/ClassicalDiT/Diffusion_model.s: src/ClassicalDiT/Diffusion_model.cpp.s
@@ -369,6 +390,7 @@ src/ClassicalDiT/Diffusion_model.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/Diffusion_model.cpp.s
 .PHONY : src/ClassicalDiT/Diffusion_model.cpp.s
 
 src/ClassicalDiT/GaussianDiffusion.o: src/ClassicalDiT/GaussianDiffusion.cpp.o
@@ -381,6 +403,7 @@ src/ClassicalDiT/GaussianDiffusion.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o
 .PHONY : src/ClassicalDiT/GaussianDiffusion.cpp.o
 
 src/ClassicalDiT/GaussianDiffusion.i: src/ClassicalDiT/GaussianDiffusion.cpp.i
@@ -393,6 +416,7 @@ src/ClassicalDiT/GaussianDiffusion.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
 .PHONY : src/ClassicalDiT/GaussianDiffusion.cpp.i
 
 src/ClassicalDiT/GaussianDiffusion.s: src/ClassicalDiT/GaussianDiffusion.cpp.s
@@ -405,6 +429,7 @@ src/ClassicalDiT/GaussianDiffusion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
 .PHONY : src/ClassicalDiT/GaussianDiffusion.cpp.s
 
 src/ClassicalDiT/NN/EpsilonPredictor.o: src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
@@ -417,6 +442,7 @@ src/ClassicalDiT/NN/EpsilonPredictor.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
 .PHONY : src/ClassicalDiT/NN/EpsilonPredictor.cpp.o
 
 src/ClassicalDiT/NN/EpsilonPredictor.i: src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
@@ -429,6 +455,7 @@ src/ClassicalDiT/NN/EpsilonPredictor.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
 .PHONY : src/ClassicalDiT/NN/EpsilonPredictor.cpp.i
 
 src/ClassicalDiT/NN/EpsilonPredictor.s: src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
@@ -441,6 +468,7 @@ src/ClassicalDiT/NN/EpsilonPredictor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
 .PHONY : src/ClassicalDiT/NN/EpsilonPredictor.cpp.s
 
 src/ClassicalDiT/NN/Layers/ConvolutionalLayer.o: src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
@@ -453,6 +481,7 @@ src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
 .PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.o
 
 src/ClassicalDiT/NN/Layers/ConvolutionalLayer.i: src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
@@ -465,6 +494,7 @@ src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
 .PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.i
 
 src/ClassicalDiT/NN/Layers/ConvolutionalLayer.s: src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
@@ -477,6 +507,7 @@ src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
 .PHONY : src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp.s
 
 src/ClassicalDiT/NN/Layers/Flatten.o: src/ClassicalDiT/NN/Layers/Flatten.cpp.o
@@ -489,6 +520,7 @@ src/ClassicalDiT/NN/Layers/Flatten.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.o
 .PHONY : src/ClassicalDiT/NN/Layers/Flatten.cpp.o
 
 src/ClassicalDiT/NN/Layers/Flatten.i: src/ClassicalDiT/NN/Layers/Flatten.cpp.i
@@ -501,6 +533,7 @@ src/ClassicalDiT/NN/Layers/Flatten.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.i
 .PHONY : src/ClassicalDiT/NN/Layers/Flatten.cpp.i
 
 src/ClassicalDiT/NN/Layers/Flatten.s: src/ClassicalDiT/NN/Layers/Flatten.cpp.s
@@ -513,6 +546,7 @@ src/ClassicalDiT/NN/Layers/Flatten.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/Flatten.cpp.s
 .PHONY : src/ClassicalDiT/NN/Layers/Flatten.cpp.s
 
 src/ClassicalDiT/NN/Layers/FullyConnectedLayer.o: src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
@@ -525,6 +559,7 @@ src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
 .PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.o
 
 src/ClassicalDiT/NN/Layers/FullyConnectedLayer.i: src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
@@ -537,6 +572,7 @@ src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
 .PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.i
 
 src/ClassicalDiT/NN/Layers/FullyConnectedLayer.s: src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
@@ -549,6 +585,7 @@ src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
 .PHONY : src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp.s
 
 src/ClassicalDiT/NN/Layers/PoolingLayer.o: src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
@@ -561,6 +598,7 @@ src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
 .PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.o
 
 src/ClassicalDiT/NN/Layers/PoolingLayer.i: src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
@@ -573,6 +611,7 @@ src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
 .PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.i
 
 src/ClassicalDiT/NN/Layers/PoolingLayer.s: src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
@@ -585,6 +624,7 @@ src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
 .PHONY : src/ClassicalDiT/NN/Layers/PoolingLayer.cpp.s
 
 src/ClassicalDiT/NN/Layers/ReluLayer.o: src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
@@ -597,6 +637,7 @@ src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
 .PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.cpp.o
 
 src/ClassicalDiT/NN/Layers/ReluLayer.i: src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
@@ -609,6 +650,7 @@ src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
 .PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.cpp.i
 
 src/ClassicalDiT/NN/Layers/ReluLayer.s: src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
@@ -621,6 +663,7 @@ src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
 .PHONY : src/ClassicalDiT/NN/Layers/ReluLayer.cpp.s
 
 src/ClassicalDiT/NN/NeuralNetwork.o: src/ClassicalDiT/NN/NeuralNetwork.cpp.o
@@ -633,6 +676,7 @@ src/ClassicalDiT/NN/NeuralNetwork.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.o
 .PHONY : src/ClassicalDiT/NN/NeuralNetwork.cpp.o
 
 src/ClassicalDiT/NN/NeuralNetwork.i: src/ClassicalDiT/NN/NeuralNetwork.cpp.i
@@ -645,6 +689,7 @@ src/ClassicalDiT/NN/NeuralNetwork.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.i
 .PHONY : src/ClassicalDiT/NN/NeuralNetwork.cpp.i
 
 src/ClassicalDiT/NN/NeuralNetwork.s: src/ClassicalDiT/NN/NeuralNetwork.cpp.s
@@ -657,6 +702,7 @@ src/ClassicalDiT/NN/NeuralNetwork.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/NN/NeuralNetwork.cpp.s
 .PHONY : src/ClassicalDiT/NN/NeuralNetwork.cpp.s
 
 src/ClassicalDiT/NormalDist.o: src/ClassicalDiT/NormalDist.cpp.o
@@ -691,6 +737,30 @@ src/ClassicalDiT/NormalDist.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/ClassicalDiT/NormalDist.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/ClassicalDiT/NormalDist.cpp.s
 .PHONY : src/ClassicalDiT/NormalDist.cpp.s
+
+src/ClassicalDiT/main.o: src/ClassicalDiT/main.cpp.o
+.PHONY : src/ClassicalDiT/main.o
+
+# target to build an object file
+src/ClassicalDiT/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/main.cpp.o
+.PHONY : src/ClassicalDiT/main.cpp.o
+
+src/ClassicalDiT/main.i: src/ClassicalDiT/main.cpp.i
+.PHONY : src/ClassicalDiT/main.i
+
+# target to preprocess a source file
+src/ClassicalDiT/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/main.cpp.i
+.PHONY : src/ClassicalDiT/main.cpp.i
+
+src/ClassicalDiT/main.s: src/ClassicalDiT/main.cpp.s
+.PHONY : src/ClassicalDiT/main.s
+
+# target to generate assembly for a file
+src/ClassicalDiT/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/ClassicalDiT/main.cpp.s
+.PHONY : src/ClassicalDiT/main.cpp.s
 
 src/ClassicalDiT/tests/BetaSchedule_tests.o: src/ClassicalDiT/tests/BetaSchedule_tests.cpp.o
 .PHONY : src/ClassicalDiT/tests/BetaSchedule_tests.o
@@ -909,6 +979,7 @@ src/DataProcessing/models/sampleData.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/sampleData.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/sampleData.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/DataProcessing/models/sampleData.cpp.o
 .PHONY : src/DataProcessing/models/sampleData.cpp.o
 
 src/DataProcessing/models/sampleData.i: src/DataProcessing/models/sampleData.cpp.i
@@ -921,6 +992,7 @@ src/DataProcessing/models/sampleData.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/sampleData.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/sampleData.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/DataProcessing/models/sampleData.cpp.i
 .PHONY : src/DataProcessing/models/sampleData.cpp.i
 
 src/DataProcessing/models/sampleData.s: src/DataProcessing/models/sampleData.cpp.s
@@ -933,6 +1005,7 @@ src/DataProcessing/models/sampleData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/src/DataProcessing/models/sampleData.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/src/DataProcessing/models/sampleData.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/src/DataProcessing/models/sampleData.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/src/DataProcessing/models/sampleData.cpp.s
 .PHONY : src/DataProcessing/models/sampleData.cpp.s
 
 src/DataProcessing/normaliser/bert.o: src/DataProcessing/normaliser/bert.cpp.o
@@ -1415,6 +1488,30 @@ src/DataProcessing/tokenizer/tokenizer_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/tokenizer/tokenizer_test.cpp.s
 .PHONY : src/DataProcessing/tokenizer/tokenizer_test.cpp.s
 
+src/Quantum_encoder/Hamiltonian/time_H.o: src/Quantum_encoder/Hamiltonian/time_H.cpp.o
+.PHONY : src/Quantum_encoder/Hamiltonian/time_H.o
+
+# target to build an object file
+src/Quantum_encoder/Hamiltonian/time_H.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o
+.PHONY : src/Quantum_encoder/Hamiltonian/time_H.cpp.o
+
+src/Quantum_encoder/Hamiltonian/time_H.i: src/Quantum_encoder/Hamiltonian/time_H.cpp.i
+.PHONY : src/Quantum_encoder/Hamiltonian/time_H.i
+
+# target to preprocess a source file
+src/Quantum_encoder/Hamiltonian/time_H.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.i
+.PHONY : src/Quantum_encoder/Hamiltonian/time_H.cpp.i
+
+src/Quantum_encoder/Hamiltonian/time_H.s: src/Quantum_encoder/Hamiltonian/time_H.cpp.s
+.PHONY : src/Quantum_encoder/Hamiltonian/time_H.s
+
+# target to generate assembly for a file
+src/Quantum_encoder/Hamiltonian/time_H.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.s
+.PHONY : src/Quantum_encoder/Hamiltonian/time_H.cpp.s
+
 src/Quantum_encoder/Model_Circuit/model_circuit.o: src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o
 .PHONY : src/Quantum_encoder/Model_Circuit/model_circuit.o
 
@@ -1504,6 +1601,7 @@ help:
 	@echo "... bert_minimal_test"
 	@echo "... bert_test"
 	@echo "... byte_test"
+	@echo "... main_program"
 	@echo "... prepend_test"
 	@echo "... quantum_classical_hybrid"
 	@echo "... replace_test"
@@ -1543,6 +1641,9 @@ help:
 	@echo "... src/ClassicalDiT/NormalDist.o"
 	@echo "... src/ClassicalDiT/NormalDist.i"
 	@echo "... src/ClassicalDiT/NormalDist.s"
+	@echo "... src/ClassicalDiT/main.o"
+	@echo "... src/ClassicalDiT/main.i"
+	@echo "... src/ClassicalDiT/main.s"
 	@echo "... src/ClassicalDiT/tests/BetaSchedule_tests.o"
 	@echo "... src/ClassicalDiT/tests/BetaSchedule_tests.i"
 	@echo "... src/ClassicalDiT/tests/BetaSchedule_tests.s"
@@ -1612,6 +1713,9 @@ help:
 	@echo "... src/DataProcessing/tokenizer/tokenizer_test.o"
 	@echo "... src/DataProcessing/tokenizer/tokenizer_test.i"
 	@echo "... src/DataProcessing/tokenizer/tokenizer_test.s"
+	@echo "... src/Quantum_encoder/Hamiltonian/time_H.o"
+	@echo "... src/Quantum_encoder/Hamiltonian/time_H.i"
+	@echo "... src/Quantum_encoder/Hamiltonian/time_H.s"
 	@echo "... src/Quantum_encoder/Model_Circuit/model_circuit.o"
 	@echo "... src/Quantum_encoder/Model_Circuit/model_circuit.i"
 	@echo "... src/Quantum_encoder/Model_Circuit/model_circuit.s"
