@@ -63,37 +63,15 @@ CMAKE_BINARY_DIR = /Users/catherinepemblington/Documents/GitHub/Quantum-Classica
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/utils.dir/all
-all: CMakeFiles/quantum_classical_hybrid.dir/all
-all: CMakeFiles/BetaSchedule_tests.dir/all
-all: CMakeFiles/Diffusion_model_test.dir/all
-all: CMakeFiles/Diffusion_sample_test.dir/all
-all: CMakeFiles/Gaussian_Diffusion_test.dir/all
-all: CMakeFiles/bert_minimal_test.dir/all
-all: CMakeFiles/bert_test.dir/all
-all: CMakeFiles/byte_test.dir/all
-all: CMakeFiles/prepend_test.dir/all
-all: CMakeFiles/replace_test.dir/all
-all: CMakeFiles/GaussianDiffusionTest.dir/all
-all: CMakeFiles/main_program.dir/all
+all: CMakeFiles/shared_lib.dir/all
 all: CMakeFiles/Quantum_encoder.dir/all
+all: CMakeFiles/quantum_classical_hybrid.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/utils.dir/codegen
-codegen: CMakeFiles/quantum_classical_hybrid.dir/codegen
-codegen: CMakeFiles/BetaSchedule_tests.dir/codegen
-codegen: CMakeFiles/Diffusion_model_test.dir/codegen
-codegen: CMakeFiles/Diffusion_sample_test.dir/codegen
-codegen: CMakeFiles/Gaussian_Diffusion_test.dir/codegen
-codegen: CMakeFiles/bert_minimal_test.dir/codegen
-codegen: CMakeFiles/bert_test.dir/codegen
-codegen: CMakeFiles/byte_test.dir/codegen
-codegen: CMakeFiles/prepend_test.dir/codegen
-codegen: CMakeFiles/replace_test.dir/codegen
-codegen: CMakeFiles/GaussianDiffusionTest.dir/codegen
-codegen: CMakeFiles/main_program.dir/codegen
+codegen: CMakeFiles/shared_lib.dir/codegen
 codegen: CMakeFiles/Quantum_encoder.dir/codegen
+codegen: CMakeFiles/quantum_classical_hybrid.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -101,437 +79,42 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/utils.dir/clean
-clean: CMakeFiles/quantum_classical_hybrid.dir/clean
-clean: CMakeFiles/BetaSchedule_tests.dir/clean
-clean: CMakeFiles/Diffusion_model_test.dir/clean
-clean: CMakeFiles/Diffusion_sample_test.dir/clean
-clean: CMakeFiles/Gaussian_Diffusion_test.dir/clean
-clean: CMakeFiles/bert_minimal_test.dir/clean
-clean: CMakeFiles/bert_test.dir/clean
-clean: CMakeFiles/byte_test.dir/clean
-clean: CMakeFiles/prepend_test.dir/clean
-clean: CMakeFiles/replace_test.dir/clean
-clean: CMakeFiles/GaussianDiffusionTest.dir/clean
-clean: CMakeFiles/main_program.dir/clean
+clean: CMakeFiles/shared_lib.dir/clean
 clean: CMakeFiles/Quantum_encoder.dir/clean
+clean: CMakeFiles/quantum_classical_hybrid.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/utils.dir
+# Target rules for target CMakeFiles/shared_lib.dir
 
 # All Build rule for target.
-CMakeFiles/utils.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=96,97,98,99,100 "Built target utils"
-.PHONY : CMakeFiles/utils.dir/all
+CMakeFiles/shared_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_lib.dir/build.make CMakeFiles/shared_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_lib.dir/build.make CMakeFiles/shared_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=21,22,23,24,25 "Built target shared_lib"
+.PHONY : CMakeFiles/shared_lib.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/utils.dir/rule: cmake_check_build_system
+CMakeFiles/shared_lib.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/utils.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/shared_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/utils.dir/rule
+.PHONY : CMakeFiles/shared_lib.dir/rule
 
 # Convenience name for target.
-utils: CMakeFiles/utils.dir/rule
-.PHONY : utils
+shared_lib: CMakeFiles/shared_lib.dir/rule
+.PHONY : shared_lib
 
 # codegen rule for target.
-CMakeFiles/utils.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=96,97,98,99,100 "Finished codegen for target utils"
-.PHONY : CMakeFiles/utils.dir/codegen
+CMakeFiles/shared_lib.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_lib.dir/build.make CMakeFiles/shared_lib.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=21,22,23,24,25 "Finished codegen for target shared_lib"
+.PHONY : CMakeFiles/shared_lib.dir/codegen
 
 # clean rule for target.
-CMakeFiles/utils.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/clean
-.PHONY : CMakeFiles/utils.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/quantum_classical_hybrid.dir
-
-# All Build rule for target.
-CMakeFiles/quantum_classical_hybrid.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=82,83,84,85,86,87,88,89,90 "Built target quantum_classical_hybrid"
-.PHONY : CMakeFiles/quantum_classical_hybrid.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/quantum_classical_hybrid.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 9
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/quantum_classical_hybrid.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/quantum_classical_hybrid.dir/rule
-
-# Convenience name for target.
-quantum_classical_hybrid: CMakeFiles/quantum_classical_hybrid.dir/rule
-.PHONY : quantum_classical_hybrid
-
-# codegen rule for target.
-CMakeFiles/quantum_classical_hybrid.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=82,83,84,85,86,87,88,89,90 "Finished codegen for target quantum_classical_hybrid"
-.PHONY : CMakeFiles/quantum_classical_hybrid.dir/codegen
-
-# clean rule for target.
-CMakeFiles/quantum_classical_hybrid.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/clean
-.PHONY : CMakeFiles/quantum_classical_hybrid.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/BetaSchedule_tests.dir
-
-# All Build rule for target.
-CMakeFiles/BetaSchedule_tests.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target BetaSchedule_tests"
-.PHONY : CMakeFiles/BetaSchedule_tests.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/BetaSchedule_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BetaSchedule_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/BetaSchedule_tests.dir/rule
-
-# Convenience name for target.
-BetaSchedule_tests: CMakeFiles/BetaSchedule_tests.dir/rule
-.PHONY : BetaSchedule_tests
-
-# codegen rule for target.
-CMakeFiles/BetaSchedule_tests.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Finished codegen for target BetaSchedule_tests"
-.PHONY : CMakeFiles/BetaSchedule_tests.dir/codegen
-
-# clean rule for target.
-CMakeFiles/BetaSchedule_tests.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BetaSchedule_tests.dir/build.make CMakeFiles/BetaSchedule_tests.dir/clean
-.PHONY : CMakeFiles/BetaSchedule_tests.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Diffusion_model_test.dir
-
-# All Build rule for target.
-CMakeFiles/Diffusion_model_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20 "Built target Diffusion_model_test"
-.PHONY : CMakeFiles/Diffusion_model_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Diffusion_model_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Diffusion_model_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/Diffusion_model_test.dir/rule
-
-# Convenience name for target.
-Diffusion_model_test: CMakeFiles/Diffusion_model_test.dir/rule
-.PHONY : Diffusion_model_test
-
-# codegen rule for target.
-CMakeFiles/Diffusion_model_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20 "Finished codegen for target Diffusion_model_test"
-.PHONY : CMakeFiles/Diffusion_model_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/Diffusion_model_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_model_test.dir/build.make CMakeFiles/Diffusion_model_test.dir/clean
-.PHONY : CMakeFiles/Diffusion_model_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Diffusion_sample_test.dir
-
-# All Build rule for target.
-CMakeFiles/Diffusion_sample_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31 "Built target Diffusion_sample_test"
-.PHONY : CMakeFiles/Diffusion_sample_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Diffusion_sample_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Diffusion_sample_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/Diffusion_sample_test.dir/rule
-
-# Convenience name for target.
-Diffusion_sample_test: CMakeFiles/Diffusion_sample_test.dir/rule
-.PHONY : Diffusion_sample_test
-
-# codegen rule for target.
-CMakeFiles/Diffusion_sample_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31 "Finished codegen for target Diffusion_sample_test"
-.PHONY : CMakeFiles/Diffusion_sample_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/Diffusion_sample_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Diffusion_sample_test.dir/build.make CMakeFiles/Diffusion_sample_test.dir/clean
-.PHONY : CMakeFiles/Diffusion_sample_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Gaussian_Diffusion_test.dir
-
-# All Build rule for target.
-CMakeFiles/Gaussian_Diffusion_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47 "Built target Gaussian_Diffusion_test"
-.PHONY : CMakeFiles/Gaussian_Diffusion_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Gaussian_Diffusion_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Gaussian_Diffusion_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/Gaussian_Diffusion_test.dir/rule
-
-# Convenience name for target.
-Gaussian_Diffusion_test: CMakeFiles/Gaussian_Diffusion_test.dir/rule
-.PHONY : Gaussian_Diffusion_test
-
-# codegen rule for target.
-CMakeFiles/Gaussian_Diffusion_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=37,38,39,40,41,42,43,44,45,46,47 "Finished codegen for target Gaussian_Diffusion_test"
-.PHONY : CMakeFiles/Gaussian_Diffusion_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/Gaussian_Diffusion_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Gaussian_Diffusion_test.dir/build.make CMakeFiles/Gaussian_Diffusion_test.dir/clean
-.PHONY : CMakeFiles/Gaussian_Diffusion_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/bert_minimal_test.dir
-
-# All Build rule for target.
-CMakeFiles/bert_minimal_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=51,52,53,54,55,56 "Built target bert_minimal_test"
-.PHONY : CMakeFiles/bert_minimal_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/bert_minimal_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bert_minimal_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/bert_minimal_test.dir/rule
-
-# Convenience name for target.
-bert_minimal_test: CMakeFiles/bert_minimal_test.dir/rule
-.PHONY : bert_minimal_test
-
-# codegen rule for target.
-CMakeFiles/bert_minimal_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=51,52,53,54,55,56 "Finished codegen for target bert_minimal_test"
-.PHONY : CMakeFiles/bert_minimal_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/bert_minimal_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_minimal_test.dir/build.make CMakeFiles/bert_minimal_test.dir/clean
-.PHONY : CMakeFiles/bert_minimal_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/bert_test.dir
-
-# All Build rule for target.
-CMakeFiles/bert_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=57,58,59,60,61 "Built target bert_test"
-.PHONY : CMakeFiles/bert_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/bert_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bert_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/bert_test.dir/rule
-
-# Convenience name for target.
-bert_test: CMakeFiles/bert_test.dir/rule
-.PHONY : bert_test
-
-# codegen rule for target.
-CMakeFiles/bert_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=57,58,59,60,61 "Finished codegen for target bert_test"
-.PHONY : CMakeFiles/bert_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/bert_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bert_test.dir/build.make CMakeFiles/bert_test.dir/clean
-.PHONY : CMakeFiles/bert_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/byte_test.dir
-
-# All Build rule for target.
-CMakeFiles/byte_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=62,63,64,65,66,67 "Built target byte_test"
-.PHONY : CMakeFiles/byte_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/byte_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/byte_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/byte_test.dir/rule
-
-# Convenience name for target.
-byte_test: CMakeFiles/byte_test.dir/rule
-.PHONY : byte_test
-
-# codegen rule for target.
-CMakeFiles/byte_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=62,63,64,65,66,67 "Finished codegen for target byte_test"
-.PHONY : CMakeFiles/byte_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/byte_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/byte_test.dir/build.make CMakeFiles/byte_test.dir/clean
-.PHONY : CMakeFiles/byte_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/prepend_test.dir
-
-# All Build rule for target.
-CMakeFiles/prepend_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=76,77,78,79,80,81 "Built target prepend_test"
-.PHONY : CMakeFiles/prepend_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/prepend_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/prepend_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/prepend_test.dir/rule
-
-# Convenience name for target.
-prepend_test: CMakeFiles/prepend_test.dir/rule
-.PHONY : prepend_test
-
-# codegen rule for target.
-CMakeFiles/prepend_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=76,77,78,79,80,81 "Finished codegen for target prepend_test"
-.PHONY : CMakeFiles/prepend_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/prepend_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prepend_test.dir/build.make CMakeFiles/prepend_test.dir/clean
-.PHONY : CMakeFiles/prepend_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/replace_test.dir
-
-# All Build rule for target.
-CMakeFiles/replace_test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=91,92,93,94,95 "Built target replace_test"
-.PHONY : CMakeFiles/replace_test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/replace_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/replace_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/replace_test.dir/rule
-
-# Convenience name for target.
-replace_test: CMakeFiles/replace_test.dir/rule
-.PHONY : replace_test
-
-# codegen rule for target.
-CMakeFiles/replace_test.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=91,92,93,94,95 "Finished codegen for target replace_test"
-.PHONY : CMakeFiles/replace_test.dir/codegen
-
-# clean rule for target.
-CMakeFiles/replace_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/replace_test.dir/build.make CMakeFiles/replace_test.dir/clean
-.PHONY : CMakeFiles/replace_test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/GaussianDiffusionTest.dir
-
-# All Build rule for target.
-CMakeFiles/GaussianDiffusionTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=32,33,34,35,36 "Built target GaussianDiffusionTest"
-.PHONY : CMakeFiles/GaussianDiffusionTest.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/GaussianDiffusionTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GaussianDiffusionTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/GaussianDiffusionTest.dir/rule
-
-# Convenience name for target.
-GaussianDiffusionTest: CMakeFiles/GaussianDiffusionTest.dir/rule
-.PHONY : GaussianDiffusionTest
-
-# codegen rule for target.
-CMakeFiles/GaussianDiffusionTest.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=32,33,34,35,36 "Finished codegen for target GaussianDiffusionTest"
-.PHONY : CMakeFiles/GaussianDiffusionTest.dir/codegen
-
-# clean rule for target.
-CMakeFiles/GaussianDiffusionTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussianDiffusionTest.dir/build.make CMakeFiles/GaussianDiffusionTest.dir/clean
-.PHONY : CMakeFiles/GaussianDiffusionTest.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/main_program.dir
-
-# All Build rule for target.
-CMakeFiles/main_program.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75 "Built target main_program"
-.PHONY : CMakeFiles/main_program.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/main_program.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main_program.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
-.PHONY : CMakeFiles/main_program.dir/rule
-
-# Convenience name for target.
-main_program: CMakeFiles/main_program.dir/rule
-.PHONY : main_program
-
-# codegen rule for target.
-CMakeFiles/main_program.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=68,69,70,71,72,73,74,75 "Finished codegen for target main_program"
-.PHONY : CMakeFiles/main_program.dir/codegen
-
-# clean rule for target.
-CMakeFiles/main_program.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_program.dir/build.make CMakeFiles/main_program.dir/clean
-.PHONY : CMakeFiles/main_program.dir/clean
+CMakeFiles/shared_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shared_lib.dir/build.make CMakeFiles/shared_lib.dir/clean
+.PHONY : CMakeFiles/shared_lib.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Quantum_encoder.dir
@@ -540,12 +123,12 @@ CMakeFiles/main_program.dir/clean:
 CMakeFiles/Quantum_encoder.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=48,49,50 "Built target Quantum_encoder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Quantum_encoder"
 .PHONY : CMakeFiles/Quantum_encoder.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Quantum_encoder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Quantum_encoder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
 .PHONY : CMakeFiles/Quantum_encoder.dir/rule
@@ -557,13 +140,45 @@ Quantum_encoder: CMakeFiles/Quantum_encoder.dir/rule
 # codegen rule for target.
 CMakeFiles/Quantum_encoder.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=48,49,50 "Finished codegen for target Quantum_encoder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target Quantum_encoder"
 .PHONY : CMakeFiles/Quantum_encoder.dir/codegen
 
 # clean rule for target.
 CMakeFiles/Quantum_encoder.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/clean
 .PHONY : CMakeFiles/Quantum_encoder.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/quantum_classical_hybrid.dir
+
+# All Build rule for target.
+CMakeFiles/quantum_classical_hybrid.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target quantum_classical_hybrid"
+.PHONY : CMakeFiles/quantum_classical_hybrid.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/quantum_classical_hybrid.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 15
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/quantum_classical_hybrid.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles 0
+.PHONY : CMakeFiles/quantum_classical_hybrid.dir/rule
+
+# Convenience name for target.
+quantum_classical_hybrid: CMakeFiles/quantum_classical_hybrid.dir/rule
+.PHONY : quantum_classical_hybrid
+
+# codegen rule for target.
+CMakeFiles/quantum_classical_hybrid.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Finished codegen for target quantum_classical_hybrid"
+.PHONY : CMakeFiles/quantum_classical_hybrid.dir/codegen
+
+# clean rule for target.
+CMakeFiles/quantum_classical_hybrid.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quantum_classical_hybrid.dir/build.make CMakeFiles/quantum_classical_hybrid.dir/clean
+.PHONY : CMakeFiles/quantum_classical_hybrid.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

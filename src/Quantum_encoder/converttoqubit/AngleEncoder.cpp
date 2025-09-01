@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 #include "utils/logger.hpp"
+#include <omp.h>
 
 AngleEncoder::AngleEncoder(const std::vector<double>& input, RotationAxis axis)
     : data(input), axis(axis) {
@@ -9,10 +10,11 @@ AngleEncoder::AngleEncoder(const std::vector<double>& input, RotationAxis axis)
 }
 
 void AngleEncoder::encode() {
-    encoded.clear();
-    for (double val : data) {
-        double theta = val * M_PI; // Scale input to [0, π]
-        encoded.push_back(RotationGate{axis, theta});
+    encoded.resize(data.size());
+    #pragma omp parallel for
+    for (size_t i = 0; i < data.size(); ++i) {
+        double theta = data[i] * M_PI; // Scale input to [0, π]
+        encoded[i] = RotationGate{axis, theta};
     }
     Logger::log("AngleEncoder encoded " + std::to_string(data.size()) + " values", LogLevel::INFO, __FILE__, __LINE__);
 }

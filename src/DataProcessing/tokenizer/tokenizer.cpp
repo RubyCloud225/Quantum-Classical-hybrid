@@ -5,20 +5,35 @@
 #include <unordered_map>
 #include <vector>
 #include <string>
+#include <omp.h>
 #include "utils/logger.hpp"
 
 std::vector<std::string> Tokenizer::tokenize(const std::string& input) {
-    // Regular expression to match delimiters (spaces, commas, semicolons, periods)
     std::regex delimiter_regex("[ ,;\\.]+");
     std::vector<std::string> tokens;
-    std::sregex_token_iterator iter(input.begin(), input.end(), delimiter_regex, -1);
-    std::sregex_token_iterator end;
-    for (; iter != end; ++iter) {
-        if (!iter->str().empty()) {
-            tokens.push_back(iter->str());
+    size_t nThreads = omp_get_max_threads();
+    std::vector<std::vector<std::string>> threadTokens(nThreads);
+
+    // Parallel processing for large input
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        std::sregex_token_iterator iter(input.begin(), input.end(), delimiter_regex, -1);
+        std::sregex_token_iterator end;
+        for (; iter != end; ++iter) {
+            if (!iter->str().empty()) {
+                threadTokens[tid].push_back(iter->str());
+            }
         }
     }
-    Logger::log("Tokenized input into " + std::to_string(tokens.size()) + " tokens", LogLevel::INFO, __FILE__, __LINE__);
+
+    for (const auto& tvec : threadTokens) {
+        tokens.insert(tokens.end(), tvec.begin(), tvec.end());
+    }
+    #pragma omp critical
+    {
+        Logger::log("Tokenized input into " + std::to_string(tokens.size()) + " tokens", LogLevel::INFO, __FILE__, __LINE__);
+    }
     return tokens;
 }
 

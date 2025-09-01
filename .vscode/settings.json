@@ -68,7 +68,11 @@
         "cinttypes": "cpp",
         "condition_variable": "cpp",
         "future": "cpp",
-        "strstream": "cpp"
+        "strstream": "cpp",
+        "csignal": "cpp",
+        "semaphore": "cpp",
+        "shared_mutex": "cpp",
+        "source_location": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "python.analysis.extraPaths": [

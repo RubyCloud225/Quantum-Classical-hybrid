@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(quantum_classical_hybrid LANGUAGES CXX)
 
-
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -16,9 +15,6 @@ if(APPLE)
 endif()
 
 find_package(OpenMP REQUIRED)
-
-
-project(quantum_classical_hybrid LANGUAGES CXX)
 
 if(APPLE)
     set(CMAKE_OSX_ARCHITECTURES arm64)
@@ -72,7 +68,7 @@ if(NOT pybind11_FOUND)
     find_package(pybind11 REQUIRED PATHS /opt/homebrew/lib/cmake/pybind11)
 endif()
 
-# Find the required libraries
+# Include directories
 include_directories(
     ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
@@ -98,50 +94,75 @@ link_directories(
     $ENV{HOME}/icu-install/lib
 )
 
+# --- Shared Libraries ---
+
+add_library(shared_lib STATIC
+    src/DataProcessing/models/sampleData.cpp
+    src/ClassicalDiT/GaussianDiffusion.cpp
+    src/ClassicalDiT/Diffusion_model.cpp
+    src/ClassicalDiT/Diffusion_Sample.cpp
+)
+target_include_directories(shared_lib PUBLIC
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+)
+target_link_libraries(shared_lib PUBLIC OpenMP::OpenMP_CXX)
+
+add_library(Quantum_encoder SHARED
+    src/Quantum_encoder/converttoqubit/AngleEncoder.cpp
+    src/Quantum_encoder/converttoqubit/HybridEncoder.cpp
+    src/Quantum_encoder/Model_Circuit/model_circuit.cpp
+    src/Quantum_encoder/Hamiltonian/time_H.cpp
+)
+target_include_directories(Quantum_encoder PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${Python3_INCLUDE_DIRS}
+)
+
+# --- Python Bindings Module ---
 
 file(GLOB_RECURSE DATAPROCESSING_SOURCES src/DataProcessing/*.cpp)
 file(GLOB_RECURSE NORMALISER_SOURCES src/DataProcessing/normaliser/*.cpp)
-file(GLOB_RECURSE UTILS_SOURCES src/utils/*.cpp)
-file(GLOB_RECURSE BINDINGS_SOURCES src/Bindings/*.cpp)
 
-set(CMAKE_OSX_ARCHITECTURES arm64)
-
-# Homebrew paths
-set(LIBOMP_ROOT "/opt/homebrew/opt/libomp")
-set(OPENSSL_ROOT "/opt/homebrew/opt/openssl@3")
-
-pybind11_add_module(utils
-    ${UTILS_SOURCES}
-    ${BINDINGS_SOURCES}
-)
-target_include_directories(utils PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/utils
-    ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${Python3_INCLUDE_DIRS}
-    ${LIBOMP_ROOT}/include
-    ${OPENSSL_ROOT}/include
-)
-target_link_libraries(utils PRIVATE
-    ${Python3_LIBRARIES}
-    ${LIBOMP_ROOT}/lib/libomp.dylib
-    ${OPENSSL_ROOT}/lib/libssl.dylib
-    ${OPENSSL_ROOT}/lib/libcrypto.dylib
-    icuuc
-    icui18n
-    curl
-)
-
-# Remove test files from Hypernetwork module sources
+# Remove test files from sources
 list(FILTER DATAPROCESSING_SOURCES EXCLUDE REGEX ".*tests/.*")
 list(FILTER NORMALISER_SOURCES EXCLUDE REGEX ".*tests/.*")
-
 
 pybind11_add_module(quantum_classical_hybrid
     ${DATAPROCESSING_SOURCES}
     ${NORMALISER_SOURCES}
 )
 
-# --- Universal function to add test executables with all required sources (multi-module version) ---
+target_link_libraries(quantum_classical_hybrid PRIVATE
+    ${Python3_LIBRARIES}
+    OpenMP::OpenMP_CXX
+    icuuc
+    icui18n
+)
+target_include_directories(quantum_classical_hybrid PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${Python3_INCLUDE_DIRS}
+    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
+    ${PROJECT_SOURCE_DIR}/src/DataProcessing
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
+    ${PROJECT_SOURCE_DIR}/src/Compression
+    $ENV{HOME}/icu-install/include
+)
+
+set_target_properties(quantum_classical_hybrid PROPERTIES
+    OUTPUT_NAME "quantum-classical-hybrid"
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
+)
+
+# --- Test Executables ---
+
 function(add_test_executable_with_sources test_dir module_dirs)
     file(GLOB_RECURSE TEST_FILES ${test_dir}/*.cpp)
     list(FILTER TEST_FILES EXCLUDE REGEX ".*/main.cpp$")
@@ -178,158 +199,52 @@ function(add_test_executable_with_sources test_dir module_dirs)
     endforeach()
 endfunction()
 
-# Update your calls to include all relevant module directories per test
-
-add_test_executable_with_sources(
-    "${PROJECT_SOURCE_DIR}/src/ClassicalDiT/tests"
-    "src/ClassicalDiT;src/DataProcessing/models"
-)
-
-add_test_executable_with_sources(
-    "${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/tests"
-    "src/DataProcessing/normaliser"
-)
-
-foreach(target IN LISTS TEST_FILES)
-    if(TARGET ${target})
-        target_include_directories(${target} PRIVATE
-            ${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser
-        )
-    endif()
-endforeach()
-
-add_test_executable_with_sources(
-    "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/tests"
-    "src/Quantum_encoder"
-)
-
-# Set the include directories for the quantum_classical_hybrid module
-target_link_libraries(quantum_classical_hybrid PRIVATE
-    ${Python3_LIBRARIES}
-    OpenMP::OpenMP_CXX
-    icuuc
-    icui18n
-)
-target_include_directories(quantum_classical_hybrid PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/utils
-    ${Python3_INCLUDE_DIRS}
-    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
-    ${PROJECT_SOURCE_DIR}/src/DataProcessing
-    ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-    ${PROJECT_SOURCE_DIR}/src/Compression
-    $ENV{HOME}/icu-install/include
-)
-# Set the output directory and output name for the compiled module
-set_target_properties(quantum_classical_hybrid PROPERTIES
-    OUTPUT_NAME "quantum-classical-hybrid"
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
-)
-
-# Add executable target for Gaussian Diffusion Test with debug flags
-add_executable(GaussianDiffusionTest 
-    src/ClassicalDiT/tests/Gaussian_Diffusion_test.cpp 
-    src/ClassicalDiT/GaussianDiffusion.cpp 
-    src/ClassicalDiT/NN/EpsilonPredictor.cpp 
-    src/ClassicalDiT/NN/NeuralNetwork.cpp 
-    src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp 
-    src/ClassicalDiT/NN/Layers/Flatten.cpp 
-    src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp 
-    src/ClassicalDiT/NN/Layers/PoolingLayer.cpp 
-    src/ClassicalDiT/NN/Layers/ReluLayer.cpp 
+if(EXISTS "${PROJECT_SOURCE_DIR}/src/ClassicalDiT/tests")
+    add_test_executable_with_sources(
+        "${PROJECT_SOURCE_DIR}/src/ClassicalDiT/tests"
+        "src/ClassicalDiT;src/DataProcessing/models"
     )
-
-# Add main program executable
-add_executable(main_program
-    src/ClassicalDiT/main.cpp
-    src/ClassicalDiT/BetaSchedule.cpp
-    src/ClassicalDiT/GaussianDiffusion.cpp
-    src/ClassicalDiT/Diffusion_model.cpp
-    src/ClassicalDiT/Diffusion_Sample.cpp
-    src/ClassicalDiT/NN/EpsilonPredictor.cpp
-    src/ClassicalDiT/NN/NeuralNetwork.cpp
-    src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp
-    src/ClassicalDiT/NN/Layers/Flatten.cpp
-    src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp
-    src/ClassicalDiT/NN/Layers/PoolingLayer.cpp
-    src/ClassicalDiT/NN/Layers/ReluLayer.cpp
-    src/DataProcessing/models/sampleData.cpp
-)
-target_link_libraries(main_program PRIVATE
-    OpenMP::OpenMP_CXX
-    ${Python3_LIBRARIES}
-    icuuc
-    icui18n
-)
-target_include_directories(main_program PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/utils
-    ${Python3_INCLUDE_DIRS}
-    ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
-    ${PROJECT_SOURCE_DIR}/src/DataProcessing
-    ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-    ${PROJECT_SOURCE_DIR}/src/Compression
-    $ENV{HOME}/icu-install/include
-)
-add_library(Quantum_encoder SHARED
-    src/Quantum_encoder/converttoqubit/AngleEncoder.cpp
-    src/Quantum_encoder/converttoqubit/HybridEncoder.cpp
-    src/Quantum_encoder/Model_Circuit/model_circuit.cpp
-    src/Quantum_encoder/Hamiltonian/time_H.cpp
-)
-target_include_directories(Quantum_encoder PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
-    ${PROJECT_SOURCE_DIR}/src/utils
-    ${Python3_INCLUDE_DIRS}
-)
-
-# Set C and C++ compilers to GCC and G++ from Homebrew
-set(CMAKE_C_COMPILER /opt/homebrew/bin/gcc-15)
-set(CMAKE_CXX_COMPILER /opt/homebrew/bin/g++-15)
-
-# Set OpenMP flags for GCC
-set(OpenMP_C_FLAGS "-fopenmp")
-set(OpenMP_CXX_FLAGS "-fopenmp")
-set(OpenMP_CXX_LIB_NAMES "gomp")
-set(OpenMP_C_LIB_NAMES "gomp")
-
-# Explicitly set OpenMP_gomp_LIBRARY path to GCC libgomp.dylib
-set(OpenMP_gomp_LIBRARY /opt/homebrew/Cellar/gcc/15.1.0/lib/gcc/15/libgomp.dylib)
-set(OpenMP_LINK_FLAGS "-L/opt/homebrew/opt/libomp/lib -lomp")
-set(OpenMP_CXX_INCLUDE_DIR /opt/homebrew/opt/libomp/include)
-
-# Add OpenMP include directory explicitly to compiler flags
-add_compile_options(
-    -I/opt/homebrew/opt/libomp/include
-    -I$ENV{HOME}/icu-install/include
-)
-add_definitions(-fopenmp)
-
-# Also set environment variables for the build process
-set(ENV{CPPFLAGS} "-I/opt/homebrew/opt/libomp/include")
-set(ENV{LDFLAGS} "-L/opt/homebrew/opt/libomp/lib")
-
-find_package(OpenMP REQUIRED)
-if(OpenMP_CXX_FOUND)
-    target_include_directories(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_INCLUDE_DIR})
-    target_link_libraries(GaussianDiffusionTest PRIVATE OpenMP::OpenMP_CXX)
-    target_compile_options(GaussianDiffusionTest PRIVATE ${OpenMP_CXX_FLAGS} -I/opt/homebrew/opt/libomp/include -fopenmp)
-    target_link_directories(GaussianDiffusionTest PRIVATE /opt/homebrew/opt/libomp/lib)
-    target_link_options(GaussianDiffusionTest PRIVATE ${OpenMP_LINK_FLAGS})
 endif()
 
-target_link_libraries(GaussianDiffusionTest PRIVATE
-    OpenMP::OpenMP_CXX
-    ${Python3_LIBRARIES}
-    icuuc
-    icui18n
-)
+if(EXISTS "${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/tests")
+    add_test_executable_with_sources(
+        "${PROJECT_SOURCE_DIR}/src/DataProcessing/normaliser/tests"
+        "src/DataProcessing/normaliser"
+    )
+endif()
 
-add_test_executable_with_sources(
-    "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/convert_classical_state_to_Quantum.md/tests"
-    "src/Quantum_encoder"
-)
+if(EXISTS "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/tests")
+    add_test_executable_with_sources(
+        "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/tests"
+        "src/Quantum_encoder"
+    )
+endif()
+
+if(EXISTS "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/convert_classical_state_to_Quantum.md/tests")
+    add_test_executable_with_sources(
+        "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/convert_classical_state_to_Quantum.md/tests"
+        "src/Quantum_encoder"
+    )
+endif()
+
+# --- Apple Clang OpenMP Setup ---
+
+if(APPLE)
+    set(CMAKE_C_COMPILER clang)
+    set(CMAKE_CXX_COMPILER clang++)
+
+    find_package(OpenMP REQUIRED)
+
+    if(OpenMP_CXX_FOUND)
+        message(STATUS "Using Apple Clang OpenMP: ${OpenMP_omp_LIBRARY}")
+
+        foreach(tgt shared_lib quantum_classical_hybrid Quantum_encoder)
+            target_compile_options(${tgt} PRIVATE -Xpreprocessor -fopenmp)
+            target_include_directories(${tgt} PRIVATE /opt/homebrew/opt/libomp/include)
+            target_link_libraries(${tgt} PRIVATE OpenMP::OpenMP_CXX)
+            target_link_options(${tgt} PRIVATE /opt/homebrew/opt/libomp/lib/libomp.dylib)
+        endforeach()
+    else()
+        message(FATAL_ERROR "OpenMP not found on Apple Clang")
+    endif()
+endif()

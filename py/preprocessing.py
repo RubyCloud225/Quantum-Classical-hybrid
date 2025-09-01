@@ -1,5 +1,8 @@
-import preprocessing
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "build"))
+
 import utils
+import preprocessing
 # import ModelCircuit  # Uncomment this line if ModelCircuit is available and required
 
 class PreprocessingPipeline:
@@ -17,13 +20,12 @@ class PreprocessingPipeline:
     
     def nasa_preprocess_text(self, text_input):
         env_vars = utils.load_env(".env")
-        nasa_api_key = env_vars.get("NASA_API_KEY")
-        if not nasa_api_key:
-            raise ValueError("NASA_API_KEY not found in environment variables.")
-        response = env_vars.get(nasa_api_key, text_input)
-        if response.status_code != 200:
-            raise ValueError(f"Failed to fetch NASA APOD data: {response.status_code}")
-        return response.text
+        nasa_url = env_vars.get("NASA_URL")
+        if not nasa_url:
+            raise ValueError("NASA_URL not found in environment variables.")
+        # Call the C++ utils http_get binding
+        response = utils.http_get(nasa_url, {"text": text_input})
+        return response
     
     def preprocess_text(self, text_input):
         #BERT Cleaning
@@ -131,15 +133,16 @@ class SanityMetrics:
             "avg_embedding_length": avg_embedding_length
         }
     def _compute_from_raw_inputs(self):
-        #use pipeline to preprocess
-        text_metrics = self.pipeline.sanity_check_text(self.text_input)
-        image_metrics = self.pipeline.sanity_check_image(self.image_path)
-        self.metrics = {"text_metrics": text_metrics, "image_metrics": image_metrics}
+        # Instead of calling undefined methods, just run full pipeline and merge
+        sample = self.pipeline.merge_text_image(self.text_input, self.image_path)
+        self.sample_data = sample
+        self._compute_from_sample_data()
+        return self.metrics
     def get_metrics(self):
         if self.sample_data:
             self._compute_from_sample_data()
         elif self.text_input and self.image_path:
-            self._compute_from_raw_inputs()
+            return self._compute_from_raw_inputs()
         else:
             raise ValueError("Insufficient data to compute metrics.")
         return self.metrics

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <complex>
 #include <utility> // for std::pair
+#include <omp.h>
 
 using cplx = std::complex<double>;
 
@@ -15,7 +16,7 @@ inline size_t idx(size_t row, size_t col, size_t dim) {
 // anaihilation operator a (d x d) as dense matrix
 std::vector<cplx> H_map_Single_Transmon::annihilation_op(size_t d) {
     std::vector<cplx> a(d * d, cplx(0.0, 0.0));
-    for (size_t n = 1; < d; ++n) {
+    for (size_t n = 1; n < d; ++n) {
         a[idx(n - 1, n, d)] = std::sqrt(static_cast<double>(n));
     }
     return a;
@@ -24,6 +25,7 @@ std::vector<cplx> H_map_Single_Transmon::annihilation_op(size_t d) {
 // C = A * B
 std::vector<cplx> H_map_Single_Transmon::matmul(const std::vector<cplx> &A, const std::vector<cplx> &B, size_t d) {
     std::vector<cplx> C(d * d, cplx(0.0, 0.0));
+    #pragma omp parallel for collapse(2)
     for (size_t i = 0; i < d; ++i) {
         for (size_t j = 0; j < d; ++j) {
             cplx sum(0.0, 0.0);
@@ -39,6 +41,7 @@ std::vector<cplx> H_map_Single_Transmon::matmul(const std::vector<cplx> &A, cons
 // Matrix Addition: C = A + B
 std::vector<cplx> H_map_Single_Transmon::matadd(const std::vector<cplx> & A, const std::vector<cplx> & B, size_t d) {
     std::vector<cplx> C(d * d);
+    #pragma omp parallel for
     for (size_t i = 0; i < d * d; ++i) {
         C[i] = A[i] + B[i];
     }
@@ -48,6 +51,7 @@ std::vector<cplx> H_map_Single_Transmon::matadd(const std::vector<cplx> & A, con
 // Scalar-matrix C = s * A
 std::vector<cplx> H_map_Single_Transmon::matscale(const std::vector<cplx> &A, cplx s, size_t d) {
     std::vector<cplx> C(d * d);
+    #pragma omp parallel for
     for (size_t i = 0; i < d * d; ++i) {
         C[i] = s * A[i];
     }
@@ -93,7 +97,7 @@ std::vector<cplx> H_map_Single_Transmon::build_transmons_H(double omega, double 
 
     auto H = matadd(matscale(n_op, cplx(omega, 0.0), d),
                     matscale(n_n_minus_1, cplx(0.5 * alpha, 0.0), d), d);
-    return hermitain_sym(H, d);
+    return hermitian_sym(H, d);
 }
 
 // Control Hamiltonian H_c,j = (a^dagger + a) / 2
@@ -111,4 +115,3 @@ std::pair<std::vector<cplx>, std::vector<cplx>> H_map_Single_Transmon::build_con
     auto H_Z = hermitian_sym(matadd(a_dag, matscale(identity(d), cplx(1.0, 0.0), d), d), d);
     return std::make_pair(H_X, H_Z);
 }
-

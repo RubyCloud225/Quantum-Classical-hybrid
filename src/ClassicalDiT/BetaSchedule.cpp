@@ -1,4 +1,5 @@
 #include "BetaSchedule.hpp"
+#include <omp.h>
 
 //Constructor
 BetaSchedule::BetaSchedule(int total_epochs, double initial_beta) : total_epochs_(total_epochs), initial_beta_(initial_beta), current_beta_(initial_beta) {}

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <complex>
+#include <omp.h>
 
 namespace Training {
 
@@ -18,6 +19,7 @@ namespace Training {
 
     double fidelity (const Time::Vec& psi_target, const Time::Vec& psi_final) {
         cplx overlap(0.0, 0.0);
+        #pragma omp parallel for reduction(+:overlap)
         for (int i=0; i < psi_target.size(); ++i) {
             overlap += std::conj(psi_target[i]) * psi_final[i];
         }
@@ -26,6 +28,7 @@ namespace Training {
 
     double leakagePenalty(const Time::Vec& psi, int logical_dim) {
         double leakage = 0.0;
+        #pragma omp parallel for reduction(+:leakage)
         for (int i = logical_dim; i < psi.size(); ++i) {
             leakage += std::norm(psi[i]);
         }
@@ -35,6 +38,7 @@ namespace Training {
     double energyPenalty(const Time::Mat& H, const Time::Vec& psi) {
         Time::Vec Hpsi = H * psi;
         cplx exp_val(0.0,0.0);
+        #pragma omp parallel for reduction(+:exp_val)
         for (int i = 0; i < psi.size(); ++i) {
             exp_val += std::conj(psi[i]) * Hpsi[i];
         }
@@ -43,8 +47,10 @@ namespace Training {
 
     double bandwidthPenalty(const std::vector<double>& uX, const std::vector<double>& uZ) {
         double sum=0.0;
-        for (auto u:uX) sum += u*u;
-        for (auto i:uZ) sum += i*i;
+        #pragma omp parallel for reduction(+:sum)
+        for (size_t i = 0; i < uX.size(); ++i) sum += uX[i]*uX[i];
+        #pragma omp parallel for reduction(+:sum)
+        for (size_t i = 0; i < uZ.size(); ++i) sum += uZ[i]*uZ[i];
         return sum;
     }
 
@@ -73,6 +79,3 @@ namespace Training {
         return reward;
     }
 }
-
-
-

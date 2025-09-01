@@ -30,18 +30,40 @@ py::dict run_preprocessing(const std::string& input) {
     std::vector<std::string> byteNormalizedTokens = byteNormalizer.ByteNormalise(normalizedText, true);
     // join tokens back to a single string
     //-------- Digits ---------------//
-    DigitNormaliser digitNormaliser;
-    std::string digitNormalizedText = digitNormaliser.normaliseDigits(byteNormalizedTokens, true);
+    std::vector<std::string> digitNormalizedTokens;
+    try {
+        DigitNormaliser digitNormaliser;
+        digitNormalizedTokens = digitNormaliser.normaliseDigits(normalizedText, true);
+    } catch (const std::exception& e) {
+        std::cerr << "DigitNormaliser failed: " << e.what() << std::endl;
+        digitNormalizedTokens.push_back(normalizedText);
+    }
+
+    // Join digit tokens to string for MetaspaceNormaliser
+    std::string digitNormalizedText;
+    for (const auto& t : digitNormalizedTokens) digitNormalizedText += t;
+
     // --- Metaspace normalization ---//
-    MetaspaceNormaliser metaspaceNormaliser;
-    metaspaceNormaliser.setReplacement("Ġ", true);
-    metaspaceNormaliser.setReplacement(" ", true);
-    std::string metaspaceNormalizedText = metaspaceNormaliser.pretok(digitNormalizedText, true);
+    std::vector<std::string> metaspaceTokens;
+    try {
+        MetaspaceNormaliser metaspaceNormaliser;
+        // Modern robust: accept UTF-8 string replacements
+        metaspaceNormaliser.setReplacement("Ġ", true);
+        metaspaceNormaliser.setReplacement(" ", true);
+        metaspaceTokens = metaspaceNormaliser.pretok(digitNormalizedText, true);
+    } catch (const std::exception& e) {
+        std::cerr << "MetaspaceNormaliser failed: " << e.what() << std::endl;
+        metaspaceTokens = digitNormalizedTokens;
+    }
+
+    // Optional: Join metaspace tokens back to string
+    std::string metaspaceNormalizedText;
+    for (const auto& t : metaspaceTokens) metaspaceNormalizedText += t;
 
     
-    //===== Prepend normalization ===//
-    Prepend prepend;
-    std::set<std::string> normalizedValues = prepend.extract_normalised(digitNormalizedText);
+    // ===== Prepend normalization === //
+    Prepend prepend("dummy.txt", metaspaceNormalizedText);
+    std::set<std::string> normalizedValues = prepend.extract_normalised(metaspaceNormalizedText);
     
     // === Tokenization on normalized text ===//
     Tokenizer tokenizer;
@@ -77,7 +99,9 @@ py::dict run_preprocessing(const std::string& input) {
     std::vector<std::pair<double, double>> testData(regressionData.begin() + trainSize, regressionData.end());
 
     LinearRegression lr;
-    lr.fit(trainData);
+    // Wrap fit in lambda to handle C++17 std::pair move semantics with pybind11
+    auto fit_lambda = [&lr](const std::vector<std::pair<double,double>>& data) { lr.fit(data); };
+    fit_lambda(trainData);
 
     std::vector<double> predictedY;
     for (const auto& [x, _] : testData) {
@@ -115,7 +139,7 @@ py::dict run_preprocessing(const std::string& input) {
         sample.normalized_noise = normalizedNLL;
         sample.density = density;
         sample.nll = nllValues[i];
-        sample.entropy = entropy;
+        sample.entopy = entropy;
         dataset.push_back(sample);
     }
 
@@ -173,31 +197,17 @@ PYBIND11_MODULE(preprocessing, m) {
         .def("countUniqueTokens", &Tokenizer::countUniqueTokens, py::arg("text"))
         .def("countSentences", &Tokenizer::countSentences, py::arg("text"))
         .def("countPunctuation", &Tokenizer::countPunctuation, py::arg("text"));
+    /*
     py::class_<ImageNormalizer>(m, "ImageNormalizer")
         .def(py::init<>())
         .def("loadImage", &ImageNormalizer::loadImage, py::arg("image.jpg"));
     
-    py::class_<PatchToken>(m, "PatchToken")
-        .def(py::init<>())
-        .def_readwrite("embedding", &PatchToken::embedding)
-        .def_readwrite("row", &PatchToken::row)
-        .def_readwrite("col", &PatchToken::col);
-
-    py::class_<SampleData>(m, "SampleData")
-        .def(py::init<>())
-        .def_readwrite("token_embedding", &SampleData::token_embedding)
-        .def_readwrite("noise", &SampleData::noise)
-        .def_readwrite("target_value", &SampleData::target_value)
-        .def_readwrite("normalized_noise", &SampleData::normalized_noise)
-        .def_readwrite("density", &SampleData::density)
-        .def_readwrite("nll", &SampleData::nll)
-        .def_readwrite("entropy", &SampleData::entropy);
-
     py::class_<ImageSequentialTokenizer>(m, "ImageSequentialTokenizer")
         .def(py::init<>())
         .def_readwrite("textTokens", &ImageSequentialTokenizer::textTokens)
         .def_readwrite("imageTokens", &ImageSequentialTokenizer::imageTokens)
         .def("tokenizeImage", &ImageSequentialTokenizer::tokenizeImage);
+    */
 
     // Bindings from DataWrapper.cpp merged here:
     py::class_<GaussianNoise>(m, "GaussianNoise")
@@ -216,7 +226,7 @@ PYBIND11_MODULE(preprocessing, m) {
 
     py::class_<LinearRegression>(m, "LinearRegression")
         .def(py::init<>())
-        .def("fit", &LinearRegression::fit, py::arg("data"))
+        .def("fit", [](LinearRegression &lr, const std::vector<std::pair<double,double>> &data) { lr.fit(data); }, py::arg("data"))
         .def("predict", &LinearRegression::predict, py::arg("x"))
         .def("reshapeData", &LinearRegression::reshapeData, py::arg("x"), py::arg("y"), py::arg("reshapeData"));
 }

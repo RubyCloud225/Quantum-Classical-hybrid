@@ -4,46 +4,59 @@
 #include <iomanip>
 #include <iostream>
 #include "utils/logger.hpp"
+#include <omp.h>
 
 std::vector<std::string> ByteNormalizer::pretok(const std::string& input, bool debug) {
-    std::ostringstream oss;
-    for (unsigned char ch : input) {
-        Logger::log("Processing byte: " + std::to_string(static_cast<int>(ch)), LogLevel::INFO, __FILE__, __LINE__);
-        if (ch == ' ') {
-            oss << "Ġ";
-        } else {
-            oss << static_cast<char>(ch);
-        }
-    }
-    std::string byte_str = oss.str();
+    // OpenMP parallel processing
     std::vector<std::string> tokens;
-    std::string token;
-    std::istringstream iss(byte_str);
-    while (iss >> token) {
-        Logger::log("Tokenizing byte: " + token, LogLevel::INFO, __FILE__, __LINE__);
-        if (debug) {
-            std::cout << "Byte: " << static_cast<int >( token[0]) << " -> " << token << std::endl;
+    int nThreads = omp_get_max_threads();
+    std::vector<std::vector<std::string>> threadTokens(nThreads);
+
+    #pragma omp parallel for
+    for (size_t i = 0; i < input.size(); ++i) {
+        int tid = omp_get_thread_num();
+        unsigned char ch = input[i];
+        std::string token = (ch == ' ') ? "Ġ" : std::string(1, ch);
+
+        #pragma omp critical
+        {
+            Logger::log("Processing byte: " + std::to_string(static_cast<int>(ch)), LogLevel::INFO, __FILE__, __LINE__);
+            if (debug) {
+                std::cout << "Byte: " << static_cast<int>(ch) << " -> " << token << std::endl;
+            }
         }
-        tokens.push_back(token);
+        threadTokens[tid].push_back(token);
+    }
+
+    // Merge thread-local vectors
+    for (const auto& tvec : threadTokens) {
+        tokens.insert(tokens.end(), tvec.begin(), tvec.end());
     }
     return tokens;
 }
 std::vector<std::string> ByteNormalizer::ByteNormalise(const std::string& input, bool debug) {
+    // OpenMP parallel ByteNormalise
     std::vector<std::string> output;
-    for (unsigned char ch : input) {
-        std::string token;
-        if (ch == ' ') {
-            token = "Ġ";
-        } else {
-            token = std::string(1, ch);
+    std::vector<std::vector<std::string>> threadOutput(omp_get_max_threads());
+
+    #pragma omp parallel for
+    for (size_t i = 0; i < input.size(); ++i) {
+        int tid = omp_get_thread_num();
+        unsigned char ch = input[i];
+        std::string token = (ch == ' ') ? "Ġ" : std::string(1, ch);
+
+        #pragma omp critical
+        {
+            Logger::log("Normalizing byte: " + std::to_string(static_cast<int>(ch)), LogLevel::INFO, __FILE__, __LINE__);
+            if (debug) {
+                std::cout << "Byte: " << static_cast<int>(ch) << " -> " << token << std::endl;
+            }
         }
-        if (debug) {
-            std::cout << "Byte: " << static_cast<int>(ch) << " -> " << token << std::endl;
-        }
-        Logger::log("Normalizing byte: " + std::to_string(static_cast<int>(ch)), LogLevel::INFO, __FILE__, __LINE__);
-        output.push_back(token);
+        threadOutput[tid].push_back(token);
+    }
+
+    for (const auto& tvec : threadOutput) {
+        output.insert(output.end(), tvec.begin(), tvec.end());
     }
     return output;
 }
-
-

@@ -4,6 +4,7 @@
 #include <cmath>
 #include <unordered_map>
 #include <algorithm>
+#include <omp.h>
 
 DiffusionSample::DiffusionSample(DiffusionModel& model, const std::vector<double>& noise_schedule)
     : model_(model), noise_schedule_(noise_schedule), generator_(std::random_device{}()), normal_dist_(0.0, 1.0) {}
@@ -17,12 +18,17 @@ std::vector<std::vector<double> > DiffusionSample::p_sample(
 ) {
     std::vector<std::vector<double>> samples(shape[0], std::vector<double>(shape[1] * shape[2] * shape[3], 0.0));
     std::vector<double> mean, variance;
+
+    #pragma omp parallel for
     for (int n = 0; n < shape[0]; ++n) {
+        std::default_random_engine thread_generator(std::random_device{}());
+        std::normal_distribution<double> thread_normal_dist(0.0, 1.0);
+
         std::vector<double> x_t(shape[1] * shape[2] * shape[3], 0.0);
         for (int t = shape[0] - 1; t >= 0; --t) {
             model_.compute_mean_variance(x_t, t, mean, variance);
             for (size_t i = 0; i < x_t.size(); ++i) {
-                double noise = normal_dist_(generator_) * std::sqrt(variance[i]);
+                double noise = thread_normal_dist(thread_generator) * std::sqrt(variance[i]);
                 x_t[i] = mean[i] + noise;
             }
         }
@@ -65,7 +71,7 @@ std::vector<std::unordered_map<std::string, std::vector<double>>> DiffusionSampl
         throw std::invalid_argument("Invalid device: " + device);
     }
 
-    std::vector<std::unordered_map<std::string, std::vector<double>>> samples;
+    std::vector<std::unordered_map<std::string, std::vector<double>>> samples(shape[0]);
 
     std::cout << "Checking model_kwags size: " << model_kwags.size() << std::endl;
     if (model_kwags.empty()) {
@@ -74,19 +80,20 @@ std::vector<std::unordered_map<std::string, std::vector<double>>> DiffusionSampl
     }
     std::cout << "Passed model_kwags check" << std::endl;
 
-    std::vector<std::unordered_map<std::string, std::vector<double>>> progressive_samples;
-    std::normal_distribution<double> distribution_(0.0, 1.0);
-    std::default_random_engine generator_(std::random_device{}());
     std::vector<double> mean, variance;
 
+    #pragma omp parallel for
     for (int n = 0; n < shape[0]; ++n) {
+        std::default_random_engine thread_generator(std::random_device{}());
+        std::normal_distribution<double> thread_distribution(0.0, 1.0);
+
         std::unordered_map<std::string, std::vector<double>> sample;
         std::vector<double> x_t(shape[1] * shape[2] * shape[3], 0.0);
 
         for (int t = shape[0] - 1; t >= 0; --t) {
             model_.compute_mean_variance(x_t, t, mean, variance);
             for (size_t i = 0; i < x_t.size(); ++i) {
-                double noise = distribution_(generator_) * std::sqrt(variance[i]);
+                double noise = thread_distribution(thread_generator) * std::sqrt(variance[i]);
                 x_t[i] = mean[i] + noise;
             }
         }
@@ -103,8 +110,8 @@ std::vector<std::unordered_map<std::string, std::vector<double>>> DiffusionSampl
         }
         // Store the sample in the progressive_samples vector
         sample["sample"] = x_t;
-        progressive_samples.push_back(sample);
+        samples[n] = sample;
     }
-    samples.insert(samples.end(), progressive_samples.begin(), progressive_samples.end());
+
     return samples;
 }

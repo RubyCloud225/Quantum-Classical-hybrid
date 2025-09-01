@@ -10,6 +10,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <omp.h>
 
 struct GlobalInitLogger {
     GlobalInitLogger() {
@@ -172,16 +173,33 @@ std::vector<std::string> BertNormaliser::pretok(const std::string& input) {
     std::string cleaned = bertCleaning(input);
     std::string noAccents = stripAccents(cleaned);
     std::u32string utf32 = utf8ToUtf32(noAccents);
-    std::u32string processed;
-    for (char32_t ch : utf32) {
-        if (isChineseChar(ch)) {
-            processed.push_back(U' ');
-            processed.push_back(ch);
-            processed.push_back(U' ');
-        } else {
-            processed.push_back(toLowerAscii(ch));
+
+    // OpenMP parallel post-processing with thread-local buffers
+    std::vector<std::u32string> threadBuffers(omp_get_max_threads());
+
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        auto& local = threadBuffers[tid];
+
+        #pragma omp for nowait
+        for (size_t i = 0; i < utf32.size(); ++i) {
+            char32_t ch = utf32[i];
+            if (isChineseChar(ch)) {
+                local.push_back(U' ');
+                local.push_back(ch);
+                local.push_back(U' ');
+            } else {
+                local.push_back(toLowerAscii(ch));
+            }
         }
     }
+
+    std::u32string processed;
+    for (const auto& buf : threadBuffers) {
+        processed += buf;
+    }
+
     std::string output = utf32ToUtf8(processed);
     std::istringstream iss(output);
     std::vector<std::string> tokens;

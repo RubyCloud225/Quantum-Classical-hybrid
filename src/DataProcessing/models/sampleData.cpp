@@ -7,6 +7,7 @@
 
 void saveSamples(const std::vector<SampleData>& samples, const std::string& filename) {
     std::ofstream out(filename, std::ios::binary);
+    // Sequential file I/O
     for (const auto& sample : samples) {
         size_t size = sample.token_embedding.size();
         size_t noise_size = sample.noise.size();
@@ -30,6 +31,21 @@ void saveSamples(const std::vector<SampleData>& samples, const std::string& file
             out.write(reinterpret_cast<const char*>(token.embedding.data()), embedding_size * sizeof(double));
         }
     }
+
+    // Parallel post-processing for each sample (if needed)
+    #pragma omp parallel for
+    for (size_t i = 0; i < samples.size(); ++i) {
+        auto& sample = samples[i];
+        // Example: compute any derived quantities here
+        // Logger inside parallel region must be critical
+        #pragma omp critical
+        Logger::log("Processed sample with token embedding size: " + std::to_string(sample.token_embedding.size()) +
+                    ", noise size: " + std::to_string(sample.noise.size()) +
+                    ", target value: " + std::to_string(sample.target_value),
+                    LogLevel::INFO, __FILE__, __LINE__);
+    }
+
+    #pragma omp critical
     Logger::log("Saved " + std::to_string(samples.size()) + " samples to " + filename, LogLevel::INFO, __FILE__, __LINE__);
     out.close();
 }
@@ -71,10 +87,12 @@ std::vector<SampleData> loadSamples(const std::string& filename) {
         if (in.fail()) {
             throw std::runtime_error("Error reading sample from file");
         }
+        #pragma omp critical
         Logger::log("Loaded sample with token embedding size: " + std::to_string(size) + 
                     ", noise size: " + std::to_string(noise_size) + 
                     ", target value: " + std::to_string(sample.target_value), LogLevel::INFO, __FILE__, __LINE__);
     }
+    #pragma omp critical
     Logger::log("Loaded " + std::to_string(samples.size()) + " samples from " + filename, LogLevel::INFO, __FILE__, __LINE__);
     in.close();
     return samples;

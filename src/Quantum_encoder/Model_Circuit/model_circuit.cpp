@@ -7,6 +7,7 @@
 #include <cmath>
 #include <numeric>
 #include <stdexcept>
+#include <omp.h>
 
 const double ModelCircuit::pi = 3.14159265358979323846;
 
@@ -70,11 +71,13 @@ std::vector<ModelCircuit::Complex> ModelCircuit::apply_unitary_to_encoded_state(
         auto U = U_theta_lambda(theta[i], lambda[i]);
         apply_gate(state_vector, U, i); // Apply the unitary gate to the i-th qubit
     }
-    // Apply Hadamard gates to the first qubit
+    // Apply Hadamard gates in parallel
+    #pragma omp parallel for
     for (int i = 0; i < num_qubits; ++i) {
         apply_hadamard(state_vector, i);
     }
-    // Apply CNOT gates between the first qubit and all other qubits
+    // Apply CNOT gates in parallel
+    #pragma omp parallel for
     for (int i = 1; i < num_qubits; ++i) {
         apply_cnot(state_vector, i, (i + 1) % num_qubits);
     }
@@ -136,13 +139,15 @@ std::vector<ModelCircuit::Complex> ModelCircuit::apply_propagator(const Time::Ma
     // Apply the propagator to the state vector
     std::vector<Complex> new_state_vector(state_vector.size(), Complex(0.0, 0.0));
 
+    #pragma omp parallel for
     for (int i = 0; i < propagator.nrows; ++i) {
+        Complex sum = Complex(0.0, 0.0);
         for (int j = 0; j < propagator.ncols; ++j) {
-            new_state_vector[i] += propagator(i, j) * state_vector[j];
+            sum += propagator(i, j) * state_vector[j];
         }
+        new_state_vector[i] = sum;
     }
 
-    return new_state_vector;
 }
 
 // Quantum circuit that encodes a parameterized graph state
@@ -157,6 +162,8 @@ std::vector<Complex> ModelCircuit::apply_hybrid_encoding(const std::vector<Hybri
     std::vector<Complex> state_vector(1 << num_qubits, Complex(0.0, 0.0));
     state_vector[0] = Complex(1.0, 0.0);  // Start in |0...0>
 
+    // Apply rotation gates in parallel
+    #pragma omp parallel for
     for (int i = 0; i < num_qubits; ++i) {
         const auto& gate = hybridGates[i].angleGate;
         double amplitude = hybridGates[i].amplitude;

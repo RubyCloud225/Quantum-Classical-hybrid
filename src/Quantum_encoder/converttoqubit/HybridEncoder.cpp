@@ -2,25 +2,28 @@
 #include <cmath>
 #include "utils/logger.hpp"
 #include <iostream>
+#include <omp.h>
 
 HybridEncoder::HybridEncoder(const std::vector<double>& input) {
     normaliseAndEncode(input);
 }
 void HybridEncoder::normaliseAndEncode(const std::vector<double>& input) {
     double norm = 0.0;
-    for (double x : input) norm += x * x;
+    #pragma omp parallel for reduction(+:norm)
+    for (size_t i = 0; i < input.size(); ++i) norm += input[i] * input[i];
     norm = std::sqrt(norm);
 
-    std::vector<double> normalized_input;
-    for (double x : input) {
-        normalized_input.push_back(x / norm);
+    std::vector<double> normalized_input(input.size());
+    #pragma omp parallel for
+    for (size_t i = 0; i < input.size(); ++i) {
+        normalized_input[i] = input[i] / norm;
     }
     AngleEncoder angleEncoder(normalized_input, RotationAxis::Y);
     auto angleGates = angleEncoder.get_gates();
-    hybridEncodedGates.clear();
+    hybridEncodedGates.resize(angleGates.size());
+    #pragma omp parallel for
     for (size_t i = 0; i < angleGates.size(); ++i) {
-        double amplitude = normalized_input[i];
-        hybridEncodedGates.push_back({angleGates[i], amplitude});
+        hybridEncodedGates[i] = {angleGates[i], normalized_input[i]};
     }
     Logger::log("HybridEncoder encoded " + std::to_string(hybridEncodedGates.size()) + " gates", LogLevel::INFO, __FILE__, __LINE__);
 }

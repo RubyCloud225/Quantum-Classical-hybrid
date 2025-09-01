@@ -1,5 +1,7 @@
 #include "unicode_processor.hpp"
 #include "utils/logger.hpp"
+#include <omp.h>
+#include <vector>
 
 std::string UnicodeProcessor::normaliseString(const std::string& input, NormalizationMode mode) {
     UErrorCode errorCode = U_ZERO_ERROR;
@@ -46,14 +48,36 @@ std::string UnicodeProcessor::removeDiacritics(const std::string& input) {
     icu::UnicodeString uInput = icu::UnicodeString::fromUTF8(input);
     icu::UnicodeString uResult;
 
-    for (int32_t i = 0; i < uInput.length(); ) {
-        UChar32 c = uInput.char32At(i);
-        UCharCategory cat = static_cast<UCharCategory>(u_charType(c));
+    // OpenMP parallel remove diacritics
+    int nThreads = omp_get_max_threads();
+    std::vector<icu::UnicodeString> threadResults(nThreads);
 
-        if (cat != U_COMBINING_SPACING_MARK && cat != U_NON_SPACING_MARK && cat != U_ENCLOSING_MARK) {
-            uResult.append(c);
-        }
+    // Precompute the start indices of each code point
+    std::vector<int32_t> indices;
+    for (int32_t i = 0; i < uInput.length(); ) {
+        indices.push_back(i);
+        UChar32 c = uInput.char32At(i);
         i += U16_LENGTH(c);
+    }
+
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        auto& localResult = threadResults[tid];
+
+        #pragma omp for
+        for (int i = 0; i < static_cast<int>(indices.size()); ++i) {
+            int32_t idx = indices[i];
+            UChar32 c = uInput.char32At(idx);
+            UCharCategory cat = static_cast<UCharCategory>(u_charType(c));
+            if (cat != U_COMBINING_SPACING_MARK && cat != U_NON_SPACING_MARK && cat != U_ENCLOSING_MARK) {
+                localResult.append(c);
+            }
+        }
+    }
+
+    for (const auto& local : threadResults) {
+        uResult.append(local);
     }
     Logger::log("Removing diacritics from string: " + input, LogLevel::INFO, __FILE__, __LINE__);
 

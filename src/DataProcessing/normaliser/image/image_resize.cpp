@@ -2,6 +2,7 @@
 #include <string>
 #include <stdexcept>
 #include <algorithm>
+#include <omp.h>
 
 #include "image_resize.hpp"
 
@@ -47,24 +48,26 @@ namespace ImageNormalliser {
     }
     // -------- Extract sequential patches ----------
     inline std::vector<Image> extractPathesSequential(const Image& input, int patch_size) {
-        std::vector<Image> patches;
-        patches.reserve((input.width / patch_size) * (input.height / patch_size));
-        // Always row-major order: top-left -> right -> down
-        for (int y = 0; y + patch_size <= input.height; y += patch_size) {
-            for (int x = 0; x + patch_size <= input.width; x += patch_size) {
+        int patches_x = input.width / patch_size;
+        int patches_y = input.height / patch_size;
+        std::vector<Image> patches(patches_x * patches_y);
+
+        #pragma omp parallel for collapse(2)
+        for (int y = 0; y < patches_y; ++y) {
+            for (int x = 0; x < patches_x; ++x) {
                 Image patch;
                 patch.width = patch_size;
                 patch.height = patch_size;
                 patch.channels = input.channels;
                 patch.data.resize(patch_size * patch_size * input.channels);
-                
+
                 for (int py = 0; py < patch_size; ++py) {
-                    int srcY = y + py;
-                    const unsigned char* srcRow = &input.data[(srcY * input.width + x) * input.channels];
+                    int srcY = y * patch_size + py;
+                    const unsigned char* srcRow = &input.data[(srcY * input.width + x * patch_size) * input.channels];
                     unsigned char* dstRow = &patch.data[(py * patch.width) * input.channels];
                     std::copy(srcRow, srcRow + patch_size * input.channels, dstRow);
                 }
-                patches.push_back(std::move(patch));
+                patches[y * patches_x + x] = std::move(patch);
             }
         }
         return patches;
@@ -72,8 +75,9 @@ namespace ImageNormalliser {
     // ----- Flatten Patch to float vector [0,1] ------
     inline std::vector<float> flatenPatchToFloat(const Image& patch) {
         std::vector<float> flat(patch.width * patch.height * patch.channels);
+        #pragma omp parallel for
         for (size_t i = 0; i < flat.size(); ++i) {
-            flat[i] = static_cast<float>(patch.data[i]) / 255.0f; //normalize
+            flat[i] = static_cast<float>(patch.data[i]) / 255.0f; // normalize
         }
         return flat;
     }

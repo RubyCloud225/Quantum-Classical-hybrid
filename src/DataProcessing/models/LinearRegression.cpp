@@ -3,6 +3,7 @@
 #include <cmath>
 #include "utils/logger.hpp"
 #include <math.h>
+#include <omp.h>
 
 LinearRegression::LinearRegression() : slope(0.0), intercept(0.0) {
     Logger::log("Initialized LinearRegression model", LogLevel::INFO, __FILE__, __LINE__);
@@ -15,6 +16,7 @@ void LinearRegression::fit(const std::vector<std::pair<double, double>>& data) {
     double sum_x = 0.0, sum_y = 0.0, sum_xy = 0.0, sum_xx = 0.0;
     size_t n = data.size();
 
+    #pragma omp parallel for reduction(+:sum_x, sum_y, sum_xy, sum_xx)
     for (const auto& pair : data) {
         sum_x += pair.first;
         sum_y += pair.second;
@@ -40,12 +42,24 @@ void LinearRegression::reshapeData(const std::vector<double>& x, const std::vect
     if (x.size() != y.size()) {
         throw std::invalid_argument("X and Y vectors must be of the same length");
     }
-    reshapedData.clear();
-    for (size_t i = 0; i < x.size(); ++i) {
-        if (isnan(x[i]) || isnan(y[i])) {
-            Logger::log("NaN value found in input data at index " + std::to_string(i), LogLevel::WARNING, __FILE__, __LINE__);
-            continue; // Skip NaN values
+    // OpenMP parallel reshape
+    size_t n = x.size();
+    std::vector<std::pair<double, double>> tempData;
+    tempData.reserve(n);
+    #pragma omp parallel
+    {
+        std::vector<std::pair<double, double>> localData;
+        #pragma omp for nowait
+        for (size_t i = 0; i < n; ++i) {
+            if (isnan(x[i]) || isnan(y[i])) {
+                #pragma omp critical
+                Logger::log("NaN value found in input data at index " + std::to_string(i), LogLevel::WARNING, __FILE__, __LINE__);
+                continue;
+            }
+            localData.emplace_back(x[i], y[i]);
         }
-        reshapedData.emplace_back(x[i], y[i]);
+        #pragma omp critical
+        tempData.insert(tempData.end(), localData.begin(), localData.end());
     }
+    reshapedData = std::move(tempData);
 }

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libshared_lib.a CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o
+/usr/bin/ranlib libshared_lib.a

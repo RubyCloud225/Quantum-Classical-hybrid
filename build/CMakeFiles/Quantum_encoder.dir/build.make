@@ -76,57 +76,57 @@ CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.c
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o: CMakeFiles/Quantum_encoder.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.i
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/AngleEncoder.cpp.s
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o: CMakeFiles/Quantum_encoder.dir/flags.make
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o: CMakeFiles/Quantum_encoder.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.i
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o: CMakeFiles/Quantum_encoder.dir/flags.make
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Model_Circuit/model_circuit.cpp
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o: CMakeFiles/Quantum_encoder.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Model_Circuit/model_circuit.cpp
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Model_Circuit/model_circuit.cpp
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Model_Circuit/model_circuit.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Model_Circuit/model_circuit.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.i
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Model_Circuit/model_circuit.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Model_Circuit/model_circuit.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.s
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o: CMakeFiles/Quantum_encoder.dir/flags.make
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Hamiltonian/time_H.cpp
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o: CMakeFiles/Quantum_encoder.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Hamiltonian/time_H.cpp
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o -MF CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o.d -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Hamiltonian/time_H.cpp
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.i"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Hamiltonian/time_H.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Hamiltonian/time_H.cpp > CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.i
 
 CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.s"
-	/opt/homebrew/bin/g++-15 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Hamiltonian/time_H.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/Quantum_encoder/Hamiltonian/time_H.cpp -o CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.s
 
 # Object files for target Quantum_encoder
 Quantum_encoder_OBJECTS = \
@@ -143,6 +143,7 @@ libQuantum_encoder.dylib: CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/con
 libQuantum_encoder.dylib: CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Model_Circuit/model_circuit.cpp.o
 libQuantum_encoder.dylib: CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/Hamiltonian/time_H.cpp.o
 libQuantum_encoder.dylib: CMakeFiles/Quantum_encoder.dir/build.make
+libQuantum_encoder.dylib: /opt/homebrew/opt/libomp/lib/libomp.dylib
 libQuantum_encoder.dylib: CMakeFiles/Quantum_encoder.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libQuantum_encoder.dylib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Quantum_encoder.dir/link.txt --verbose=$(VERBOSE)

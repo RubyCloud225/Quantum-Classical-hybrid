@@ -28,16 +28,20 @@ std::vector<double> LayerNormalization::forward(const std::vector<double>& input
         throw std::invalid_argument("input size must be Normal_shape");
     }
 
-    // calculate mean and variance using Welford's online algorithm for numerical stability
+    // Parallelized mean calculation using OpenMP reduction
     double mean = 0.0;
+    #pragma omp parallel for reduction(+:mean)
+    for (int i = 0; i < normal_shape; ++i) {
+        mean += input[i];
+    }
+    mean /= normal_shape;
+
+    // Parallelized variance calculation using OpenMP reduction
     double M2 = 0.0;
-    int n = 0;
-    for (const auto& value : input) {
-        n++;
-        double delta = value - mean;
-        mean += delta / n;
-        double delta2 = value - mean;
-        M2 += delta * delta2;
+    #pragma omp parallel for reduction(+:M2)
+    for (int i = 0; i < normal_shape; ++i) {
+        double delta = input[i] - mean;
+        M2 += delta * delta;
     }
     double variance = M2 / normal_shape;
 
@@ -48,6 +52,8 @@ std::vector<double> LayerNormalization::forward(const std::vector<double>& input
         throw std::runtime_error("Standard deviation is zero, cannot normalize.");
     }
     std::vector<double> normalized(normal_shape);
+    // Parallelize normalization
+    #pragma omp parallel for
     for (int i = 0; i < normal_shape; ++i) {
         normalized[i] = gamma[i] * ((input[i] - mean) / std_dev) + beta[i];
     }

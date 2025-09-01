@@ -10,6 +10,7 @@
 #include "replace.hpp"
 #include "utils/logger.hpp"
 #include <sstream>
+#include <omp.h>
 
 // creates an object and initializes it with the regex pattern and replacement string
 Replace::Replace(const std::string& regexPattern, const std::string& replaceWith)
@@ -18,8 +19,9 @@ Replace::Replace(const std::string& regexPattern, const std::string& replaceWith
 // applied a find and replace operation on the content using the regex pattern and replacement string
 std::string Replace::applyReplace(const std::string& content) const {
     std::regex re(regexPattern);
+    #pragma omp critical
     Logger::log("Applying regex replace with pattern: " + regexPattern + " and replacement: " + replaceWith, LogLevel::INFO, __FILE__, __LINE__);
-    return std::regex_replace(content, re, replaceWith);
+    return std::regex_replace(content, re, replaceWith); // sequential to be thread-safe
 }
 
 // creates a clone of the Replace object with the same regex pattern and replacement string

@@ -8,7 +8,7 @@
 #include "Diffusion_Sample.hpp"
 #include "NormalDist.hpp"
 #include "sampleData.hpp"
-#include "train_diffusion_model.hpp"
+//#include "train_diffusion_model.hpp"
 
 namespace py = pybind11;
 PYBIND11_MODULE(dit_wrapper, m) {

@@ -48,8 +48,14 @@ std::vector<double> GaussianNoise::generateNoise() {
     size_t n = mean_.size();
     std::vector<double> noise(n, 0.0);
 
-    for (size_t i = 0; i < n; ++i) {
-        noise[i] = distribution_(generator_);
+    // Parallel noise generation with per-thread generators
+    #pragma omp parallel
+    {
+        std::mt19937 thread_gen(generator_());
+        #pragma omp for
+        for (size_t i = 0; i < n; ++i) {
+            noise[i] = distribution_(thread_gen);
+        }
     }
 
     for (size_t i = 0; i < n; ++i) {
@@ -60,6 +66,8 @@ std::vector<double> GaussianNoise::generateNoise() {
         noise[i] = sum;
     }
 
+    // Parallel post-processing
+    #pragma omp parallel for
     for (size_t i = 0; i < n; ++i) {
         noise[i] += mean_[i];
         noise[i] *= weights_[i];

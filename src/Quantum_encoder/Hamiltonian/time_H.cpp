@@ -1,3 +1,4 @@
+#include <omp.h>
 // Compute U_k = exp(-i H dt) for Hermitian H using Jacobi diagonalization
 //
 // Equations:
@@ -146,8 +147,9 @@ namespace Time {
 
     double frobenius_norm(const Mat& A) {
         double ss = 0.0;
-        for (const auto& z : A.a) {
-            ss += std::norm(z);
+        #pragma omp parallel for reduction(+:ss)
+        for (size_t i = 0; i < A.a.size(); ++i) {
+            ss += std::norm(A.a[i]);
         }
         return std::sqrt(ss);
     }
@@ -257,6 +259,7 @@ namespace Time {
         // Build D = diag(exp(-i λ_m dt))
         Mat D(n, n);
         const cplx im(0.0,1.0);
+        #pragma omp parallel for
         for (int i = 0; i< n; ++i) {
             double ang = -er.lambda[static_cast<size_t>(i)] * dt;
             D(i,i) = std::exp(im * ang); // e^{-i λ_m dt} 

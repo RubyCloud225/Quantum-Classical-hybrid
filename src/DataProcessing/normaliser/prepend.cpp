@@ -3,6 +3,8 @@
 #include <string>
 #include <regex>
 #include <set>
+#include <vector>
+#include <omp.h>
 #include "logger.hpp"
 
 Prepend::Prepend(std::string filename, std::string text) {
@@ -10,23 +12,46 @@ Prepend::Prepend(std::string filename, std::string text) {
 }
 
 std::set<std::string> Prepend::extract_normalised(const std::string& text) {
+    // Parallel regex matching using OpenMP
     std::set<std::string> matches;
-    // match floating-pont numbers- (TODO this is basic)
+    size_t nThreads = omp_get_max_threads();
+    std::vector<std::set<std::string>> threadMatches(nThreads);
     std::regex re("\\d+(?:\\.\\d+)?");
-    auto words_begin = std::sregex_iterator(text.begin(), text.end(), re);
-    auto words_end = std::sregex_iterator();
-    for (std::sregex_iterator i = words_begin; i != words_end; ++i) {
-        std::smatch match = *i;
-        matches.insert(match.str());
+
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        std::sregex_iterator words_begin(text.begin(), text.end(), re);
+        std::sregex_iterator words_end;
+        for (auto it = words_begin; it != words_end; ++it) {
+            threadMatches[tid].insert(it->str());
+        }
+    }
+
+    // Merge thread-local sets
+    for (const auto& tset : threadMatches) {
+        matches.insert(tset.begin(), tset.end());
     }
     Logger::log("Extracted " + std::to_string(matches.size()) + " normalised values from text", LogLevel::INFO, __FILE__, __LINE__);
     return matches;
 }
 
 std::string Prepend::build_comment_block(const std::set<std::string>& values) {
-    std::string comment_block = ""; // === Normalised values ===\n";
-    for (const auto& match : values) {
-        comment_block += match + "\n";
+    // Parallel concatenation using OpenMP
+    int nThreads = omp_get_max_threads();
+    std::vector<std::string> threadStrings(nThreads);
+
+    #pragma omp parallel for
+    for (size_t i = 0; i < values.size(); ++i) {
+        int tid = omp_get_thread_num();
+        auto it = values.begin();
+        std::advance(it, i);
+        threadStrings[tid] += *it + "\n";
+    }
+
+    std::string comment_block;
+    for (const auto& str : threadStrings) {
+        comment_block += str;
     }
     comment_block += "===\n";
     Logger::log("Built comment block with " + std::to_string(values.size()) + " values", LogLevel::INFO, __FILE__, __LINE__);
