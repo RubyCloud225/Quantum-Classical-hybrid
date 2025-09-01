@@ -1,6 +1,6 @@
+from site import makepath
 import preprocessing
-import os
-import requests
+import utils
 # import ModelCircuit  # Uncomment this line if ModelCircuit is available and required
 
 class PreprocessingPipeline:
@@ -17,11 +17,14 @@ class PreprocessingPipeline:
         self.metaspace.setReplacement(" ", True)
     
     def nasa_preprocess_text(self, text_input):
-        url = os.getenv("NASA_URL")
-        response = requests.get(url, params={"text": text_input})
-        if requests.Response.status_code != 200:
-            raise ValueError("Error in NASA preprocessing API")
-        return response.json()
+        env_vars = utils.load_env(".env")
+        nasa_api_key = env_vars.get("NASA_API_KEY")
+        if not nasa_api_key:
+            raise ValueError("NASA_API_KEY not found in environment variables.")
+        response = env_vars.get(nasa_api_key, text_input)
+        if response.status_code != 200:
+            raise ValueError(f"Failed to fetch NASA APOD data: {response.status_code}")
+        return response.text
     
     def preprocess_text(self, text_input):
         #BERT Cleaning
@@ -105,14 +108,14 @@ class SampleDataWrapper:
 # example usage
 if __name__ == "__main__":
     pipeline = PreprocessingPipeline()
-
-    text_input = pipeline.nasa_preprocess_text(response.text)
-
-    merged_sample = pipeline.merge_text_image(text_input, image_path)
+    sample_text = "Sample text for preprocessing."
+    text_input_dict = pipeline.nasa_preprocess_text(sample_text)
+    sample_image = "path/to/image.jpg"  # Replace with actual image path
+    merged_sample = pipeline.merge_text_image(sample_text, sample_image)
     wrapped = SampleDataWrapper(merged_sample)
     print("Text tokens:", merged_sample.textTokens)
     print("Number of image patches:", len(merged_sample.imageTokens))
-    if wrapped.sample_data.imageTokens:
+    if merged_sample.imageTokens:
         first_patch = merged_sample.imageTokens[0]
         print("First patch embedding length:", len(first_patch.embedding))
         print("First patch position (row, col):", first_patch.row, first_patch.col)
