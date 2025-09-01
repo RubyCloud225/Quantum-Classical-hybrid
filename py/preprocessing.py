@@ -1,4 +1,3 @@
-from site import makepath
 import preprocessing
 import utils
 # import ModelCircuit  # Uncomment this line if ModelCircuit is available and required
