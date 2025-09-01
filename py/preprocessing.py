@@ -1,4 +1,6 @@
 import preprocessing
+import dotenv
+import requests
 # import ModelCircuit  # Uncomment this line if ModelCircuit is available and required
 
 class PreprocessingPipeline:
@@ -13,6 +15,13 @@ class PreprocessingPipeline:
         #configure metaspace replacement
         self.metaspace.setReplacement("Ġ", True)
         self.metaspace.setReplacement(" ", True)
+    
+    def nasa_preprocess_text(self, text_input):
+        url = dotenv.get("NASA_URL")
+        response = requests.get(url, params={"text": text_input})
+        if requests.Response.status_code != 200:
+            raise ValueError("Error in NASA preprocessing API")
+        return response.json()
     
     def preprocess_text(self, text_input):
         #BERT Cleaning
