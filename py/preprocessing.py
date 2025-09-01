@@ -99,11 +99,54 @@ class SampleDataWrapper:
     def GaussianNoise(self):
         return self._sample_data.GaussianNoise
     @property
-    def LayereNormalization(self):
+    def LayerNormalization(self):
         return self._sample_data.LayerNormalization
     @property
     def LinearRegression(self):
         return self._sample_data.LinearRegression
+
+class SanityMetrics:
+    def __init__(self, sample_data=None, text_input=None, image_path=None):
+        self.sample_data = sample_data
+        self.text_input = text_input
+        self.image_path = image_path
+        self.pipeline = PreprocessingPipeline()
+        if self.sample_data is None and self.text_input and self.image_path:
+            self.sample_data = self.pipeline.merge_text_image(self.text_input, self.image_path)
+        self.metrics = {}
+    
+    def _compute_from_sample_data(self):
+        text_tokens = getattr(self.sample_data, 'textTokens', [])
+        num_text_tokens = len(text_tokens)
+        unique_tokens = len(set(text_tokens))
+        text_length = sum(len(t) for t in text_tokens) if num_text_tokens > 0 else 0
+        avg_token_length = text_length / num_text_tokens if num_text_tokens > 0 else 0
+        image_tokens = getattr(self.sample_data, 'imageTokens', [])
+        num_image_patches = len(image_tokens)
+        avg_embedding_length = (sum(len(patch.embedding) for patch in image_tokens) / num_image_patches) if num_image_patches > 0 else 0
+        self.metrics = {
+            "num_text_tokens": num_text_tokens,
+            "unique_text_tokens": unique_tokens,
+            "avg_token_length": avg_token_length,
+            "num_image_patches": num_image_patches,
+            "avg_embedding_length": avg_embedding_length
+        }
+    def _compute_from_raw_inputs(self):
+        #use pipeline to preprocess
+        text_metrics = self.pipeline.sanity_check_text(self.text_input)
+        image_metrics = self.pipeline.sanity_check_image(self.image_path)
+        self.metrics = {"text_metrics": text_metrics, "image_metrics": image_metrics}
+    def get_metrics(self):
+        if self.sample_data:
+            self._compute_from_sample_data()
+        elif self.text_input and self.image_path:
+            self._compute_from_raw_inputs()
+        else:
+            raise ValueError("Insufficient data to compute metrics.")
+        return self.metrics
+
+    
+
 
 # example usage
 if __name__ == "__main__":
@@ -126,3 +169,13 @@ if __name__ == "__main__":
     print("Density:", wrapped.density)
     print("NLL:", wrapped.nll)
     print("Entropy:", wrapped.entropy)
+    print("Gaussian Noise:", wrapped.GaussianNoise)
+    print("Layer Normalization:", wrapped.LayerNormalization)
+    print("Linear Regression:", wrapped.LinearRegression)
+    # Compute sanity metrics
+    sanity = SanityMetrics(sample_data=merged_sample)
+    metrics = sanity.get_metrics()
+    print("Sanity Metrics:", metrics)
+    sanity_raw = SanityMetrics(text_input=sample_text, image_path=sample_image)
+    raw_metrics = sanity_raw.get_metrics()
+    print("Raw Input Sanity Metrics:", raw_metrics)
