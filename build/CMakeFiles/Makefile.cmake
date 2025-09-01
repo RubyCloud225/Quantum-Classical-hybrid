@@ -30,9 +30,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake"
+  "/opt/homebrew/share/cmake/Modules/FindCURL.cmake"
   "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake"
+  "/opt/homebrew/share/cmake/Modules/FindOpenSSL.cmake"
   "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+  "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake"
   "/opt/homebrew/share/cmake/Modules/FindPython/Support.cmake"
   "/opt/homebrew/share/cmake/Modules/FindPython3.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
@@ -50,6 +53,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/opt/homebrew/share/cmake/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
@@ -65,6 +69,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/utils.dir/DependInfo.cmake"
   "CMakeFiles/shared_lib.dir/DependInfo.cmake"
   "CMakeFiles/Quantum_encoder.dir/DependInfo.cmake"
   "CMakeFiles/quantum_classical_hybrid.dir/DependInfo.cmake"

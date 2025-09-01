@@ -76,57 +76,57 @@ CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o: CMakeFiles
 CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
 CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o: CMakeFiles/shared_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o -MF CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o.d -o CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o -MF CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o.d -o CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp
 
 CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp > CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp > CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.i
 
 CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp -o CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/DataProcessing/models/sampleData.cpp -o CMakeFiles/shared_lib.dir/src/DataProcessing/models/sampleData.cpp.s
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: CMakeFiles/shared_lib.dir/flags.make
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o: CMakeFiles/shared_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -MF CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o.d -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -MF CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o.d -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp > CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp > CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.i
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/GaussianDiffusion.cpp -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/GaussianDiffusion.cpp.s
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o: CMakeFiles/shared_lib.dir/flags.make
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o: CMakeFiles/shared_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o -MF CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o.d -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o -MF CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o.d -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp > CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp > CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.i
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_model.cpp -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_model.cpp.s
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o: CMakeFiles/shared_lib.dir/flags.make
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o: /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o: CMakeFiles/shared_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -MF CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o.d -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -MF CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o.d -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.o -c /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp > CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp > CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.i
 
 CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/src/ClassicalDiT/Diffusion_Sample.cpp -o CMakeFiles/shared_lib.dir/src/ClassicalDiT/Diffusion_Sample.cpp.s
 
 # Object files for target shared_lib
 shared_lib_OBJECTS = \

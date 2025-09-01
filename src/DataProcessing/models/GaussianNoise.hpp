@@ -21,11 +21,11 @@ public:
     double negativeLogLikelihood(const std::vector<double>& sample);
     double calculateEntropy() const;
 
-//#ifndef __APPLE__
-//    void uploadToDevice();
-//    void freeDeviceMemory();
-//    void runCUDAKernel(std::vector<double>& output);
-//#endif
+#ifndef __APPLE__
+    void uploadToDevice();
+    void freeDeviceMemory();
+    void runCUDAKernel(std::vector<double>& output);
+#endif
 
 private:
     void choleskyDecomposition();
@@ -36,12 +36,12 @@ private:
     std::vector<double> weights_;
     std::vector<std::vector<double>> L_;
 
-//#ifndef __APPLE__
-//    double* d_L_ = nullptr;
-//    double* d_mean_ = nullptr;
-//    double* d_weights_ = nullptr;
-//    double* d_noise_ = nullptr;
-//#endif
+#ifndef __APPLE__
+    double* d_L_ = nullptr;
+    double* d_mean_ = nullptr;
+    double* d_weights_ = nullptr;
+    double* d_noise_ = nullptr;
+#endif
 
     std::mt19937 generator_{std::random_device{}()};
     std::normal_distribution<double> distribution_;

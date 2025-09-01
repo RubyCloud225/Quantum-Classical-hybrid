@@ -93,23 +93,17 @@ double GaussianNoise::negativeLogLikelihood(const std::vector<double>& sample) {
 #ifndef __APPLE__
 void GaussianNoise::uploadToDevice() {
     Logger::log("Uploading GaussianNoise data to device", LogLevel::INFO, __FILE__, __LINE__);
-    int n = static_cast<int>(mean_.size());
-    size_t vec_size = n * sizeof(double);
-    size_t mat_size = n * n * sizeof(double);
-
-    // CUDA memory allocation and copying omitted for brevity
-
-    Logger::log("Freed device memory for GaussianNoise", LogLevel::INFO, __FILE__, __LINE__);
+    // Dummy implementation
 }
 
-extern void launchGaussianNoiseKernel(double* d_L, double* d_mean, double* d_weights, double* d_noise, int dim, unsigned long long seed);
+void GaussianNoise::freeDeviceMemory() {
+    Logger::log("Freeing device memory for GaussianNoise", LogLevel::INFO, __FILE__, __LINE__);
+    // Dummy implementation
+}
 
-void GaussianNoise::runKernel() {
-    uploadToDevice();
-    launchGaussianNoiseKernel(d_L_, d_mean_, d_weights_, d_noise_, dim, static_cast<unsigned long long>(time(nullptr)));
-    output.resize(dim);
-    cudaMemcpy(output.data(), d_noise_, dim * sizeof(double), cudaMemcpyDeviceToHost);
-    Logger::log("CUDA kernel execution complete", LogLevel::INFO, __FILE__, __LINE__);
-    freeDeviceMemory();
+void GaussianNoise::runCUDAKernel(std::vector<double>& output) {
+    Logger::log("Running CUDA kernel for GaussianNoise", LogLevel::INFO, __FILE__, __LINE__);
+    // Dummy implementation
+    output = generateNoise();
 }
 #endif

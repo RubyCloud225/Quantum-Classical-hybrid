@@ -1,4 +1,0 @@
-transformers>=4.30.0
-torch>=2.0.0
-setuptools>=65.0.0
-dotenv>=1.0.0

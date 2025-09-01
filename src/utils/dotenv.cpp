@@ -80,7 +80,7 @@ void clearcache(const std::string& cache_filename = "dotenv_cache.txt") {
     dotenv_cache.clear();
 }
 // fetch and cache .env file from URL
-std::string fetch_and_cache_dotenv(const std::string& url, const std::string& cache_filepath = "dotenv_cache.txt") {
+std::string fetch_and_cache_dotenv(const std::string& url, const std::string& cache_filepath) {
     CURL* curl;
     CURLcode res;
     curl = curl_easy_init();
@@ -106,7 +106,7 @@ std::string fetch_and_cache_dotenv(const std::string& url, const std::string& ca
     return readBuffer;
 }
 
-std::string load_cached_dotenv(const std::string& cache_filepath = "dotenv_cache.txt") {
+std::string load_cached_dotenv(const std::string& cache_filepath) {
     std::string path = cache_folder + "/" + cache_filepath;
     if (!fs::exists(path)) {
         throw std::runtime_error("Cache file does not exist");
@@ -120,7 +120,7 @@ std::string load_cached_dotenv(const std::string& cache_filepath = "dotenv_cache
     return content;
 }
 // Https:// or http:// URL support
-std::string http_get(const std::string& url, const std::map<std::string, std::string>& params = {}, bool use_cache = true) {
+std::string http_get(const std::string& url, const std::map<std::string, std::string>& params, bool use_cache) {
     std::ostringstream key_stream;
     key_stream << url;
     for (auto& [k, v] : params) {

@@ -23,4 +23,5 @@ std::vector<std::string> DigitNormaliser::normaliseDigits(const std::string& inp
         }
     }
     Logger::log("Digit normalization completed with " + std::to_string(tokens.size()) + " tokens", LogLevel::INFO, "DigitNormaliser");
+    return tokens;
 }

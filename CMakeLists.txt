@@ -63,9 +63,34 @@ execute_process(
 )
 list(APPEND CMAKE_PREFIX_PATH ${PYBIND11_CMAKE_DIR})
 find_package(pybind11 REQUIRED)
+find_package(OpenSSL REQUIRED)
+find_package(CURL REQUIRED)
 
-if(NOT pybind11_FOUND)
-    find_package(pybind11 REQUIRED PATHS /opt/homebrew/lib/cmake/pybind11)
+# Add pybind11 module for utils.cpp
+pybind11_add_module(utils src/Bindings/utils.cpp src/utils/dotenv.cpp src/utils/json.cpp)
+target_include_directories(utils PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${Python3_INCLUDE_DIRS}
+)
+target_link_libraries(utils PRIVATE
+    OpenMP::OpenMP_CXX
+    CURL::libcurl
+    OpenSSL::SSL
+    OpenSSL::Crypto
+)
+set_target_properties(utils PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
+)
+
+if(APPLE)
+    target_compile_options(utils PRIVATE -Xpreprocessor -fopenmp)
+    target_include_directories(utils PRIVATE ${OPENMP_ROOT}/include)
+    target_link_libraries(utils PRIVATE ${OPENMP_ROOT}/lib/libomp.dylib)
 endif()
 
 # Include directories
@@ -78,11 +103,15 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/src/Compression
     ${PROJECT_SOURCE_DIR}/src/utils
     ${PROJECT_SOURCE_DIR}/src/DataProcessing/models
-    /opt/homebrew/include/eigen3
-    /opt/homebrew/include
-    $ENV{HOME}/icu-install/include
     ${Python3_INCLUDE_DIRS}
 )
+
+# Platform-specific include directories
+if(APPLE)
+    include_directories(/opt/homebrew/include/eigen3 /opt/homebrew/include ${OpenMP_INCLUDE_DIR})
+elseif(UNIX AND NOT APPLE)
+    include_directories(/usr/include/eigen3 ${OpenMP_INCLUDE_DIR})
+endif()
 link_directories(
     ${PROJECT_SOURCE_DIR}/src/ClassicalDiT
     ${PROJECT_SOURCE_DIR}/src/DataProcessing
@@ -90,11 +119,12 @@ link_directories(
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
     ${PROJECT_SOURCE_DIR}/src/Compression
     ${PROJECT_SOURCE_DIR}/src/utils
-    /opt/homebrew/lib
-    $ENV{HOME}/icu-install/lib
 )
 
-# --- Shared Libraries ---
+# Platform-specific link directories
+if(APPLE)
+    link_directories(/opt/homebrew/lib)
+endif()
 
 add_library(shared_lib STATIC
     src/DataProcessing/models/sampleData.cpp
@@ -121,8 +151,6 @@ target_include_directories(Quantum_encoder PRIVATE
     ${Python3_INCLUDE_DIRS}
 )
 
-# --- Python Bindings Module ---
-
 file(GLOB_RECURSE DATAPROCESSING_SOURCES src/DataProcessing/*.cpp)
 file(GLOB_RECURSE NORMALISER_SOURCES src/DataProcessing/normaliser/*.cpp)
 
@@ -133,13 +161,12 @@ list(FILTER NORMALISER_SOURCES EXCLUDE REGEX ".*tests/.*")
 pybind11_add_module(quantum_classical_hybrid
     ${DATAPROCESSING_SOURCES}
     ${NORMALISER_SOURCES}
+    src/Bindings/PreprocessingBindings.cpp
 )
 
 target_link_libraries(quantum_classical_hybrid PRIVATE
     ${Python3_LIBRARIES}
     OpenMP::OpenMP_CXX
-    icuuc
-    icui18n
 )
 target_include_directories(quantum_classical_hybrid PRIVATE
     ${PROJECT_SOURCE_DIR}/src/utils
@@ -149,19 +176,16 @@ target_include_directories(quantum_classical_hybrid PRIVATE
     ${PROJECT_SOURCE_DIR}/src/Bindings
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
     ${PROJECT_SOURCE_DIR}/src/Compression
-    $ENV{HOME}/icu-install/include
 )
 
 set_target_properties(quantum_classical_hybrid PROPERTIES
-    OUTPUT_NAME "quantum-classical-hybrid"
+    OUTPUT_NAME "preprocessing"
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
 )
-
-# --- Test Executables ---
 
 function(add_test_executable_with_sources test_dir module_dirs)
     file(GLOB_RECURSE TEST_FILES ${test_dir}/*.cpp)
@@ -191,8 +215,6 @@ function(add_test_executable_with_sources test_dir module_dirs)
             target_link_libraries(${test_name} PRIVATE
                 ${Python3_LIBRARIES}
                 OpenMP::OpenMP_CXX
-                icuuc
-                icui18n
             )
             target_compile_options(${test_name} PRIVATE -g)
         endif()
@@ -225,26 +247,4 @@ if(EXISTS "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/convert_classical_state_to_
         "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/convert_classical_state_to_Quantum.md/tests"
         "src/Quantum_encoder"
     )
-endif()
-
-# --- Apple Clang OpenMP Setup ---
-
-if(APPLE)
-    set(CMAKE_C_COMPILER clang)
-    set(CMAKE_CXX_COMPILER clang++)
-
-    find_package(OpenMP REQUIRED)
-
-    if(OpenMP_CXX_FOUND)
-        message(STATUS "Using Apple Clang OpenMP: ${OpenMP_omp_LIBRARY}")
-
-        foreach(tgt shared_lib quantum_classical_hybrid Quantum_encoder)
-            target_compile_options(${tgt} PRIVATE -Xpreprocessor -fopenmp)
-            target_include_directories(${tgt} PRIVATE /opt/homebrew/opt/libomp/include)
-            target_link_libraries(${tgt} PRIVATE OpenMP::OpenMP_CXX)
-            target_link_options(${tgt} PRIVATE /opt/homebrew/opt/libomp/lib/libomp.dylib)
-        endforeach()
-    else()
-        message(FATAL_ERROR "OpenMP not found on Apple Clang")
-    endif()
 endif()

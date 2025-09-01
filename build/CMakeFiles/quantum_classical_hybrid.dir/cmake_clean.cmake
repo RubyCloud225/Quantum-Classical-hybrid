@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.cpython-313-darwin.so"
-  "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/quantum-classical-hybrid.pdb"
+  "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/preprocessing.cpython-313-darwin.so"
+  "/Users/catherinepemblington/Documents/GitHub/Quantum-Classical-hybrid/lib/preprocessing.pdb"
+  "CMakeFiles/quantum_classical_hybrid.dir/src/Bindings/PreprocessingBindings.cpp.o"
+  "CMakeFiles/quantum_classical_hybrid.dir/src/Bindings/PreprocessingBindings.cpp.o.d"
   "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o"
   "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/GaussianNoise.cpp.o.d"
   "CMakeFiles/quantum_classical_hybrid.dir/src/DataProcessing/models/LayerNormalization.cpp.o"

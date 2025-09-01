@@ -7,6 +7,7 @@
 #include <vector>
 #include <variant>
 #include <memory>
+#include <pybind11/pybind11.h>
 
 namespace json {
     struct jsonValue;
@@ -23,10 +24,11 @@ namespace json {
         jsonValue(double v) : type(Type::NUMBER), value(v) {}
         jsonValue(bool v) : type(Type::BOOLEAN), value(v) {}
         jsonValue(std::nullptr_t v) : type(Type::NIL), value(v) {}
+
+        pybind11::object to_py() const;
+
+
     };
     std::shared_ptr<jsonValue> parse(const std::string& text);
 };
 #endif // JSON_HPP
-
-
-

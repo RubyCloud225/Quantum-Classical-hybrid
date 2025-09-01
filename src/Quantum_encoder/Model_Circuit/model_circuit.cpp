@@ -148,6 +148,7 @@ std::vector<ModelCircuit::Complex> ModelCircuit::apply_propagator(const Time::Ma
         new_state_vector[i] = sum;
     }
 
+    return new_state_vector;
 }
 
 // Quantum circuit that encodes a parameterized graph state
