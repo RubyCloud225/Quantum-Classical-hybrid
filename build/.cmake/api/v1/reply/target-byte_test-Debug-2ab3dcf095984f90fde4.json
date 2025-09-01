@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Diffusion_sample_test"
+			"path" : "byte_test"
 		}
 	],
 	"backtrace" : 2,
@@ -32,13 +32,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 155,
+				"line" : 188,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 138,
+				"line" : 166,
 				"parent" : 1
 			},
 			{
@@ -50,13 +50,13 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 142,
+				"line" : 170,
 				"parent" : 1
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 288,
+				"line" : 316,
 				"parent" : 0
 			},
 			{
@@ -72,7 +72,7 @@
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 148,
+				"line" : 176,
 				"parent" : 1
 			},
 			{
@@ -175,19 +175,11 @@
 				5,
 				6,
 				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16
+				8
 			]
 		}
 	],
-	"id" : "Diffusion_sample_test::@6890427a1f51a3e7e1df",
+	"id" : "byte_test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -267,8 +259,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Diffusion_sample_test",
-	"nameOnDisk" : "Diffusion_sample_test",
+	"name" : "byte_test",
+	"nameOnDisk" : "byte_test",
 	"paths" : 
 	{
 		"build" : ".",
@@ -288,15 +280,7 @@
 				5,
 				6,
 				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16
+				8
 			]
 		}
 	],
@@ -305,103 +289,55 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/tests/Diffusion_sample_test.cpp",
+			"path" : "src/DataProcessing/normaliser/tests/byte_test.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/BetaSchedule.cpp",
+			"path" : "src/DataProcessing/normaliser/bert.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/Diffusion_Sample.cpp",
+			"path" : "src/DataProcessing/normaliser/byte_level.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/Diffusion_model.cpp",
+			"path" : "src/DataProcessing/normaliser/digits.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/GaussianDiffusion.cpp",
+			"path" : "src/DataProcessing/normaliser/image/image_resize.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NN/EpsilonPredictor.cpp",
+			"path" : "src/DataProcessing/normaliser/metaspace.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NN/Layers/ConvolutionalLayer.cpp",
+			"path" : "src/DataProcessing/normaliser/prepend.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NN/Layers/Flatten.cpp",
+			"path" : "src/DataProcessing/normaliser/replace.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NN/Layers/FullyConnectedLayer.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NN/Layers/PoolingLayer.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NN/Layers/ReluLayer.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NN/NeuralNetwork.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/ClassicalDiT/NormalDist.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/DataProcessing/models/GaussianNoise.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/DataProcessing/models/LayerNormalization.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/DataProcessing/models/LinearRegression.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "src/DataProcessing/models/sampleData.cpp",
+			"path" : "src/DataProcessing/normaliser/unicode_processor.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

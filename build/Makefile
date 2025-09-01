@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named utils
+
+# Build rule for target.
+utils: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 utils
+.PHONY : utils
+
+# fast build rule for target.
+utils/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/build
+.PHONY : utils/fast
+
+#=============================================================================
 # Target rules for targets named quantum_classical_hybrid
 
 # Build rule for target.
@@ -284,6 +297,102 @@ Quantum_encoder: cmake_check_build_system
 Quantum_encoder/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/build
 .PHONY : Quantum_encoder/fast
+
+src/Bindings/DiTWrapper.o: src/Bindings/DiTWrapper.cpp.o
+.PHONY : src/Bindings/DiTWrapper.o
+
+# target to build an object file
+src/Bindings/DiTWrapper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/DiTWrapper.cpp.o
+.PHONY : src/Bindings/DiTWrapper.cpp.o
+
+src/Bindings/DiTWrapper.i: src/Bindings/DiTWrapper.cpp.i
+.PHONY : src/Bindings/DiTWrapper.i
+
+# target to preprocess a source file
+src/Bindings/DiTWrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/DiTWrapper.cpp.i
+.PHONY : src/Bindings/DiTWrapper.cpp.i
+
+src/Bindings/DiTWrapper.s: src/Bindings/DiTWrapper.cpp.s
+.PHONY : src/Bindings/DiTWrapper.s
+
+# target to generate assembly for a file
+src/Bindings/DiTWrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/DiTWrapper.cpp.s
+.PHONY : src/Bindings/DiTWrapper.cpp.s
+
+src/Bindings/PreprocessingBindings.o: src/Bindings/PreprocessingBindings.cpp.o
+.PHONY : src/Bindings/PreprocessingBindings.o
+
+# target to build an object file
+src/Bindings/PreprocessingBindings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/PreprocessingBindings.cpp.o
+.PHONY : src/Bindings/PreprocessingBindings.cpp.o
+
+src/Bindings/PreprocessingBindings.i: src/Bindings/PreprocessingBindings.cpp.i
+.PHONY : src/Bindings/PreprocessingBindings.i
+
+# target to preprocess a source file
+src/Bindings/PreprocessingBindings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/PreprocessingBindings.cpp.i
+.PHONY : src/Bindings/PreprocessingBindings.cpp.i
+
+src/Bindings/PreprocessingBindings.s: src/Bindings/PreprocessingBindings.cpp.s
+.PHONY : src/Bindings/PreprocessingBindings.s
+
+# target to generate assembly for a file
+src/Bindings/PreprocessingBindings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/PreprocessingBindings.cpp.s
+.PHONY : src/Bindings/PreprocessingBindings.cpp.s
+
+src/Bindings/quantumWrapper.o: src/Bindings/quantumWrapper.cpp.o
+.PHONY : src/Bindings/quantumWrapper.o
+
+# target to build an object file
+src/Bindings/quantumWrapper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/quantumWrapper.cpp.o
+.PHONY : src/Bindings/quantumWrapper.cpp.o
+
+src/Bindings/quantumWrapper.i: src/Bindings/quantumWrapper.cpp.i
+.PHONY : src/Bindings/quantumWrapper.i
+
+# target to preprocess a source file
+src/Bindings/quantumWrapper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/quantumWrapper.cpp.i
+.PHONY : src/Bindings/quantumWrapper.cpp.i
+
+src/Bindings/quantumWrapper.s: src/Bindings/quantumWrapper.cpp.s
+.PHONY : src/Bindings/quantumWrapper.s
+
+# target to generate assembly for a file
+src/Bindings/quantumWrapper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/quantumWrapper.cpp.s
+.PHONY : src/Bindings/quantumWrapper.cpp.s
+
+src/Bindings/utils.o: src/Bindings/utils.cpp.o
+.PHONY : src/Bindings/utils.o
+
+# target to build an object file
+src/Bindings/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/utils.cpp.o
+.PHONY : src/Bindings/utils.cpp.o
+
+src/Bindings/utils.i: src/Bindings/utils.cpp.i
+.PHONY : src/Bindings/utils.i
+
+# target to preprocess a source file
+src/Bindings/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/utils.cpp.i
+.PHONY : src/Bindings/utils.cpp.i
+
+src/Bindings/utils.s: src/Bindings/utils.cpp.s
+.PHONY : src/Bindings/utils.s
+
+# target to generate assembly for a file
+src/Bindings/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/Bindings/utils.cpp.s
+.PHONY : src/Bindings/utils.cpp.s
 
 src/ClassicalDiT/BetaSchedule.o: src/ClassicalDiT/BetaSchedule.cpp.o
 .PHONY : src/ClassicalDiT/BetaSchedule.o
@@ -1584,6 +1693,54 @@ src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Quantum_encoder.dir/build.make CMakeFiles/Quantum_encoder.dir/src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s
 .PHONY : src/Quantum_encoder/converttoqubit/HybridEncoder.cpp.s
 
+src/utils/dotenv.o: src/utils/dotenv.cpp.o
+.PHONY : src/utils/dotenv.o
+
+# target to build an object file
+src/utils/dotenv.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/utils/dotenv.cpp.o
+.PHONY : src/utils/dotenv.cpp.o
+
+src/utils/dotenv.i: src/utils/dotenv.cpp.i
+.PHONY : src/utils/dotenv.i
+
+# target to preprocess a source file
+src/utils/dotenv.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/utils/dotenv.cpp.i
+.PHONY : src/utils/dotenv.cpp.i
+
+src/utils/dotenv.s: src/utils/dotenv.cpp.s
+.PHONY : src/utils/dotenv.s
+
+# target to generate assembly for a file
+src/utils/dotenv.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/utils/dotenv.cpp.s
+.PHONY : src/utils/dotenv.cpp.s
+
+src/utils/json.o: src/utils/json.cpp.o
+.PHONY : src/utils/json.o
+
+# target to build an object file
+src/utils/json.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/utils/json.cpp.o
+.PHONY : src/utils/json.cpp.o
+
+src/utils/json.i: src/utils/json.cpp.i
+.PHONY : src/utils/json.i
+
+# target to preprocess a source file
+src/utils/json.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/utils/json.cpp.i
+.PHONY : src/utils/json.cpp.i
+
+src/utils/json.s: src/utils/json.cpp.s
+.PHONY : src/utils/json.s
+
+# target to generate assembly for a file
+src/utils/json.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/utils.dir/build.make CMakeFiles/utils.dir/src/utils/json.cpp.s
+.PHONY : src/utils/json.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1605,6 +1762,19 @@ help:
 	@echo "... prepend_test"
 	@echo "... quantum_classical_hybrid"
 	@echo "... replace_test"
+	@echo "... utils"
+	@echo "... src/Bindings/DiTWrapper.o"
+	@echo "... src/Bindings/DiTWrapper.i"
+	@echo "... src/Bindings/DiTWrapper.s"
+	@echo "... src/Bindings/PreprocessingBindings.o"
+	@echo "... src/Bindings/PreprocessingBindings.i"
+	@echo "... src/Bindings/PreprocessingBindings.s"
+	@echo "... src/Bindings/quantumWrapper.o"
+	@echo "... src/Bindings/quantumWrapper.i"
+	@echo "... src/Bindings/quantumWrapper.s"
+	@echo "... src/Bindings/utils.o"
+	@echo "... src/Bindings/utils.i"
+	@echo "... src/Bindings/utils.s"
 	@echo "... src/ClassicalDiT/BetaSchedule.o"
 	@echo "... src/ClassicalDiT/BetaSchedule.i"
 	@echo "... src/ClassicalDiT/BetaSchedule.s"
@@ -1725,6 +1895,12 @@ help:
 	@echo "... src/Quantum_encoder/converttoqubit/HybridEncoder.o"
 	@echo "... src/Quantum_encoder/converttoqubit/HybridEncoder.i"
 	@echo "... src/Quantum_encoder/converttoqubit/HybridEncoder.s"
+	@echo "... src/utils/dotenv.o"
+	@echo "... src/utils/dotenv.i"
+	@echo "... src/utils/dotenv.s"
+	@echo "... src/utils/json.o"
+	@echo "... src/utils/json.i"
+	@echo "... src/utils/json.s"
 .PHONY : help
 
 

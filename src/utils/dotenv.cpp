@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <openssl/sha.h>
 #include <string>
-#include "json_util.hpp"
+#include "json.hpp"
 #include "dotenv.hpp"
 #include <cstdlib>
 #include <curl/curl.h>
@@ -35,7 +35,7 @@ std::string sha1(const std::string& str) {
 void set_cache_folder(const std::string& folder) {
     cache_folder = folder;
     if (!fs::exists(cache_folder)) {
-        fs::create_directories(cache_file_path);
+        fs::create_directories(cache_folder);
     }
 }
 // Load and save cache

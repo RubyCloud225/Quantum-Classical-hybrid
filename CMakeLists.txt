@@ -101,7 +101,35 @@ link_directories(
 
 file(GLOB_RECURSE DATAPROCESSING_SOURCES src/DataProcessing/*.cpp)
 file(GLOB_RECURSE NORMALISER_SOURCES src/DataProcessing/normaliser/*.cpp)
-file(GLOB_RECURSE NORMALISER_TESTS src/DataProcessing/normaliser/tests/*.cpp)
+file(GLOB_RECURSE UTILS_SOURCES src/utils/*.cpp)
+file(GLOB_RECURSE BINDINGS_SOURCES src/Bindings/*.cpp)
+
+set(CMAKE_OSX_ARCHITECTURES arm64)
+
+# Homebrew paths
+set(LIBOMP_ROOT "/opt/homebrew/opt/libomp")
+set(OPENSSL_ROOT "/opt/homebrew/opt/openssl@3")
+
+pybind11_add_module(utils
+    ${UTILS_SOURCES}
+    ${BINDINGS_SOURCES}
+)
+target_include_directories(utils PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${PROJECT_SOURCE_DIR}/src/Bindings
+    ${Python3_INCLUDE_DIRS}
+    ${LIBOMP_ROOT}/include
+    ${OPENSSL_ROOT}/include
+)
+target_link_libraries(utils PRIVATE
+    ${Python3_LIBRARIES}
+    ${LIBOMP_ROOT}/lib/libomp.dylib
+    ${OPENSSL_ROOT}/lib/libssl.dylib
+    ${OPENSSL_ROOT}/lib/libcrypto.dylib
+    icuuc
+    icui18n
+    curl
+)
 
 # Remove test files from Hypernetwork module sources
 list(FILTER DATAPROCESSING_SOURCES EXCLUDE REGEX ".*tests/.*")
