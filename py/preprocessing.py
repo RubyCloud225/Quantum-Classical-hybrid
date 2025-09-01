@@ -1,5 +1,5 @@
 import preprocessing
-import dotenv
+import os
 import requests
 # import ModelCircuit  # Uncomment this line if ModelCircuit is available and required
 
@@ -17,7 +17,7 @@ class PreprocessingPipeline:
         self.metaspace.setReplacement(" ", True)
     
     def nasa_preprocess_text(self, text_input):
-        url = dotenv.get("NASA_URL")
+        url = os.getenv("NASA_URL")
         response = requests.get(url, params={"text": text_input})
         if requests.Response.status_code != 200:
             raise ValueError("Error in NASA preprocessing API")
@@ -106,8 +106,7 @@ class SampleDataWrapper:
 if __name__ == "__main__":
     pipeline = PreprocessingPipeline()
 
-    text_input = "The price is 1,234.56 USD on 23rd March 2025."
-    image_path = "cat.png"
+    text_input = pipeline.nasa_preprocess_text(response.text)
 
     merged_sample = pipeline.merge_text_image(text_input, image_path)
     wrapped = SampleDataWrapper(merged_sample)
