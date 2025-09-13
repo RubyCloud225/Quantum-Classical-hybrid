@@ -66,33 +66,6 @@ find_package(pybind11 REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(CURL REQUIRED)
 
-# Add pybind11 module for utils.cpp
-pybind11_add_module(utils src/Bindings/utils.cpp src/utils/dotenv.cpp src/utils/json.cpp)
-target_include_directories(utils PRIVATE
-    ${PROJECT_SOURCE_DIR}/src/Bindings
-    ${PROJECT_SOURCE_DIR}/src/utils
-    ${Python3_INCLUDE_DIRS}
-)
-target_link_libraries(utils PRIVATE
-    OpenMP::OpenMP_CXX
-    CURL::libcurl
-    OpenSSL::SSL
-    OpenSSL::Crypto
-)
-set_target_properties(utils PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_RELEASE ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_CURRENT_SOURCE_DIR}/lib
-    LIBRARY_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_CURRENT_SOURCE_DIR}/lib
-)
-
-if(APPLE)
-    target_compile_options(utils PRIVATE -Xpreprocessor -fopenmp)
-    target_include_directories(utils PRIVATE ${OPENMP_ROOT}/include)
-    target_link_libraries(utils PRIVATE ${OPENMP_ROOT}/lib/libomp.dylib)
-endif()
-
 # Include directories
 include_directories(
     ${PROJECT_SOURCE_DIR}/src
@@ -158,6 +131,7 @@ file(GLOB_RECURSE NORMALISER_SOURCES src/DataProcessing/normaliser/*.cpp)
 list(FILTER DATAPROCESSING_SOURCES EXCLUDE REGEX ".*tests/.*")
 list(FILTER NORMALISER_SOURCES EXCLUDE REGEX ".*tests/.*")
 
+# Consolidated pybind11 module for quantum_classical_hybrid including all normaliser sources and PreprocessingBindings.cpp
 pybind11_add_module(quantum_classical_hybrid
     ${DATAPROCESSING_SOURCES}
     ${NORMALISER_SOURCES}
@@ -177,7 +151,6 @@ target_include_directories(quantum_classical_hybrid PRIVATE
     ${PROJECT_SOURCE_DIR}/src/Quantum_encoder
     ${PROJECT_SOURCE_DIR}/src/Compression
 )
-
 set_target_properties(quantum_classical_hybrid PROPERTIES
     OUTPUT_NAME "preprocessing"
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib

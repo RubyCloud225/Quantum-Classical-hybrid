@@ -151,12 +151,67 @@ py::dict run_preprocessing(const std::string& input) {
     result["punctuation"] = totalPunctuation;
     return result;
 }
+py::object json::jsonValue::to_py() const {
+    switch (type) {
+        case Type::OBJECT: {
+            py::dict obj;
+            for (const auto& [k, v] : std::get<json::jsonObject>(value)) {
+                obj[py::str(k)] = v->to_py();
+            }
+            return obj;
+        }
+        case Type::ARRAY: {
+            py::list arr;
+            for (const auto& v : std::get<json::jsonArray>(value)) {
+                arr.append(v->to_py());
+            }
+            return arr;
+        }
+        case Type::STRING:
+            return py::str(std::get<std::string>(value));
+        case Type::NUMBER:
+            return py::float_(std::get<double>(value));
+        case Type::BOOLEAN:
+            return py::bool_(std::get<bool>(value));
+        case Type::NIL:
+            return py::none();
+        default:
+            throw std::runtime_error("Unknown JSON value type");
+    }
+}
 
+
+
+// Python wrapper for load_dotenv with caching
+py::dict load_dotenv_py(const std::string& path = ".env", bool use_cache = true) {
+    std::string content;
+    std::string cache_path = "dotenv_cache.txt";
+
+    if (use_cache) {
+        try {
+            content = load_cached_dotenv(cache_path);
+        } catch (...) {
+            content = fetch_and_cache_dotenv(path, cache_path);
+        }
+    } else {
+        content = fetch_and_cache_dotenv(path, cache_path);
+    }
+
+    auto env_map = load_dotenv(path);
+    py::dict env_dict;
+    for (const auto& [k, v] : env_map) {
+        env_dict[py::str(k)] = py::str(v);
+    }
+    return env_dict;
+}
+
+// --- Pybind11 module ---
 // --- Pybind11 module ---
 PYBIND11_MODULE(quantum_classical_hybrid, m) {
     m.def("run_preprocessing", &run_preprocessing, py::arg("input"),
           "Preprocess text and generate data for DiT training");
 
+    // Bind normalization classes (existing)
     py::class_<BertNormaliser>(m, "BertNormaliser")
         .def(py::init<>())
         .def("bertCleaning", &BertNormaliser::bertCleaning)
@@ -220,7 +275,11 @@ PYBIND11_MODULE(quantum_classical_hybrid, m) {
         .def("fit", [](LinearRegression &lr, const std::vector<std::pair<double,double>>& data){ lr.fit(data); })
         .def("predict", &LinearRegression::predict);
 
-    m.def("load_dotenv", &load_dotenv, py::arg("path") = "");
+    // --- Bind all dotenv functions ---
+    m.def("load_dotenv", &load_dotenv, py::arg("path") = ".env");
+    m.def("load_cached_dotenv", &load_cached_dotenv, py::arg("cache_filepath") = "dotenv_cache.txt");
+    m.def("fetch_and_cache_dotenv", &fetch_and_cache_dotenv, py::arg("url"), py::arg("cache_filepath") = "dotenv_cache.txt");
+    m.def("http_get", &http_get, py::arg("url"), py::arg("params") = std::map<std::string,std::string>(), py::arg("use_cache") = true);
 
     py::class_<json::jsonValue>(m, "jsonValue")
         .def("to_py", &json::jsonValue::to_py);
