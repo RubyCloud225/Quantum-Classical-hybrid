@@ -69,7 +69,7 @@ double intensity(const std::vector<double>& R, const std::vector<double>& I) {
 }
 
 // Propagate 3d field
-void propagate_hamiltonian_3d(py::array_t<cdouble> psi_in, int nx, int ny, int nz, double dx, double dz, double k, double re) {
+void propagate_hamiltonian_3d(std::<cdouble> psi_in, int nx, int ny, int nz, double dx, double dz, double k, double re) {
     auto buf = psi_in.request();
     if (buf.ndim != 3) throw std::runtime_error("Input array must be 3-dimensional");
     if (buf.shape[0] != nz || buf.shape[1] != nx || buf.shape[2] != ny) throw std::runtime_error("Input array shape does not match specified dimensions");
