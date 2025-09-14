@@ -1,11 +1,10 @@
-# Fix Compilation Error in time_H.cpp
+# TODO: Update Dockerfile and Setup for VM with GPU
 
-## Steps to Complete:
-1. [ ] Remove malformed struct definition on line 23
-2. [ ] Add proper constructor to existing Vec struct for std::vector<cplx> conversion
-3. [ ] Test compilation to verify fix
+## Completed Tasks
+- [x] Update Dockerfile to use NVIDIA CUDA base image (nvidia/cuda:12.2-base-ubuntu22.04)
+- [x] Remove redundant manual CUDA installation from Dockerfile
+- [x] Create HOW-TO.md with VM setup instructions
 
-## Current Status:
-- Error: "expected unqualified-id before 'const'" on line 23
-- Cause: Incorrect struct definition syntax
-- Solution: Replace with proper constructor in existing Vec struct
+## Pending Tasks (Later)
+- [ ] Test Docker build on VM with GPU
+- [ ] Verify CUDA functionality in the container on VM

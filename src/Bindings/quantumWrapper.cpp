@@ -5,6 +5,7 @@
 #include "model_circuit.hpp"
 #include "../Quantum_encoder/converttoqubit/AngleEncoder.hpp"
 #include "../Quantum_encoder/converttoqubit/HybridEncoder.hpp"
+#include "../Quantum_encoder/Compression/wavelet_compression.hpp"
 
 namespace py = pybind11;
 
@@ -52,4 +53,24 @@ PYBIND11_MODULE(model_circuit, m) {
         .def_readwrite("axis", &HybridGate::axis)
         .def_readwrite("angle", &HybridGate::angle)
         .def_readwrite("target_qubit", &HybridGate::target_qubit);
+
+    py::class_<Wavelet_compression>(m, "Wavelet_compression")
+        .def(py::init<>())
+        .def("qubits_to_wave", &qubits_to_wave,
+            py::arg("qubits"),
+            py::arg("psi"),
+            py::arg("nx"),
+            py::arg("ny"),
+            "Convert qubit state to 2D wavelet transform.")
+        .def("propagate_and_compress", &propagate_and_compress,
+            py::arg("nx"),
+            py::arg("ny"),
+            py::arg("nz"),
+            py::arg("dx"),
+            py::arg("dz"),
+            py::arg("k"),
+            py::arg("re"),
+            py::arg("J"),
+            py::arg("F_star"),
+            "Propagate field and perform wavelet compression.");
 }

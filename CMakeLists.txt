@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(quantum_classical_hybrid LANGUAGES CXX)
+project(quantum_classical_hybrid LANGUAGES CXX CUDA)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -65,6 +65,7 @@ list(APPEND CMAKE_PREFIX_PATH ${PYBIND11_CMAKE_DIR})
 find_package(pybind11 REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(CURL REQUIRED)
+find_package(CUDA REQUIRED)
 
 # Include directories
 include_directories(
@@ -221,3 +222,23 @@ if(EXISTS "${PROJECT_SOURCE_DIR}/src/Quantum_encoder/convert_classical_state_to_
         "src/Quantum_encoder"
     )
 endif()
+
+# Add test_echo executable target
+add_executable(test_echo
+    src/utils/test_echo.cpp
+    src/utils/echo_pipeline.cu
+)
+
+target_include_directories(test_echo PRIVATE
+    ${PROJECT_SOURCE_DIR}/src/utils
+    ${PROJECT_SOURCE_DIR}/src
+)
+
+target_link_libraries(test_echo PRIVATE
+    CUDA::cufft
+)
+
+set_target_properties(test_echo PROPERTIES
+    CUDA_SEPARABLE_COMPILATION ON
+    CXX_STANDARD 17
+)
