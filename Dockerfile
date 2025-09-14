@@ -2,8 +2,8 @@
 # Quantum-Classical-Hybrid Dockerfile
 # -----------------------------
 
-# Base image
-FROM ubuntu:22.04
+# Base image with CUDA 12.2
+FROM nvidia/cuda:12.2-base-ubuntu22.04
 
 # Environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     libeigen3-dev \
     libicu-dev \
+    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 # Install pybind11 globally
