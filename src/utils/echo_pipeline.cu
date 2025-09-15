@@ -23,6 +23,11 @@
     } \
 }
 
+struct EchoResult {
+    double E_tot;
+    std::vector<cufftDoubleComplex> E_out;
+};
+
 // Kernel: Build Gaussian Packet F_j(k)
 
 __global__ void gaussian_wavepacket(cufftDoubleComplex* f, const double* k, double k0, double x0, double sigma, int N) {
@@ -64,7 +69,7 @@ double compute_Etot(const cufftDoubleComplex* E, int N) {
 
 // Entry point (called by the bindings)
 extern "C"
-void run_echo_pipeline(double* k_host, double* omega_host, int N, double k1, double x1, double k2, double x2, double sigma, double t, cufftDoubleComplex* E_out) {
+EchoResult run_echo_pipeline(double* k_host, double* omega_host, int N, double k1, double x1, double k2, double x2, double sigma, double t) {
     double *d_k, *d_omega;
     cufftDoubleComplex *f1, *f2, *g, *E;
     CHECK_CUDA(cudaMalloc(&d_k, N*sizeof(double)));
@@ -89,11 +94,18 @@ void run_echo_pipeline(double* k_host, double* omega_host, int N, double k1, dou
     CHECK_CUFFT(cufftPlan1d(&plan, N, CUFFT_Z2Z, 1));
     CHECK_CUFFT(cufftExecZ2Z(plan, g, E, CUFFT_INVERSE));
     CHECK_CUFFT(cufftDestroy(plan));
+    // Allocate host vector for E_out
+    std::vector<cufftDoubleComplex> E_host(N);
     // copy E(x, t) to host
-    CHECK_CUDA(cudaMemcpy(E_out, E, N*sizeof(cufftDoubleComplex), cudaMemcpyDeviceToHost));
+    CHECK_CUDA(cudaMemcpy(E_host.data(), E, N*sizeof(cufftDoubleComplex), cudaMemcpyDeviceToHost));
     // Compute E_tot
     double E_tot = compute_Etot(E, N);
-    // Free
+    // Free device memory
     cudaFree(d_k); cudaFree(d_omega);
     cudaFree(f1); cudaFree(f2); cudaFree(g); cudaFree(E);
+
+    EchoResult result;
+    result.E_tot = E_tot;
+    result.E_out = std::move(E_host);
+    return result;
 }
