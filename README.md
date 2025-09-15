@@ -1,75 +1,86 @@
-# Algorithm Overview
+# Hamiltonian–Wavelet Diffusion Transformer with Qubit Echo (HW-DiT-RNN)
 
-I’m building a hybrid system that combines **classical AI** with **quantum-inspired methods** to achieve high efficiency, scalability, and robustness. Unlike traditional pipelines, my design adds a **quantum encoder + compression stage** up front and a **refinement/error-correction loop** at the end, which together reduce cost, improve accuracy, and make the model more production-friendly.
+## 📌 Overview
+This project develops a **quantum-inspired AI architecture** that combines principles of **quantum field theory (QFT)**, **wavelet compression**, and **diffusion transformers (DiT)**.  
 
-This project is an **active work in progress**. My goal is to show how quantum-inspired representations can reshape the **economics of AI** by delivering stronger performance with fewer resources.
+At its core:
+- Data is first **encoded into qubits** through a Hamiltonian-driven encoder.  
+- The resulting **qubit graph state** is **compressed into momentum space** using a wavelet transform.  
+- A **Diffusion Transformer** operates in this compressed representation, learning to denoise and reconstruct efficiently.  
+- An **Echo loop (CUDA RNN)** refines qubit dynamics in parallel, feeding back into the main pipeline to stabilize and improve reconstruction.  
 
----
-
-# Pipeline Breakdown
-
-### 1) Raw Data → Tokenization
-I convert raw input into tokens—structured units the rest of the system can handle consistently.
-
-### 2) Quantum Encoder (Graph / Qubit-Style Encoding)
-I encode tokens into a **graph-like, qubit-inspired state** (e.g., parameterized gates and entanglement structure).  
-This creates a compact, information-dense representation with two aims:
-- Preserve salient structure while enabling **reversible** mapping back to the original domain.
-- Expose **topology** (graph structure) that downstream components can compress and reason about.
-
-### 3) Quantum-Inspired Compression & Pruning
-I apply compression on the encoded graph/state to remove redundancy (e.g., pruning weak edges/entanglements and merging equivalent substructures) while tracking fidelity metrics.  
-Result: a **smaller, cheaper latent** that retains the signal I care about.
-
-### 4) Latent Diffusion Transformer (DiT, Classical Core)
-I run a diffusion-style transformer **in latent space**.  
-Operating on the compressed representation lets the model:
-- Capture long-range dependencies efficiently.
-- Train/infer with **lower compute and memory** than raw-space approaches.
-
-### 5) Quantum Decoder Layer (Back to Graph/State)
-I map the DiT’s latent back onto the quantum-style graph/state so I can:
-- Enforce **cycle-consistency** with the encoder.
-- Recover structure needed to reconstruct outputs or pass to downstream tasks.
-
-### 6) Error Estimation & Refinement Loop
-I estimate reconstruction error (and diffusion noise mismatch) and run a **controller (RNN-style)** to adjust encoder/decoder/compression parameters.  
-This **closed loop** reduces artifacts, stabilizes training, and improves final accuracy over successive passes.
-
-### 7) Output Reconstruction
-I decode the refined graph/state back to the target domain, producing the final output.
+This approach unites **particle (qubit)** and **wave (momentum)** perspectives, providing compression, efficiency, and accuracy gains over classical AI methods.  
 
 ---
 
-# Why This Matters
+## 🔬 Key Concepts
 
-- **Efficiency:** Compressing before modeling means fewer FLOPs, less memory pressure, and faster training/serving—without sacrificing accuracy.  
-- **Scalability:** The latent+graph approach scales to larger datasets and longer contexts with **sub-linear cost growth** relative to raw-space methods.  
-- **Resilience:** Noise injection plus the error-correction loop makes the system more robust to imperfect or shifting data.  
-- **Differentiation:** Blending **latent diffusion** with a **quantum-style encoder/decoder** and **graph compression** goes beyond classical pipelines.
+### 1. Qubit Graph Encoding (Particle Side)
+- Inputs are mapped into **qubit states**.  
+- A **Hamiltonian** governs interactions, producing a structured **graph of amplitudes**.  
+- This captures **entanglement and local correlations**.  
 
-### Business Impact (What this unlocks)
-- **Lower infra cost per task:** More throughput on the same hardware footprint.  
-- **Faster iteration cycles:** Shorter experiment loops, enabling quicker product improvements.  
-- **Deployability:** A smaller, more stable model is easier to operate, monitor, and scale in production.  
-- **Defensibility:** The hybrid architecture and compression+refinement loop create clear technical differentiation that’s hard to replicate.
+### 2. Wavelet Compression (Wave / Momentum Side)
+- The qubit graph is “**encased in a wave**” by applying a **wavelet transform**.  
+- Produces **momentum coefficients** that describe how information oscillates across scales.  
+- This gives a **compressed latent representation** that is efficient to store and process.  
 
----
+### 3. Diffusion Transformer (DiT Core)
+- Operates **in wavelet/momentum space**.  
+- Learns to **denoise coefficients progressively** (coarse → fine scales).  
+- Preserves global structure while refining local detail.  
+- Optionally includes an **energy/action head** for physics-informed regularization.  
 
-# Current Status & Next Steps
-
-**Status (WIP):**
-- ✅ Core tokenization, noise handling, normalization/regression implemented.  
-- ✅ DiT backbone training loop running in latent space.  
-- ✅ **Quantum Encoder** prototype generating graph/qbit-style states.  
-- ✅ Compression/pruning pass with fidelity tracking in early testing.  
-- 🔄 Quantum Decoder + cycle-consistency constraints under active tuning.  
-- 🔄 Error estimation + RNN controller loop being optimized for stability and convergence.  
-
-**Next Steps:**
-- 📊 Benchmark end-to-end cost vs. accuracy against strong classical baselines.  
-- 🧪 Harden the compression criteria (learned + rule-based) and improve fidelity metrics.  
-- 🔁 Tighten the encoder/decoder loop for better reversibility and fewer artifacts.  
-- 🚀 Extend to enterprise-scale datasets and publish performance/efficiency results.  
+### 4. Qubit Echo RNN (Stabilization Loop)
+- Runs in parallel on **CUDA**.  
+- Extracts an **“echo” signal** from the evolving qubit graph.  
+- A **recurrent neural network (RNN)** models these echoes, refining the qubit state step by step.  
+- Feedback loop improves **stability and reconstruction quality**.  
 
 ---
+
+## 🏗️ Architecture
+
+```text
+   Classical Input
+         ↓
+ Qubit Encoder (Hamiltonian)
+         ↓
+   Qubit Graph State
+         ↓──────────────────┐
+     Wavelet Compression    │
+         ↓                  │
+   Momentum Coefficients    │
+         ↓                  │
+   Diffusion Transformer    │
+         ↓                  │
+   Reconstructed Output     │
+                            │
+      Echo Extractor        │
+         ↓                  │
+    Qubit Echo RNN (CUDA)   │
+         ↓                  │
+  Refined Qubit Graph State─┘
+
+```
+
+## Why This Matters & Value Proposition
+
+### Efficiency: 
+Operating in momentum space reduces noise and redundancy → faster training and inference.
+
+### Compression: 
+Wavelet coefficients naturally capture essential features → lower memory and compute costs.
+
+### Accuracy: 
+Echo RNN stabilizes qubit dynamics → better reconstructions.
+
+### Physics-Inspired Edge: 
+Unlike classical AI, this design mirrors fundamental particle–wave duality.
+
+This architecture is a next-gen AI platform that is lighter, faster, and more scalable. It builds a defensible moat by grounding AI in quantum-inspired principles.
+
+Providing a modular pipeline (qubit encoder → wavelet compression → diffusion → echo refinement) that is implementable with CUDA acceleration.
+
+### For the Future: 
+Bridges quantum mechanics and classical AI, positioning us ahead of traditional architectures that only see data in one domain.
