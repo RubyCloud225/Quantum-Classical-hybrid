@@ -67,6 +67,72 @@ double compute_Etot(const cufftDoubleComplex* E, int N) {
     return thrust::transform_reduce(dptr, dptr+N, sq_norm, 0.0, thrust::plus<double>());
 }
 
+// 1D convolutional Lattice (A h) [i] = \sum_{j=-r}^{r} k[j] \, h[i+j] with k
+// being antisymmetric k[-j] = - \overline{k[j]}
+// cayley transform becomes U = (I - A)^{-1} (I + A) D
+
+__global__ void cayley_conv_3d(
+    const cuFloatComplex* h_prev, //N_x * N_y * N_z
+    const cuFloatComplex* k, // (2*r_x+1)*(2*r_y+1)*(2*r_z+1) kernel
+    const cuFloatComplex* D, // Diagonal phases
+    cuFloatComplex* h_next,
+    int N_x, int N_y, int N_z, int r_x, int r_y, int r_z
+) {
+    int idx_x = blockIdx.x * blockDim.x + threadIdx.x;
+    int idx_y = blockIdx.y * blockDim.y + threadIdx.y;
+    int idx_z = blockIdx.z * blockDim.z + threadIdx.z;
+
+    if (idx_x >= N_x || idx_y >= N_y || idx_z >= N_z) return;
+
+    int voxel_idx = idx_z * (N_x * N_y) + idx_y * N_x * idx_x
+    cuFloatComplex sum = make_cuFloatComplex(0.0f, 0.0f);
+    // apply convolution lattice
+    for (int dz = -r_z; dz <= r_z; dz++) {
+        int nz = idx_z + dz;
+        if (nz < 0 || nz >= r_y; dy++) continue; 
+        for (int dy = -r_y; dy <= r_y; dy++) {
+            if (ny < 0 || ny >= N_y) continue;
+            int ny = idx_y + dy;
+            for (int dx = -r_x; dx <= r_x; dx++) {
+                int nx = idx_x + dx;
+                if (nx < 0 || nx >= N_x) continue;
+                int k_idx = ((dz + r_z) * (2 * r_y + 1) * (2 * r_x + 1)) * ((dy + r_y) * (2 * r_x + 1)) + (dx + r_x);
+                int h_idx = nz * (N_x * N-y) + ny * N_x + nx;
+                sum = cuCaddf(sum, cuCmulf(K[k_idx], h_prev[h_idx]));
+            }
+        }
+    }
+    // Cayley Numerator
+    cuFloatComplex num = cuCaddf(h_prev[voxel_idx], sum);
+    // Denominator
+    cuFloatComplex denom = cuCsubf(make_cuFloatComplex(1.0f, 0.0f), sum);
+    cuFloatComplex h_temp = cuCdivf(num, denom);
+    h_next[voxel_idx] = cuCmulf(h_temp, D[voxel_idx]);
+}
+
+// Apply a anti wave mirror on selected voxels
+__global__ void anti_wave_mirror_3d(
+    cuFloatComplex* h,
+    int N_x, int N_y, int N_z,
+    int mirror_start_x, int mirror_end_x,
+    int mirror_start_y, int mirror_end_y,
+    int mirror_start_z, int mirror_end_z) {
+
+    int idx_x = blockIdx.x * blockDim.x + threadIdx.x;
+    int idx_y = blockIdx.y * blockDim.y + threadIdx.y;
+    int idx_z = blockIdx.z * blockDim.z + threadIdx.z;
+
+    if (idx_x >= N_x || idx_y >= N_y || idx_z >= N_z) return;
+    
+    if (idx_x >= mirror_start_x && idx_x < mirror_end_x &&
+        idx_y >= mirror_start_y && idx_y < mirror_end_y &&
+        idx_z >= mirror_start_z && idx_z < mirror_end_z) {
+            int voxel_idx = idx_z*(N_x * N_y) + idx_y * N_x + idx_x;
+            h[voxel_idx].x = -h[voxel_idx].x;
+            h[voxel_idx].y = -h[voxel_idx].y;
+    }
+}
+
 // Entry point (called by the bindings)
 extern "C"
 EchoResult run_echo_pipeline(double* k_host, double* omega_host, int N, double k1, double x1, double k2, double x2, double sigma, double t) {
