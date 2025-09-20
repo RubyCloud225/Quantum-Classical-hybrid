@@ -3,7 +3,7 @@
 # -----------------------------
 
 # Base image with CUDA 12.2
-FROM nvidia/cuda:12.2-base-ubuntu22.04
+FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
 
 # Environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -20,13 +20,16 @@ RUN apt-get update && apt-get install -y \
     wget \
     libomp-dev \
     curl \
+    libcurl4-openssl-dev \
     libeigen3-dev \
     libicu-dev \
+    libssl-dev \
+    pkg-config \
     software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 # Install pybind11 globally
-RUN pip3 install pybind11
+RUN pip3 install --no-cache-dir pybind11
 
 # Set working directory
 WORKDIR /workspace

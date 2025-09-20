@@ -59,13 +59,12 @@ find_package(
 execute_process(
     COMMAND python3 -m pybind11 --cmakedir
     OUTPUT_VARIABLE PYBIND11_CMAKE_DIR
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-)
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
 list(APPEND CMAKE_PREFIX_PATH ${PYBIND11_CMAKE_DIR})
 find_package(pybind11 REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(CURL REQUIRED)
-find_package(CUDA REQUIRED)
+find_package(CUDAToolkit REQUIRED)
 
 # Include directories
 include_directories(
@@ -226,7 +225,7 @@ endif()
 # Add test_echo executable target
 add_executable(test_echo
     src/utils/test_echo.cpp
-    src/utils/echo_pipeline.cu
+    src/utils/RNN/echo_pipeline.cu
 )
 
 target_include_directories(test_echo PRIVATE
@@ -241,4 +240,8 @@ target_link_libraries(test_echo PRIVATE
 set_target_properties(test_echo PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
     CXX_STANDARD 17
+    CUDA_ARCHITECTURES 70
 )
+
+# Add CUDA extended lambda flag for test_echo
+target_compile_options(test_echo PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:--extended-lambda>)

@@ -2,6 +2,8 @@
 #include <cufft.h>
 #include <thrust/device_vector.h>
 #include <thrust/reduce.h>
+#include <thrust/transform_reduce.h>
+#include <thrust/functional.h>
 #include <cmath>
 #include <complex>
 #include <iostream>
@@ -61,7 +63,7 @@ __global__ void compute_overlap(cufftDoubleComplex* g, const cufftDoubleComplex*
 
 double compute_Etot(const cufftDoubleComplex* E, int N) {
     thrust::device_ptr<const cufftDoubleComplex> dptr(E);
-    auto sq_norm = [=] __device__(cufftDoubleComplex z) {
+    auto sq_norm = [] __device__ (cufftDoubleComplex z) {
         return z.x*z.x + z.y*z.y;
     };
     return thrust::transform_reduce(dptr, dptr+N, sq_norm, 0.0, thrust::plus<double>());
@@ -84,24 +86,27 @@ __global__ void cayley_conv_3d(
 
     if (idx_x >= N_x || idx_y >= N_y || idx_z >= N_z) return;
 
-    int voxel_idx = idx_z * (N_x * N_y) + idx_y * N_x * idx_x
+    int voxel_idx = idx_z * (N_x * N_y) + idx_y * N_x + idx_x;
     cuFloatComplex sum = make_cuFloatComplex(0.0f, 0.0f);
+
     // apply convolution lattice
     for (int dz = -r_z; dz <= r_z; dz++) {
         int nz = idx_z + dz;
-        if (nz < 0 || nz >= r_y; dy++) continue; 
+        if (nz < 0 || nz >= N_z) continue;
         for (int dy = -r_y; dy <= r_y; dy++) {
-            if (ny < 0 || ny >= N_y) continue;
             int ny = idx_y + dy;
+            if (ny < 0 || ny >= N_y) continue;
             for (int dx = -r_x; dx <= r_x; dx++) {
                 int nx = idx_x + dx;
                 if (nx < 0 || nx >= N_x) continue;
-                int k_idx = ((dz + r_z) * (2 * r_y + 1) * (2 * r_x + 1)) * ((dy + r_y) * (2 * r_x + 1)) + (dx + r_x);
-                int h_idx = nz * (N_x * N-y) + ny * N_x + nx;
-                sum = cuCaddf(sum, cuCmulf(K[k_idx], h_prev[h_idx]));
+                int k_idx = (dz + r_z) * ((2 * r_y + 1) * (2 * r_x + 1)) +
+                           (dy + r_y) * (2 * r_x + 1) + (dx + r_x);
+                int h_idx = nz * (N_x * N_y) + ny * N_x + nx;
+                sum = cuCaddf(sum, cuCmulf(k[k_idx], h_prev[h_idx]));
             }
         }
     }
+
     // Cayley Numerator
     cuFloatComplex num = cuCaddf(h_prev[voxel_idx], sum);
     // Denominator
@@ -123,7 +128,7 @@ __global__ void anti_wave_mirror_3d(
     int idx_z = blockIdx.z * blockDim.z + threadIdx.z;
 
     if (idx_x >= N_x || idx_y >= N_y || idx_z >= N_z) return;
-    
+
     if (idx_x >= mirror_start_x && idx_x < mirror_end_x &&
         idx_y >= mirror_start_y && idx_y < mirror_end_y &&
         idx_z >= mirror_start_z && idx_z < mirror_end_z) {
